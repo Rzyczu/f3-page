@@ -1,0 +1,50 @@
+.hover-left-circle:hover::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-radius: 50%; /* Okrągły kształt */
+    top: 50%; /* Pozycja pionowa */
+    transform: translateY(-50%); /* Wycentrowanie pionowe */
+}
+
+.left-line::before{
+  content: '';
+  position: absolute;
+  height: 80%;
+  border: 1px solid;
+  top: 50%; /* Pozycja pionowa */
+  transform: translateY(-50%); /* Wycentrowanie pionowe */
+}
+
+
+  .h-line::before {
+    content: "";
+    height: 0;
+    margin-top: 2rem;
+    border: 0.5px solid rgb(113 76 152);
+    display:inline-block;
+  }
+
+  .h-line::after {
+    content: "";
+    margin-top: 2rem;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid rgb(113 76 152) ;
+    border-radius: 50%; /* Okrągły kształt */
+    transform: translate(-50%,calc(50% - 1px));
+  }
+
+  /* .article-photo::before{
+    content: '';
+    background-image: url( './assets/logo-gray.svg' );
+    z-index: 100;
+    height: 100px;
+    width: 100px;
+    left: 10px;
+    top: 10px;
+  } */
