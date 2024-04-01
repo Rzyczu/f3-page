@@ -1,21 +1,74 @@
 @tailwind base;
-
-@layer base {
-    p,span,h1,h2,h3,h4,h5,h6{
-
-    }
-    h1 {
-      @apply text-3xl;
-      @apply font-bold
-    }
-    h2 {
-      @apply text-2xl;
-      @apply font-semibold
-    }
-    h3 {
-      @apply text-xl;
-    }
-  }
-
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p,span,h1,h2,h3,h4,h5,h6{
+
+  }
+  h1 {
+    @apply text-3xl;
+    @apply font-bold
+  }
+  h2 {
+    @apply text-2xl;
+    @apply font-semibold
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .hover-left-circle {
+    @apply hover:before:content-[''];
+    @apply hover:before:block;
+    @apply hover:before:absolute;
+    @apply hover:before:w-3;
+    @apply hover:before:h-3;
+    @apply hover:before:border-solid;
+    @apply hover:before:border;
+    @apply hover:before:rounded-full;
+    @apply hover:before:top-1/2;
+    @apply hover:before:-translate-y-1/2;
+    @apply before:bg-primary;
+    @apply before:-left-4;
+    @apply md:before:left-auto;
+    @apply md:before:-right-8;
+  }
+
+  .left-line {
+    @apply before:content-[''];
+    @apply before:absolute;
+    @apply before:h-4/5;
+    @apply before:border;
+    @apply before:border-solid;
+    @apply before:top-1/2;
+    @apply before:-translate-y-1/2;
+    @apply before:left-[calc(-0.7rem)];
+    @apply md:before:left-auto;
+    @apply  md:before:right-[calc(-1.67rem)];
+  }
+
+  .h-line {
+    @apply before:content-[''];
+    @apply before:h-0;
+    @apply before:mt-2;
+    @apply before:border;
+    @apply before:border-solid;
+    @apply before:border-primary;
+    @apply before:inline-block;  
+    @apply after:content-[''];
+    @apply after:h-2.5;
+    @apply after:w-2.5;
+    @apply after:mt-2;
+    @apply after:border;
+    @apply after:border-solid;
+    @apply after:border-primary;
+    @apply after:rounded-full;
+    @apply after:inline-block;
+    @apply after:-translate-x-1/2;
+    @apply after:translate-y-[calc(50%-1px)];
+  }
+  
+}

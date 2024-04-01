@@ -3,7 +3,7 @@ module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
     container: {
-      margin: {
+      padding: {
         DEFAULT: '1rem',
         sm: '2rem',
         md: '3rem',
