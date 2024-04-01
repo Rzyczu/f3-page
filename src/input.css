@@ -40,7 +40,7 @@
   .left-line {
     @apply before:content-[''];
     @apply before:absolute;
-    @apply before:h-4/5;
+    @apply before:h-5/6;
     @apply before:border;
     @apply before:border-solid;
     @apply before:top-1/2;
@@ -50,9 +50,11 @@
     @apply  md:before:right-[calc(-1.67rem)];
   }
 
-  .h-line {
+  .horizontal-line {
     @apply before:content-[''];
     @apply before:h-0;
+    @apply before:w-1/2;
+    @apply before:sm:w-3/4;
     @apply before:mt-2;
     @apply before:border;
     @apply before:border-solid;
