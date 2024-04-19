@@ -50,6 +50,8 @@
     @apply  md:before:right-[calc(-1.67rem)];
   }
 
+  
+
   .horizontal-line {
     @apply before:content-[''];
     @apply before:h-0;
@@ -58,7 +60,7 @@
     @apply before:mt-2;
     @apply before:border;
     @apply before:border-solid;
-    @apply before:border-primary;
+    @apply before:border-primary-light;
     @apply before:inline-block;  
     @apply after:content-[''];
     @apply after:h-2.5;
@@ -66,7 +68,7 @@
     @apply after:mt-2;
     @apply after:border;
     @apply after:border-solid;
-    @apply after:border-primary;
+    @apply before:border-primary-light;
     @apply after:rounded-full;
     @apply after:inline-block;
     @apply after:-translate-x-1/2;
