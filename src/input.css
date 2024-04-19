@@ -63,15 +63,15 @@
     @apply before:border-primary-light;
     @apply before:inline-block;  
     @apply after:content-[''];
-    @apply after:h-2.5;
-    @apply after:w-2.5;
+    @apply after:h-3;
+    @apply after:w-3;
     @apply after:mt-2;
-    @apply after:border;
+    @apply after:border-2;
     @apply after:border-solid;
-    @apply before:border-primary-light;
+    @apply after:border-primary-light;
     @apply after:rounded-full;
     @apply after:inline-block;
-    @apply after:-translate-x-1/2;
+    @apply after:-translate-x-[calc(50%)];
     @apply after:translate-y-[calc(50%-1px)];
   }
   
