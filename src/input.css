@@ -50,14 +50,12 @@
     @apply  md:before:right-[calc(-1.67rem)];
   }
 
-  
-
   .horizontal-line {
     @apply before:content-[''];
     @apply before:h-0;
     @apply before:w-1/2;
     @apply before:sm:w-3/4;
-    @apply before:mt-2;
+    @apply mt-6;
     @apply before:border;
     @apply before:border-solid;
     @apply before:border-primary-light;
@@ -65,7 +63,6 @@
     @apply after:content-[''];
     @apply after:h-3;
     @apply after:w-3;
-    @apply after:mt-2;
     @apply after:border-2;
     @apply after:border-solid;
     @apply after:border-primary-light;
@@ -75,4 +72,75 @@
     @apply after:translate-y-[calc(50%-1px)];
   }
   
+  .slider {
+    @apply relative; 
+    @apply border-2; 
+    @apply border-solid; 
+    @apply w-60; 
+    @apply h-60;
+    @apply rounded-[50%]; 
+    @apply border-gray-light;
+  }
+  .slides-dots {
+    @apply -left-2/4;
+  }
+  .slide-dot {
+    @apply absolute;
+    @apply w-6;
+    @apply h-6;
+    @apply transition-[0.5s]; 
+    @apply  bg-primary-light;
+    @apply cursor-pointer;
+    @apply origin-[8.2rem]; 
+    @apply rounded-[50%];
+    transform: rotate(calc(360deg / var(--total-slides) * var(--i)));
+    @apply z-10;
+    @apply hover:border-4 hover:border-solid hover:border-primary;
+  }
+  .slide-dot.active {
+    @apply bg-primary;
+  }
+  .slides-images {
+    @apply absolute;
+    @apply inset-0;
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply overflow-hidden;
+  }
+  .slide-image.active {
+    @apply opacity-100;
+    @apply delay-[0.5s];
+    @apply scale-100;
+  }
+  .slide-image {
+    @apply absolute;
+    @apply transition-[0.5s];
+    @apply w-4/5;
+    @apply h-4/5;
+    @apply rounded-[50%];
+    @apply scale-0;
+  }
+  .slide-image img {
+    @apply inline-block;
+    @apply w-full;
+    @apply h-full;
+    @apply bg-cover;
+    @apply rounded-[50%];
+  }
+  .slides-names {
+    @apply grid w-full grid-cols-2 gap-4;
+  }
+  .slide-name.active {
+    @apply text-primary
+  }
+  .slide-name {
+    @apply text-xl text-center cursor-pointer basis-1/2 text-primary-light hover:text-primary;
+  }
+  .slide-content {
+    @apply hidden;
+  }
+  .slide-content.active {
+    @apply block;
+  }
 }
