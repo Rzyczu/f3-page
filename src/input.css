@@ -20,6 +20,10 @@
 }
 
 @layer components {
+  #navbar-index {
+    @apply bg-primary;
+  }
+  
   .hover-left-circle {
     @apply hover:before:content-[''];
     @apply hover:before:block;

@@ -610,6 +610,11 @@ h3 {
   }
 }
 
+#navbar-index {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 76 152 / var(--tw-bg-opacity));
+}
+
 .hover-left-circle:hover::before {
   --tw-content: '';
   display: block;
@@ -1137,10 +1142,6 @@ h3 {
   fill: #C4C2C1;
 }
 
-.fill-primary-light {
-  fill: #B3A2CE;
-}
-
 .stroke-gray-light {
   stroke: #C4C2C1;
 }
@@ -1261,24 +1262,12 @@ h3 {
   transition-duration: 150ms;
 }
 
-.hover\:fill-white:hover {
-  fill: #FEFBF7;
-}
-
-.hover\:stroke-primary:hover {
-  stroke: #714C98;
-}
-
 .hover\:stroke-primary-dark:hover {
   stroke: #532984;
 }
 
 .hover\:stroke-primary-light:hover {
   stroke: #B3A2CE;
-}
-
-.hover\:stroke-white:hover {
-  stroke: #FEFBF7;
 }
 
 .hover\:font-semibold:hover {
@@ -1496,6 +1485,10 @@ h3 {
 
   .sm\:bg-transparent {
     background-color: transparent;
+  }
+
+  .sm\:\!bg-transparent {
+    background-color: transparent !important;
   }
 
   .sm\:bg-gradient-to-r {
