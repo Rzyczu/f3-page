@@ -1,11 +1,15 @@
-function navDropdown(e) {
-  let mobileNavbar = document.getElementById("mobile-navbar");
-  let openBtn = document.getElementById("hamburger-open");
-  let closeBtn = document.getElementById("hamburger-close");
-  let navbarBrand = document.getElementById("navbar-brand");
-  let navbar = document.getElementById("navbar");
-  let navbarLinksDisplayMobile = document.querySelectorAll(".display-mobile")
+let navbaIndex = document.getElementById("navbarIndex");
+let mobileNavbar = document.getElementById("mobile-navbar");
+let openBtn = document.getElementById("hamburger-open");
+let closeBtn = document.getElementById("hamburger-close");
+let navbarBrand = document.getElementById("navbar-brand");
+let navbar = document.getElementById("navbar");
+let navbarLinksDisplayMobile = document.querySelectorAll(".display-mobile")
+navbaIndex.classList.add("bg-primary");
 
+
+function navDropdown(e) {
+ 
   console.log(navbar);
   
   e === openBtn?
