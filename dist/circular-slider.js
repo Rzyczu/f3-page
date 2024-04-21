@@ -1,17 +1,21 @@
 let carousels = document.querySelectorAll('.circular-carousel');
 
 carousels.forEach((carousel) => {
-  let slideDots = carousel.querySelectorAll('.slide-dot');
+  let slidesDotsContainer = carousel.querySelectorAll('.slides-dots');
   let slideImages = carousel.querySelectorAll('.slide-image');
   let slideNames = carousel.querySelectorAll('.slide-name');
   let slideContent = carousel.querySelectorAll('.slide-content');
 
-
-  slideDots.forEach((item, index) => {
-    item.style.setProperty('--i', index + 1);
-    item.setAttribute('data-id', `content-${index + 1}`);
-    item.style.setProperty('--total-slides', slideDots.length);
+  slideNames.forEach((item, index) => {
+    let dot = document.createElement('div');
+    dot.classList.add('slide-dot');
+    dot.style.setProperty('--i', index + 1);
+    dot.setAttribute('data-id', `content-${index + 1}`);
+    dot.style.setProperty('--total-slides', slideNames.length);
+    slidesDotsContainer[0].appendChild(dot);
   });
+
+  let slideDots = carousel.querySelectorAll('.slide-dot');
 
   slideImages.forEach((item, index) => {
     item.setAttribute('data-id', `content-${index + 1}`);
@@ -23,6 +27,11 @@ carousels.forEach((carousel) => {
 
   slideNames.forEach((item, index) => {
     item.setAttribute('data-id', `content-${index + 1}`);
+  });
+
+  let elements = document.querySelectorAll('[data-id=content-1]');
+  elements.forEach(function(element) {
+    element.classList.add('active');
   });
 
   function clickEvent(){
@@ -39,7 +48,6 @@ carousels.forEach((carousel) => {
         item.classList.remove('active');
       });
       let elements = document.querySelectorAll('[data-id="' + this.dataset.id + '"]');
-      console.log(elements)
       elements.forEach(function(element) {
         element.classList.add('active');
       });
