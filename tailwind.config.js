@@ -24,7 +24,7 @@ module.exports = {
         'gray': {light: '#C4C2C1'}
       },
       fontFamily: {
-        serif: ['Inter', 'sans-serif']
+        'montserrat': ['Montserrat'],
       },
       extend:{
         gradientColorStopPositions: {

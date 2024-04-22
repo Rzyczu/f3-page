@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body{
+    @apply font-montserrat
+  }
+
   p,span,h1,h2,h3,h4,h5,h6{
 
   }
@@ -71,6 +75,7 @@
     @apply after:border-2;
     @apply after:border-solid;
     @apply after:border-primary-light;
+    @apply after:bg-white;
     @apply after:rounded-full;
     @apply after:inline-block;
     @apply after:-translate-x-[calc(50%)];
@@ -94,6 +99,7 @@
     @apply rounded-[50%]; 
     @apply border-gray-light;
     @apply max-sm:self-center;
+    @apply max-sm:mb-8;
   }
 
   .slider-dots {
@@ -154,10 +160,12 @@
     @apply h-full;
     @apply bg-cover;
     @apply rounded-[50%];
+    @apply object-cover;
+
   }
 
   .slider-names {
-    @apply flex flex-row flex-wrap mb-12 gap-x-8 gap-y-2;
+    @apply grid grid-cols-2 mb-12 gap-x-8 gap-y-2;
   }
 
   .slide-name.active {
@@ -174,5 +182,20 @@
 
   .slide-content.active {
     @apply block;
+  }
+
+.person-card{
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply items-center;
+}
+
+  .person-image {
+    @apply size-60;
+    @apply rounded-[50%];
+    @apply overflow-hidden;
+    @apply object-cover;
   }
 }
