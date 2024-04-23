@@ -86,20 +86,19 @@
     @apply flex;
     @apply flex-col;
     @apply gap-10 md:gap-16 lg:gap-20;
-    @apply sm:flex-row;
+    @apply md:flex-row;
   }
 
   .carousel-slider {
     @apply relative; 
     @apply border-2; 
     @apply border-solid; 
-    @apply w-60; 
-    @apply min-w-60; 
-    @apply h-60;
+    @apply size-60 lg:size-72; 
+    @apply min-w-60 lg:min-w-72; 
     @apply rounded-[50%]; 
     @apply border-gray-light;
-    @apply max-sm:self-center;
-    @apply max-sm:mb-8;
+    @apply max-md:self-center;
+    @apply max-md:mb-8;
   }
 
   .slider-dots {
@@ -114,12 +113,11 @@
 
   .slide-dot {
     @apply absolute;
-    @apply w-6;
-    @apply h-6;
+    @apply size-6;
     @apply transition-[0.5s]; 
     @apply  bg-primary-light;
     @apply cursor-pointer;
-    @apply origin-[8.2rem]; 
+    @apply origin-[8.2rem] lg:origin-[9.65rem]; 
     @apply rounded-[50%];
     transform: rotate(calc(360deg / var(--total-slides) * var(--i)));
     @apply z-10;
@@ -165,7 +163,8 @@
   }
 
   .slider-names {
-    @apply grid grid-cols-2 mb-12 gap-x-8 gap-y-2;
+    @apply grid grid-cols-2 gap-x-8 gap-y-2;
+    @apply mb-12;
   }
 
   .slide-name.active {
@@ -173,7 +172,10 @@
   }
 
   .slide-name {
-    @apply text-xl text-left cursor-pointer basis-[calc(50%-2rem)] text-primary-light hover:text-primary;
+    @apply text-xl text-left; 
+    @apply cursor-pointer;
+    @apply basis-[calc(50%-2rem)];
+    @apply text-primary-light hover:text-primary;
   }
   
   .slide-content {
@@ -184,18 +186,105 @@
     @apply block;
   }
 
-.person-card{
-  @apply flex;
-  @apply flex-col;
-  @apply items-center;
-  @apply justify-center;
-  @apply items-center;
-}
+  .board-menu {
+    @apply flex justify-around mt-16 mb-16;
+  }
 
+  .board-group-name {
+    @apply font-bold;
+    @apply text-2xl;
+    @apply text-primary-light;
+    @apply cursor-pointer;
+  }
+
+  .board-group-name.active {
+    @apply text-primary;
+  }
+
+  .board-group {
+    @apply grid items-center;
+    @apply grid-cols-2 md:grid-cols-3 ;
+    @apply  gap-4 sm:gap-6 md:gap-10 lg:gap-20;
+    @apply hidden;
+  }
+
+  .board-group.active {
+    @apply grid;;
+  }
+
+  .person-card{
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply items-center;
+  }
+  
   .person-image {
-    @apply size-60;
+    @apply size-28 sm:size-40 md:size-40 lg:size-60;
     @apply rounded-[50%];
     @apply overflow-hidden;
     @apply object-cover;
+    @apply mb-2;
+  }
+
+  .person-title {
+    @apply mb-2 text-xl font-medium;
+  }
+
+  #board-personnel .person-card:first-child {
+    @apply max-md:col-span-2 md:row-span-2;
+  }
+
+  #board-personnel .person-card:first-child img {
+    @apply relative size-40 sm:size-56 md:size-52 lg:size-64 xl:size-80;
+  }
+
+  #board-personnel .person-card:first-child .person-title {
+    @apply text-2xl 
+  }
+
+  #board-personnel .person-card:first-child .person-title {
+    @apply text-2xl 
+  }
+
+  .brotherhood {
+    @apply flex;
+    @apply flex-row;
+    @apply gap-20;
+    @apply content-start;
+    @apply mt-16 mb-16;
+  }
+
+  .brotherhood-menu {
+    @apply flex flex-col justify-around;
+  }
+
+  .brotherhood-group-name {
+    @apply font-bold;
+    @apply text-2xl;
+    @apply text-primary-light;
+    @apply cursor-pointer;
+  }
+
+  .brotherhood-group-name.active {
+    @apply text-primary;
+  }
+
+  .brotherhood-photo {
+    @apply size-28 sm:size-40 md:size-40 lg:size-60;
+    @apply rounded-[50%];
+    @apply overflow-hidden;
+    @apply object-cover;
+    @apply mb-2;
+    @apply hidden;
+  }
+
+  .brotherhood-photo.active {
+    @apply block;
+  }
+
+  .brotherhood-photos{
+
   }
 }

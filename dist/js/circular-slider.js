@@ -6,8 +6,9 @@ carousels.forEach((carousel) => {
   let slideNames = carousel.querySelectorAll('.slide-name');
   let slideContent = carousel.querySelectorAll('.slide-content');
 
+
   slideNames.forEach((item, index) => {
-    const dot = document.createElement('div');
+    let dot = document.createElement('div');
     dot.classList.add('slide-dot');
     dot.style.setProperty('--i', index + 1);
     dot.setAttribute('data-id', `content-${index + 1}`);
@@ -15,7 +16,7 @@ carousels.forEach((carousel) => {
     sliderDotsContainer.appendChild(dot);
   });
 
-  const slideDots = carousel.querySelectorAll('.slide-dot');
+  let slideDots = carousel.querySelectorAll('.slide-dot');
 
   slideImages.forEach((item, index) => {
     item.setAttribute('data-id', `content-${index + 1}`);

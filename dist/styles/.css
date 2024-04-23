@@ -769,34 +769,6 @@ h3 {
   height: 100%;
 }
 
-.slide-dot {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition-property: 0.5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  --tw-bg-opacity: 1;
-  background-color: rgb(179 162 206 / var(--tw-bg-opacity));
-  cursor: pointer;
-  transform-origin: 8.2rem;
-  border-radius: 50%;
-  transform: rotate(calc(360deg / var(--total-slides) * var(--i)));
-  z-index: 10;
-}
-
-.slide-dot:hover {
-  border-width: 4px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(113 76 152 / var(--tw-border-opacity));
-}
-
-.slide-dot.active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 76 152 / var(--tw-bg-opacity));
-}
-
 .slider-images {
   position: absolute;
   inset: 0px;
@@ -838,12 +810,12 @@ h3 {
 }
 
 .slider-names {
-  margin-bottom: 3rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .slide-name.active {
@@ -852,11 +824,11 @@ h3 {
 }
 
 .slide-name {
-  flex-basis: calc(50% - 2rem);
-  cursor: pointer;
   text-align: left;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  cursor: pointer;
+  flex-basis: calc(50% - 2rem);
   --tw-text-opacity: 1;
   color: rgb(179 162 206 / var(--tw-text-opacity));
 }
@@ -874,6 +846,29 @@ h3 {
   display: block;
 }
 
+.board-menu {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.board-group-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(179 162 206 / var(--tw-text-opacity));
+}
+
+.board-group {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 5rem;
+  display: none;
+}
+
 .person-card {
   display: flex;
   flex-direction: column;
@@ -888,6 +883,14 @@ h3 {
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.person-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
 }
 
 .absolute {
@@ -996,10 +999,6 @@ h3 {
 
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .ml-16 {
@@ -1133,10 +1132,6 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -1179,10 +1174,6 @@ h3 {
 
 .gap-16 {
   gap: 4rem;
-}
-
-.gap-20 {
-  gap: 5rem;
 }
 
 .gap-24 {
@@ -1325,10 +1316,6 @@ h3 {
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-semibold {
