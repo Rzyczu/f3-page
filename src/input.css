@@ -192,7 +192,7 @@
 
   .board-group-name {
     @apply font-bold;
-    @apply text-2xl;
+    @apply text-base sm:text-xl md:text-2xl;
     @apply text-primary-light;
     @apply cursor-pointer;
   }
@@ -218,6 +218,7 @@
     @apply items-center;
     @apply justify-center;
     @apply items-center;
+    @apply mb-4;
   }
   
   .person-image {
@@ -249,28 +250,19 @@
   }
 
   .brotherhood {
-    @apply flex;
-    @apply flex-row;
-    @apply gap-20;
-    @apply content-start;
-    @apply mt-16 mb-16;
+    @apply grid ;
+    @apply grid-cols-2; 
+    @apply md:grid-cols-[repeat(2,auto)];
+    @apply gap-x-2 md:gap-x-16 lg:gap-x-20 max-md:gap-y-8;
+    @apply max-md:items-center max-md:justify-items-center;
+
   }
 
-  .brotherhood-menu {
-    @apply flex flex-col justify-around;
+  .brotherhood-photos{
+    @apply md:row-span-2;
+    @apply min-w-28 sm:min-w-40 md:min-w-40 lg:min-w-60;
   }
-
-  .brotherhood-group-name {
-    @apply font-bold;
-    @apply text-2xl;
-    @apply text-primary-light;
-    @apply cursor-pointer;
-  }
-
-  .brotherhood-group-name.active {
-    @apply text-primary;
-  }
-
+  
   .brotherhood-photo {
     @apply size-28 sm:size-40 md:size-40 lg:size-60;
     @apply rounded-[50%];
@@ -284,7 +276,28 @@
     @apply block;
   }
 
-  .brotherhood-photos{
-
+  .brotherhood-menu {
+    @apply flex flex-col gap-2 md:mb-6;
   }
+
+  .brotherhood-group-name {
+    @apply font-bold;
+    @apply text-base sm:text-xl md:text-2xl;
+    @apply text-primary-light;
+    @apply cursor-pointer;
+  }
+
+  .brotherhood-group-name.active {
+    @apply text-primary;
+  }
+
+  .brotherhood-content {
+    @apply hidden;
+    @apply max-md:col-span-2;
+  }
+
+  .brotherhood-content.active {
+    @apply inline-block;
+  }
+
 }

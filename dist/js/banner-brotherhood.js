@@ -1,17 +1,17 @@
-let boardGroups = document.querySelectorAll('.board-group');
-let boardNames = document.querySelectorAll('.board-group-name');
+let brotherhoodContent = document.querySelectorAll('.brotherhood-content');
+let brotherhoodNames = document.querySelectorAll('.brotherhood-group-name');
 
 function clickEvent() {
-    boardNames.forEach(item => {
+  brotherhoodNames.forEach(item => {
       item.classList.remove('active');
     });
-    boardGroups.forEach(item => {
+    brotherhoodContent.forEach(item => {
         item.classList.remove('active');
       });
     document.getElementById(this.dataset.id).classList.add('active');;
     this.classList.add('active');
 }
 
-boardNames.forEach(item => {
+brotherhoodNames.forEach(item => {
     item.addEventListener('click', clickEvent);
   });
