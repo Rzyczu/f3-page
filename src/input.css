@@ -299,5 +299,33 @@
   .brotherhood-content.active {
     @apply inline-block;
   }
+  
+  #hamburger-open svg:hover .top,
+  #hamburger-open svg:hover .bottom,
+  #hamburger-close svg:hover .top,
+  #hamburger-close svg:hover .bottom {
+    @apply origin-[50%_10%] transition-all duration-700 ease-[ease-in-out];
+  }
+  #hamburger-open svg:hover .top {
+    @apply rotate-[-20deg] -translate-x-[10px] -translate-y-[2px];
+  }
+  #hamburger-open svg:hover .bottom {
+    @apply rotate-[20deg] translate-y-[4px];
+  }
+  #hamburger-close svg:hover .top {
+    @apply rotate-[-25deg] translate-x-[5px] translate-y-[3px];
+  }
+  #hamburger-close svg:hover .bottom {
+    @apply rotate-[25deg]  translate-y-[-3px];
+  }
+  /* #hamburger-open svg:hover .text,
+    #hamburger-close svg:hover .text {
+     opacity: 0;
+     transition: all 300ms ease-in-out;
+   } */
 
+   #mobile-navbar {
+    @apply transition-all duration-700 ease-[ease-in-out];
+
+  }
 }

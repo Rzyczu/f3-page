@@ -35,71 +35,67 @@
         class="hidden py-2 text-xs font-bold text-gray-light hover:text-primary sm:px-3 sm:text-sm lg:block">Wesprzyj
         nas</a>
       <a href="#"
-        class="hidden py-2 font-semibold lg:font-bold text-gray-light display-mobile textext-sm sm:block hover:text-primary sm:px-3 sm:text-md">Kontakt</a>
+        class="hidden py-2 text-xs font-semibold md:font-bold text-gray-light display-mobile sm:block hover:text-primary sm:px-3 sm:text-sm">Kontakt</a>
       <a href="#"
-        class="hidden py-2 text-sm font-semibold lg:font-bold text-gray-light display-mobile sm:block hover: hover:text-primary sm:px-3 sm:text-md lg:hidden ">1%</a>
+        class="hidden py-2 text-sm font-semibold md:font-bold text-gray-light display-mobile sm:block hover: hover:text-primary sm:px-3 sm:text-sm lg:hidden ">1%</a>
       <!-- </div> -->
 
 
 
       <div
-        class="inline-flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-        <button id="hamburger-open" onclick="navDropdown(this)" type="button" class="w-10">
-          <svg class="w-full overflow-hidden group" xmlns="http://www.w3.org/2000/svg" width="63.835" height="40.5"
-            viewBox="0 0 63.835 40.5">
-            <g id="Group_182" data-name="Group 182" transform="translate(-1734.165 -75.5)">
-              <line class="stroke-gray-light group-hover:stroke-primary" id=" Line_20" data-name="Line 20" x2="40.278"
-                transform="translate(1753.318 88.101)" stroke-linecap="square" stroke-width="2" />
-              <line class="stroke-gray-light group-hover:stroke-primary" id="Line_21" data-name="Line 21" x2="58.431"
-                transform="translate(1735.165 76.5)" stroke-linecap="square" stroke-width="2" />
-              <text id="menu" transform="translate(1743 111)" class="fill-gray-light group-hover:fill-primary"
-                font-size="18" font-family="Montserrat-Regular, Montserrat">
-                <tspan x="0" y="0">menu</tspan>
-              </text>
-            </g>
+        class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <button id="hamburger-open" onclick="navDropdown(this)" type="button" class="w-10 overflow-visible">
+
+          <svg class="w-full overflow-visible group" viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.2471 10.3047H48.2921" class="top stroke-gray-light group-hover:stroke-primary" stroke-width="2"
+              stroke-linecap="square" />
+            <path d="M1.80371 1.07422H48.2917" class="bottom stroke-gray-light group-hover:stroke-primary"
+              stroke-width="2" stroke-linecap="square" />
+            <text id="menu" class="text fill-gray-light group-hover:fill-primary" font-size="14"
+              font-family="Montserrat-Regular, Montserrat">
+              <tspan x="5" y="28">menu</tspan>
+            </text>
           </svg>
 
         </button>
         <button id="hamburger-close" onclick="navDropdown(this)" type="button"
           class="content-end hidden w-10 hover:text-primary">
-          <svg class="w-4/5 overflow-hidden group " xmlns="http://www.w3.org/2000/svg" width="50" height="40.5"
-            viewBox="0 0 46 44.716">
-            <text id="close" transform="translate(0 39.716)" class="fill-gray-light group-hover:fill-white"
-              font-size="18" font-family="Montserrat-Regular, Montserrat">
-              <tspan x="0" y="0">close</tspan>
+          <svg class="w-full overflow-hidden group" viewBox=" 0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.23389 1.39453L27.5359 12.6405" class="top stroke-gray-light group-hover:stroke-white"
+              stroke-width="1.5" stroke-linecap="square" />
+            <path d="M2.23389 13.1245L27.5359 1.39453" class="bottom stroke-gray-light group-hover:stroke-white"
+              stroke-width="1.5" stroke-linecap="square" />
+            <text id="menu" class="text fill-gray-light group-hover:fill-white" font-size="9"
+              font-family="Montserrat-Regular, Montserrat">
+              <tspan x="4" y="22">close</tspan>
             </text>
-            <line id="Line_35" data-name="Line 35" x2="40.5" y2="18.001" transform="translate(2.5 1.328)"
-              class="stroke-gray-light group-hover:stroke-white" stroke-linecap="square" stroke-width="2" />
-            <line id="Line_34" data-name="Line 34" y1="18.776" x2="40.5" transform="translate(2.5 1.328)"
-              class="stroke-gray-light group-hover:stroke-white" stroke-linecap="square" stroke-width="2" />
           </svg>
+
 
         </button>
       </div>
 
     </div>
-    <div id="mobile-navbar" class="hidden">
-      <div class="h-screen transition-all bg-primary">
-        <div class="relative flex justify-center mt-20">
-          <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
-            <a href="./about.html"
-              class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">O
-              nas</a>
-            <a href="#"
-              class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Dołącz do
-              nas</a>
-            <a href="#"
-              class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Nasza
-              twórczość</a>
-            <a href="#"
-              class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Wesprzyj
-              nas</a>
-            <a href="#"
-              class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Kontakt</a>
-          </div>
+    <div id="mobile-navbar" class="hidden h-screen bg-primary">
+      <div class="relative flex justify-center mt-20">
+        <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
+          <a href="./about.html"
+            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">O
+            nas</a>
+          <a href="#"
+            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Dołącz do
+            nas</a>
+          <a href="#"
+            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Nasza
+            twórczość</a>
+          <a href="#"
+            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Wesprzyj
+            nas</a>
+          <a href="#"
+            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Kontakt</a>
         </div>
-        <img src="./assets/svg/oboz.svg" class="top-0 right-0 z-10 hidden pl-16 w-52 md:display" alt="Flowbite Logo" />
       </div>
+      <img src="./assets/svg/oboz.svg" class="top-0 right-0 z-10 hidden pl-16 w-52 md:block" alt="Flowbite Logo" />
     </div>
   </nav>
 
