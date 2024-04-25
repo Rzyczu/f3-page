@@ -11,7 +11,9 @@ function navDropdown(e) {
   console.log(navbar);
   
   e === openBtn?
-     ( mobileNavbar.classList.remove('hidden'),
+     ( 
+     setTimeout(function() {
+      mobileNavbar.classList.remove('hidden'),
       closeBtn.classList.remove('hidden'),
       openBtn.classList.add('hidden'),
       navbarBrand.classList.add('hidden'),
@@ -23,9 +25,13 @@ function navDropdown(e) {
         element.classList.remove('hidden');
         element.classList.remove('hover:text-primary');
         element.classList.add('hover:text-white');
-      }))
+      })
+     }, 300)
+     )
   :
-      (mobileNavbar.classList.add('hidden'),
+  (
+  setTimeout(function() {
+      mobileNavbar.classList.add('hidden'),
       openBtn.classList.remove('hidden'),
       closeBtn.classList.add('hidden'),
       navbarBrand.classList.remove('hidden'),
@@ -37,5 +43,7 @@ function navDropdown(e) {
         element.classList.add('hidden');
         element.classList.add('hover:text-primary');
         element.classList.remove('hover:text-white')
-      }))
+      })
+    }, 300)
+     )
   }
