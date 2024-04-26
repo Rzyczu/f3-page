@@ -185,10 +185,12 @@
     @apply opacity-0;
     @apply scale-0;
     @apply absolute;
-    @apply transition-all duration-500 ease-[ease-in-out];  
+    @apply max-md:bottom-0;
+    @apply transition-opacity duration-500 ease-[ease-in-out];  
   }
 
   .slide-content.active {
+    @apply relative;
     @apply opacity-100;
     @apply scale-100;
     @apply delay-200;
@@ -301,6 +303,7 @@
     @apply opacity-100;
     @apply delay-200;
     @apply scale-100;
+    @apply relative;
   }
 
   .brotherhood-menu {
