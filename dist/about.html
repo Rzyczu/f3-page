@@ -15,7 +15,7 @@
 
   <nav class="sm:bg-transparent text-gray-light" id="navbar">
     <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-14">
-      <a href="./index.html" class="flex md:basis-2/3 lg:basis-1/3 xl:basis-1/2">
+      <a href="./index.html" class="flex md:basis-2/3 lg:basis-1/3 xl:basis-1/2 hover:text-primary">
         <img src="./assets/svg/logo-gray.svg" class="h-8" alt="Flowbite Logo" />
         <span id="navbar-brand" class="pl-2 text-xs text-gray-ligh">3 Podgórski Szczep Fioletowej Trójki </br> im.
           Tadeusza Kościószki</span>
@@ -39,13 +39,9 @@
       <a href="#"
         class="hidden py-2 text-sm font-semibold md:font-bold text-gray-light display-mobile sm:block hover: hover:text-primary sm:px-3 sm:text-sm lg:hidden ">1%</a>
       <!-- </div> -->
-
-
-
       <div
         class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <button id="hamburger-open" onclick="navDropdown(this)" type="button" class="w-10 overflow-visible">
-
           <svg class="w-full overflow-visible group" viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.2471 10.3047H48.2921" class="top stroke-gray-light group-hover:stroke-primary" stroke-width="2"
               stroke-linecap="square" />
@@ -56,7 +52,6 @@
               <tspan x="5" y="28">menu</tspan>
             </text>
           </svg>
-
         </button>
         <button id="hamburger-close" onclick="navDropdown(this)" type="button"
           class="content-end hidden w-10 hover:text-primary">
@@ -70,32 +65,32 @@
               <tspan x="4" y="22">close</tspan>
             </text>
           </svg>
-
-
         </button>
       </div>
 
     </div>
-    <div id="mobile-navbar" class="hidden h-screen bg-primary">
+    <div id="mobile-navbar" class="h-screen bg-primary">
       <div class="relative flex justify-center mt-20">
         <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
           <a href="./about.html"
-            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">O
+            class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle ">O
             nas</a>
           <a href="#"
-            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Dołącz do
+            class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Dołącz
+            do
             nas</a>
           <a href="#"
-            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Nasza
+            class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Nasza
             twórczość</a>
           <a href="#"
-            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Wesprzyj
+            class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Wesprzyj
             nas</a>
           <a href="#"
-            class="relative px-3 py-2 text-2xl text-gray-light font-lg hover:text-white hover-left-circle">Kontakt</a>
+            class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Kontakt</a>
         </div>
       </div>
-      <img src="./assets/svg/oboz.svg" class="top-0 right-0 z-10 hidden pl-16 w-52 md:block" alt="Flowbite Logo" />
+      <img src="./assets/svg/oboz.svg" class="hidden bottom-20 right-20 md:block md:absolute w-52"
+        alt="Flowbite Logo" />
     </div>
   </nav>
 
@@ -275,11 +270,11 @@
       </div>
       <div class="board">
         <div class="board-menu">
-          <h3 class="board-group-name active" data-id="board-personnel">Kadra</h3>
-          <h3 class="board-group-name" data-id="board-leaders">Drużynowi</h3>
-          <h3 class="board-group-name" data-id="board-instructors">instruktorzy</h3>
+          <h3 class="board-group-name active" id="board-personnel">Kadra</h3>
+          <h3 class="board-group-name" id="board-leaders">Drużynowi</h3>
+          <h3 class="board-group-name" id="board-instructors">instruktorzy</h3>
         </div>
-        <div class="board-group active" id="board-personnel">
+        <div class="board-group active" data-id="board-personnel">
           <div class="person-card">
             <img alt="HTML badge " class="person-image" src="./assets/news-1.jpg">
             <h4 class="person-title">Szczepowy</h4>
@@ -311,7 +306,7 @@
             <p class="person-name">hm. Radosław Kurek HR</p>
           </div>
         </div>
-        <div class="board-group" id="board-leaders">
+        <div class="board-group" data-id="board-leaders">
           <div class="person-card">
             <img alt="HTML badge " class="person-image" src="./assets/news-1.jpg">
             <h4 class="person-title">Drużynowy</h4>
@@ -343,7 +338,7 @@
             <p class="person-name">hm. Radosław Kurek HR</p>
           </div>
         </div>
-        <div class="board-group" id="board-instructors">
+        <div class="board-group" data-id="board-instructors">
           <div class="person-card">
             <img alt="HTML badge " class="person-image" src="./assets/news-1.jpg">
             <h4 class="person-title">Instruktor</h4>
@@ -392,28 +387,28 @@
       </div>
       <div class="brotherhood">
         <div class="brotherhood-photos">
-          <img alt="HTML badge" class="brotherhood-photo active" src="./assets/news-1.jpg">
-          <img alt="HTML badge" class="brotherhood-photo" src="./assets/news-2.jpg">
-          <img alt="HTML badge" class="brotherhood-photo" src="./assets/news-3.jpg">
+          <img alt="HTML badge" class="brotherhood-photo active" src="./assets/news-1.jpg" data-id="brotherhood-1">
+          <img alt="HTML badge" class="brotherhood-photo" src="./assets/news-2.jpg" data-id="brotherhood-2">
+          <img alt="HTML badge" class="brotherhood-photo" src="./assets/news-3.jpg" data-id="brotherhood-3">
         </div>
         <div class="brotherhood-menu">
-          <h3 class="brotherhood-group-name active" data-id="brotherhood-1">III sztandar 2001</h3>
-          <h3 class="brotherhood-group-name" data-id="brotherhood-2">II sztandar 1967</h3>
-          <h3 class="brotherhood-group-name" data-id="brotherhood-3">I sztandar 1931</h3>
+          <h3 class="brotherhood-group-name active" id="brotherhood-1">III sztandar 2001</h3>
+          <h3 class="brotherhood-group-name" id="brotherhood-2">II sztandar 1967</h3>
+          <h3 class="brotherhood-group-name" id="brotherhood-3">I sztandar 1931</h3>
         </div>
-        <div class="brotherhood-content active" id="brotherhood-1">
+        <div class="brotherhood-content active" data-id="brotherhood-1">
           <p>Nam magna ante, efficitur eu lorem eget, viverra volutpat libero. Proin ut tellus eget ante dignissim
             faucibus. Proin dolor nunc, lacinia vitae ornare sed, maximus id orci. Phasellus suscipit ut leo vitae
             feugiat. Aliquam auctor mattis enim, ut condimentum elit interdum ut. Vivamus arcu leo, posuere vitae
             porttitor vitae, tincidunt ac ex. Ut congue ipsum a dui tempor, a congue nisl sagittis.</p>
         </div>
-        <div class="brotherhood-content" id="brotherhood-2">
+        <div class="brotherhood-content" data-id="brotherhood-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a tincidunt sapien. Vestibulum
             volutpat erat vel ex dapibus mollis. In id convallis odio, in finibus dolor. Fusce suscipit nisl sem, a
             bibendum nisl blandit eget. Curabitur dignissim faucibus varius. Cras fringilla sapien ut tortor
             lacinia, vitae efficitur nunc tristique. Duis id libero est. Curabitur aliquet ornare commodo.</p>
         </div>
-        <div class="brotherhood-content" id="brotherhood-3">
+        <div class="brotherhood-content" data-id="brotherhood-3">
           <p>Fusce vitae ligula sed orci lacinia viverra id et nunc. Mauris quis efficitur felis. Nulla luctus eget
             la cus ut fringilla. Nunc eu lectus dui. Vestibulum luctus mollis felis et finibus. Quisque egestas ac
             lacus sed consequat. Etiam sed eleifend est, nec ultrices arcu. Integer sit amet rhoncus dui, quis

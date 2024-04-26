@@ -8,8 +8,9 @@ function clickEvent() {
     boardGroups.forEach(item => {
         item.classList.remove('active');
       });
-    document.getElementById(this.dataset.id).classList.add('active');;
+    // document.getElementById(this.dataset.id).classList.add('active');;
     this.classList.add('active');
+    document.querySelector(`[data-id="${this.id}"]`).classList.add('active');;
 }
 
 boardNames.forEach(item => {

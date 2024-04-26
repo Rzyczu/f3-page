@@ -25,10 +25,6 @@
 }
 
 @layer components {
-  #navbar-index {
-    @apply bg-primary;
-  }
-  
   .hover-left-circle {
     @apply hover:before:content-[''];
     @apply hover:before:block;
@@ -37,6 +33,8 @@
     @apply hover:before:h-3;
     @apply hover:before:border-solid;
     @apply hover:before:border;
+    @apply hover:before:border-white;
+    @apply hover:before:border-[2px];
     @apply hover:before:rounded-full;
     @apply hover:before:top-1/2;
     @apply hover:before:-translate-y-1/2;
@@ -51,7 +49,9 @@
     @apply before:absolute;
     @apply before:h-5/6;
     @apply before:border;
+    @apply before:border-[1px];
     @apply before:border-solid;
+    @apply before:border-white;
     @apply before:top-1/2;
     @apply before:-translate-y-1/2;
     @apply before:left-[calc(-0.7rem)];
@@ -135,17 +135,20 @@
     @apply items-center;
     @apply justify-center;
     @apply overflow-hidden;
+    @apply transition-opacity duration-700 ease-[ease-in-out];  
+
   }
 
   .slide-image.active {
     @apply opacity-100;
-    @apply delay-[0.5s];
+    @apply delay-200;
     @apply scale-100;
+    
   }
 
   .slide-image {
     @apply absolute;
-    @apply transition-[0.5s];
+    @apply transition-all duration-500 ease-[ease-in-out];  
     @apply w-4/5;
     @apply h-4/5;
     @apply rounded-[50%];
@@ -179,12 +182,18 @@
   }
   
   .slide-content {
-    @apply hidden;
+    @apply opacity-0;
+    @apply scale-0;
+    @apply absolute;
+    @apply transition-all duration-500 ease-[ease-in-out];  
   }
 
   .slide-content.active {
-    @apply block;
-  }
+    @apply opacity-100;
+    @apply scale-100;
+    @apply delay-200;
+
+    }
 
   .board-menu {
     @apply flex justify-around mt-16 mb-16;
@@ -197,7 +206,8 @@
     @apply cursor-pointer;
   }
 
-  .board-group-name.active {
+  .board-group-name.active,
+  .board-group-name:hover {
     @apply text-primary;
   }
 
@@ -205,11 +215,20 @@
     @apply grid items-center;
     @apply grid-cols-2 md:grid-cols-3 ;
     @apply gap-4 sm:gap-6 md:gap-10 lg:gap-20;
-    @apply hidden;
+    
+    @apply absolute;
+    @apply opacity-0;
+    @apply scale-0;
+    @apply transition-opacity duration-700 ease-[ease-in-out];  
   }
 
   .board-group.active {
-    @apply grid;;
+    @apply relative;
+    @apply grid;
+    @apply opacity-100;
+    @apply scale-100;
+    @apply delay-200;
+
   }
 
   .person-card{
@@ -269,11 +288,19 @@
     @apply overflow-hidden;
     @apply object-cover;
     @apply mb-2;
-    @apply hidden;
+    @apply scale-0;
+    @apply opacity-0;
+    @apply absolute;
+    @apply transition-opacity duration-500 ease-[ease-in-out];  
+
+
   }
 
   .brotherhood-photo.active {
     @apply block;
+    @apply opacity-100;
+    @apply delay-200;
+    @apply scale-100;
   }
 
   .brotherhood-menu {
@@ -287,17 +314,25 @@
     @apply cursor-pointer;
   }
 
-  .brotherhood-group-name.active {
+  .brotherhood-group-name.active,
+  .brotherhood-group-name:hover {
     @apply text-primary;
   }
 
   .brotherhood-content {
-    @apply hidden;
     @apply max-md:col-span-2;
+    @apply absolute;
+    @apply opacity-0;
+    @apply scale-0;
+    @apply transition-opacity duration-500 ease-[ease-in-out];  
   }
 
   .brotherhood-content.active {
     @apply inline-block;
+    @apply relative;
+    @apply opacity-100;
+    @apply scale-100;
+    @apply delay-200;
   }
   
   #hamburger-open:focus svg .top,
@@ -306,25 +341,37 @@
   #hamburger-close:focus svg .bottom {
     @apply origin-[50%_10%] transition-all duration-300 ease-[ease-in-out];
   }
+
   #hamburger-open:focus svg .top {
     @apply rotate-[-20deg] -translate-x-[10px] -translate-y-[2px];
   }
+
   #hamburger-open:focus svg .bottom {
     @apply rotate-[20deg] translate-y-[4px];
   }
+
   #hamburger-close:focus svg .top {
     @apply rotate-[-25deg] translate-x-[5px] translate-y-[3px];
   }
+
   #hamburger-close:focus svg .bottom {
     @apply rotate-[25deg]  translate-y-[-3px];
   }
+
   /* #hamburger-open:focus svg .text,
     #hamburger-close:focus svg .text {
      opacity: 0;
      transition: all 300ms ease-in-out;
    } */
 
-   #mobile-navbar {
-    @apply transition-all duration-300 ease-[ease-in-out];
+  #mobile-navbar {
+    @apply opacity-0;
+    @apply h-0;
+    @apply transition-all duration-1000 ease-[ease-in-out];
+  }
+
+  #mobile-navbar.active {
+    @apply opacity-100;
+    @apply h-screen;
   }
 }

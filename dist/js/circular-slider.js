@@ -48,7 +48,7 @@ carousels.forEach((carousel) => {
     slideNames.forEach(item => {
       item.classList.remove('active');
     });
-    const elements = carousel.querySelectorAll(`[data-id="${this.dataset.id}"]`);
+    let elements = carousel.querySelectorAll(`[data-id="${this.dataset.id}"]`);
     elements.forEach(element => {
       element.classList.add('active');
     });
