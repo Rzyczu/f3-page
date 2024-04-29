@@ -1894,6 +1894,11 @@ h3 {
     align-self: center;
   }
 
+  .max-md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 251 247 / var(--tw-bg-opacity));
+  }
+
   .max-md\:pb-14 {
     padding-bottom: 3.5rem;
   }
@@ -1927,6 +1932,11 @@ h3 {
 
   .max-sm\:w-full {
     width: 100%;
+  }
+
+  .max-sm\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 251 247 / var(--tw-bg-opacity));
   }
 
   .max-sm\:pb-16 {
@@ -1991,6 +2001,11 @@ h3 {
   .sm\:my-24 {
     margin-top: 6rem;
     margin-bottom: 6rem;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sm\:mb-0 {
@@ -2145,6 +2160,11 @@ h3 {
 
   .md\:m-20 {
     margin: 5rem;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .md\:block {
