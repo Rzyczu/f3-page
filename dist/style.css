@@ -615,6 +615,11 @@ h3 {
   }
 }
 
+[aria-current="page"] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(113 76 152 / var(--tw-text-opacity)) !important;
+}
+
 .hover-left-circle:hover::before {
   --tw-content: '';
   display: block;
@@ -1072,53 +1077,58 @@ h3 {
   font-weight: 500;
 }
 
+.board-group.active[data-id="board-personnel"] .person-card:first-child {
+  position: relative;
+}
+
 @media not all and (min-width: 768px) {
-  #board-personnel .person-card:first-child {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child {
     grid-column: span 2 / span 2;
   }
 }
 
 @media (min-width: 768px) {
-  #board-personnel .person-card:first-child {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child {
     grid-row: span 2 / span 2;
+    margin-bottom: 0px;
   }
 }
 
-#board-personnel .person-card:first-child img {
+.board-group.active[data-id="board-personnel"] .person-card:first-child img {
   position: relative;
   width: 10rem;
   height: 10rem;
 }
 
 @media (min-width: 640px) {
-  #board-personnel .person-card:first-child img {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child img {
     width: 14rem;
     height: 14rem;
   }
 }
 
 @media (min-width: 768px) {
-  #board-personnel .person-card:first-child img {
-    width: 13rem;
-    height: 13rem;
+  .board-group.active[data-id="board-personnel"] .person-card:first-child img {
+    width: 12rem;
+    height: 12rem;
   }
 }
 
 @media (min-width: 1024px) {
-  #board-personnel .person-card:first-child img {
-    width: 16rem;
-    height: 16rem;
+  .board-group.active[data-id="board-personnel"] .person-card:first-child img {
+    width: 15rem;
+    height: 15rem;
   }
 }
 
 @media (min-width: 1280px) {
-  #board-personnel .person-card:first-child img {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child img {
     width: 20rem;
     height: 20rem;
   }
 }
 
-#board-personnel .person-card:first-child .person-title {
+.board-group.active[data-id="board-personnel"] .person-card:first-child .person-title {
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -1786,6 +1796,10 @@ h3 {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-semibold {

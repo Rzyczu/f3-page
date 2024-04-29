@@ -25,6 +25,10 @@
 }
 
 @layer components {
+  [aria-current="page"] {
+    @apply text-primary !important;
+  }
+
   .hover-left-circle {
     @apply hover:before:content-[''];
     @apply hover:before:block;
@@ -254,19 +258,19 @@
     @apply mb-2 text-xl font-medium;
   }
 
-  #board-personnel .person-card:first-child {
-    @apply max-md:col-span-2 md:row-span-2;
+  .board-group.active[data-id="board-personnel"] .person-card:first-child {
+    @apply relative md:mb-0 max-md:col-span-2 md:row-span-2 ;
   }
 
-  #board-personnel .person-card:first-child img {
-    @apply relative size-40 sm:size-56 md:size-52 lg:size-64 xl:size-80;
+  .board-group.active[data-id="board-personnel"] .person-card:first-child img {
+    @apply relative size-40 sm:size-56 md:size-48 lg:size-60 xl:size-80;
   }
 
-  #board-personnel .person-card:first-child .person-title {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child .person-title {
     @apply text-2xl 
   }
 
-  #board-personnel .person-card:first-child .person-title {
+  .board-group.active[data-id="board-personnel"] .person-card:first-child .person-title {
     @apply text-2xl 
   }
 
