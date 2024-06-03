@@ -184,6 +184,12 @@
     @apply basis-[calc(50%-2rem)];
     @apply text-primary-light hover:text-primary;
   }
+
+  .slide-media{
+    @apply flex;
+    @apply gap-8 sm:gap-16;
+    @apply pt-6;
+  }
   
   .slide-content {
     @apply opacity-0;
@@ -254,7 +260,7 @@
     @apply mb-2;
   }
 
-  .person-title {
+  .person-title, .slide-title {
     @apply mb-2 text-xl font-medium;
   }
 
