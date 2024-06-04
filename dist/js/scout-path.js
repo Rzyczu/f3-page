@@ -1,5 +1,5 @@
 let scoutPathContent = document.querySelectorAll('.scout-path-content');
-let scoutPathElements = document.querySelectorAll('.scout-path-elements');
+let scoutPathElements = document.querySelectorAll('.scout-path-element');
 
 function clickEvent() {
   scoutPathElements.forEach(item => {
@@ -9,11 +9,9 @@ function clickEvent() {
       item.classList.remove('active');
     });
 
-    let elements = document.querySelector(`[data-id="${this.id}"]`);
+    let element = document.querySelector(`[data-id="${this.id}"]`);
     console.log(this);
-    elements.forEach(element => {
       element.classList.add('active');
-    });
     this.classList.add('active');
 }
 
