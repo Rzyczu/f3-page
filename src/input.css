@@ -185,6 +185,11 @@
     @apply text-primary-light hover:text-primary;
   }
 
+  .color-white svg g path{
+    fill: antiquewhite;
+    stroke: aliceblue
+}
+
   .slide-media{
     @apply flex;
     @apply gap-8 sm:gap-16;

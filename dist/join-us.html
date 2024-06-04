@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+        href="/css/app-wa-d53d10572a0e0d37cb8d614a3f177a0c.css?vsn=d">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+
+</head>
+
+<body class="bg-white">
+
+    <nav class="sm:bg-transparent text-gray-light" id="navbar">
+        <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-14">
+            <a href="./index.html" class="flex md:basis-2/3 lg:basis-1/3 xl:basis-1/2">
+                <img src="./assets/svg/logo-gray.svg" class="h-8" alt="Flowbite Logo" />
+                <span id="navbar-brand" class="pl-2 text-xs font-medium text-gray-ligh">3 Podgórski Szczep Fioletowej
+                    Trójki<br /> im.
+                    Tadeusza Kościószki</span>
+            </a>
+
+            <!-- <div class="flex justify-around space-x-2 sm:space-x-3 basis-1/3 sm:basis-1/2 md:basis-2/3 xl:basis-1/2 lg:basis-3/5 md:justify-end"> -->
+            <a href="./about-us.html"
+                class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">O nas</a>
+            <a href="./join-us.html"
+                class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block"
+                aria-current="page">Dołącz
+                do nas</a>
+            <a href="#"
+                class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">Nasza
+                twórczość</a>
+            <a href="#"
+                class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">Wesprzyj
+                nas</a>
+            <a href="#"
+                class="hidden py-2 text-sm font-semibold text-gray-light display-mobile sm:block hover:text-primary sm:px-3 sm:text-sm">Kontakt</a>
+            <a href="#"
+                class="hidden py-2 text-sm font-semibold text-gray-light display-mobile sm:block hover: hover:text-primary sm:px-3 sm:text-sm lg:hidden ">1%</a>
+            <!-- </div> -->
+            <div
+                class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <button id="hamburger-open" onclick="navDropdown(this)" type="button" class="w-10 overflow-visible">
+                    <svg class="w-full overflow-visible group" viewBox="0 0 50 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.2471 10.3047H48.2921" class="top stroke-gray-light group-hover:stroke-primary"
+                            stroke-width="2" stroke-linecap="square" />
+                        <path d="M1.80371 1.07422H48.2917" class="bottom stroke-gray-light group-hover:stroke-primary"
+                            stroke-width="2" stroke-linecap="square" />
+                        <text id="menu" class="text fill-gray-light group-hover:fill-primary" font-size="14"
+                            font-family="Montserrat-Regular, Montserrat">
+                            <tspan x="5" y="28">menu</tspan>
+                        </text>
+                    </svg>
+                </button>
+                <button id="hamburger-close" onclick="navDropdown(this)" type="button"
+                    class="content-end hidden w-10 hover:text-primary">
+                    <svg class="w-full overflow-hidden group" viewBox=" 0 0 29 26" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.23389 1.39453L27.5359 12.6405"
+                            class="top stroke-gray-light group-hover:stroke-white" stroke-width="1.5"
+                            stroke-linecap="square" />
+                        <path d="M2.23389 13.1245L27.5359 1.39453"
+                            class="bottom stroke-gray-light group-hover:stroke-white" stroke-width="1.5"
+                            stroke-linecap="square" />
+                        <text id="menu" class="text fill-gray-light group-hover:fill-white" font-size="9"
+                            font-family="Montserrat-Regular, Montserrat">
+                            <tspan x="4" y="22">close</tspan>
+                        </text>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        <div id="mobile-navbar" class="h-screen bg-primary">
+            <div class="relative flex justify-center mt-20">
+                <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
+                    <a href="./about.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle ">O
+                        nas</a>
+                    <a href="#"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Dołącz
+                        do
+                        nas</a>
+                    <a href="#"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Nasza
+                        twórczość</a>
+                    <a href="#"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Wesprzyj
+                        nas</a>
+                    <a href="#"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle">Kontakt</a>
+                </div>
+            </div>
+            <img src="./assets/svg/camp.svg" class="hidden bottom-20 right-20 md:block md:absolute w-52"
+                alt="Flowbite Logo" />
+        </div>
+    </nav>
+
+    <section class="relative items-center sm:flex">
+        <img src="./assets/svg/lake.svg"
+            class="right-0 sm:absolute max-sm:pb-16 max-sm:pl-6 max-sm:mx-0 sm:w-1/2 lg:w-1/2" alt="Flowbite Logo" />
+        <div class="container mx-auto mb-24 bg-white text-primary">
+            <div class="w-3/4 sm:pt-12 sm:pb-12 sm:w-5/12">
+                <h1 class="mb-4">Dołącz do nas</h1>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <div class="horizontal-line">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative mb-24 text-white bg-primary">
+        <div class="container flex items-start pt-24 pb-24 mx-auto max-md:flex-col-reverse">
+            <div class="pt-12 md:w-1/2">
+                <h2 class="mb-4">Krok po kroku</h2>
+                <p class="mb-6">Jeżeli szukasz drużyny dla siebie lub dla swojego dziecka lub chcesz z nami działać jako
+                    dorosły to znajdziesz tutaj jak to zrobić:</p>
+                <div>
+                    <object type="image/svg+xml" data="./assets/svg/compass.svg" class="svg-icon color-white"
+                        id="compass-icon"></object>
+                    <img src="./assets/svg/glasses.svg" class="text-white fill-white" alt="Flowbite Logo" />
+                    <img src="./assets/svg/ciphers.svg" class="" alt="Flowbite Logo" />
+                    <img src="./assets/svg/notebook-menu.svg" class="" alt="Flowbite Logo" />
+                    <img src="./assets/svg/pennon.svg" class="" alt="Flowbite Logo" />
+                    <img src="./assets/svg/river.svg" class="" alt="Flowbite Logo" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script defer src="./js/navbar.js"></script>
+
+</html>
