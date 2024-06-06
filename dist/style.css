@@ -1563,6 +1563,16 @@ section{
   margin-bottom: 0px;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -2149,6 +2159,11 @@ section{
   .max-sm\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .max-sm\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .max-sm\:mt-10 {
