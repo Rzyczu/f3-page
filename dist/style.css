@@ -1371,12 +1371,7 @@ section{
   justify-content: center;
   width: 100%;
   padding-top: 4rem;
-}
-
-@media (min-width: 640px) {
-  .scout-path-elements {
-    gap: 1rem;
-  }
+  gap: 1rem;
 }
 
 @media not all and (min-width: 640px) {

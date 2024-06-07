@@ -379,7 +379,7 @@
     @apply justify-center;
     @apply w-full;
     @apply pt-16;
-    @apply sm:gap-4; 
+    @apply gap-4; 
     @apply max-sm:flex-wrap
   }
 
