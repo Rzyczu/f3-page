@@ -194,7 +194,8 @@
   }
 
   .slider-names {
-    @apply grid grid-cols-2 gap-x-8 gap-y-2;
+    @apply grid grid-cols-2;
+    @apply gap-x-8 gap-y-2;
     @apply mb-12;
   }
 
@@ -289,11 +290,14 @@
   }
 
   .board-group.active[data-id="board-personnel"] .person-card:first-child {
-    @apply relative md:mb-0 max-md:col-span-2 md:row-span-2 ;
+    @apply relative;
+    @apply md:mb-0;
+    @apply max-md:col-span-2 md:row-span-2 ;
   }
 
   .board-group.active[data-id="board-personnel"] .person-card:first-child img {
-    @apply relative size-40 sm:size-56 md:size-48 lg:size-60 xl:size-80;
+    @apply relative;
+    @apply size-40 sm:size-56 md:size-48 lg:size-60 xl:size-80;
   }
 
   .board-group.active[data-id="board-personnel"] .person-card:first-child .person-title {
@@ -309,7 +313,8 @@
     @apply grid-cols-2; 
     @apply md:grid-cols-[repeat(2,auto)];
     @apply gap-x-2 md:gap-x-16 lg:gap-x-20 max-md:gap-y-8;
-    @apply max-md:items-center max-md:justify-items-center;
+    @apply max-md:items-center;
+    @apply max-md:justify-items-center;
 
   }
 
@@ -341,7 +346,9 @@
   }
 
   .brotherhood-menu {
-    @apply flex flex-col gap-2 md:mb-6;
+    @apply flex flex-col;
+    @apply gap-2;
+    @apply md:mb-6;
   }
 
   .brotherhood-group-name {
@@ -402,12 +409,38 @@
   
   .scout-path-content.active {
     @apply pt-16;
-    @apply md:w-1/2;
     @apply inline-block;
     @apply relative;
     @apply opacity-100;
     @apply scale-100;
     @apply delay-200;
+  }
+
+  .input{
+    @apply text-primary;
+    @apply bg-white;
+    @apply border-4;
+    @apply border-primary-light;
+    @apply rounded-full;
+    @apply px-4;
+    @apply py-2;
+    @apply w-1/2;
+    @apply outline-none;
+    @apply focus:border-primary-dark;
+    @apply focus:ring-2;
+    @apply focus:ring-primary-dark;
+    @apply focus:ring-opacity-50;
+    @apply transition-all duration-300 ease-[ease-in-out];
+    @apply placeholder-primary-light;
+    @apply mb-4;
+  }
+
+  textarea {
+    @apply h-24;
+    @apply rounded-2xl !important;
+    @apply w-full !important;
+
+
   }
 
   #hamburger-open:focus svg .top,
