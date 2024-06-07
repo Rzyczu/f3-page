@@ -373,7 +373,14 @@
   }
 
   .scout-path-elements {
-    @apply flex flex-row items-center justify-center w-full pt-16 sm:gap-4; 
+    @apply flex; 
+    @apply flex-row; 
+    @apply items-center;
+    @apply justify-center;
+    @apply w-full;
+    @apply pt-16;
+    @apply sm:gap-4; 
+    @apply max-sm:flex-wrap
   }
 
   .scout-path-element {

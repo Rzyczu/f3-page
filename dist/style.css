@@ -1366,16 +1366,22 @@ section{
 
 .scout-path-elements {
   display: flex;
-  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding-top: 4rem;
 }
 
 @media (min-width: 640px) {
   .scout-path-elements {
     gap: 1rem;
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .scout-path-elements {
+    flex-wrap: wrap;
   }
 }
 
@@ -1799,10 +1805,6 @@ section{
 
 .overflow-x-visible {
   overflow-x: visible;
-}
-
-.overflow-y-visible {
-  overflow-y: visible;
 }
 
 .bg-primary {
@@ -2474,23 +2476,15 @@ section{
     right: 6rem;
   }
 
+  .\32xl\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .\32xl\:w-1\/5 {
     width: 20%;
   }
 
   .\32xl\:w-2\/5 {
     width: 40%;
-  }
-
-  .\32xl\:w-1\/3 {
-    width: 33.333333%;
-  }
-
-  .\32xl\:w-1\/6 {
-    width: 16.666667%;
-  }
-
-  .\32xl\:w-1\/4 {
-    width: 25%;
   }
 }
