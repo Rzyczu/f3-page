@@ -25,13 +25,20 @@ function updateClasses() {
 // Initial setup
 updateClasses();
 
-// Event listeners for buttons
-nextBtn.addEventListener('click', () => {
+function nextSlide() {
   active = (active + 1) % opinions.length;
   updateClasses();
-});
+}
 
-prevBtn.addEventListener('click', () => {
+function prevSlide() {
   active = (active - 1 + opinions.length) % opinions.length;
   updateClasses();
-});
+}
+
+// Event listeners for buttons
+nextBtn.addEventListener('click', nextSlide);
+
+prevBtn.addEventListener('click', prevSlide);
+
+
+setInterval(nextSlide, 15000);
