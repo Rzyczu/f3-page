@@ -1473,6 +1473,41 @@ textarea {
   width: 100% !important;
 }
 
+.opinions {
+  height: auto;
+}
+
+.opinions article {
+  position: absolute;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .opinions article {
+    width: 33.333333%;
+  }
+}
+
+.opinions article {
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.opinions article.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.opinions article.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.opinions article.next {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 #hamburger-open:focus svg .top,
   #hamburger-open:focus svg .bottom,
   #hamburger-close:focus svg .top,
@@ -1831,11 +1866,6 @@ textarea {
 .gap-x-12 {
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-}
-
-.gap-x-20 {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2434,10 +2464,6 @@ textarea {
 
   .md\:gap-12 {
     gap: 3rem;
-  }
-
-  .md\:gap-20 {
-    gap: 5rem;
   }
 
   .md\:gap-x-20 {

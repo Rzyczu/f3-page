@@ -439,8 +439,33 @@
     @apply h-24;
     @apply rounded-2xl !important;
     @apply w-full !important;
+  }
 
+.opinions {
+  @apply h-auto;
 
+}
+
+  .opinions article {
+    @apply absolute;
+    @apply w-full md:w-1/3;
+    @apply opacity-0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .opinions article.active {
+    transform: translateX(0);
+    @apply opacity-100;
+  }
+
+  .opinions article.prev {
+    transform: translateX(-100%);
+    @apply opacity-0;
+  }
+
+  .opinions article.next {
+    transform: translateX(100%);
+    @apply opacity-0;
   }
 
   #hamburger-open:focus svg .top,

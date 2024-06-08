@@ -159,7 +159,7 @@
   <section class="my-24 text-white max-sm:my-12 bg-primary">
     <div class="container flex flex-col mx-auto sm:relative sm:block sm:flex-none">
       <div class="order-3 float-right mb-12 sm:translate-y-24 sm:mb-0">
-        <button class="pr-8">
+        <button class="pr-8" id="opinions-prev-btn">
           <svg class="h-4 stroke-white hover:stroke-primary-light hover:scale-x-125" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 57.623 27.941">
             <g id="Group_50" data-name="Group 50" transform="translate(1.459 0.736)">
@@ -170,7 +170,7 @@
             </g>
           </svg>
         </button>
-        <button class="btn strokes">
+        <button class="" id="opinions-next-btn">
           <svg class="h-4 stroke-white hover:stroke-primary-light hover:scale-x-125" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 161.462 27.941">
             <g id="Group_49" data-name="Group 49" transform="translate(160.003 27.205) rotate(180)">
@@ -194,41 +194,43 @@
 
       <div class="order-2 pt-12 pb-12 sm:ml-24 sm:w-1/3 sm:pt-24 sm:pb-40 sm:min-h-96">
         <h2 class="mb-4">Opinie</h2>
-        <article>
-          <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
-            zadowolony
-            z wyjazdów letnich!</p>
-          <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
-        </article>
-        <article>
-          <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
-            zadowolony
-            z wyjazdów letnich!</p>
-          <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
-        </article>
-        <article>
-          <p class="mb-6">Moje dziecko wraca z każdej zbiórki pełne entuzjazmu i nowych pomysłów. Program jest świetnie
-            zorganizowany i dostosowany do różnych zainteresowań.</p>
-          <span class="text-xs"><i>Pan Tomasz, tata zucha</i></span>
-        </article>
-        <article>
-          <p class="mb-6">Jestem pod wrażeniem, jak harcerstwo kształtuje charakter mojego syna. Nauczył się
-            samodzielności i odpowiedzialności, a jednocześnie ma mnóstwo zabawy.</p>
-          <span class="text-xs"><i>Pani Ewa, mama harcerza</i></span>
-        </article>
-        <article>
-          <p class="mb-6">Fantastyczna drużyna! Córka nie może doczekać się każdego kolejnego spotkania. Lubi wszystkie
-            gry i wyzwania, jakie stawia przed nią drużyna.</p>
-          <span class="text-xs"><i>Pani Katarzyna, mama harcerki</i></span>
-        </article>
-        <article>
-          <p class="mb-6">Harcerstwo to najlepsza decyzja, jaką mogliśmy podjąć dla naszego syna. Obóz letni był
-            doskonale zorganizowany, a syn wrócił pełen wrażeń i nowych znajomości.</p>
-          <span class="text-xs"><i>Pan Marek, tata harcerza</i></span>
-        </article>
+        <div class="opinions">
+          <article class="">
+            <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
+              zadowolony
+              z wyjazdów letnich!</p>
+            <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
+          </article>
+          <article class="">
+            <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
+              zadowolony
+              z wyjazdów letnich!</p>
+            <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
+          </article>
+          <article class="">
+            <p class="mb-6">Moje dziecko wraca z każdej zbiórki pełne entuzjazmu i nowych pomysłów. Program jest
+              świetnie
+              zorganizowany i dostosowany do różnych zainteresowań.</p>
+            <span class="text-xs"><i>Pan Tomasz, tata zucha</i></span>
+          </article>
+          <article class="">
+            <p class="mb-6">Jestem pod wrażeniem, jak harcerstwo kształtuje charakter mojego syna. Nauczył się
+              samodzielności i odpowiedzialności, a jednocześnie ma mnóstwo zabawy.</p>
+            <span class="text-xs"><i>Pani Ewa, mama harcerza</i></span>
+          </article>
+          <article class="">
+            <p class="mb-6">Fantastyczna drużyna! Córka nie może doczekać się każdego kolejnego spotkania. Lubi
+              wszystkie
+              gry i wyzwania, jakie stawia przed nią drużyna.</p>
+            <span class="text-xs"><i>Pani Katarzyna, mama harcerki</i></span>
+          </article>
+          <article class="">
+            <p class="mb-6">Harcerstwo to najlepsza decyzja, jaką mogliśmy podjąć dla naszego syna. Obóz letni był
+              doskonale zorganizowany, a syn wrócił pełen wrażeń i nowych znajomości.</p>
+            <span class="text-xs"><i>Pan Marek, tata harcerza</i></span>
+          </article>
+        </div>
       </div>
-
-    </div>
   </section>
 
 
@@ -275,5 +277,6 @@
 
 </body>
 <script defer src="./js/navbar.js"></script>
+<script defer src="./js/opinions.js"></script>
 
 </html>
