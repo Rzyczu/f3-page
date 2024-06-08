@@ -443,7 +443,7 @@
 
 .opinions {
   @apply h-auto;
-
+  @apply overflow-hidden;
 }
 
   .opinions article {
