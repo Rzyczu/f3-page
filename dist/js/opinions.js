@@ -1,6 +1,6 @@
 let opinions = document.querySelectorAll('.opinions article');
-let nextBtn = document.getElementById('opinions-next-btn');
-let prevBtn = document.getElementById('opinions-prev-btn');
+let nextBtnOpinion = document.getElementById('opinions-next-btn');
+let OpinionOpinion = document.getElementById('opinions-prev-btn');
 
 let active = 0;
 
@@ -36,9 +36,9 @@ function prevSlide() {
 }
 
 // Event listeners for buttons
-nextBtn.addEventListener('click', nextSlide);
+nextBtnOpinion.addEventListener('click', nextSlide);
 
-prevBtn.addEventListener('click', prevSlide);
+OpinionOpinion.addEventListener('click', prevSlide);
 
 
 setInterval(nextSlide, 15000);

@@ -233,47 +233,83 @@
   </section>
 
 
-  <section class="container mx-auto my-24 overflow-visible bg-white max-sm:my-12 text-primary">
+  <section class="container relative mx-auto my-24 overflow-visible bg-white max-sm:my-12 text-primary">
     <h2 class="mb-4 sm:ml-24">Wydarzenia</h2>
-    <div class="flex flex-col mt-12 md:gap-16 lg:gap-24 2xl:gap-16 md:flex-row justify-stretch">
-      <article class="basis-1/3 2xl:basis-1/4 justify-self-stretch">
-        <div class="relative h-48 mb-6">
-          <img class="object-cover w-full h-full" src="./assets/news-1.jpg" />
-          <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
-            src="./assets/svg/logo.svg" />
-        </div>
-        <h3 class="mb-2 text-xl font-bold ">Wydarzenie I</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-      </article>
-      <article class="basis-1/3 2xl:basis-1/4 justify-self-stretch">
-        <div class="relative h-48 mb-6">
-          <img class="object-cover w-full h-full" src="./assets/news-2.jpg" />
-          <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
-            src="./assets/svg/logo.svg" />
-        </div>
-        <h3 class="mb-2 text-xl font-bold ">Wydarzenie I</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-      </article>
-      <article class="basis-1/3 2xl:basis-1/4 justify-self-stretch">
-        <div class="relative h-48 mb-6">
-          <img class="object-cover w-full h-full" src="./assets/news-3.jpg" />
-          <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
-            src="./assets/svg/logo.svg" />
-        </div>
-        <h3 class="mb-2 text-xl font-bold ">Wydarzenie I</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-      </article>
-      <article class="basis-1/3 2xl:basis-1/4 justify-self-stretch">
-        <div class="relative h-48 mb-6">
-          <img class="object-cover w-full h-full" src="./assets/news-2.jpg" />
-          <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
-            src="./assets/svg/logo.svg" />
-        </div>
-        <h3 class="mb-2 text-xl font-bold ">Wydarzenie I</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-      </article>
+    <button id="events-prev-btn" class="slider-events-btn">
+      &#9664;
+    </button>
+    <button id="events-next-btn" class="slider-events-btn">
+      &#9654;
+    </button>
+    <div class="events-slider">
+      <div class="events">
+        <article class="event">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-1.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie I</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-2.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie II</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-3.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie III</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-2.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie IV</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-1.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie 5</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-2.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie 6</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+        <article class="event ">
+          <div class="relative h-48 mb-6">
+            <img class="object-cover w-full h-full" src="./assets/news-3.jpg" />
+            <img class="absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white"
+              src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Wydarzenie 7</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </article>
+      </div>
     </div>
   </section>
+
 
   <section class="container mx-auto my-24 bg-white max-sm:my-12 -scroll-my-28 text-primary">
     <h2 class="mb-4 sm:ml-24">Struktury, <br /> w których działamy</h2>
@@ -298,5 +334,6 @@
 </body>
 <script defer src="./js/navbar.js"></script>
 <script defer src="./js/opinions.js"></script>
+<script defer src="./js/news.js"></script>
 
 </html>

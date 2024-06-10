@@ -473,6 +473,55 @@
 
   }
 
+  .events-slider {
+    @apply relative;
+    @apply overflow-hidden;
+}
+
+.events {
+    @apply flex;
+    @apply gap-16 2xl:gap-24;
+    @apply transition-transform duration-500 ease-in-out;
+}
+
+.event {
+    @apply basis-1 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5;
+    @apply flex;
+    @apply flex-col;
+    @apply shrink-0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+
+.slider-events-btn {
+  @apply bg-transparent;
+  @apply border-none;
+  @apply cursor-pointer;
+  @apply text-primary;
+  @apply max-md:text-3xl text-7xl;
+  @apply absolute;
+  @apply top-0 md:top-1/4;
+  @apply z-20;
+
+}
+
+#events-prev-btn{
+  @apply max-md:right-40;
+  @apply md:-left-9 lg:-left-5 xl:left-7 2xl:left-3;
+  @apply transform translate-x-1/2;
+
+}
+
+#events-next-btn{
+  @apply right-4 md:-right-9 lg:-right-5 xl:right-7 2xl:right-3;
+  @apply transform -translate-x-1/2;
+}
+
+.slider-events-btn:focus {
+    outline: none;
+}
+
+
   #hamburger-open:focus svg .top,
   #hamburger-open:focus svg .bottom,
   #hamburger-close:focus svg .top,
