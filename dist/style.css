@@ -1596,7 +1596,7 @@ textarea {
 
 @media not all and (min-width: 768px) {
   #events-prev-btn {
-    right: 10rem;
+    right: 8rem;
   }
 }
 

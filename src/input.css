@@ -506,7 +506,7 @@
 }
 
 #events-prev-btn{
-  @apply max-md:right-40;
+  @apply max-md:right-32;
   @apply md:-left-9 lg:-left-5 xl:left-7 2xl:left-3;
   @apply transform translate-x-1/2;
 
