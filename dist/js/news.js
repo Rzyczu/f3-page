@@ -1,7 +1,7 @@
-const eventsContainer = document.querySelector('.events');
-const events = document.querySelectorAll('.event');
-const nextBtnEvents = document.getElementById('events-next-btn');
-const prevBtnEvents = document.getElementById('events-prev-btn');
+const newsContainer = document.querySelector('.news');
+const news = document.querySelectorAll('.news-article');
+const nextBtnnews = document.getElementById('news-next-btn');
+const prevBtnnews = document.getElementById('news-prev-btn');
 
 let activeIndex = 0;
 let itemsToShow = calculateItemsToShow();
@@ -17,16 +17,15 @@ function calculateItemsToShow() {
 }
 
 function updateSlider() {
-    const slideWidth = events[0].clientWidth;
-    const eventStyles = window.getComputedStyle(eventsContainer);
-    const eventGap =  parseInt(eventStyles.getPropertyValue('gap'));
-    console.log(slideWidth);
-    console.log(eventGap);
-    eventsContainer.style.transform = `translateX(-${activeIndex * (slideWidth + eventGap)}px)`;
+    const slideWidth = news[0].clientWidth;
+    const newstyles = window.getComputedStyle(newsContainer);
+    const newsArticleGap =  parseInt(newstyles.getPropertyValue('gap'));
+
+    newsContainer.style.transform = `translateX(-${activeIndex * (slideWidth + newsArticleGap)}px)`;
 }
 
 function nextSlide() {
-    if (activeIndex < events.length - itemsToShow) {
+    if (activeIndex < news.length - itemsToShow) {
         activeIndex++;
     } else {
         activeIndex = 0;
@@ -38,13 +37,13 @@ function prevSlide() {
     if (activeIndex > 0) {
         activeIndex--;
     } else {
-        activeIndex = events.length - itemsToShow;
+        activeIndex = news.length - itemsToShow;
     }
     updateSlider();
 }
 
-nextBtnEvents.addEventListener('click', nextSlide);
-prevBtnEvents.addEventListener('click', prevSlide);
+nextBtnnews.addEventListener('click', nextSlide);
+prevBtnnews.addEventListener('click', prevSlide);
 
 window.addEventListener('resize', () => {
     itemsToShow = calculateItemsToShow();
@@ -53,4 +52,4 @@ window.addEventListener('resize', () => {
 
 // Initial setup
 updateSlider();
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 44000);

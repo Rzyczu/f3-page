@@ -473,18 +473,18 @@
 
   }
 
-  .events-slider {
+  .news-slider {
     @apply relative;
     @apply overflow-hidden;
   }
 
-.events {
+.news {
     @apply flex;
     @apply gap-16 2xl:gap-24;
     @apply transition-transform duration-500 ease-in-out;
 }
 
-.event {
+.news-article {
     @apply max-sm:w-full sm:basis-1/3 lg:basis-1/4 xl:basis-1/5;
     @apply sm:flex;
     @apply flex-col;
@@ -492,82 +492,64 @@
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 
-
-  .slider-events-btn {
-    @apply flex items-center justify-center w-8 h-8 mx-1 bg-transparent border border-none rounded-full cursor-pointer text-primary border-primary hover:bg-primary-light hover:text-white;
+  .news-article-img-logo{
+    @apply absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white;
   }
 
-  .slider-arrow {
+  .news-article-header{
+    @apply mb-2 text-xl font-bold;
+  }
+
+  .news-article-img{
+    @apply object-cover w-full h-full;
+  }
+
+  .news-article-imgages{
+    @apply relative mb-6 h-60 md:h-48;
+  }
+
+  
+ #news-next-btn, #news-prev-btn {
     @apply relative;
-    width: 10px;
-    height: 10px;
+   @apply w-12;
+    top: -2.5rem;
+    @apply max-sm:left-48;
+     height: 10px;
+    @apply cursor-pointer;
+    
   }
-
-  .slider-arrow::before,
-  .slider-arrow::after {
+  
+  #news-next-btn::before, #news-next-btn::after,
+  #news-prev-btn::before, #news-prev-btn::after {
     content: '';
     @apply absolute bg-primary;
+    @apply hover:bg-primary-light;
+
     width: 2px;
     height: 12px;
+    left: 4px;
   }
   
-  .slider-arrow::before {
-    transform: rotate(45deg);
+  #news-next-btn::before {
+    @apply -rotate-45;
     top: -5px;
-    left: 4px;
   }
-
-  .slider-arrow::after {
-    transform: rotate(-45deg);
+  
+  #news-next-btn::after {
+    @apply rotate-45;
     bottom: -5px;
-    left: 4px;
   }
-
-  @layer components {
-    .slider-events-btn {
-      @apply flex items-center justify-center w-8 h-8 mx-1 bg-transparent border-none rounded-full cursor-pointer text-primary border-primary hover:bg-primary-light hover:text-white;
-    }
   
-    .news-next-btn, .news-prev-btn {
-      @apply relative;
-      width: 10px;
-      height: 10px;
-    }
-  
-    .news-next-btn::before,
-    .news-next-btn::after,
-    .news-prev-btn::before,
-    .news-prev-btn::after {
-      content: '';
-      @apply absolute bg-primary;
-      width: 2px;
-      height: 12px;
-    }
-  
-    .news-next-btn::before {
-      @apply -rotate-45;
-      top: -5px;
-      left: 4px;
-    }
-  
-    .news-next-btn::after {
-      @apply rotate-45;
-      bottom: -5px;
-      left: 4px;
-    }
-  
-    .news-prev-btn::before {
-      @apply rotate-45;
-      top: -5px;
-      left: 4px;
-    }
-  
-    .news-prev-btn::after {
-      @apply -rotate-45;
-      bottom: -5px;
-      left: 4px;
-    }
+  #news-prev-btn::before {
+    @apply rotate-45;
+    top: -5px;
   }
+  
+  #news-prev-btn::after {
+    @apply -rotate-45;
+    bottom: -5px;
+  }
+  
   
 
 
