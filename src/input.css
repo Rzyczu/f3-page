@@ -476,7 +476,7 @@
   .events-slider {
     @apply relative;
     @apply overflow-hidden;
-}
+  }
 
 .events {
     @apply flex;
@@ -485,41 +485,90 @@
 }
 
 .event {
-    @apply basis-1 sm:basis-1/3 lg:basis-1/4 xl:basis-1/5;
-    @apply flex;
+    @apply max-sm:w-full sm:basis-1/3 lg:basis-1/4 xl:basis-1/5;
+    @apply sm:flex;
     @apply flex-col;
     @apply shrink-0;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
 
 
-.slider-events-btn {
-  @apply bg-transparent;
-  @apply border-none;
-  @apply cursor-pointer;
-  @apply text-primary;
-  @apply max-md:text-3xl text-7xl;
-  @apply absolute;
-  @apply top-0 md:top-1/4;
-  @apply z-20;
+  .slider-events-btn {
+    @apply flex items-center justify-center w-8 h-8 mx-1 bg-transparent border border-none rounded-full cursor-pointer text-primary border-primary hover:bg-primary-light hover:text-white;
+  }
 
-}
+  .slider-arrow {
+    @apply relative;
+    width: 10px;
+    height: 10px;
+  }
 
-#events-prev-btn{
-  @apply max-md:right-32;
-  @apply md:-left-9 lg:-left-5 xl:left-7 2xl:left-3;
-  @apply transform translate-x-1/2;
+  .slider-arrow::before,
+  .slider-arrow::after {
+    content: '';
+    @apply absolute bg-primary;
+    width: 2px;
+    height: 12px;
+  }
+  
+  .slider-arrow::before {
+    transform: rotate(45deg);
+    top: -5px;
+    left: 4px;
+  }
 
-}
+  .slider-arrow::after {
+    transform: rotate(-45deg);
+    bottom: -5px;
+    left: 4px;
+  }
 
-#events-next-btn{
-  @apply right-4 md:-right-9 lg:-right-5 xl:right-7 2xl:right-3;
-  @apply transform -translate-x-1/2;
-}
-
-.slider-events-btn:focus {
-    outline: none;
-}
+  @layer components {
+    .slider-events-btn {
+      @apply flex items-center justify-center w-8 h-8 mx-1 bg-transparent border-none rounded-full cursor-pointer text-primary border-primary hover:bg-primary-light hover:text-white;
+    }
+  
+    .news-next-btn, .news-prev-btn {
+      @apply relative;
+      width: 10px;
+      height: 10px;
+    }
+  
+    .news-next-btn::before,
+    .news-next-btn::after,
+    .news-prev-btn::before,
+    .news-prev-btn::after {
+      content: '';
+      @apply absolute bg-primary;
+      width: 2px;
+      height: 12px;
+    }
+  
+    .news-next-btn::before {
+      @apply -rotate-45;
+      top: -5px;
+      left: 4px;
+    }
+  
+    .news-next-btn::after {
+      @apply rotate-45;
+      bottom: -5px;
+      left: 4px;
+    }
+  
+    .news-prev-btn::before {
+      @apply rotate-45;
+      top: -5px;
+      left: 4px;
+    }
+  
+    .news-prev-btn::after {
+      @apply -rotate-45;
+      bottom: -5px;
+      left: 4px;
+    }
+  }
+  
 
 
   #hamburger-open:focus svg .top,

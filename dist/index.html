@@ -235,13 +235,16 @@
 
   <section class="container relative mx-auto my-24 overflow-visible bg-white max-sm:my-12 text-primary">
     <h2 class="mb-4 sm:ml-24">Wydarzenia</h2>
-    <button id="events-prev-btn" class="slider-events-btn">
-      &#9664;
-    </button>
-    <button id="events-next-btn" class="slider-events-btn">
-      &#9654;
-    </button>
+    <div class="flex items-center justify-between mb-4">
+      <button id="events-prev-btn" class="slider-events-btn">
+        <span class="news-prev-btn"></span>
+      </button>
+      <button id="events-next-btn" class="slider-events-btn">
+        <span class="news-next-btn"></span>
+      </button>
+    </div>
     <div class="events-slider">
+
       <div class="events">
         <article class="event">
           <div class="relative h-48 mb-6">
@@ -307,6 +310,7 @@
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </article>
       </div>
+
     </div>
   </section>
 
