@@ -1610,7 +1610,7 @@ textarea {
 #news-next-btn, #news-prev-btn {
   position: relative;
   width: 3rem;
-  top: -2.5rem;
+  top: -3rem;
 }
 
 @media not all and (min-width: 768px) {
@@ -1938,6 +1938,16 @@ textarea {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-min {
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .basis-1\/2 {

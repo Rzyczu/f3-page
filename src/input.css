@@ -512,7 +512,7 @@
  #news-next-btn, #news-prev-btn {
     @apply relative;
    @apply w-12;
-    top: -2.5rem;
+    top: -3rem;
     @apply max-md:left-[calc(100%-theme('spacing.48'))];
     @apply max-sm:left-[calc(100%-theme('spacing.24'))];
      height: 10px;
