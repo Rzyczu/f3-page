@@ -513,7 +513,8 @@
     @apply relative;
    @apply w-12;
     top: -2.5rem;
-    @apply max-sm:left-48;
+    @apply max-md:left-[calc(100%-theme('spacing.48'))];
+    @apply max-sm:left-[calc(100%-theme('spacing.24'))];
      height: 10px;
     @apply cursor-pointer;
     

@@ -1613,9 +1613,15 @@ textarea {
   top: -2.5rem;
 }
 
+@media not all and (min-width: 768px) {
+  #news-next-btn, #news-prev-btn {
+    left: calc(100% - 12rem);
+  }
+}
+
 @media not all and (min-width: 640px) {
   #news-next-btn, #news-prev-btn {
-    left: 12rem;
+    left: calc(100% - 6rem);
   }
 }
 
