@@ -1615,7 +1615,7 @@ textarea {
 
 @media not all and (min-width: 768px) {
   #news-next-btn, #news-prev-btn {
-    left: calc(100% - 12rem);
+    left: calc(100% - 8rem);
   }
 }
 
@@ -1646,8 +1646,8 @@ textarea {
 
 #news-next-btn::before, #news-next-btn::after,
   #news-prev-btn::before, #news-prev-btn::after {
-  width: 2px;
-  height: 12px;
+  height: 0.75rem;
+  width: 0.25rem;
   left: 4px;
 }
 
@@ -1912,6 +1912,10 @@ textarea {
   width: 2.5rem;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -2051,20 +2055,8 @@ textarea {
   overflow: visible;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
-
 .overflow-x-visible {
   overflow-x: visible;
-}
-
-.overscroll-none {
-  overscroll-behavior: none;
 }
 
 .bg-primary {

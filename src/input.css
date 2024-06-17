@@ -513,7 +513,7 @@
     @apply relative;
    @apply w-12;
     top: -3rem;
-    @apply max-md:left-[calc(100%-theme('spacing.48'))];
+    @apply max-md:left-[calc(100%-theme('spacing.32'))];
     @apply max-sm:left-[calc(100%-theme('spacing.24'))];
      height: 10px;
     @apply cursor-pointer;
@@ -526,8 +526,7 @@
     @apply absolute bg-primary;
     @apply hover:bg-primary-light;
 
-    width: 2px;
-    height: 12px;
+    @apply w-1 h-3;
     left: 4px;
   }
   
