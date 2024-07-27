@@ -8,6 +8,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
   <script type="text/javascript">
     var isIndex = true;
   </script>
@@ -239,76 +241,57 @@
 
   <section class="container relative mx-auto my-24 overflow-visible bg-white max-sm:my-12 text-primary">
     <h2 class="mb-4 sm:ml-24">Wydarzenia</h2>
-
-    <div class="absolute w-11/12">
-      <button id="news-prev-btn" class="slider-news-btn">
-      </button>
-      <button id="news-next-btn" class="slider-news-btn">
-      </button>
+    <div class="absolute flex w-11/12 gap-10 md:gap-6 max-md:justify-end md:right-10">
+      <button class="swiper-button-prev"></button>
+      <button class="swiper-button-next"></button>
     </div>
-    <div class="news-slider">
-
-      <div class="news">
-        <article class="news-article">
+    <div class="swiper-news">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide news-article">
           <div class="news-article-imgages">
             <img class="news-article-img" src="./assets/news-1.jpg" />
             <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
           </div>
-          <h3 class="news-article-header">Wydarzenie I</h3>
+          <h3 class="news-article-header">Wydarzenie 0</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
+        </div>
+        <div class="swiper-slide news-article">
           <div class="news-article-imgages">
             <img class="news-article-img" src="./assets/news-2.jpg" />
             <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
           </div>
-          <h3 class="news-article-header">Wydarzenie II</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
+          <h3 class="news-article-header">Wydarzenie I</h3>
+          <p>Lorem ipsum dolor sit aLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempormet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </div>
+        <div class="swiper-slide news-article">
           <div class="news-article-imgages">
             <img class="news-article-img" src="./assets/news-3.jpg" />
             <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
           </div>
-          <h3 class="">Wydarzenie III</h3>
+          <h3 class="news-article-header">Wydarzenie II</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
+        </div>
+        <div class="swiper-slide news-article">
+          <div class="news-article-imgages">
+            <img class="news-article-img" src="./assets/news-1.jpg" />
+            <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+          </div>
+          <h3 class="news-article-header">Wydarzenie III</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+        </div>
+        <div class="swiper-slide news-article">
           <div class="news-article-imgages">
             <img class="news-article-img" src="./assets/news-2.jpg" />
             <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
           </div>
           <h3 class="news-article-header">Wydarzenie IV</h3>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
-          <div class="news-article-imgages">
-            <img class="news-article-img" src="./assets/news-1.jpg" />
-            <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
-          </div>
-          <h3 class="news-article-header">Wydarzenie 5</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
-          <div class="news-article-imgages">
-            <img class="news-article-img" src="./assets/news-2.jpg" />
-            <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
-          </div>
-          <h3 class="news-article-header">Wydarzenie 6</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
-        <article class="news-article ">
-          <div class="news-article-imgages">
-            <img class="news-article-img" src="./assets/news-3.jpg" />
-            <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
-          </div>
-          <h3 class="news-article-header">Wydarzenie 7</h3>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-        </article>
+        </div>
       </div>
-
     </div>
   </section>
+
 
 
   <section class="container mx-auto my-24 bg-white max-sm:my-12 -scroll-my-28 text-primary">
@@ -335,5 +318,6 @@
 <script defer src="./js/navbar.js"></script>
 <script defer src="./js/opinions.js"></script>
 <script defer src="./js/news.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </html>

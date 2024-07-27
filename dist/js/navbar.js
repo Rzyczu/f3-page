@@ -17,6 +17,10 @@ function toggleNavbar(e) {
       element.classList.add('hover:text-white');
     });
 
+    openBtn.classList.remove('svg-color-primary');
+    openBtn.classList.add('svg-color-primary');
+
+
     setTimeout(function() {
       mobileNavbar.classList.add('active');
       navbarBrand.classList.add('hidden');
@@ -54,5 +58,30 @@ function toggleNavbar(e) {
   }
 }
 
+function handleResize() {
+  if (window.innerWidth > 1024) {
+    navbarLinksDisplayMobile.forEach(element => {
+      element.classList.add('hidden', 'hover:text-primary');
+      element.classList.remove('hover:text-white');
+    });
+    
+    mobileNavbar.classList.remove('active');
+    navbarBrand.classList.remove('hidden');
+    navElement.classList.add('sm:bg-transparent'); 
+
+    if (navElement.getAttribute('data-page') !== 'index') {
+      navElement.classList.remove('bg-primary');
+    }
+    document.body.classList.remove('bg-primary', 'overflow-hidden');
+    document.body.classList.add('bg-white');
+    openBtn.classList.remove('hidden');
+    closeBtn.classList.add('hidden');
+    
+    logo.classList.remove('group-hover:svg-color-white');
+    logo.classList.add('group-hover:svg-color-primary');
+  }
+}
+
 openBtn.addEventListener('click', () => toggleNavbar(openBtn));
 closeBtn.addEventListener('click', () => toggleNavbar(closeBtn));
+window.addEventListener('resize', handleResize);

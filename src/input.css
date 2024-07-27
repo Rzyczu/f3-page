@@ -473,82 +473,39 @@
 
   }
 
-  .news-slider {
-    @apply relative;
-    @apply overflow-hidden;
-}
+  .swiper-button-next, .swiper-button-prev {
+    @apply relative size-10 px-0 !important;
+    @apply text-primary hover:text-primary-dark !important;
+    @apply -translate-y-3/4 !important;
+  }
 
-.news {
-    @apply flex;
-    @apply gap-16 2xl:gap-24;
-    @apply transition-transform duration-500 ease-in-out;
-    @apply rtl:flex-row-reverse; /* Support for RTL */
-}
+  .swiper-button-next::after, .swiper-button-prev::after{
+    @apply text-3xl font-bold hover:text-4xl !important;
+  }
 
-.news-article {
-    @apply max-sm:w-full sm:basis-1/3 lg:basis-1/4 xl:basis-1/5;
-    @apply sm:flex;
-    @apply flex-col;
-    @apply shrink-0;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-.news-article-img-logo {
-    @apply absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white;
-}
-
-.news-article-header {
-    @apply mb-2 text-xl font-bold;
-}
-
-.news-article-img {
-    @apply object-cover w-full h-full;
-}
-
-.news-article-imgages {
+  .swiper-news {
+    @apply relative overflow-hidden;
+  }
+  
+  .news-article {
+    @apply flex flex-col transition-transform duration-500 ease-in-out max-sm:w-full shrink-0;
+  }
+  
+  .news-article-imgages {
     @apply relative mb-6 h-60 md:h-48;
-}
+  }
+    
+  .news-article-img {
+    @apply object-cover w-full h-full;
+  }
 
-#news-next-btn, #news-prev-btn {
-    @apply relative;
-    @apply w-12;
-    top: -3rem;
-    @apply max-md:left-[calc(100%-theme('spacing.32'))];
-    @apply max-sm:left-[calc(100%-theme('spacing.24'))];
-    height: 10px;
-    @apply cursor-pointer;
-}
-
-#news-next-btn::before, #news-next-btn::after,
-#news-prev-btn::before, #news-prev-btn::after {
-    content: '';
-    @apply absolute bg-primary;
-    @apply hover:bg-primary-light;
-    @apply w-1 h-3;
-    left: 4px;
-}
-
-#news-next-btn::before {
-    @apply -rotate-45;
-    top: -5px;
-}
-
-#news-next-btn::after {
-    @apply rotate-45;
-    bottom: -5px;
-}
-
-#news-prev-btn::before {
-    @apply rotate-45;
-    top: -5px;
-}
-
-#news-prev-btn::after {
-    @apply -rotate-45;
-    bottom: -5px;
-}
-
-
+  .news-article-img-logo {
+    @apply absolute top-0 z-10 object-cover h-full -translate-x-half-logo svg-color-white;
+  }
+  
+  .news-article-header {
+    @apply mb-2 text-xl font-extrabold;
+  }
 
   #hamburger-open:focus svg .top,
   #hamburger-open:focus svg .bottom,

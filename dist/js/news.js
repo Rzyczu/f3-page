@@ -1,84 +1,36 @@
-const newsContainer = document.querySelector('.news');
-const news = document.querySelectorAll('.news-article');
-const nextBtnnews = document.getElementById('news-next-btn');
-const prevBtnnews = document.getElementById('news-prev-btn');
-
-let activeIndex = 0;
-let itemsToShow = calculateItemsToShow();
-let touchStartX = 0;
-let touchEndX = 0;
-
-function calculateItemsToShow() {
-    if (window.innerWidth <= 640) {
-        return 1;
-    } else if (window.innerWidth <= 1536) {
-        return 4;
-    } else {
-        return 5;
-    }
-}
-
-function updateSlider() {
-    const slideWidth = news[0].clientWidth;
-    const newstyles = window.getComputedStyle(newsContainer);
-    const newsArticleGap =  parseInt(newstyles.getPropertyValue('gap'));
-    
-    const direction = document.documentElement.getAttribute('dir') === 'rtl' ? 1 : -1;
-    newsContainer.style.transform = `translateX(${direction * activeIndex * (slideWidth + newsArticleGap)}px)`;
-}
-
-function nextSlide() {
-    if (activeIndex < news.length - itemsToShow) {
-        activeIndex++;
-    } else {
-        activeIndex = 0;
-    }
-    updateSlider();
-}
-
-function prevSlide() {
-    if (activeIndex > 0) {
-        activeIndex--;
-    } else {
-        activeIndex = news.length - itemsToShow;
-    }
-    updateSlider();
-}
-
-nextBtnnews.addEventListener('click', nextSlide);
-prevBtnnews.addEventListener('click', prevSlide);
-
-window.addEventListener('resize', () => {
-    itemsToShow = calculateItemsToShow();
-    updateSlider();
-});
-
-// Touch event handlers
-newsContainer.addEventListener('touchstart', (event) => {
-    touchStartX = event.touches[0].clientX;
-});
-
-newsContainer.addEventListener('touchmove', (event) => {
-    touchEndX = event.touches[0].clientX;
-});
-
-newsContainer.addEventListener('touchend', () => {
-    handleSwipeGesture();
-});
-
-function handleSwipeGesture() {
-    const swipeDistance = touchStartX - touchEndX;
-    const swipeThreshold = 50; // Minimum distance for a swipe to be considered valid
-    
-    if (Math.abs(swipeDistance) > swipeThreshold) {
-        if (swipeDistance > 0) {
-            nextSlide();
-        } else {
-            prevSlide();
+new Swiper('.swiper-news', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 90,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 90,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 60,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 60,
+        },
+        1536: {
+            slidesPerView: 4,
+            spaceBetween: 80,
         }
-    }
-}
-
-// Initial setup
-updateSlider();
-setInterval(nextSlide, 44000);
+      }
+    });
