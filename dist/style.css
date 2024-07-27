@@ -637,7 +637,14 @@ section{
 
 [aria-current="page"] {
   --tw-text-opacity: 1 !important;
-  color: rgb(113 76 152 / var(--tw-text-opacity)) !important;
+  color: rgb(254 251 247 / var(--tw-text-opacity)) !important;
+}
+
+@media (min-width: 1024px) {
+  [aria-current="page"] {
+    --tw-text-opacity: 1 !important;
+    color: rgb(113 76 152 / var(--tw-text-opacity)) !important;
+  }
 }
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */
@@ -654,7 +661,7 @@ section{
   filter: invert(100%) sepia(5%) saturate(1386%) hue-rotate(298deg) brightness(80%) contrast(89%);
 }
 
-.hover-left-circle:hover::before {
+.hover-left-circle:hover::before, [aria-current="page"]::before {
   --tw-content: '';
   display: block;
   position: absolute;
@@ -666,12 +673,8 @@ section{
   border-width: 2px;
   border-radius: 9999px;
   top: 50%;
-  content: var(--tw-content);
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover-left-circle::before {
   --tw-bg-opacity: 1;
   background-color: rgb(113 76 152 / var(--tw-bg-opacity));
   content: var(--tw-content);
@@ -679,7 +682,7 @@ section{
 }
 
 @media (min-width: 768px) {
-  .hover-left-circle::before {
+  .hover-left-circle:hover::before, [aria-current="page"]::before {
     left: auto;
     content: var(--tw-content);
     right: -2rem;
@@ -1543,6 +1546,14 @@ textarea {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.news:where([dir="rtl"], [dir="rtl"] *) {
+  flex-direction: row-reverse;
+}
+
+.news {
+  /* Support for RTL */
+}
+
 @media not all and (min-width: 640px) {
   .news-article {
     width: 100%;
@@ -1641,7 +1652,7 @@ textarea {
 }
 
 #news-next-btn::before, #news-next-btn::after,
-  #news-prev-btn::before, #news-prev-btn::after {
+#news-prev-btn::before, #news-prev-btn::after {
   content: '';
   position: absolute;
   --tw-bg-opacity: 1;
@@ -1649,13 +1660,13 @@ textarea {
 }
 
 #news-next-btn:hover::before, #news-next-btn:hover::after,
-  #news-prev-btn:hover::before, #news-prev-btn:hover::after {
+#news-prev-btn:hover::before, #news-prev-btn:hover::after {
   --tw-bg-opacity: 1;
   background-color: rgb(179 162 206 / var(--tw-bg-opacity));
 }
 
 #news-next-btn::before, #news-next-btn::after,
-  #news-prev-btn::before, #news-prev-btn::after {
+#news-prev-btn::before, #news-prev-btn::after {
   height: 0.75rem;
   width: 0.25rem;
   left: 4px;
@@ -1728,6 +1739,13 @@ textarea {
      transition: all 300ms ease-in-out;
    } */
 
+nav {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
 #mobile-navbar {
   --tw-bg-opacity: 1;
   background-color: rgb(113 76 152 / var(--tw-bg-opacity));
@@ -1736,7 +1754,7 @@ textarea {
   height: 0px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 1000ms;
+  transition-duration: 500ms;
   transition-timing-function: ease-in-out;
 }
 
@@ -1821,11 +1839,6 @@ textarea {
   margin-bottom: 8rem;
 }
 
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1880,10 +1893,6 @@ textarea {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ms-0 {
-  margin-inline-start: 0px;
 }
 
 .inline-block {
@@ -2110,10 +2119,6 @@ textarea {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-3 {
