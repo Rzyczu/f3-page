@@ -583,6 +583,8 @@
    } */
 
   #mobile-navbar {
+    @apply bg-primary;
+    @apply h-screen;
     @apply opacity-0;
     @apply h-0;
     @apply transition-all duration-1000 ease-[ease-in-out];

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -527,6 +529,10 @@ section{
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -577,6 +583,10 @@ section{
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container {
@@ -1719,6 +1729,9 @@ textarea {
    } */
 
 #mobile-navbar {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 76 152 / var(--tw-bg-opacity));
+  height: 100vh;
   opacity: 0;
   height: 0px;
   transition-property: all;
@@ -1808,6 +1821,11 @@ textarea {
   margin-bottom: 8rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1862,6 +1880,10 @@ textarea {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ms-0 {
+  margin-inline-start: 0px;
 }
 
 .inline-block {
@@ -2090,6 +2112,10 @@ textarea {
      object-fit: contain;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2205,12 +2231,6 @@ textarea {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(254 251 247 / var(--tw-text-opacity));
-}
-
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .group:hover .group-hover\:svg-color-primary{
