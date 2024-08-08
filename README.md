@@ -2,6 +2,8 @@
 
 A modern web application template built with HTML, CSS, JavaScript, and Tailwind CSS.
 
+![image](https://github.com/user-attachments/assets/c5d2a7ef-8d33-4d82-9946-7368c6c9d047)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
