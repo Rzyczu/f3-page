@@ -47,31 +47,11 @@
       <!-- </div> -->
       <div
         class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-        <button id="hamburger-open" onclick="navDropdown(this)" type="button" class="w-10 overflow-visible">
-          <svg class="w-full overflow-visible group" viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.2471 10.3047H48.2921" class="top stroke-gray-light group-hover:stroke-primary" stroke-width="2"
-              stroke-linecap="square" />
-            <path d="M1.80371 1.07422H48.2917" class="bottom stroke-gray-light group-hover:stroke-primary"
-              stroke-width="2" stroke-linecap="square" />
-            <text id="menu" class="text fill-gray-light group-hover:fill-primary" font-size="14"
-              font-family="Montserrat-Regular, Montserrat">
-              <tspan x="5" y="28">menu</tspan>
-            </text>
-          </svg>
-        </button>
-        <button id="hamburger-close" onclick="navDropdown(this)" type="button"
-          class="content-end hidden w-10 hover:text-primary">
-          <svg class="w-full overflow-hidden group" viewBox=" 0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.23389 1.39453L27.5359 12.6405" class="top stroke-gray-light group-hover:stroke-white"
-              stroke-width="1.5" stroke-linecap="square" />
-            <path d="M2.23389 13.1245L27.5359 1.39453" class="bottom stroke-gray-light group-hover:stroke-white"
-              stroke-width="1.5" stroke-linecap="square" />
-            <text id="menu" class="text fill-gray-light group-hover:fill-white" font-size="9"
-              font-family="Montserrat-Regular, Montserrat">
-              <tspan x="4" y="22">close</tspan>
-            </text>
-          </svg>
-        </button>
+        <div class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-label">menu</span>
+        </div>
       </div>
 
     </div>

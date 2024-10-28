@@ -516,35 +516,6 @@
     @apply mb-2 text-xl font-extrabold;
   }
 
-  #hamburger-open:focus svg .top,
-  #hamburger-open:focus svg .bottom,
-  #hamburger-close:focus svg .top,
-  #hamburger-close:focus svg .bottom {
-    @apply origin-[50%_10%] transition-all duration-300 ease-[ease-in-out];
-  }
-
-  #hamburger-open:focus svg .top {
-    @apply rotate-[-20deg] -translate-x-[10px] -translate-y-[2px];
-  }
-
-  #hamburger-open:focus svg .bottom {
-    @apply rotate-[20deg] translate-y-[4px];
-  }
-
-  #hamburger-close:focus svg .top {
-    @apply rotate-[-25deg] translate-x-[5px] translate-y-[3px];
-  }
-
-  #hamburger-close:focus svg .bottom {
-    @apply rotate-[25deg]  translate-y-[-3px];
-  }
-
-  /* #hamburger-open:focus svg .text,
-    #hamburger-close:focus svg .text {
-     opacity: 0;
-     transition: all 300ms ease-in-out;
-   } */
-
 nav{
   @apply transition-all duration-200 ease-[ease-in-out];
 }
@@ -579,8 +550,41 @@ nav{
   @apply 2xl:pr-24;
 }
 
-.top-29-5 {
-  top: 7.375rem
+.hamburger {
+  @apply relative w-[1em] h-[1em] text-[2rem] transition-all duration-[0.3s] ease-[ease] cursor-pointer;
+}
+.hamburger-line {
+  @apply absolute w-full h-[0.05em] transition-[inherit] rounded-[0.125em] right-0;
+  background: currentColor;
+}
+.hamburger-line:nth-child(1) {
+  @apply w-[150%] top-[0.125em];
+}
+.hamburger.is-active .hamburger-line:nth-child(1),
+.w-nav-button.w--open .hamburger-line:nth-child(1) {
+  @apply w-[150%] top-2/4;
+  transform: translateY(-50%) rotateZ(-150deg);
+}
+.hamburger-line:nth-child(2) {
+  @apply top-[0.438em];
+}
+.hamburger.is-active .hamburger-line:nth-child(2),
+.w-nav-button.w--open .hamburger-line:nth-child(2) {
+  @apply w-[150%] top-2/4;
+  transform: translateY(-50%) rotateZ(150deg);
+}
+.hamburger-line:nth-child(3) {
+  @apply w-[0.625em] top-[0.75em];
+}
+.hamburger.is-active .hamburger-line:nth-child(3),
+.hamburger-line:nth-child(3) {
+  @apply w-0 right-2/4;
+}
+.hamburger-label {
+  @apply text-[small] block text-center ml-[-1rem] transition-[margin-top] duration-[0.3s] ease-[ease] mt-[1em];
+}
+.hamburger.is-active .hamburger-label {
+  @apply mt-[1.75em];
 }
 
 }
