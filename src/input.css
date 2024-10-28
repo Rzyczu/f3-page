@@ -4,7 +4,7 @@
 
 @layer base {
   body{
-    @apply font-montserrat
+    @apply font-montserrat;
   }
 
   p,span,h1,h2,h3,h4,h5,h6{
@@ -68,8 +68,8 @@
     @apply before:-translate-y-1/2;
     @apply before:bg-primary;
     @apply before:-left-4;
-    @apply md:before:left-auto;
-    @apply md:before:-right-8;
+    @apply md:max-md:before:left-auto;
+    @apply md:max-md:before:-right-8;
   }
 
   .left-line {
