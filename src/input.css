@@ -110,6 +110,12 @@
     @apply after:translate-y-[calc(50%-1px)];
   }
   
+  .left-start {
+    @apply relative;
+    @apply left-0;
+  }
+  
+
   .circular-carousel {
     @apply flex;
     @apply flex-col;
@@ -552,4 +558,26 @@ nav{
   @apply opacity-100;
   @apply h-screen;
 }
+
+.container-r {
+  @apply w-full;
+  @apply pr-6;
+  @apply pl-0;
+  @apply ml-0;
+  @apply sm:max-w-[calc(640px+2rem)];
+  @apply sm:pr-8;
+  @apply md:max-w-[calc(768px+3rem)];
+  @apply md:pr-12;
+  @apply lg:max-w-[calc(1024px+4rem)];
+  @apply lg:pr-16;
+  @apply xl:max-w-[calc(1280px+5rem)];
+  @apply xl:pr-20;
+  @apply 2xl:max-w-[calc(1536px+6rem)];
+  @apply 2xl:pr-24;
+}
+
+.top-29-5 {
+  top: 7.375rem
+}
+
 }
