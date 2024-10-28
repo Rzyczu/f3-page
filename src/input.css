@@ -5,6 +5,8 @@
 @layer base {
   body{
     @apply font-montserrat;
+    @apply min-h-screen;
+    @apply flex flex-col;
   }
 
   p,span,h1,h2,h3,h4,h5,h6{
@@ -16,7 +18,7 @@
   }
   h2 {
     @apply text-3xl;
-    @apply font-bold
+    @apply font-bold;
   }
   h3 {
     @apply text-2xl;
@@ -29,6 +31,7 @@
   section{
     overflow-x: hidden;
   }
+
 }
 
 @layer components {
@@ -513,34 +516,7 @@
     @apply mb-2 text-xl font-extrabold;
   }
 
-  #hamburger-open:focus svg .top,
-  #hamburger-open:focus svg .bottom,
-  #hamburger-close:focus svg .top,
-  #hamburger-close:focus svg .bottom {
-    @apply origin-[50%_10%] transition-all duration-300 ease-[ease-in-out];
-  }
-
-  #hamburger-open:focus svg .top {
-    @apply rotate-[-20deg] -translate-x-[10px] -translate-y-[2px];
-  }
-
-  #hamburger-open:focus svg .bottom {
-    @apply rotate-[20deg] translate-y-[4px];
-  }
-
-  #hamburger-close:focus svg .top {
-    @apply rotate-[-25deg] translate-x-[5px] translate-y-[3px];
-  }
-
-  #hamburger-close:focus svg .bottom {
-    @apply rotate-[25deg]  translate-y-[-3px];
-  }
-
-  /* #hamburger-open:focus svg .text,
-    #hamburger-close:focus svg .text {
-     opacity: 0;
-     transition: all 300ms ease-in-out;
-   } */
+  
 
 nav{
   @apply transition-all duration-200 ease-[ease-in-out];
