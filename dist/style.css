@@ -1618,6 +1618,49 @@ textarea {
   font-weight: 800;
 }
 
+#hamburger-open:focus svg .top,
+  #hamburger-open:focus svg .bottom,
+  #hamburger-close:focus svg .top,
+  #hamburger-close:focus svg .bottom {
+  transform-origin: 50% 10%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+#hamburger-open:focus svg .top {
+  --tw-translate-x: -10px;
+  --tw-translate-y: -2px;
+  --tw-rotate: -20deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+#hamburger-open:focus svg .bottom {
+  --tw-translate-y: 4px;
+  --tw-rotate: 20deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+#hamburger-close:focus svg .top {
+  --tw-translate-x: 5px;
+  --tw-translate-y: 3px;
+  --tw-rotate: -25deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+#hamburger-close:focus svg .bottom {
+  --tw-translate-y: -3px;
+  --tw-rotate: 25deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+/* #hamburger-open:focus svg .text,
+    #hamburger-close:focus svg .text {
+     opacity: 0;
+     transition: all 300ms ease-in-out;
+   } */
+
 nav {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
