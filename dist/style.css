@@ -685,12 +685,18 @@ section{
 }
 
 @media (min-width: 768px) {
-  @media not all and (min-width: 768px) {
-    .hover-left-circle:hover::before, [aria-current="page"]::before {
-      left: auto;
-      content: var(--tw-content);
-      right: -2rem;
-    }
+  .hover-left-circle:hover::before, [aria-current="page"]::before {
+    left: auto;
+    content: var(--tw-content);
+    right: -2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hover-left-circle:hover::before, [aria-current="page"]::before {
+    left: 0px;
+    content: var(--tw-content);
+    right: 0px;
   }
 }
 

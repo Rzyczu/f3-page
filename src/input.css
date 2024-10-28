@@ -71,8 +71,10 @@
     @apply before:-translate-y-1/2;
     @apply before:bg-primary;
     @apply before:-left-4;
-    @apply md:max-md:before:left-auto;
-    @apply md:max-md:before:-right-8;
+    @apply md:before:left-auto;
+    @apply md:before:-right-8;
+    @apply lg:before:left-0;
+    @apply lg:before:right-0;
   }
 
   .left-line {
