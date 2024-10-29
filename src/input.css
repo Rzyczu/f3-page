@@ -489,10 +489,16 @@
   }
 
   .swiper-button-next, .swiper-button-prev {
-    @apply relative size-10 px-0 !important;
+    @apply relative  md:absolute !important;
+    @apply size-10 px-0 !important;
     @apply text-primary hover:text-primary-dark !important;
     @apply -translate-y-3/4 !important;
   }
+
+  .swiper-button-next {
+    @apply right-0 !important;
+  }
+
 
   .swiper-button-next::after, .swiper-button-prev::after{
     @apply text-3xl font-bold hover:text-4xl !important;

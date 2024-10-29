@@ -1534,6 +1534,15 @@ textarea {
 
 .swiper-button-next, .swiper-button-prev {
   position: relative !important;
+}
+
+@media (min-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute !important;
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
   width: 2.5rem !important;
   height: 2.5rem !important;
   padding-left: 0px !important;
@@ -1550,6 +1559,10 @@ textarea {
 .swiper-button-next, .swiper-button-prev {
   --tw-translate-y: -75% !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+
+.swiper-button-next {
+  right: 0px !important;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
