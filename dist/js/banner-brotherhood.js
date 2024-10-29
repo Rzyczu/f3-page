@@ -13,7 +13,6 @@ function clickEvent() {
       item.classList.remove('active');
     });
     let elements = document.querySelectorAll(`[data-id="${this.id}"]`);
-    console.log(this);
 
     elements.forEach(element => {
       element.classList.add('active');

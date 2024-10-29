@@ -10,7 +10,6 @@ function clickEvent() {
     });
 
     let element = document.querySelector(`[data-id="${this.id}"]`);
-    console.log(this);
       element.classList.add('active');
     this.classList.add('active');
 }
