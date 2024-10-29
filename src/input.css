@@ -599,8 +599,4 @@ nav{
   @apply mt-[1.75em];
 }
 
-.partners:hover {
-  @apply scale-125;
-}
-
 }
