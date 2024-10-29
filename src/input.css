@@ -36,7 +36,11 @@
 
 @layer components {
   [aria-current="page"] {
-    @apply text-white lg:text-primary !important;
+    /* @apply text-primary !important; */
+  }
+
+ #mobile-navbar [aria-current="page"] {
+    @apply text-white !important;
   }
 
     /* https://codepen.io/sosuke/pen/Pjoqqp */

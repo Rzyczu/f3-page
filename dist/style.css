@@ -639,15 +639,12 @@ section{
 }
 
 [aria-current="page"] {
-  --tw-text-opacity: 1 !important;
-  color: rgb(254 251 247 / var(--tw-text-opacity)) !important;
+  /* @apply text-primary !important; */
 }
 
-@media (min-width: 1024px) {
-  [aria-current="page"] {
-    --tw-text-opacity: 1 !important;
-    color: rgb(113 76 152 / var(--tw-text-opacity)) !important;
-  }
+#mobile-navbar [aria-current="page"] {
+  --tw-text-opacity: 1 !important;
+  color: rgb(254 251 247 / var(--tw-text-opacity)) !important;
 }
 
 /* https://codepen.io/sosuke/pen/Pjoqqp */

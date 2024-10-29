@@ -1,10 +1,12 @@
 const mobileNavbar = document.getElementById("mobile-navbar");
 const hamburgerBtn = document.querySelector(".hamburger");
-const hamburgerLabel = document.querySelector(".hamburger-label"); // Label element
+const hamburgerLabel = document.querySelector(".hamburger-label");
 const navbarBrand = document.getElementById("navbar-brand");
 const navbarLinksDisplayMobile = document.querySelectorAll(".display-mobile");
 const navElement = document.querySelector('nav');
 const logo = document.querySelector('img[src="./assets/svg/logo.svg"]');
+const activePageLink = document.querySelector('[aria-current="page"]'); // Selects active page link
+activePageLink.classList.add('text-primary');
 
 function toggleNavbar() {
   const isActive = hamburgerBtn.classList.contains("is-active");
@@ -13,7 +15,7 @@ function toggleNavbar() {
 
   if (!isActive) {
     // Open menu logic
-    hamburgerLabel.textContent = "close"; // Set label to "close"
+    hamburgerLabel.textContent = "close";
     navElement.classList.remove('sm:bg-transparent');
     if (navElement.getAttribute('data-page') !== 'index') {
       navElement.classList.add('bg-primary');
@@ -26,6 +28,8 @@ function toggleNavbar() {
     setTimeout(function() {
       mobileNavbar.classList.add('active');
       navbarBrand.classList.add('hidden');
+      activePageLink.classList.remove('text-primary');
+      activePageLink.classList.add('text-gray-light');
     }, 100);
 
     setTimeout(function() {
@@ -33,10 +37,11 @@ function toggleNavbar() {
       document.body.classList.remove('bg-white');
       logo.classList.remove('group-hover:svg-color-primary');
       logo.classList.add('group-hover:svg-color-white');
+      
     }, 500);
   } else {
     // Close menu logic
-    hamburgerLabel.textContent = "menu"; // Set label to "menu"
+    hamburgerLabel.textContent = "menu";
     navbarLinksDisplayMobile.forEach(element => {
       element.classList.add('hidden', 'hover:text-primary');
       element.classList.remove('hover:text-white');
@@ -54,14 +59,15 @@ function toggleNavbar() {
     
     logo.classList.remove('group-hover:svg-color-white');
     logo.classList.add('group-hover:svg-color-primary');
+    activePageLink.classList.remove('text-gray-light');
+    activePageLink.classList.add('text-primary');
   }
 }
 
 function handleResize() {
   if (window.innerWidth > 1024) {
-    // Close the menu if the window is resized to larger screens
     hamburgerBtn.classList.remove("is-active");
-    hamburgerLabel.textContent = "menu"; // Reset label to "menu" on resize
+    hamburgerLabel.textContent = "menu";
     navbarLinksDisplayMobile.forEach(element => {
       element.classList.add('hidden', 'hover:text-primary');
       element.classList.remove('hover:text-white');
@@ -79,6 +85,8 @@ function handleResize() {
     
     logo.classList.remove('group-hover:svg-color-white');
     logo.classList.add('group-hover:svg-color-primary');
+    activePageLink.classList.remove('text-gray-light'); // Ensure it resets on larger screens
+    activePageLink.classList.add('text-primary');
   }
 }
 
