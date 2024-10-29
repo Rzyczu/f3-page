@@ -5,9 +5,10 @@ const navbarBrand = document.getElementById("navbar-brand");
 const navbarLinksDisplayMobile = document.querySelectorAll(".display-mobile");
 const navElement = document.querySelector('nav');
 const logo = document.querySelector('img[src="./assets/svg/logo.svg"]');
-const activePageLink = document.querySelector('[aria-current="page"]'); // Selects active page link
-activePageLink.classList.add('text-primary');
-
+const activePageLinks = document.querySelectorAll('[aria-current="page"]'); // Selects active page link
+activePageLinks.forEach(link => {
+  link.classList.add('text-primary');
+});
 function toggleNavbar() {
   const isActive = hamburgerBtn.classList.contains("is-active");
 
@@ -28,8 +29,10 @@ function toggleNavbar() {
     setTimeout(function() {
       mobileNavbar.classList.add('active');
       navbarBrand.classList.add('hidden');
-      activePageLink.classList.remove('text-primary');
-      activePageLink.classList.add('text-gray-light');
+      activePageLinks.forEach(link => {
+        link.classList.remove('text-primary');
+        link.classList.add('text-gray-light');
+      });
     }, 100);
 
     setTimeout(function() {
@@ -59,8 +62,10 @@ function toggleNavbar() {
     
     logo.classList.remove('group-hover:svg-color-white');
     logo.classList.add('group-hover:svg-color-primary');
-    activePageLink.classList.remove('text-gray-light');
-    activePageLink.classList.add('text-primary');
+    activePageLinks.forEach(link => {
+      link.classList.remove('text-gray-light');
+      link.classList.add('text-primary');
+    });
   }
 }
 
