@@ -2369,7 +2369,21 @@ nav {
   color: rgb(113 76 152 / var(--tw-text-opacity));
 }
 
+@media not all and (min-width: 1024px) {
+  .max-lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+}
+
 @media not all and (min-width: 768px) {
+  .max-md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .max-md\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
   .max-md\:flex-col-reverse {
     flex-direction: column-reverse;
   }
