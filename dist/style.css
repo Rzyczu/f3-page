@@ -1966,6 +1966,10 @@ nav {
   width: 100%;
 }
 
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -2432,6 +2436,10 @@ nav {
     margin-top: 3rem;
   }
 
+  .max-sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .max-sm\:hidden {
     display: none;
   }
@@ -2472,6 +2480,14 @@ nav {
 
   .max-sm\:pl-6 {
     padding-left: 1.5rem;
+  }
+
+  .max-sm\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .max-sm\:pt-24 {
+    padding-top: 6rem;
   }
 }
 
@@ -2534,6 +2550,10 @@ nav {
     margin-top: 0px;
   }
 
+  .sm\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -2580,6 +2600,10 @@ nav {
 
   .sm\:w-full {
     width: 100%;
+  }
+
+  .sm\:w-1\/4 {
+    width: 25%;
   }
 
   .sm\:flex-none {
