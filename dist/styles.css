@@ -666,19 +666,16 @@ nav {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
-main {
-}
-
 #mobile-navbar {
   --tw-bg-opacity: 1;
   background-color: rgb(113 76 152 / var(--tw-bg-opacity));
-  height: 100vh;
   opacity: 0;
   height: 0px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
+  overflow: hidden;
 }
 
 #mobile-navbar.active {
@@ -2419,6 +2416,11 @@ textarea {
 
   .max-sm\:self-center {
     align-self: center;
+  }
+
+  .max-sm\:bg-primary {
+    --tw-bg-opacity: 1;
+    background-color: rgb(113 76 152 / var(--tw-bg-opacity));
   }
 
   .max-sm\:bg-white {

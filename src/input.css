@@ -60,24 +60,19 @@
     @apply transition-all duration-200 ease-[ease-in-out];
     @apply sticky top-0 z-50 w-full shadow-md !important;
   }
-
-
-  main {
-  }
-
+  
   #mobile-navbar {
     @apply bg-primary;
-    @apply h-screen;
     @apply opacity-0;
     @apply h-0;
     @apply transition-all duration-500 ease-[ease-in-out];
+    @apply overflow-hidden;
   }
 
   #mobile-navbar.active {
     @apply opacity-100;
     @apply h-screen;
   }
-
 
   /* https://codepen.io/sosuke/pen/Pjoqqp */
   .svg-color-white {
