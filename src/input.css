@@ -7,8 +7,7 @@
     @apply font-montserrat;
     @apply min-h-screen;
     @apply flex flex-col;
-    @apply max-md:overflow-hidden;
-    @apply lg:overflow-auto;
+    @apply overflow-auto;
   }
 
   p,

@@ -451,18 +451,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-@media not all and (min-width: 768px) {
-  body {
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    overflow: auto;
-  }
+  overflow: auto;
 }
 
 p,
@@ -2435,11 +2424,6 @@ textarea {
   .max-sm\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(254 251 247 / var(--tw-bg-opacity));
-  }
-
-  .max-sm\:bg-primary {
-    --tw-bg-opacity: 1;
-    background-color: rgb(113 76 152 / var(--tw-bg-opacity));
   }
 
   .max-sm\:pb-16 {
