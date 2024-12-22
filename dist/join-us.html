@@ -16,21 +16,23 @@
 </head>
 
 <body class="bg-white">
-    <nav class="sm:bg-transparent text-gray-light" id="navbar">
+    <nav class="bg-white text-gray-light" id="navbar">
         <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-14">
-            <div class="flex md:basis-2/3 lg:basis-1/3 xl:basis-1/2">
+            <div class="flex md:basis-2/3 lg:basis-3/12 xl:basis-2/5">
                 <a href="./index.html" class="flex items-center space-x-2 group">
                     <img src="./assets/svg/logo.svg" class="h-8 svg-color-gray group-hover:svg-color-primary"
                         alt="Flowbite Logo" />
-                    <span id="navbar-brand" class="text-xs font-medium text-gray-light group-hover:text-primary">
+                    <span id="navbar-brand"
+                        class="text-xs font-medium xl:text-xs text-gray-light lg:text-2xs group-hover:text-primary">
                         3 Podgórski Szczep Fioletowej Trójki<br />
                         im. Tadeusza Kościószki
                     </span>
                 </a>
             </div>
 
-            <!-- <div class="flex justify-around space-x-2 sm:space-x-3 basis-1/3 sm:basis-1/2 md:basis-2/3 xl:basis-1/2 lg:basis-3/5 md:justify-end"> -->
-            <a href="./about-us.html"
+            <a href="./index.html"
+                class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">Strona
+                Główna</a> <a href="./about-us.html"
                 class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">O nas</a>
             <a href="./join-us.html" aria-current="page"
                 class="hidden py-2 text-sm font-semibold text-gray-light hover:text-primary sm:px-3 lg:block">Dołącz
@@ -57,8 +59,11 @@
 
         </div>
         <div id="mobile-navbar" class="h-screen bg-primary">
-            <div class="relative flex justify-center mt-20">
+            <div class="relative flex justify-center pt-40">
                 <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
+                    <a href="./index.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle ">Strona
+                        główna</a>
                     <a href="./about-us.html"
                         class="relative px-3 py-2 text-2xl font-semibold text-gray-light hover:text-white hover-left-circle ">O
                         nas</a>
