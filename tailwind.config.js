@@ -54,6 +54,7 @@ module.exports = {
   plugins: [],
   safelist: [
     'max-sm:bg-primary',
+    'shadow-lg'
   ]
 }
 

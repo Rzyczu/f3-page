@@ -58,7 +58,7 @@
 
   nav {
     @apply transition-all duration-200 ease-[ease-in-out];
-    @apply sticky top-0 z-50 w-full shadow-md !important;
+    @apply top-0  w-full;
   }
   
   #mobile-navbar {
