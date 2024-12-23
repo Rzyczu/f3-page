@@ -24,8 +24,6 @@ toggleNavbar = () => {
 
   const isActive = hamburgerBtn.classList.contains("is-active");
   const isIndexPage = navElement.getAttribute('data-page') === 'index';
-  const isSmallScreen = window.matchMedia('(max-width: 640px)').matches; // <=sm
-  const isLargeOrSmallerScreen = window.matchMedia('(max-width: 1024px)').matches; // <=lg
 
   hamburgerBtn.classList.toggle("is-active");
 
@@ -47,6 +45,8 @@ toggleNavbar = () => {
       element.classList.add('hover:text-white');
     });
 
+    document.body.classList.add('bg-primary', 'overflow-hidden');
+
     setTimeout(() => {
       mobileNavbar.classList.add('active');
       navbarBrand.classList.add('hidden');
@@ -57,7 +57,6 @@ toggleNavbar = () => {
     }, 100);
 
     setTimeout(() => {
-      document.body.classList.add('bg-primary', 'overflow-hidden');
       document.body.classList.remove('bg-white');
       logo.classList.remove('group-hover:svg-color-primary');
       logo.classList.add('group-hover:svg-color-white');
@@ -101,6 +100,9 @@ toggleNavbar = () => {
 }
 
 handleResize = () => {
+  if (hamburgerBtn.classList.contains("is-active"))
+    return;
+
   if (window.innerWidth > 1024) {
     hamburgerBtn.classList.remove("is-active");
     hamburgerLabel.textContent = "menu";
@@ -134,6 +136,9 @@ handleResize = () => {
 }
 
 handleScroll = () => {
+  if (hamburgerBtn.classList.contains("is-active"))
+    return;
+
   const scrollY = window.scrollY;
   console.log(scrollY)
   if (scrollY > 50) {
@@ -147,34 +152,47 @@ hamburgerBtn.addEventListener("click", toggleNavbar);
 window.addEventListener("resize", handleResize);
 window.addEventListener('scroll', handleScroll);
 
+//  CONTEX MENU NON-DEFAULT - LOCK/UNLOCK STICKY NAVBAR
 
-const contextMenu = document.getElementById('custom-context-menu');
-const toggleNavLockItem = document.getElementById('toggle-nav-lock');
-let isNavSticky = true; // Flaga oznaczająca, czy `nav` jest sticky
+const contextMenu = document.createElement('div');
+contextMenu.id = 'custom-context-menu';
+contextMenu.className = 'fixed z-50 hidden p-2 bg-white rounded shadow-md';
+
+const menuList = document.createElement('ul');
+const menuItem = document.createElement('li');
+menuItem.id = 'toggle-nav-lock';
+menuItem.className = 'p-2 cursor-pointer hover:bg-gray-100';
+
+// Składanie elementów
+menuList.appendChild(menuItem);
+contextMenu.appendChild(menuList);
+
+// Dodanie do DOM, np. do body
+document.body.appendChild(contextMenu);
+
+let isNavSticky = true;
 if (localStorage.getItem('isNavSticky') === 'false') {
   navElement.classList.remove('sticky', 'top-0');
   isNavSticky = false;
 }
-// Funkcja obsługująca kliknięcia prawym przyciskiem myszy na `nav`
 navElement.addEventListener('contextmenu', (event) => {
-  event.preventDefault(); // Zablokowanie domyślnego menu kontekstowego
+  if (hamburgerBtn.classList.contains("is-active"))
+    return;
 
-  // Pozycjonowanie menu w miejscu kliknięcia
+  event.preventDefault();
+
   contextMenu.style.top = `${event.clientY}px`;
   contextMenu.style.left = `${event.clientX}px`;
   contextMenu.classList.remove('hidden');
 
-  // Ustawienie odpowiedniej opcji w menu
-  toggleNavLockItem.textContent = isNavSticky ? 'Zablokuj menu' : 'Odblokuj menu';
+  menuItem.textContent = isNavSticky ? 'Zablokuj menu' : 'Odblokuj menu';
 });
 
-// Ukrywanie menu, gdy klikniemy gdziekolwiek indziej
 document.addEventListener('click', () => {
   contextMenu.classList.add('hidden');
 });
 
-// Funkcja obsługująca włączanie/wyłączanie sticky na `nav`
-toggleNavLockItem.addEventListener('click', () => {
+menuItem.addEventListener('click', () => {
   if (isNavSticky) {
     navElement.classList.remove('sticky', 'top-0');
     isNavSticky = false;
@@ -183,5 +201,5 @@ toggleNavLockItem.addEventListener('click', () => {
     isNavSticky = true;
   }
   localStorage.setItem('isNavSticky', isNavSticky);
-  contextMenu.classList.add('hidden'); // Ukrywanie menu po kliknięciu opcji
+  contextMenu.classList.add('hidden');
 });

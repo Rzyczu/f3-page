@@ -7,7 +7,6 @@
     @apply font-montserrat;
     @apply min-h-screen;
     @apply flex flex-col;
-    @apply overflow-auto;
   }
 
   p,
@@ -70,6 +69,7 @@
   }
 
   #mobile-navbar.active {
+    @apply overflow-hidden;
     @apply opacity-100;
     @apply h-screen;
   }
@@ -116,7 +116,7 @@
   .left-line {
     @apply before:content-[''];
     @apply before:absolute;
-    @apply before:h-5/6;
+    @apply before:h-full-3rem;
     @apply before:border;
     @apply before:border-[1px];
     @apply before:border-solid;

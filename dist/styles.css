@@ -451,7 +451,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 p,
@@ -674,6 +673,7 @@ nav {
 }
 
 #mobile-navbar.active {
+  overflow: hidden;
   opacity: 1;
   height: 100vh;
 }
@@ -736,7 +736,7 @@ nav {
 .left-line::before {
   --tw-content: '';
   position: absolute;
-  height: 83.333333%;
+  height: calc(100% - 3rem);
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -1760,8 +1760,8 @@ textarea {
   bottom: -6rem;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.bottom-28 {
+  bottom: 7rem;
 }
 
 .bottom-7 {
@@ -1792,12 +1792,12 @@ textarea {
   top: 7.375rem;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .z-40 {
   z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .order-1 {
@@ -1963,8 +1963,8 @@ textarea {
   width: 1rem;
 }
 
-.w-52 {
-  width: 13rem;
+.w-56 {
+  width: 14rem;
 }
 
 .w-6 {
@@ -2094,6 +2094,10 @@ textarea {
 
 .justify-self-stretch {
   justify-self: stretch;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-visible {

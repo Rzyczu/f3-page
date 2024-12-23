@@ -49,12 +49,16 @@ module.exports = {
       translate: {
         'half-logo': '45%', //44.744356936%
       },
+      height: {
+        'full-3rem': 'calc(100% - 3rem)'
+      }
     },
   },
   plugins: [],
   safelist: [
     'max-sm:bg-primary',
-    'shadow-lg'
+    'shadow-lg',
+    'overflow-hidden'
   ]
 }
 
