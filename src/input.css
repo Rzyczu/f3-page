@@ -91,8 +91,7 @@
     filter: invert(100%) sepia(5%) saturate(1386%) hue-rotate(298deg) brightness(80%) contrast(89%);
   }
 
-  .hover-left-circle:hover,
-  [aria-current="page"] {
+  [aria-current="page"].hover-left-circle, .hover-left-circle:hover {
     @apply max-lg:before:content-[''];
     @apply max-lg:before:block;
     @apply max-lg:before:absolute;

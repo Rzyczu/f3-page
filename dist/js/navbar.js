@@ -100,9 +100,6 @@ toggleNavbar = () => {
 }
 
 handleResize = () => {
-  if (hamburgerBtn.classList.contains("is-active"))
-    return;
-
   if (window.innerWidth > 1024) {
     hamburgerBtn.classList.remove("is-active");
     hamburgerLabel.textContent = "menu";
