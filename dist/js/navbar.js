@@ -100,6 +100,8 @@ toggleNavbar = () => {
 }
 
 handleResize = () => {
+  contextMenu.classList.add('hidden');
+
   if (window.innerWidth > 1024) {
     hamburgerBtn.classList.remove("is-active");
     hamburgerLabel.textContent = "menu";
@@ -135,9 +137,9 @@ handleResize = () => {
 handleScroll = () => {
   if (hamburgerBtn.classList.contains("is-active"))
     return;
+  contextMenu.classList.add('hidden');
 
   const scrollY = window.scrollY;
-  console.log(scrollY)
   if (scrollY > 50) {
     navElement.classList.add('shadow-lg');
   } else {
@@ -153,7 +155,7 @@ window.addEventListener('scroll', handleScroll);
 
 const contextMenu = document.createElement('div');
 contextMenu.id = 'custom-context-menu';
-contextMenu.className = 'fixed z-50 hidden p-2 bg-white rounded shadow-md';
+contextMenu.className = 'hidden';
 
 const menuList = document.createElement('ul');
 const menuItem = document.createElement('li');
@@ -175,6 +177,7 @@ if (localStorage.getItem('isNavSticky') === 'false') {
 navElement.addEventListener('contextmenu', (event) => {
   if (hamburgerBtn.classList.contains("is-active"))
     return;
+  console.log(contextMenu)
 
   event.preventDefault();
 

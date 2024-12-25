@@ -634,4 +634,8 @@
     @apply mt-[1.75em];
   }
 
+  #custom-context-menu {
+    @apply fixed z-50 p-2 bg-white rounded shadow-md hover:bg-primary-light hover:text-white;
+  }
+
 }
