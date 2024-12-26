@@ -52,7 +52,7 @@ toggleNavbar = () => {
       navbarBrand.classList.add('hidden');
       activePageLinks.forEach(link => {
         link.classList.remove('text-primary');
-        link.classList.add('text-gray-light');
+        link.classList.add('text-gray');
       });
     }, 100);
 
@@ -89,7 +89,7 @@ toggleNavbar = () => {
     logo.classList.remove('group-hover:svg-color-white');
     logo.classList.add('group-hover:svg-color-primary');
     activePageLinks.forEach(link => {
-      link.classList.remove('text-gray-light');
+      link.classList.remove('text-gray');
       link.classList.add('text-primary');
     });
 
@@ -128,7 +128,7 @@ handleResize = () => {
     logo.classList.remove('group-hover:svg-color-white');
     logo.classList.add('group-hover:svg-color-primary');
     activePageLinks.forEach(link => {
-      link.classList.remove('text-gray-light');
+      link.classList.remove('text-gray');
       link.classList.add('text-primary');
     })
   }

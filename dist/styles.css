@@ -1751,7 +1751,7 @@ textarea {
 
 #custom-context-menu:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(196 194 193 / var(--tw-bg-opacity));
+  background-color: rgb(222 222 222 / var(--tw-bg-opacity));
 }
 
 .absolute {
@@ -2256,7 +2256,7 @@ textarea {
   font-weight: 600;
 }
 
-.text-gray-light {
+.text-gray {
   --tw-text-opacity: 1;
   color: rgb(196 194 193 / var(--tw-text-opacity));
 }
@@ -2322,7 +2322,7 @@ textarea {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:stroke-gray-light:hover {
+.hover\:stroke-gray:hover {
   stroke: #C4C2C1;
 }
 
@@ -2338,7 +2338,7 @@ textarea {
   font-weight: 600;
 }
 
-.hover\:text-gray-light:hover {
+.hover\:text-gray:hover {
   --tw-text-opacity: 1;
   color: rgb(196 194 193 / var(--tw-text-opacity));
 }

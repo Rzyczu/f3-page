@@ -170,7 +170,7 @@
     @apply size-60 lg:size-72;
     @apply min-w-60 lg:min-w-72;
     @apply rounded-[50%];
-    @apply border-gray-light;
+    @apply border-gray;
     @apply max-md:self-center;
     @apply max-md:mb-8;
   }
