@@ -1754,6 +1754,24 @@ textarea {
   background-color: rgb(222 222 222 / var(--tw-bg-opacity));
 }
 
+#navbar-lock-icon {
+  position: relative;
+  margin-left: 1rem;
+  color: transparent;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emoji-gray {
+  color: transparent;
+  text-shadow: 0 0 0 #C4C2C1;
+}
+
+.emoji-gray:hover {
+  text-shadow: 0 0 0 #B3A2CE;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1782,6 +1800,10 @@ textarea {
   left: 0.25rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1798,12 +1820,24 @@ textarea {
   right: 1rem;
 }
 
+.top-7 {
+  top: 1.75rem;
+}
+
 .top-\[7\.375rem\] {
   top: 7.375rem;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
 .z-40 {
   z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .order-1 {

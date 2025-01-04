@@ -151,7 +151,7 @@ hamburgerBtn.addEventListener("click", toggleNavbar);
 window.addEventListener("resize", handleResize);
 window.addEventListener('scroll', handleScroll);
 
-//  CONTEX MENU NON-DEFAULT - LOCK/UNLOCK STICKY NAVBAR
+// CONTEXT MENU - LOCK/UNLOCK STICKY NAVBAR
 
 const contextMenu = document.createElement('div');
 contextMenu.id = 'custom-context-menu';
@@ -166,7 +166,7 @@ menuItem.className = 'p-2 cursor-pointer hover:bg-gray-100';
 menuList.appendChild(menuItem);
 contextMenu.appendChild(menuList);
 
-// Dodanie do DOM, np. do body
+// Dodanie do DOM
 document.body.appendChild(contextMenu);
 
 let isNavSticky = true;
@@ -174,25 +174,13 @@ if (localStorage.getItem('isNavSticky') === 'false') {
   navElement.classList.remove('sticky', 'top-0');
   isNavSticky = false;
 }
-navElement.addEventListener('contextmenu', (event) => {
-  if (hamburgerBtn.classList.contains("is-active"))
-    return;
-  console.log(contextMenu)
 
-  event.preventDefault();
+// Ustawienia początkowego stanu emoji
+const lockIcon = document.getElementById('navbar-lock-icon');
+updateLockIconState();
 
-  contextMenu.style.top = `${event.clientY}px`;
-  contextMenu.style.left = `${event.clientX}px`;
-  contextMenu.classList.remove('hidden');
-
-  menuItem.textContent = isNavSticky ? 'Zablokuj menu' : 'Odblokuj menu';
-});
-
-document.addEventListener('click', () => {
-  contextMenu.classList.add('hidden');
-});
-
-menuItem.addEventListener('click', () => {
+// Funkcja przełączająca stan sticky navbaru
+function toggleStickyNavbar() {
   if (isNavSticky) {
     navElement.classList.remove('sticky', 'top-0');
     isNavSticky = false;
@@ -201,5 +189,40 @@ menuItem.addEventListener('click', () => {
     isNavSticky = true;
   }
   localStorage.setItem('isNavSticky', isNavSticky);
+  updateLockIconState();
+}
+
+// Funkcja aktualizująca stan ikony emoji
+function updateLockIconState() {
+  if (isNavSticky) {
+    lockIcon.textContent = '🔓'; // Odblokowana kłódka
+    menuItem.textContent = 'Zablokuj menu';
+  } else {
+    lockIcon.textContent = '🔒'; // Zablokowana kłódka
+    menuItem.textContent = 'Odblokuj menu';
+  }
+}
+
+// Obsługa zdarzeń dla context menu
+navElement.addEventListener('contextmenu', (event) => {
+  if (hamburgerBtn.classList.contains("is-active")) return;
+
+  event.preventDefault();
+  contextMenu.style.top = `${event.clientY}px`;
+  contextMenu.style.left = `${event.clientX}px`;
+  contextMenu.classList.remove('hidden');
+});
+
+document.addEventListener('click', () => {
   contextMenu.classList.add('hidden');
+});
+
+menuItem.addEventListener('click', () => {
+  toggleStickyNavbar();
+  contextMenu.classList.add('hidden');
+});
+
+// Obsługa zdarzeń dla ikony emoji
+lockIcon.addEventListener('click', () => {
+  toggleStickyNavbar();
 });
