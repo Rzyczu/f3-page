@@ -1827,6 +1827,10 @@ textarea {
   top: 7.375rem;
 }
 
+.top-8 {
+  top: 2rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -2010,6 +2014,10 @@ textarea {
   width: 100%;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -2042,6 +2050,10 @@ textarea {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-\[auto_1fr\] {
+  grid-template-columns: auto 1fr;
 }
 
 .flex-row {
