@@ -2014,6 +2014,10 @@ textarea {
   width: 100%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -2746,6 +2750,10 @@ textarea {
   }
 
   .md\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .md\:w-2\/3 {
     width: 66.666667%;
   }
 
