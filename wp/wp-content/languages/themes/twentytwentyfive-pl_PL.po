@@ -1,0 +1,1442 @@
+# Translation of Themes - Twenty Twenty-Five in Polish
+# This file is distributed under the same license as the Themes - Twenty Twenty-Five package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-12-02 08:58:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: pl\n"
+"Project-Id-Version: Themes - Twenty Twenty-Five\n"
+
+#. Theme Name of the theme
+#: style.css patterns/footer-columns.php:66 patterns/footer-newsletter.php:42
+#: patterns/footer.php:75 patterns/page-portfolio-home.php:226
+#, gp-priority: high
+msgid "Twenty Twenty-Five"
+msgstr "Dwadzieścia Dwadzieścia-Pięć"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide."
+msgstr "Motyw Dwadzieścia Dwadzieścia-Pięć kładzie nacisk na prostotę i adaptacyjność. Oferuje elastyczne opcje wyglądu, obsługiwane przez różnorodne wzorce dla różnych rodzajów stron, takich jak usługi i strony docelowe, co czyni go idealnym do tworzenia osobistych blogów, profesjonalnych portfolio, internetowych czasopism czy witryn biznesowych. Jego szablony dostosowują się do różnych stylów blogów, od skupionych na tekście po układy obfitujące w obrazki. Ponadto obsługuje międzynarodową typografię i różnorodne palety kolorów, zapewniając dostępność i możliwość dostosowania dla użytkowników na całym świecie."
+
+#: patterns/text-faqs.php:35 patterns/text-faqs.php:51
+#: patterns/text-faqs.php:71 patterns/text-faqs.php:87
+msgctxt "Answer in the FAQs pattern."
+msgid "This exquisite compilation showcases a diverse array of photographs that capture the essence of different eras and cultures, reflecting the unique styles and perspectives of each artist."
+msgstr "Wyjątkowa kompilacja prezentuje różnorodne zdjęcia, które uchwyciły istotę różnych epok i kultur, odzwierciedlając unikatowe style i perspektywy każdego artysty."
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Stopka"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Nagłówek"
+
+#: styles/02-noon.json styles/04-afternoon.json styles/05-twilight.json
+#: styles/06-morning.json styles/08-midnight.json
+#: styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-4.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-7.json theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Duży"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: styles/02-noon.json styles/04-afternoon.json styles/05-twilight.json
+#: styles/06-morning.json styles/08-midnight.json
+#: styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-4.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-7.json theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Bardzo duży"
+
+#: styles/02-noon.json styles/04-afternoon.json styles/05-twilight.json
+#: styles/06-morning.json styles/08-midnight.json
+#: styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-4.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-7.json theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Średni"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Bazowy"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr "Panel boczny"
+
+#: styles/02-noon.json styles/04-afternoon.json styles/05-twilight.json
+#: styles/06-morning.json styles/08-midnight.json
+#: styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-4.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-7.json theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr "Bardzo Bardzo Duży"
+
+#: styles/02-noon.json styles/04-afternoon.json styles/05-twilight.json
+#: styles/06-morning.json styles/08-midnight.json
+#: styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-4.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-7.json theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Małe"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
+msgstr "Strona bez tytułu"
+
+#: patterns/contact-info-locations.php:34 patterns/footer-social.php:21
+msgid "Facebook"
+msgstr "Facebook"
+
+#: patterns/contact-info-locations.php:33 patterns/footer-social.php:22
+#: patterns/media-instagram-grid.php:24 patterns/page-cv-bio.php:47
+#: patterns/page-link-in-bio-heading-paragraph-links-image.php:36
+#: patterns/page-link-in-bio-with-tight-margins.php:48
+msgid "Instagram"
+msgstr "Instagram"
+
+#: patterns/comments.php:18
+msgid "Comments"
+msgstr "Komentarze"
+
+#: functions.php:106
+msgid "A collection of full page layouts."
+msgstr "Kolekcja układów pełnych stron."
+
+#: patterns/banner-intro-image.php:22
+msgctxt "Alt text for intro picture."
+msgid "Picture of a flower"
+msgstr "Zdjęcie kwiatu"
+
+#: patterns/banner-about-book.php:22
+msgid "About the book"
+msgstr "O książce"
+
+#: patterns/banner-about-book.php:34
+msgid "Image of a book"
+msgstr "Obrazek książki"
+
+#: functions.php:114
+msgid "A collection of post format patterns."
+msgstr "Zbiór wzorców formatu wpisu."
+
+#: functions.php:134
+msgctxt "Label for the block binding placeholder in the editor"
+msgid "Post format name"
+msgstr "Nazwa formatu wpisu"
+
+#: patterns/banner-about-book.php
+msgctxt "Pattern title"
+msgid "Banner with book description"
+msgstr "Baner z opisem książki"
+
+#: patterns/banner-about-book.php
+msgctxt "Pattern description"
+msgid "Banner with book description and accompanying image for promotion."
+msgstr "Baner z opisem książki i towarzyszącym obrazkiem do promocji."
+
+#: patterns/banner-intro-image.php:31
+msgctxt "Heading for banner pattern."
+msgid "New arrivals"
+msgstr "Nowości"
+
+#: patterns/banner-cover-big-heading.php
+msgctxt "Pattern title"
+msgid "Cover with big heading"
+msgstr "Okładka z dużym nagłówkiem"
+
+#: patterns/banner-cover-big-heading.php
+msgctxt "Pattern description"
+msgid "A full-width cover section with a large background image and an oversized heading."
+msgstr "Pełnowymiarowa okładka z dużym obrazem w tle i powiększonym nagłówkiem."
+
+#: patterns/banner-cover-big-heading.php:20
+#: patterns/media-instagram-grid.php:36 patterns/page-coming-soon.php:19
+msgid "Photo of a field full of flowers, a blue sky and a tree."
+msgstr "Zdjęcie przedstawiające pole pełne kwiatów, błękitne niebo i drzewo."
+
+#: patterns/banner-cover-big-heading.php:27 patterns/footer-columns.php:33
+#: patterns/footer-columns.php:35 patterns/footer-newsletter.php:20
+#: patterns/template-home-photo-blog.php:22
+msgid "Stories"
+msgstr "Historie"
+
+#: patterns/banner-intro-image.php
+msgctxt "Pattern title"
+msgid "Short heading and paragraph and image on the left"
+msgstr "Krótki nagłówek i akapit oraz obrazek po lewej"
+
+#: patterns/banner-intro-image.php
+msgctxt "Pattern description"
+msgid "A Intro pattern with Short heading, paragraph and image on the left."
+msgstr "Wzorzec wprowadzenia z krótkim nagłówkiem, akapitem i obrazkiem po lewej stronie."
+
+#: patterns/banner-intro-image.php:42
+msgctxt "Button text of intro section."
+msgid "Learn More"
+msgstr "Dowiedz się więcej"
+
+#: patterns/banner-intro.php
+msgctxt "Pattern title"
+msgid "Intro with left-aligned description"
+msgstr "Wprowadzenie z opisem wyrównanym do lewej"
+
+#: patterns/banner-intro.php
+msgctxt "Pattern description"
+msgid "A large left-aligned heading with a brand name emphasized in bold."
+msgstr "Duży, wyrównany do lewej nagłówek z nazwą marki wyróżnioną pogrubioną czcionką."
+
+#: patterns/banner-intro.php:22
+#: patterns/banner-with-description-and-images-grid.php:32
+#: patterns/footer-columns.php:46 patterns/overlapped-images.php:48
+msgctxt "Example brand name."
+msgid "Fleurs"
+msgstr "Fleurs"
+
+#: patterns/banner-poster.php:39
+msgctxt "Example event date in pattern."
+msgid "Aug 08—10 2025"
+msgstr "08—10 sierpnia 2025"
+
+#: patterns/banner-poster.php
+msgctxt "Pattern title"
+msgid "Poster-like section"
+msgstr "Sekcja typu plakat"
+
+#: patterns/banner-poster.php
+msgctxt "Pattern description"
+msgid "A section that can be used as a banner or a landing page to announce an event."
+msgstr "Sekcja, która może służyć jako baner lub strona docelowa w celu ogłoszenia wydarzenia."
+
+#: patterns/banner-poster.php:15
+msgid "Picture of a historical building in ruins."
+msgstr "Zdjęcie zabytkowego budynku w ruinie."
+
+#: patterns/banner-poster.php:39
+msgid "Fuego Bar, Mexico City"
+msgstr "Bar Fuego, Meksyk"
+
+#: patterns/banner-poster.php:59
+msgid "#stories"
+msgstr "#historie"
+
+#: patterns/banner-with-description-and-images-grid.php
+msgctxt "Pattern title"
+msgid "Banner with description and images grid"
+msgstr "Baner z opisem i siatką obrazków"
+
+#: patterns/banner-intro-image.php:35
+msgctxt "Sample description for banner with flower."
+msgid "Like flowers that bloom in unexpected places, every story unfolds with beauty and resilience, revealing hidden wonders."
+msgstr "Podobnie jak kwiaty, które rozkwitają w nieoczekiwanych miejscach, każda historia rozwija się pięknie i dynamicznie, ujawniając ukryte cuda."
+
+#. translators: %s is the brand name, e.g., 'Fleurs'.
+#: patterns/banner-intro.php:21
+msgctxt "Pattern placeholder text."
+msgid "We're %s, our mission is to deliver exquisite flower arrangements that not only adorn living spaces but also inspire a deeper appreciation for natural beauty."
+msgstr "Jesteśmy %s, naszą misją jest dostarczanie wykwintnych kompozycji kwiatowych, które nie tylko zdobią przestrzenie mieszkalne, ale także inspirują do głębszego doceniania piękna natury."
+
+#: patterns/banner-with-description-and-images-grid.php:23
+#: patterns/overlapped-images.php:37
+msgid "About Us"
+msgstr "O nas"
+
+#: patterns/banner-with-description-and-images-grid.php
+msgctxt "Pattern description"
+msgid "A banner with a short paragraph, and two images displayed in a grid layout."
+msgstr "Baner z krótkim akapitem oraz dwoma obrazkami wyświetlanymi w układzie siatki."
+
+#. translators: %s is the brand name, e.g., 'Fleurs'.
+#: patterns/banner-with-description-and-images-grid.php:31
+#: patterns/overlapped-images.php:47
+msgid "%s is a flower delivery and subscription business. Based in the EU, our mission is not only to deliver stunning flower arrangements across but also foster knowledge and enthusiasm on the beautiful gift of nature: flowers."
+msgstr "%s to firma zajmująca się dostawą kwiatów oraz oferująca subskrypcję kwiatową. Z siedzibą w UE, naszą misją jest nie tylko dostarczanie zachwycających kompozycji kwiatowych, ale również wspieranie wiedzy i entuzjazmu na temat pięknego daru natury, jakim są kwiaty."
+
+#: patterns/banner-with-description-and-images-grid.php:42
+#: patterns/overlapped-images.php:21
+msgid "Photography close up of a red flower."
+msgstr "Zdjęcie czerwonego kwiatu z bliska."
+
+#: patterns/banner-with-description-and-images-grid.php:48
+#: patterns/overlapped-images.php:26
+msgid "Black and white photography close up of a flower."
+msgstr "Czarno-biała fotografia kwiatu z bliska."
+
+#: patterns/binding-format.php
+msgctxt "Pattern title"
+msgid "Post format name"
+msgstr "Nazwa formatu wpisu"
+
+#: patterns/binding-format.php
+msgctxt "Pattern description"
+msgid "Prints the name of the post format with the help of the Block Bindings API."
+msgstr "Wyświetla nazwę formatu wpisu za pomocą API powiązań bloków."
+
+#: patterns/comments.php
+msgctxt "Pattern description"
+msgid "Comments area with comments list, pagination, and comment form."
+msgstr "Obszar komentarzy z listą komentarzy, paginacją i formularzem do wysłania komentarza."
+
+#: patterns/contact-centered-social-link.php
+msgctxt "Pattern title"
+msgid "Centered link and social links"
+msgstr "Wyśrodkowany odnośnik oraz odnośniki do mediów społecznościowych"
+
+#: patterns/contact-centered-social-link.php
+msgctxt "Pattern description"
+msgid "Centered contact section with a prominent message and social media links."
+msgstr "Wyśrodkowana sekcja kontaktowa z wyraźnym komunikatem i odnośnikami do mediów społecznościowych."
+
+#: patterns/contact-centered-social-link.php:21
+msgctxt "Heading of the Contact social link pattern"
+msgid "Got questions? <br><a href=\"#\" rel=\"nofollow\">Feel free to reach out.</a>"
+msgstr "Masz pytania? <br><a href=\"#\" rel=\"nofollow\">Skontaktuj się z nami.</a>"
+
+#: patterns/contact-info-locations.php
+msgctxt "Pattern title"
+msgid "Contact, info and locations"
+msgstr "Kontakt, informacje i lokalizacje"
+
+#: patterns/contact-info-locations.php
+msgctxt "Pattern description"
+msgid "Contact section with social media links, email, and multiple location details."
+msgstr "Sekcja kontaktowa z odnośnikami do mediów społecznościowych, adresem e-mail oraz szczegółami kilku lokalizacji."
+
+#: patterns/contact-info-locations.php:21
+msgid "How to get in touch with us"
+msgstr "Jak się z nami skontaktować"
+
+#: patterns/contact-info-locations.php:32 patterns/footer-social.php:23
+#: patterns/page-link-in-bio-heading-paragraph-links-image.php:40
+#: patterns/page-link-in-bio-with-tight-margins.php:52
+msgctxt "Refers to the social media platform formerly known as Twitter."
+msgid "X"
+msgstr "X"
+
+#: patterns/contact-info-locations.php:35
+#: patterns/page-link-in-bio-heading-paragraph-links-image.php:44
+#: patterns/page-link-in-bio-with-tight-margins.php:56
+msgid "TikTok"
+msgstr "TikTok"
+
+#: patterns/contact-info-locations.php:54
+#: patterns/contact-info-locations.php:66
+#: patterns/contact-info-locations.php:78
+#: patterns/contact-info-locations.php:90
+msgid "123 Example St. Manhattan, NY 10300 United States"
+msgstr "Ulica Przykładowa 123, 61-000 Poznań, Polska"
+
+#: patterns/contact-info-locations.php:62
+msgid "San Diego"
+msgstr "Kraków"
+
+#: patterns/contact-info-locations.php:74
+msgid "Salt Lake City"
+msgstr "Gdańsk"
+
+#: patterns/contact-location-and-link.php
+msgctxt "Pattern description"
+msgid "Contact section with a location address, a directions link, and an image of the location."
+msgstr "Sekcja kontaktowa z adresem lokalizacji, odnośnikiem do wskazówek dojazdu oraz obrazkiem lokalizacji."
+
+#: patterns/contact-location-and-link.php
+msgctxt "Pattern title"
+msgid "Contact location and link"
+msgstr "Lokalizacja do odwiedzin i odnośnik"
+
+#: patterns/contact-location-and-link.php:22
+msgid "Visit us at 123 Example St. Manhattan, NY 10300, United States"
+msgstr "Odwiedź nas na Ulicy Przykładowej 123, 61-000 Poznań, Polska"
+
+#: patterns/contact-location-and-link.php:26
+msgid "Get directions"
+msgstr "Zobacz wskazówki dojazdu"
+
+#: patterns/contact-location-and-link.php:36
+msgid "The business location"
+msgstr "Lokalizacja biznesu"
+
+#: patterns/cta-book-links.php
+msgctxt "Pattern title"
+msgid "Call to action with book links"
+msgstr "Wezwanie do działania z odnośnikami do książek"
+
+#: patterns/cta-book-links.php
+msgctxt "Pattern description"
+msgid "A call to action section with links to get the book in different websites."
+msgstr "Sekcja wezwania do działania z odnośnikami do zakupu książki na różnych witrynach internetowych."
+
+#: patterns/cta-book-links.php:17
+msgid "Buy your copy of The Stories Book"
+msgstr "Kup swój egzemplarz Książki z Historiami"
+
+#: patterns/cta-book-links.php:23
+#: patterns/hero-overlapped-book-cover-with-links.php:55
+msgctxt "Example brand name."
+msgid "Amazon"
+msgstr "Amazon"
+
+#: patterns/cta-book-links.php:27
+#: patterns/hero-overlapped-book-cover-with-links.php:77
+msgctxt "Example brand name."
+msgid "Audible"
+msgstr "Audible"
+
+#: patterns/cta-book-links.php:35
+#: patterns/hero-overlapped-book-cover-with-links.php:62
+msgctxt "Example brand name."
+msgid "Apple Books"
+msgstr "Apple Books"
+
+#: patterns/cta-book-links.php:39
+msgctxt "Example brand name."
+msgid "Bookshop.org"
+msgstr "Bookshop.org"
+
+#: patterns/cta-book-links.php:43
+msgctxt "Example brand name."
+msgid "Spotify"
+msgstr "Spotify"
+
+#: patterns/cta-book-links.php:57
+#: patterns/hero-overlapped-book-cover-with-links.php:100
+msgctxt "Pattern placeholder text with link."
+msgid "Outside Europe? View <a href=\"#\" rel=\"nofollow\">international editions</a>."
+msgstr "Poza Europą? Zobacz <a href=\"#\" rel=\"nofollow\">wydania międzynarodowe</a>."
+
+#: patterns/cta-book-locations.php
+msgctxt "Pattern title"
+msgid "Call to action with locations"
+msgstr "Wezwanie do działania z lokalizacjami"
+
+#: patterns/cta-book-locations.php
+msgctxt "Pattern description"
+msgid "A call to action section with links to get the book in the most popular locations."
+msgstr "Sekcja wezwania do działania z odnośnikami do zakupu książki w najpopularniejszych miejscach."
+
+#: patterns/cta-book-locations.php:23
+msgid "International editions"
+msgstr "Międzynarodowe wydania"
+
+#: patterns/cta-book-locations.php:27
+msgid "The Stories Book will be available from these international retailers."
+msgstr "Książka z Historiami będzie dostępna w tych międzynarodowych sklepach."
+
+#: patterns/cta-book-locations.php:43
+msgid "Australia"
+msgstr "Australia"
+
+#: patterns/cta-book-locations.php:47 patterns/cta-book-locations.php:59
+#: patterns/cta-book-locations.php:71 patterns/cta-book-locations.php:83
+#: patterns/cta-book-locations.php:99 patterns/cta-book-locations.php:111
+#: patterns/cta-book-locations.php:123 patterns/cta-book-locations.php:135
+msgid "Book Store"
+msgstr "Księgarnia"
+
+#: patterns/cta-book-locations.php:55
+msgid "Brazil"
+msgstr "Brazylia"
+
+#: patterns/cta-book-locations.php:67
+msgid "Canada"
+msgstr "Kanada"
+
+#: patterns/cta-book-locations.php:79
+msgid "Japan"
+msgstr "Japonia"
+
+#: patterns/cta-book-locations.php:95
+msgid "New Zealand"
+msgstr "Nowa Zelandia"
+
+#: patterns/cta-book-locations.php:107
+msgid "Switzerland"
+msgstr "Szwajcaria"
+
+#: patterns/cta-book-locations.php:119
+msgid "United States"
+msgstr "Stany Zjednoczone"
+
+#: patterns/cta-book-locations.php:131
+msgid "United Kingdom"
+msgstr "Wielka Brytania"
+
+#: patterns/cta-centered-heading.php
+msgctxt "Pattern title"
+msgid "Centered heading"
+msgstr "Wyśrodkowany nagłówek"
+
+#: patterns/cta-centered-heading.php:19 patterns/cta-events-list.php:33
+#: patterns/cta-events-list.php:102 patterns/event-3-col.php:40
+#: patterns/event-3-col.php:64 patterns/event-3-col.php:88
+#: patterns/template-home-photo-blog.php:27
+msgid "Tell your story"
+msgstr "Podziel się swoją historią"
+
+#: patterns/cta-centered-heading.php:22
+msgid "Like flowers that bloom in unexpected places, every story unfolds with beauty and resilience, revealing hidden wonders."
+msgstr "Podobnie jak kwiaty, które rozkwitają w nieoczekiwanych miejscach, każda historia rozwija się pięknie i dynamicznie, ujawniając ukryte cuda."
+
+#: patterns/cta-events-list.php
+msgctxt "Pattern title"
+msgid "Events list"
+msgstr "Lista wydarzeń"
+
+#: patterns/cta-events-list.php
+msgctxt "Pattern description"
+msgid "A list of events with call to action."
+msgstr "Lista wydarzeń z wezwaniem do działania."
+
+#: patterns/cta-events-list.php:19
+msgid "Upcoming events"
+msgstr "Nadchodzące wydarzenia"
+
+#: patterns/cta-events-list.php:23
+msgid "These are some of the upcoming events"
+msgstr "Oto niektóre z nadchodzących wydarzeń"
+
+#: patterns/cta-events-list.php:37
+msgid "Atlanta, GA, USA"
+msgstr "Wrocław, Polska"
+
+#: patterns/cta-events-list.php:51 patterns/cta-events-list.php:89
+#: patterns/cta-events-list.php:120 patterns/cta-events-list.php:158
+msgid "Buy Tickets"
+msgstr "Kup bilety"
+
+#: patterns/cta-events-list.php:75
+msgid "Mexico City, Mexico"
+msgstr "Poznań, Polska"
+
+#: patterns/cta-events-list.php:106 patterns/cta-events-list.php:144
+msgid "Thornville, OH, USA"
+msgstr "Kraków, Polska"
+
+#: patterns/cta-grid-products-link.php:20
+msgid "Our online store."
+msgstr "Nasz sklep internetowy."
+
+#: patterns/cta-grid-products-link.php
+msgctxt "Pattern description"
+msgid "A call to action featuring product images."
+msgstr "Wezwanie do działania z obrazkami produktów."
+
+#: patterns/cta-grid-products-link.php
+msgctxt "Pattern title"
+msgid "Call to action with grid layout with products and link"
+msgstr "Wezwanie do działania z układem siatki z produktami i odnośnikiem"
+
+#: patterns/cta-grid-products-link.php:26
+#: patterns/cta-grid-products-link.php:126
+msgid "Black and white flower"
+msgstr "Czarno-biały kwiat"
+
+#: patterns/cta-grid-products-link.php:32
+msgid "Delivered every week"
+msgstr "Dostarczane co tydzień"
+
+#: patterns/cta-grid-products-link.php:38
+msgid "Closeup of plantlife in the Malibu Canyon area"
+msgstr "Zbliżenie na roślinność w rejonie kanionu Malibu."
+
+#. translators: %s: Starting price, split into three rows using HTML <br> tags.
+#. The price value has a font size set.
+#: patterns/cta-grid-products-link.php:58
+msgid "Starting at%s/month"
+msgstr "Od %s/miesiąc"
+
+#: patterns/cta-grid-products-link.php:76
+msgid "Tailored to your needs"
+msgstr "Dopasowane do twoich potrzeb"
+
+#: patterns/cta-grid-products-link.php:84
+msgid "Free shipping"
+msgstr "Darmowa wysyłka"
+
+#: patterns/cta-grid-products-link.php:100
+msgid "Cancel anytime"
+msgstr "Anuluj w każdej chwili"
+
+#: patterns/cta-grid-products-link.php:114
+msgid "Botany flowers"
+msgstr "Kwiaty botaniczne"
+
+#: patterns/cta-grid-products-link.php:134
+msgid "Shop now"
+msgstr "Kup teraz"
+
+#: patterns/cta-heading-search.php:18
+msgid "What are you looking for?"
+msgstr "Czego szukasz?"
+
+#: patterns/cta-heading-search.php
+msgctxt "Pattern title"
+msgid "Heading and search form"
+msgstr "Nagłówek i formularz wyszukiwania"
+
+#: patterns/cta-heading-search.php:21 patterns/hidden-search.php:14
+msgctxt "Search form label."
+msgid "Search"
+msgstr "Szukaj"
+
+#: patterns/cta-heading-search.php
+msgctxt "Pattern description"
+msgid "Large heading with a search form for quick navigation."
+msgstr "Duży nagłówek z formularzem wyszukiwania dla szybkiej nawigacji."
+
+#: patterns/cta-newsletter.php
+msgctxt "Pattern title"
+msgid "Newsletter sign-up"
+msgstr "Zapis do biuletynu"
+
+#: patterns/cta-newsletter.php:32 patterns/footer-newsletter.php:30
+#: patterns/page-coming-soon.php:39
+#: patterns/services-subscriber-only-section.php:51
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: patterns/event-3-col.php:20 patterns/footer-columns.php:49
+#: patterns/footer.php:55
+msgid "Events"
+msgstr "Wydarzenia"
+
+#: patterns/event-3-col.php:24 patterns/event-schedule.php:23
+msgid "These are some of the upcoming events."
+msgstr "Oto niektóre z nadchodzących wydarzeń."
+
+#: patterns/event-3-col.php:50 patterns/event-3-col.php:74
+#: patterns/event-3-col.php:98
+msgid "Event details"
+msgstr "Szczegóły wydarzenia"
+
+#: patterns/event-3-col.php
+msgctxt "Pattern title"
+msgid "Events, 3 columns with event images and titles"
+msgstr "Wydarzenia, 3 kolumny z obrazkami i tytułami wydarzeń"
+
+#: patterns/event-3-col.php
+msgctxt "Pattern description"
+msgid "A header with title and text and three columns that show 3 events with their images and titles."
+msgstr "Nagłówek z tytułem i tekstem oraz trzy kolumny, które pokazują 3 wydarzenia wraz z ich obrazkami i tytułami."
+
+#: patterns/cta-newsletter.php:19
+msgid "Sign up to get daily stories"
+msgstr "Zapisz się, aby otrzymywać codzienne historie."
+
+#: patterns/cta-newsletter.php:23
+msgid "Get access to a curated collection of moments in time featuring photographs from historical relevance."
+msgstr "Uzyskaj dostęp do starannie wyselekcjonowanej kolekcji wyjątkowych momentów, zawierającej fotografie o historycznym znaczeniu."
+
+#: patterns/event-rsvp.php
+msgctxt "Pattern title"
+msgid "Event RSVP"
+msgstr "Potwierdzenie obecności na wydarzeniu"
+
+#: patterns/event-rsvp.php:57
+msgid "Free Workshop"
+msgstr "Darmowe warsztaty"
+
+#: patterns/event-schedule.php:46 patterns/media-instagram-grid.php:60
+msgid "Birds on a lake."
+msgstr "Ptaki na jeziorze."
+
+#: patterns/event-schedule.php:132 patterns/media-instagram-grid.php:52
+msgid "The Acropolis of Athens."
+msgstr "Akropol w Atenach."
+
+#: patterns/contact-info-locations.php:38
+msgid "Email"
+msgstr "Adres e-mail"
+
+#: patterns/hidden-sidebar.php:37
+#: patterns/template-home-posts-grid-news-blog.php:34
+#: patterns/template-home-with-sidebar-news-blog.php:61
+msgid "Add text or blocks that will display when a query returns no results."
+msgstr "Dodaj tekst lub bloki, które będą wyświetlane, gdy zapytanie nie zwróci żadnych wyników."
+
+#: patterns/footer-columns.php:52 patterns/footer.php:61
+msgid "Themes"
+msgstr "Motywy"
+
+#: functions.php:105
+msgid "Pages"
+msgstr "Strony"
+
+#: patterns/footer-columns.php:51 patterns/footer.php:59
+msgid "Patterns"
+msgstr "Wzorce"
+
+#: patterns/footer-columns.php:37 patterns/footer.php:47
+msgid "About"
+msgstr "O"
+
+#: patterns/pricing-3-col.php:89 patterns/pricing-3-col.php:129
+msgid "Month"
+msgstr "Miesiąc"
+
+#: patterns/cta-centered-heading.php:28
+msgid "Learn more"
+msgstr "Dowiedz się więcej"
+
+#: patterns/footer-columns.php:39 patterns/footer.php:51
+msgid "Authors"
+msgstr "Autorzy"
+
+#: patterns/footer-columns.php:48
+msgid "Featured"
+msgstr "Wyróżnione"
+
+#: patterns/post-navigation.php:17 patterns/post-navigation.php:18
+#: patterns/template-single-left-aligned-content.php:78
+#: patterns/template-single-left-aligned-content.php:79
+#: patterns/template-single-news-blog.php:95
+#: patterns/template-single-news-blog.php:96
+#: patterns/template-single-offset.php:61
+#: patterns/template-single-offset.php:62
+#: patterns/template-single-photo-blog.php:76
+#: patterns/template-single-photo-blog.php:77
+#: patterns/template-single-text-blog.php:36
+#: patterns/template-single-text-blog.php:37
+#: patterns/template-single-vertical-header-blog.php:82
+#: patterns/template-single-vertical-header-blog.php:83
+msgid "Post navigation"
+msgstr "Nawigacja wpisu"
+
+#: patterns/hidden-sidebar.php
+msgctxt "Pattern title"
+msgid "Sidebar"
+msgstr "Panel boczny"
+
+#: patterns/hidden-search.php
+msgctxt "Pattern title"
+msgid "Search"
+msgstr "Wyszukiwanie"
+
+#: patterns/post-navigation.php
+msgctxt "Pattern title"
+msgid "Post navigation"
+msgstr "Nawigacja wpisu"
+
+#: patterns/comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr "Komentarze"
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr "404"
+
+#: functions.php:76
+msgid "Checkmark"
+msgstr "Znacznik wyboru"
+
+#. translators: This string contains the word "Stories" in four different
+#. languages with the first item in the locale's language.
+#: patterns/banner-poster.php:28 patterns/cta-events-list.php:68
+#: patterns/cta-events-list.php:137 patterns/event-rsvp.php:30
+msgctxt "Placeholder heading in four languages."
+msgid "“Stories, <span lang=\"es\">historias</span>, <span lang=\"uk\">iсторії</span>, <span lang=\"el\">iστορίες</span>”"
+msgstr "„Historie, <span lang=\"es\">historias</span>, <span lang=\"uk\">iсторії</span>, <span lang=\"el\">iστορίες</span>”"
+
+#: patterns/cta-book-links.php:31
+#: patterns/hero-overlapped-book-cover-with-links.php:84
+msgctxt "Example brand name."
+msgid "Barnes &amp; Noble"
+msgstr "Barnes i Noble"
+
+#: patterns/cta-book-links.php:47
+msgctxt "Example brand name."
+msgid "BAM!"
+msgstr "BAM!"
+
+#: patterns/cta-book-links.php:51
+msgctxt "Example brand name."
+msgid "Simon &amp; Schuster"
+msgstr "Simon i Schuster"
+
+#: patterns/cta-events-list.php:45 patterns/cta-events-list.php:83
+#: patterns/cta-events-list.php:114 patterns/cta-events-list.php:152
+#: patterns/event-3-col.php:44 patterns/event-3-col.php:68
+#: patterns/event-3-col.php:92 patterns/event-rsvp.php:37
+#: patterns/event-schedule.php:35 patterns/event-schedule.php:121
+msgctxt "Example event date in pattern."
+msgid "Mon, Jan 1"
+msgstr "Poniedziałek, 1 stycznia"
+
+#: patterns/cta-grid-products-link.php:59
+msgid "30€"
+msgstr "130 PLN"
+
+#: patterns/cta-grid-products-link.php:70
+msgid "Flora of Akaka Falls State Park"
+msgstr "Flora parku stanowego Akaka Falls"
+
+#: patterns/cta-heading-search.php:21 patterns/hidden-search.php:14
+msgctxt "Search input field placeholder text."
+msgid "Type here..."
+msgstr "Pisz tutaj…"
+
+#: patterns/event-schedule.php:20
+msgid "Agenda"
+msgstr "Agenda"
+
+#: patterns/contact-info-locations.php:29
+#: patterns/contact-info-locations.php:31 patterns/footer-social.php:20
+msgid "Social media"
+msgstr "Social media"
+
+#: patterns/contact-info-locations.php:86
+msgid "Portland"
+msgstr "Portland"
+
+#: patterns/page-portfolio-home.php:229
+msgid "email@example.com"
+msgstr "email@example.com"
+
+#: patterns/event-3-col.php:34 patterns/event-3-col.php:58
+#: patterns/event-3-col.php:82 patterns/format-audio.php:20
+msgid "Event image"
+msgstr "Obraz wydarzenia"
+
+#: patterns/more-posts.php:18
+msgid "More posts"
+msgstr "Więcej wpisów"
+
+#: patterns/contact-info-locations.php:51
+msgid "New York"
+msgstr "Nowy Jork"
+
+#: patterns/template-home-posts-grid-news-blog.php:114
+msgid "Architecture"
+msgstr "Architektura"
+
+#: patterns/template-query-loop-news-blog.php:49
+msgid "Older Posts"
+msgstr "Starsze wpisy"
+
+#: patterns/footer-columns.php:38 patterns/footer.php:49
+msgid "FAQs"
+msgstr "Najczęściej zadawane pytania"
+
+#: patterns/footer-columns.php:36 patterns/footer.php:45
+#: patterns/hidden-blog-heading.php:15 patterns/template-home-text-blog.php:20
+msgid "Blog"
+msgstr "Blog"
+
+#: patterns/footer-columns.php:50 patterns/footer.php:57
+msgid "Shop"
+msgstr "Sklep"
+
+#: patterns/page-cv-bio.php:47
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: patterns/contact-info-locations.php:41
+msgid "example@example.com"
+msgstr "example@example.com"
+
+#: patterns/hidden-written-by.php:16
+msgid "Written by "
+msgstr "Napisał "
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Newsletter"
+msgstr "Stopka biuletynu"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Columns"
+msgstr "Kolumny stopki"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header with large title"
+msgstr "Nagłówek z dużym tytułem"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Vertical Header"
+msgstr "Pionowy nagłówek"
+
+#: styles/02-noon.json styles/typography/typography-preset-1.json
+msgctxt "Font family name"
+msgid "Beiruti"
+msgstr "Beiruti"
+
+#: styles/05-twilight.json styles/typography/typography-preset-4.json
+msgctxt "Font family name"
+msgid "Roboto Slab"
+msgstr "Roboto Slab"
+
+#: styles/04-afternoon.json styles/07-sunrise.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-6.json
+msgctxt "Font family name"
+msgid "Platypi"
+msgstr "Platypi"
+
+#: styles/04-afternoon.json styles/06-morning.json
+#: styles/typography/typography-preset-3.json
+#: styles/typography/typography-preset-5.json
+msgctxt "Font family name"
+msgid "Ysabeau Office"
+msgstr "Ysabeau Office"
+
+#: styles/08-midnight.json styles/typography/typography-preset-7.json
+msgctxt "Font family name"
+msgid "Fira Sans"
+msgstr "Fira Sans"
+
+#: styles/03-dusk.json styles/typography/typography-preset-2.json theme.json
+msgctxt "Font family name"
+msgid "Fira Code"
+msgstr "Fira Code"
+
+#: styles/03-dusk.json styles/typography/typography-preset-2.json
+msgctxt "Font family name"
+msgid "Vollkorn"
+msgstr "Vollkorn"
+
+#: styles/02-noon.json styles/06-morning.json styles/07-sunrise.json
+#: styles/08-midnight.json styles/typography/typography-preset-1.json
+#: styles/typography/typography-preset-5.json
+#: styles/typography/typography-preset-6.json
+#: styles/typography/typography-preset-7.json
+msgctxt "Font family name"
+msgid "Literata"
+msgstr "Literata"
+
+#: styles/05-twilight.json styles/typography/typography-preset-4.json
+#: theme.json
+msgctxt "Font family name"
+msgid "Manrope"
+msgstr "Manrope"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr "Zwykła"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
+msgstr "Bardzo bardzo duża"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr "Bardzo duża"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr "Duża"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr "Mała"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr "Bardzo mała"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr "Malutka"
+
+#: styles/typography/typography-preset-6.json
+msgctxt "Style variation name"
+msgid "Platypi & Literata"
+msgstr "Platypi i Literata"
+
+#: styles/typography/typography-preset-7.json
+msgctxt "Style variation name"
+msgid "Literata & Fira Sans"
+msgstr "Literata i Fira Sans"
+
+#: styles/typography/typography-preset-5.json
+msgctxt "Style variation name"
+msgid "Literata & Ysabeau Office"
+msgstr "Literata i Ysabeau Office"
+
+#: styles/typography/typography-preset-4.json
+msgctxt "Style variation name"
+msgid "Roboto Slab & Manrope"
+msgstr "Roboto Slab i Manrope"
+
+#: styles/typography/typography-preset-3.json
+msgctxt "Style variation name"
+msgid "Platypi & Ysabeau Office"
+msgstr "Platypi i Ysabeau Office"
+
+#: styles/typography/typography-preset-2.json
+msgctxt "Style variation name"
+msgid "Vollkorn & Fira Code"
+msgstr "Vollkorn i Fira Code"
+
+#: styles/typography/typography-preset-1.json
+msgctxt "Style variation name"
+msgid "Beiruti & Literata"
+msgstr "Beiruti i Literata"
+
+#: styles/sections/section-5.json
+msgctxt "Style variation name"
+msgid "Style 5"
+msgstr "Styl 5"
+
+#: styles/sections/section-4.json
+msgctxt "Style variation name"
+msgid "Style 4"
+msgstr "Styl 4"
+
+#: styles/sections/section-3.json
+msgctxt "Style variation name"
+msgid "Style 3"
+msgstr "Styl 3"
+
+#: styles/sections/section-2.json
+msgctxt "Style variation name"
+msgid "Style 2"
+msgstr "Styl 2"
+
+#: styles/sections/section-1.json
+msgctxt "Style variation name"
+msgid "Style 1"
+msgstr "Styl 1"
+
+#: styles/blocks/post-terms-1.json
+msgctxt "Style variation name"
+msgid "Pill shaped"
+msgstr "Owalne"
+
+#: styles/blocks/03-annotation.json
+msgctxt "Style variation name"
+msgid "Annotation"
+msgstr "Adnotacja"
+
+#: styles/blocks/02-subtitle.json
+msgctxt "Style variation name"
+msgid "Subtitle"
+msgstr "Podtytuł"
+
+#: styles/blocks/01-display.json
+msgctxt "Style variation name"
+msgid "Display"
+msgstr "Wyświetlacz"
+
+#: styles/08-midnight.json styles/colors/08-midnight.json
+msgctxt "Style variation name"
+msgid "Midnight"
+msgstr "Północ"
+
+#: styles/08-midnight.json styles/colors/08-midnight.json
+msgctxt "Duotone name"
+msgid "Midnight filter"
+msgstr "Filtr nocny"
+
+#: styles/07-sunrise.json styles/colors/07-sunrise.json
+msgctxt "Style variation name"
+msgid "Sunrise"
+msgstr "Brzask"
+
+#: styles/06-morning.json styles/colors/06-morning.json
+msgctxt "Style variation name"
+msgid "Morning"
+msgstr "Rano"
+
+#: styles/05-twilight.json styles/colors/05-twilight.json
+msgctxt "Style variation name"
+msgid "Twilight"
+msgstr "Zmierzch"
+
+#: styles/04-afternoon.json styles/colors/04-afternoon.json
+msgctxt "Style variation name"
+msgid "Afternoon"
+msgstr "Popołudnie"
+
+#: styles/03-dusk.json styles/colors/03-dusk.json
+msgctxt "Style variation name"
+msgid "Dusk"
+msgstr "Świt"
+
+#: styles/02-noon.json styles/colors/02-noon.json
+msgctxt "Style variation name"
+msgid "Noon"
+msgstr "Południe"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 6"
+msgstr "Akcent 6"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 5"
+msgstr "Akcent 5"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 4"
+msgstr "Akcent 4"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 3"
+msgstr "Akcent 3"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 2"
+msgstr "Akcent 2"
+
+#: styles/01-evening.json styles/02-noon.json styles/03-dusk.json
+#: styles/04-afternoon.json styles/05-twilight.json styles/06-morning.json
+#: styles/07-sunrise.json styles/08-midnight.json styles/colors/01-evening.json
+#: styles/colors/02-noon.json styles/colors/03-dusk.json
+#: styles/colors/04-afternoon.json styles/colors/05-twilight.json
+#: styles/colors/06-morning.json styles/colors/07-sunrise.json
+#: styles/colors/08-midnight.json theme.json
+msgctxt "Color name"
+msgid "Accent 1"
+msgstr "Akcent 1"
+
+#: styles/01-evening.json styles/colors/01-evening.json
+msgctxt "Style variation name"
+msgid "Evening"
+msgstr "Wieczór"
+
+#: patterns/vertical-header.php
+msgctxt "Pattern description"
+msgid "Vertical Header with site title and navigation"
+msgstr "Pionowy nagłówek z tytułem strony i nawigacją"
+
+#: patterns/vertical-header.php
+msgctxt "Pattern title"
+msgid "Vertical header"
+msgstr "Pionowy nagłówek"
+
+#: patterns/text-faqs.php:21
+msgctxt "Heading of the FAQs pattern."
+msgid "Frequently Asked Questions"
+msgstr "Często zadawane pytania"
+
+#: patterns/text-faqs.php
+msgctxt "Pattern description"
+msgid "A FAQs section with a FAQ heading and list of questions and answers."
+msgstr "Sekcja FAQ z nagłówkami i lista pytań i odpowiedzi."
+
+#: patterns/text-faqs.php
+msgctxt "Pattern title"
+msgid "FAQs"
+msgstr "Często zadawane pytania"
+
+#: patterns/testimonials-large.php:47
+msgctxt "Alt text for testimonial image."
+msgid "Picture of a person typing on a typewriter."
+msgstr "Obrazek przedstawiający osobę piszącą na maszynie."
+
+#: patterns/testimonials-6-col.php:18
+msgctxt "Testimonial section heading."
+msgid "What people are saying"
+msgstr "Co mówią ludzie"
+
+#: patterns/testimonials-6-col.php
+msgctxt "Pattern description"
+msgid "A section with three columns and two rows, each containing a testimonial and citation."
+msgstr "Sekcja z dwoma rzędami i trzema kolumnami, każdy zawierający opinię i opis"
+
+#: patterns/testimonials-2-col.php:26 patterns/testimonials-2-col.php:55
+msgctxt "Alt text for testimonial image."
+msgid "Picture of a person"
+msgstr "Zdjęcie osoby"
+
+#: patterns/template-single-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned single post"
+msgstr "Pojedynczy wpis z wyrównaniem do prawej"
+
+#: patterns/template-single-photo-blog.php:79
+msgid "Next Photo"
+msgstr "Następne zdjęcie"
+
+#: patterns/template-single-photo-blog.php:78
+msgid "Previous Photo"
+msgstr "Poprzednie zdjęcie"
+
+#: patterns/template-single-photo-blog.php:61
+msgctxt "Prefix before one or more tags. The tags are displayed in a separate block on the next line."
+msgid "Tagged:"
+msgstr "Oznaczony:"
+
+#: patterns/template-single-photo-blog.php:53
+msgctxt "Prefix before one or more categories. The categories are displayed in a separate block on the next line."
+msgid "Categories:"
+msgstr "Kategorie:"
+
+#: patterns/template-single-photo-blog.php:42
+msgctxt "Prefix before the author name. The post author name is displayed in a separate block on the next line."
+msgid "Posted by"
+msgstr "Napisany przez"
+
+#: patterns/template-single-photo-blog.php
+msgctxt "Pattern title"
+msgid "Photo blog single post"
+msgstr "Pojedynczy wpis foto bloga"
+
+#: patterns/template-single-offset.php:40
+#: patterns/template-single-photo-blog.php:36
+msgctxt "Prefix before the post date block."
+msgid "Published on"
+msgstr "Opublikowany"
+
+#: patterns/template-single-left-aligned-content.php:31
+msgctxt "Prefix before the author name. The post author name is displayed in a separate block."
+msgid "by"
+msgstr "przez"
+
+#: patterns/template-single-left-aligned-content.php
+msgctxt "Pattern title"
+msgid "Post with left-aligned content"
+msgstr "Wpis z zawartością wyrównaną do lewej"
+
+#: patterns/template-search-photo-blog.php
+msgctxt "Pattern title"
+msgid "Photo blog search results"
+msgstr "Wyniki wyszukiwania foto bloga"
+
+#: patterns/template-query-loop.php
+msgctxt "Pattern description"
+msgid "A list of posts, 1 column, with featured image and post date."
+msgstr "Lista wpisów, 1 kolumna, z wyróżnionym obrazkiem i datą wpisu."
+
+#: patterns/template-query-loop.php
+msgctxt "Pattern title"
+msgid "List of posts, 1 column"
+msgstr "Lista wpisów, 1 kolumna"
+
+#: patterns/template-query-loop-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned posts"
+msgstr "Wpisy wyrównane do lewej"
+
+#: patterns/template-query-loop-text-blog.php
+msgctxt "Pattern title"
+msgid "Text-only blog, posts"
+msgstr "Blog tylko text, wpisy"
+
+#: patterns/template-query-loop-photo-blog.php
+msgctxt "Pattern title"
+msgid "Photo blog posts"
+msgstr "Wpisy foto bloga"
+
+#: patterns/template-query-loop-news-blog.php:45
+msgid "Newer Posts"
+msgstr "Nowsze wpisy"
+
+#: patterns/template-query-loop-news-blog.php:30
+msgctxt "Prefix before the author name. The post author name is displayed in a separate block."
+msgid "Written by"
+msgstr "Napisane przez"
+
+#: patterns/services-team-photos.php:44
+msgid "Picture of a person typing on a typewriter."
+msgstr "Obraz osoby piszącej na maszynie."
+
+#: patterns/text-faqs.php:83
+msgctxt "Question in the FAQs pattern."
+msgid "Are signed copies available?"
+msgstr "Czy są dostępne podpisane kopie?"
+
+#: patterns/text-faqs.php:67
+msgctxt "Question in the FAQs pattern."
+msgid "When will The Stories Book be released?"
+msgstr "Kiedy zbiór opowiadań zostanie wydany?"
+
+#: patterns/text-faqs.php:47
+msgctxt "Question in the FAQs pattern."
+msgid "How much does The Stories Book cost?"
+msgstr "Ile kosztuje zbiór opowiadań?"
+
+#: patterns/text-faqs.php:31
+msgctxt "Question in the FAQs pattern."
+msgid "What is The Stories Book about?"
+msgstr "O czym są opowiadania?"
+
+#: patterns/testimonials-large.php
+msgctxt "Pattern title"
+msgid "Review with large image on right"
+msgstr "Recenzja z dużym obrazkiem po prawej stronie"
+
+#: patterns/testimonials-6-col.php
+msgctxt "Pattern title"
+msgid "3 column layout with 6 testimonials"
+msgstr "3 kolumnowy układ z 6 opiniami"
+
+#: patterns/testimonials-2-col.php:65 patterns/testimonials-6-col.php:30
+#: patterns/testimonials-6-col.php:47 patterns/testimonials-6-col.php:64
+#: patterns/testimonials-6-col.php:85 patterns/testimonials-6-col.php:101
+#: patterns/testimonials-6-col.php:116
+msgctxt "Sample testimonial."
+msgid "“Amazing quality and care. I love all your products.”"
+msgstr "„Wspaniała jakość i obsługa. Uwielbiam wszystkie twoje produkty.”"
+
+#: patterns/testimonials-2-col.php:36 patterns/testimonials-large.php:32
+msgctxt "Sample testimonial."
+msgid "“Superb product and customer service!”"
+msgstr "„Doskonały produkt i świetna obsługa klienta!”"
+
+#: patterns/testimonials-2-col.php
+msgctxt "Pattern description"
+msgid "Two columns with testimonials and avatars."
+msgstr "Dwie kolumny z referencjami i awatarami."
+
+#: patterns/testimonials-large.php
+msgctxt "Pattern description"
+msgid "A testimonial with a large image on the right."
+msgstr "Referencja z dużym obrazkiem po prawej stronie."
+
+#: patterns/testimonials-2-col.php
+msgctxt "Pattern title"
+msgid "2 columns with avatar"
+msgstr "2 kolumny z awatarem"
+
+#: patterns/template-single-text-blog.php
+msgctxt "Pattern title"
+msgid "Text-only blog, single post"
+msgstr "Blog, pojedynczy wpis"
+
+#: patterns/template-single-offset.php
+msgctxt "Pattern title"
+msgid "Offset post without featured image"
+msgstr "Przesunięty wpis bez obrazka wyróżniającego"
+
+#: patterns/template-single-news-blog.php
+msgctxt "Pattern title"
+msgid "News blog single post with sidebar"
+msgstr "Pojedynczy wpis bloga z paskiem bocznym"
+
+#: patterns/template-search-vertical-header-blog.php
+msgctxt "Pattern title"
+msgid "Right-aligned blog, search"
+msgstr "Blog wyrównany do prawej, wyszukiwanie"
+
+#: patterns/template-search-text-blog.php
+msgctxt "Pattern title"
+msgid "Text-only blog, search"
+msgstr "Blog, wyszukiwanie"
+
+#: patterns/template-search-news-blog.php
+msgctxt "Pattern title"
+msgid "News blog search results"
+msgstr "Wyniki wyszukiwania bloga"
+
+#: patterns/template-query-loop-photo-blog.php
+msgctxt "Pattern description"
+msgid "A list of posts, 3 columns, with only featured images."
+msgstr "Lista wpisów, 3 kolumny z obrazkami wyróżniającymi."
+
+#: patterns/services-team-photos.php:38
+msgid "Portrait of a nurse"
+msgstr "Portret pielęgniarki"
+
+#: functions.php:113
+msgid "Post formats"
+msgstr "Formaty wpisu"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "the WordPress team"
+msgstr "zespół WordPressa"
+
+#. Author URI of the theme
+#: style.css patterns/footer-centered.php:34 patterns/footer-columns.php:74
+#: patterns/footer-newsletter.php:50 patterns/footer-social.php:36
+#: patterns/footer.php:83
+#, gp-priority: low
+msgid "https://wordpress.org"
+msgstr "https://pl.wordpress.org"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wordpress.org/themes/twentytwentyfive/"
+msgstr "https://pl.wordpress.org/themes/twentytwentyfive/"

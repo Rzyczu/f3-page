@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css">
+</head>
+
+<body class="bg-white">
+
+    <nav class="sticky z-40 bg-white text-gray" id="navbar">
+        <div class="z-50 items-center hidden gap-4 lg:block lg:absolute right-4 top-8">
+            <span
+                id="navbar-lock-icon"
+                class="text-xl text-gray-400 cursor-pointer emoji-gray">
+                🔓
+            </span>
+        </div>
+        <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-8">
+            <div class="flex md:basis-2/3 lg:basis-3/12 xl:basis-2/5">
+                <a href="./index.html" class="flex items-center space-x-2 group">
+                    <img src="./assets/svg/logo.svg" class="h-8 svg-color-gray group-hover:svg-color-primary"
+                        alt="Flowbite Logo" />
+                    <span id="navbar-brand"
+                        class="text-xs font-medium xl:text-xs text-gray lg:text-2xs group-hover:text-primary">
+                        3 Podgórski Szczep Fioletowej Trójki<br />
+                        im. Tadeusza Kościószki
+                    </span>
+                </a>
+            </div>
+            <a href="./index.html"
+                class="hidden py-2 font-semibold sm:text-sm text-gray hover:text-primary max-md:px-3 2xl:px-4 lg:block">Strona
+                Główna</a>
+            <a href="./about-us.html" aria-current="page"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">O
+                nas</a>
+            <a href="./join-us.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Dołącz
+                do nas</a>
+            <a href="./our-creativity.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Nasza
+                twórczość</a>
+            <a href="./support-us.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Wesprzyj
+                nas</a>
+            <a href="./contact.html"
+                class="hidden py-2 text-xs font-semibold text-gray display-mobile sm:block hover:text-primary 2xl:px-4 max-md:px-3 sm:text-sm">Kontakt</a>
+            <a href="./support-us.html"
+                class="hidden py-2 text-sm font-semibold text-gray display-mobile sm:block hover: hover:text-primary 2xl:px-4 max-md:px-3 sm:text-md lg:hidden ">1,5%</a>
+            <div
+                class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <div class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-label">menu</span>
+                </div>
+            </div>
+
+        </div>
+        <div id="mobile-navbar" class="h-screen bg-primary">
+            <div class="relative flex justify-center pt-20">
+                <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
+                    <a href="./index.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">Strona
+                        główna</a>
+                    <a href="./about-us.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">O
+                        nas</a>
+                    <a href="./join-us.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Dołącz
+                        do
+                        nas</a>
+                    <a href="./our-creativity.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Nasza
+                        twórczość</a>
+                    <a href="./support-us.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Wesprzyj
+                        nas</a>
+                    <a href="./contact.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Kontakt</a>
+                </div>
+            </div>
+            <img src="./assets/svg/camp.svg" class="hidden w-56 svg-color-white bottom-28 right-20 md:block md:absolute"
+                alt="Flowbite Logo" />
+        </div>
+    </nav>
+
+    <main>
+        <section class="relative items-center sm:flex">
+            <img src="./assets/svg/lake.svg"
+                class="right-0 svg-color-primary sm:absolute max-sm:pb-16 max-sm:pl-6 max-sm:mx-0 sm:w-1/2 lg:w-1/2"
+                alt="Flowbite Logo" />
+            <div class="container mx-auto mb-24 bg-white text-primary">
+                <div class="w-3/4 sm:pt-12 sm:pb-12 sm:w-5/12">
+                    <h1 class="mb-4">Nasza historia</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                    <div class="horizontal-line">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative text-white bg-primary">
+            <div class="container relative items-start py-24 mx-auto max-md:flex-col-reverse">
+                <div class="md:w-1/2">
+                    <h2 class="mb-4">Krok po kroku</h2>
+                    <p class="mb-6">Jeżeli szukasz drużyny dla siebie lub dla swojego dziecka lub chcesz z nami działać
+                        jako
+                        dorosły to znajdziesz tutaj jak to zrobić:</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white bg-primary">
+        <div
+            class="container flex flex-col items-center justify-between py-4 mx-auto font-medium text-center sm:flex-row">
+            <div class="flex items-center gap-8">
+                <img src="./assets/svg/logo.svg" class="h-8 svg-color-white" alt="Flowbite Logo" />
+                <p>&copy; Szczep Fiolej Trójki</p>
+            </div>
+            <div class="flex items-center gap-16">
+                <a href="./">Logowanie</a>
+                <a href="./contact.html">Kontakt</a>
+                <a href="https://www.facebook.com/szczepf3" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.04c-5.5 0-9.96 4.47-9.96 9.96 0 5.24 4.04 9.57 9.27 9.96v-7.06h-2.79v-2.91h2.79v-2.18c0-2.72 1.63-4.23 4.12-4.23 1.2 0 2.45.21 2.45.21v2.67h-1.38c-1.36 0-1.78.85-1.78 1.72v2.08h3.12l-.5 2.91h-2.62v7.06c5.23-.39 9.27-4.72 9.27-9.96 0-5.49-4.47-9.96-9.96-9.96z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script defer src="./js/navbar.js"></script>
+
+</html>

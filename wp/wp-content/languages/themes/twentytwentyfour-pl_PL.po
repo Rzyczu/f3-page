@@ -1,0 +1,906 @@
+# Translation of Themes - Twenty Twenty-Four in Polish
+# This file is distributed under the same license as the Themes - Twenty Twenty-Four package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-14 06:37:40+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: pl\n"
+"Project-Id-Version: Themes - Twenty Twenty-Four\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4."
+msgstr "Dwadzieścia Dwadzieścia-Cztery został zaprojektowany tak, aby był elastyczny, wszechstronny i odpowiedni dla każdej witryny internetowej. Jego kolekcja szablonów i wzorców dostosowana jest do różnych potrzeb, takich jak wizytówka firmy, blogowanie i pisanie lub prezentacja pracy. Mnóstwo możliwości otwiera się dzięki zaledwie kilku zmianom w kolorystyce i typografii. Dwadzieścia Dwadzieścia-Cztery zawiera warianty stylów i pełne projekty stron, aby przyspieszyć proces tworzenia witryny, jest w pełni kompatybilny z edytorem witryn i wykorzystuje nowe narzędzia do projektowania wprowadzone w WordPress 6.4."
+
+#. Theme Name of the theme
+#: style.css
+#, gp-priority: high
+msgid "Twenty Twenty-Four"
+msgstr "Dwadzieścia Dwadzieścia-Cztery"
+
+#: patterns/footer.php:96
+msgid "Twitter/X"
+msgstr "Twitter/X"
+
+#: patterns/footer.php:72
+msgid "Privacy Policy"
+msgstr "Polityka prywatności"
+
+#: patterns/footer.php:51
+msgid "Careers"
+msgstr "Kariera"
+
+#: patterns/footer.php:50
+msgid "History"
+msgstr "Historia"
+
+#: patterns/footer.php:49
+msgid "Team"
+msgstr "Zespół"
+
+#: patterns/footer.php:74
+msgid "Contact Us"
+msgstr "Skontaktuj się z nami"
+
+#: patterns/footer.php:73
+msgid "Terms and Conditions"
+msgstr "Regulamin i zasady"
+
+#: patterns/posts-list.php
+msgctxt "Pattern title"
+msgid "List of posts without images, 1 column"
+msgstr "Lista wpisów bez obrazków, 1 kolumna"
+
+#: patterns/hidden-portfolio-hero.php:16
+msgid "I’m <em>Leia Acosta</em>, a passionate photographer who finds inspiration in capturing the fleeting beauty of life."
+msgstr "Jestem <em>Leia Acosta</em>, pasjonatka fotografii, która znajduje inspirację w uchwyceniu ulotnego piękna życia."
+
+#: functions.php:200
+msgid "A collection of full page layouts."
+msgstr "Kolekcja układów pełnych stron."
+
+#: functions.php:199
+msgctxt "Block pattern category"
+msgid "Pages"
+msgstr "Strony"
+
+#. Author URI of the theme
+#. Translators: WordPress link.
+#: style.css patterns/footer-centered-logo-nav.php:22
+#: patterns/footer-colophon-3-col.php:91 patterns/footer.php:117
+msgid "https://wordpress.org"
+msgstr "https://pl.wordpress.org"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Stopka"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Nagłówek"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post Meta"
+msgstr "Meta dane wpisu"
+
+#: styles/fossil.json styles/ice.json theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr "Inter"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr "6"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr "5"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr "4"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr "3"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr "2"
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr "1"
+
+#: styles/fossil.json styles/ice.json styles/maelstrom.json theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Duży"
+
+#: styles/ember.json styles/fossil.json styles/ice.json styles/maelstrom.json
+#: styles/mint.json styles/onyx.json styles/rust.json theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: styles/fossil.json styles/ice.json styles/maelstrom.json theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Bardzo duży"
+
+#: styles/fossil.json styles/ice.json styles/maelstrom.json theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Średni"
+
+#: styles/ember.json styles/fossil.json styles/ice.json styles/maelstrom.json
+#: styles/mint.json styles/onyx.json styles/rust.json theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr "Bazowy"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Single with Sidebar"
+msgstr "Pojedynczy z paskiem bocznym"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with Wide Image"
+msgstr "Strona z szerokim obrazem"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page with Sidebar"
+msgstr "Strona z paskiem bocznym"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Sidebar"
+msgstr "Panel boczny"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard pewter to white"
+msgstr "Pionowa twarda cyna do białej"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard mint to white"
+msgstr "Pionowa twarda mięta do białego"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sage to white"
+msgstr "Pionowa twarda szałwia do białej"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard rust to white"
+msgstr "Pionowa twarda rdza do białego"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard sandstone to white"
+msgstr "Pionowy twardy piaskowiec do białego"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical hard beige to white"
+msgstr "Pionowy twardy beżowy do białego"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft pewter to white"
+msgstr "Pionowa miękka cyna do białej"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft mint to white"
+msgstr "Pionowo od delikatnej mięty do bieli"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft sage to white"
+msgstr "Pionowy, miękki szałwiowy do białego"
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Vertical soft rust to white"
+msgstr "Pionowa miękka rdza do bieli"
+
+#: styles/onyx.json theme.json
+msgctxt "Color name"
+msgid "Accent / Four"
+msgstr "Akcent / Cztery"
+
+#: styles/onyx.json theme.json
+msgctxt "Color name"
+msgid "Accent / Three"
+msgstr "Akcent / Trzy"
+
+#: styles/onyx.json theme.json
+msgctxt "Color name"
+msgid "Accent / Two"
+msgstr "Akcent / Dwa"
+
+#: styles/onyx.json theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr "Akcent"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard pewter to dark gray"
+msgstr "Pionowa twarda cyna do ciemnoszarej"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard steel to dark gray"
+msgstr "Pionowy twardy stalowy do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard olive to dark gray"
+msgstr "Pionowy twardy oliwkowy do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard cinnamon to dark gray"
+msgstr "Pionowy twardy cynamon do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard walnut to dark gray"
+msgstr "Pionowy twardy orzech do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical hard beige to dark gray"
+msgstr "Pionowy twardy beżowy do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical soft pewter to dark gray"
+msgstr "Pionowa miękka cyna do ciemnoszarej"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical soft steel to dark gray"
+msgstr "Pionowy miękki stalowy do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical soft olive to dark gray"
+msgstr "Pionowy, miękki oliwkowy do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical soft cinnamon to dark gray"
+msgstr "Pionowy miękki cynamon do ciemnoszarego"
+
+#: styles/onyx.json
+msgctxt "Gradient name"
+msgid "Vertical soft walnut to dark gray"
+msgstr "Pionowy miękki orzech do ciemnoszarego"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical hard ice to azure"
+msgstr "Pionowa twarda szałwia do białej"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical ink to ocean"
+msgstr "Pionowy atrament do oceanu"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical ocean to slate"
+msgstr "Pionowy ocean do łupków"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical ink to ice"
+msgstr "Pionowy tusz do lodu"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical ocean to ice"
+msgstr "Pionowy ocean do lodu"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical slate to ice"
+msgstr "Pionowy łupek do lodu"
+
+#: styles/ice.json
+msgctxt "Gradient name"
+msgid "Vertical azure to ice"
+msgstr "Pionowy lazur do lodu"
+
+#: styles/ice.json
+msgctxt "Style variation name"
+msgid "Ice"
+msgstr "Lód"
+
+#: styles/fossil.json styles/ice.json styles/maelstrom.json theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr "Bardzo Bardzo Duży"
+
+#: styles/fossil.json styles/ice.json styles/maelstrom.json theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Małe"
+
+#: styles/fossil.json styles/maelstrom.json theme.json
+msgctxt "Font family name"
+msgid "Cardo"
+msgstr "Cardo"
+
+#: styles/fossil.json styles/ice.json styles/mint.json styles/onyx.json
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast / Three"
+msgstr "Przeciwieństwo / Trzy"
+
+#: styles/fossil.json styles/ice.json styles/mint.json styles/onyx.json
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast / Two"
+msgstr "Kontrast / Dwa"
+
+#: styles/fossil.json
+msgctxt "Style variation name"
+msgid "Fossil"
+msgstr "Skamielina"
+
+#: styles/ember.json styles/fossil.json styles/ice.json styles/maelstrom.json
+#: styles/mint.json theme.json
+msgctxt "Font family name"
+msgid "System Serif"
+msgstr "System Serif"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page No Title"
+msgstr "Strona bez tytułu"
+
+#: styles/ember.json styles/maelstrom.json
+msgctxt "Color name"
+msgid "Contrast / 2"
+msgstr "Kontrast / 2"
+
+#: styles/maelstrom.json
+msgctxt "Color name"
+msgid "Contrast / 3"
+msgstr "Kontrast / 3"
+
+#: patterns/footer.php:86
+msgid "Social"
+msgstr "Media społecznościowe"
+
+#: patterns/hidden-sidebar.php:33
+msgid "Popular Categories"
+msgstr "Popularne kategorie"
+
+#: patterns/footer-colophon-3-col.php:60 patterns/footer.php:94
+msgid "Facebook"
+msgstr "Facebook"
+
+#: patterns/footer-colophon-3-col.php:60 patterns/footer.php:95
+msgid "Instagram"
+msgstr "Instagram"
+
+#: patterns/footer-colophon-3-col.php:39
+msgid "Contact"
+msgstr "Kontakt"
+
+#: functions.php:51
+msgid "Pill"
+msgstr "Pigułka"
+
+#: patterns/footer-colophon-3-col.php:82
+msgid "&copy;"
+msgstr "&copy;"
+
+#: patterns/hidden-sidebar.php:49
+msgid "Useful Links"
+msgstr "Przydatne linki"
+
+#: patterns/footer.php:92
+msgid "Social Media"
+msgstr "Media społecznościowe"
+
+#: patterns/footer-colophon-3-col.php:57
+msgid "Follow"
+msgstr "Obserwuj"
+
+#: patterns/footer.php:64 patterns/footer.php:70
+msgid "Privacy"
+msgstr "Prywatność"
+
+#: patterns/hidden-post-navigation.php:9 patterns/hidden-post-navigation.php:10
+#: patterns/hidden-posts-heading.php:10
+#: patterns/template-index-portfolio.php:16
+msgid "Posts"
+msgstr "Wpisy"
+
+#: patterns/hidden-comments.php:12
+msgid "Comments"
+msgstr "Komentarze"
+
+#: patterns/cta-pricing.php:104
+msgctxt "Sample price for the second pricing level"
+msgid "$12"
+msgstr "12 zł"
+
+#: patterns/cta-content-image-on-right.php:47
+msgctxt "Button text of this section"
+msgid "How it works"
+msgstr "Jak to działa"
+
+#: patterns/cta-content-image-on-right.php:41
+msgctxt "Button text of this section"
+msgid "Download app"
+msgstr "Pobierz aplikację"
+
+#: patterns/cta-pricing.php
+msgctxt "Pattern title"
+msgid "Pricing"
+msgstr "Cennik"
+
+#: patterns/cta-pricing.php:18
+msgctxt "Sample heading for pricing pattern"
+msgid "Our Services"
+msgstr "Nasze usługi"
+
+#: patterns/cta-pricing.php:11
+msgctxt "Name for the pricing pattern"
+msgid "Pricing Table"
+msgstr "Tabela cen"
+
+#: patterns/cta-pricing.php:203
+msgctxt "Button text for the third pricing level"
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: patterns/cta-pricing.php:145
+msgctxt "Button text for the second pricing level"
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: patterns/text-title-left-image-right.php:35
+msgctxt "Call to Action button text"
+msgid "About us"
+msgstr "O nas"
+
+#: functions.php:28
+msgid "Arrow icon"
+msgstr "Ikonka strzałki"
+
+#: functions.php:74
+msgid "Checkmark"
+msgstr "Znacznik wyboru"
+
+#: functions.php:93
+msgid "With arrow"
+msgstr "Ze strzałką"
+
+#: functions.php:111
+msgid "With asterisk"
+msgstr "Z gwiazdką"
+
+#: patterns/banner-hero.php:18
+msgctxt "Heading of the hero section"
+msgid "A commitment to innovation and sustainability"
+msgstr "Zaangażowanie w innowacyjność i zrównoważony rozwój"
+
+#: patterns/banner-hero.php:26
+msgctxt "Content of the hero section"
+msgid "Études is a pioneering firm that seamlessly merges creativity and functionality to redefine architectural excellence."
+msgstr "Études to pionierska firma, która płynnie łączy kreatywność i funkcjonalność, aby na nowo zdefiniować doskonałość architektoniczną."
+
+#: patterns/banner-hero.php:37
+msgctxt "Button text of the hero section"
+msgid "About us"
+msgstr "O nas"
+
+#: patterns/banner-hero.php:52
+msgid "Building exterior in Toronto, Canada"
+msgstr "Zewnętrzna część budynku w Toronto, Kanadzie"
+
+#: patterns/banner-project-description.php
+msgctxt "Pattern title"
+msgid "Project description"
+msgstr "Opis projektu"
+
+#: patterns/banner-project-description.php:17
+msgctxt "Sample title for a project or post"
+msgid "Art Gallery — Overview"
+msgstr "Galeria sztuki — przegląd"
+
+#: patterns/banner-project-description.php:41
+msgid "Hyatt Regency San Francisco, San Francisco, United States"
+msgstr "Hyatt Regency San Francisco, San Francisco, Stany Zjednoczone"
+
+#: patterns/cta-content-image-on-right.php
+msgctxt "Pattern title"
+msgid "Call to action with image on right"
+msgstr "Wezwanie do działania z obrazkiem po prawej stronie"
+
+#: patterns/cta-content-image-on-right.php:59
+#: patterns/cta-services-image-left.php:19
+msgid "White abstract geometric artwork from Dresden, Germany"
+msgstr "Białe abstrakcyjne dzieło geometryczne z Drezna, Niemiec"
+
+#: patterns/cta-content-image-on-right.php:32
+#: patterns/text-alternating-images.php:52
+msgctxt "Sample list item"
+msgid "Experience the world of architecture."
+msgstr "Doświadcz świata architektury."
+
+#: patterns/cta-content-image-on-right.php:28
+#: patterns/text-alternating-images.php:48
+msgctxt "Sample list item"
+msgid "Showcase your projects."
+msgstr "Zaprezentuj swoje projekty."
+
+#: patterns/cta-content-image-on-right.php:24
+#: patterns/text-alternating-images.php:44
+msgctxt "Sample list item"
+msgid "Collaborate with fellow architects."
+msgstr "Współpracuj z innymi architektami."
+
+#: patterns/cta-content-image-on-right.php:18
+msgctxt "Sample heading"
+msgid "Enhance your architectural journey with the Études Architect app."
+msgstr "Ulepsz swoją podróż architektoniczną dzięki aplikacji Études Architect."
+
+#: patterns/cta-pricing.php:42
+msgctxt "Sample price for the first pricing level"
+msgid "$0"
+msgstr "0 zł"
+
+#: patterns/cta-pricing.php:37
+msgctxt "Sample heading for the first pricing level"
+msgid "Free"
+msgstr "Bezpłatne"
+
+#: patterns/cta-pricing.php:162
+msgctxt "Sample price for the third pricing level"
+msgid "$28"
+msgstr "28 zł"
+
+#: patterns/cta-pricing.php:157
+msgctxt "Sample heading for the third pricing level"
+msgid "Expert"
+msgstr "Ekspert"
+
+#: patterns/cta-pricing.php:99
+msgctxt "Sample heading for the second pricing level"
+msgid "Connoisseur"
+msgstr "Koneser"
+
+#: patterns/cta-pricing.php:22
+msgctxt "Sample description for a pricing table"
+msgid "We offer flexible options, which you can adapt to the different needs of each project."
+msgstr "Oferujemy elastyczne opcje, które można dostosować do różnych potrzeb każdego projektu."
+
+#: patterns/cta-pricing.php:115
+msgctxt "Feature for pricing level"
+msgid "Access to 20 exclusive <em>Études Articles</em> per month."
+msgstr "Dostęp do 20 ekskluzywnych <em>artykułów Études</em> miesięcznie."
+
+#: patterns/cta-pricing.php:87
+msgctxt "Button text for the first pricing level"
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: patterns/cta-pricing.php:72 patterns/cta-pricing.php:131
+msgctxt "Feature for pricing level"
+msgid "Exclusive access to the <em>Études</em> app for iOS and Android."
+msgstr "Ekskluzywny dostęp do aplikacji <em>Études</em> na iOS i Android."
+
+#: patterns/cta-pricing.php:62 patterns/cta-pricing.php:123
+#: patterns/cta-pricing.php:181
+msgctxt "Feature for pricing level"
+msgid "Weekly print edition."
+msgstr "Tygodniowe wydanie drukowane."
+
+#: patterns/cta-pricing.php:53
+msgctxt "Feature for pricing level"
+msgid "Access to 5 exclusive <em>Études Articles</em> per month."
+msgstr "Dostęp do 5 ekskluzywnych artykułów <em>artykułów Études</em> miesięcznie."
+
+#: patterns/cta-pricing.php:173
+msgctxt "Feature for pricing level"
+msgid "Exclusive, unlimited access to <em>Études Articles</em>."
+msgstr "Ekskluzywny, nieograniczony dostęp do <em>artykułów Études</em>."
+
+#: patterns/cta-pricing.php:189
+msgctxt "Feature for pricing level"
+msgid "Exclusive access to the <em>Études</em> app for iOS and Android"
+msgstr "Ekskluzywny dostęp do aplikacji <em>Études</em> na iOS i Android"
+
+#: patterns/cta-rsvp.php
+msgctxt "Pattern title"
+msgid "RSVP"
+msgstr "RSVP"
+
+#: patterns/cta-rsvp.php:11
+msgctxt "Name of RSVP pattern"
+msgid "RSVP"
+msgstr "RSVP"
+
+#: patterns/cta-rsvp.php:21 patterns/page-rsvp-landing.php:23
+msgctxt "Initials for ´please respond´"
+msgid "RSVP"
+msgstr "RSVP"
+
+#: patterns/cta-rsvp.php:34 patterns/page-rsvp-landing.php:34
+msgctxt "Call to action button text for the reservation button"
+msgid "Reserve your spot"
+msgstr "Zarezerwuj swoje miejsce"
+
+#: patterns/cta-services-image-left.php:39
+msgctxt "Sample button text to view the services"
+msgid "Our services"
+msgstr "Nasze usługi"
+
+#: patterns/cta-rsvp.php:50 patterns/text-title-left-image-right.php:51
+msgid "A ramp along a curved wall in the Kiasma Museu, Helsinki, Finland"
+msgstr "Rampa wzdłuż zakrzywionej ściany w muzeum Kiasma, Helsinki, Finlandia"
+
+#: patterns/cta-subscribe-centered.php
+msgctxt "Pattern title"
+msgid "Centered call to action"
+msgstr "Wyśrodkowane wezwanie do działania"
+
+#: patterns/cta-subscribe-centered.php:20
+msgctxt "Sample text for Subscriber Heading with numbers"
+msgid "Join 900+ subscribers"
+msgstr "Dołącz do 900+ subskrybentów"
+
+#: patterns/cta-subscribe-centered.php:31
+msgctxt "Sample text for Sign Up Button"
+msgid "Sign up"
+msgstr "Zapisz się"
+
+#. Translators: Designed with WordPress
+#: patterns/footer-centered-logo-nav.php:25
+#: patterns/footer-colophon-3-col.php:94 patterns/footer.php:120
+msgid "Designed with %1$s"
+msgstr "Stworzone z %1$s"
+
+#: patterns/footer-centered-logo-nav.php
+msgctxt "Pattern title"
+msgid "Footer with centered logo and navigation"
+msgstr "Stopka z wyśrodkowanym logo i nawigacją"
+
+#: patterns/cta-subscribe-centered.php:24
+msgctxt "Sample text for Subscriber Description"
+msgid "Stay in the loop with everything you need to know."
+msgstr "Bądź na bieżąco ze wszystkim, co musisz wiedzieć."
+
+#: patterns/footer-colophon-3-col.php
+msgctxt "Pattern title"
+msgid "Footer with colophon, 3 columns"
+msgstr "Stopka z kolofonem, 3 kolumny"
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer with colophon, 4 columns"
+msgstr "Stopka z kolofonem, 4 kolumny"
+
+#: patterns/footer-colophon-3-col.php:30
+msgid "Keep up, get in touch."
+msgstr "Bądź na bieżąco, bądźmy w kontakcie."
+
+#: patterns/cta-services-image-left.php
+msgctxt "Pattern title"
+msgid "Services call to action with image on left"
+msgstr "Usługi - wezwanie do działania z obrazkiem po lewej stronie"
+
+#: patterns/cta-services-image-left.php:32
+msgctxt "Sample description of the services pattern"
+msgid "Experience the fusion of imagination and expertise with Études—the catalyst for architectural transformations that enrich the world around us."
+msgstr "Doświadcz połączenia wyobraźni i wiedzy specjalistycznej z Études — katalizatorem transformacji architektonicznych, które wzbogacają otaczający nas świat."
+
+#: patterns/cta-rsvp.php:27 patterns/page-rsvp-landing.php:28
+msgctxt "RSVP call to action description"
+msgid "Experience the fusion of imagination and expertise with Études Arch Summit, February 2025."
+msgstr "Doświadcz połączenia wyobraźni i wiedzy specjalistycznej podczas konferencji Études Arch, w lutym 2025."
+
+#: patterns/cta-services-image-left.php:28
+msgctxt "Sample heading of the services pattern"
+msgid "Guiding your business through the project"
+msgstr "Prowadzimy twój biznes przez projket"
+
+#: patterns/gallery-offset-images-grid-2-col.php
+msgctxt "Pattern title"
+msgid "Offset gallery, 2 columns"
+msgstr "Galeria przesunięta, 2 kolumny"
+
+#: patterns/gallery-offset-images-grid-3-col.php
+msgctxt "Pattern title"
+msgid "Offset gallery, 3 columns"
+msgstr "Galeria przesunięta, 3 kolumny"
+
+#: patterns/gallery-offset-images-grid-4-col.php
+msgctxt "Pattern title"
+msgid "Offset gallery, 4 columns"
+msgstr "Galeria przesunięta, 4 kolumny"
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404"
+msgstr "404"
+
+#: patterns/gallery-project-layout.php:54
+msgid "Art Gallery of Ontario, Toronto, Canada"
+msgstr "Galeria Sztuki Ontario, Toronto, Kanada"
+
+#: patterns/gallery-project-layout.php
+msgctxt "Pattern title"
+msgid "Project layout"
+msgstr "Układ projektu"
+
+#: patterns/gallery-project-layout.php:21
+msgid "An empty staircase under an angular roof in Darling Harbour, Sydney, Australia"
+msgstr "Pusta klatka schodowa pod kątowym dachem w Darling Harbour, Sydney, Australia"
+
+#: patterns/hidden-404.php:10
+msgctxt "Heading for a webpage that is not found"
+msgid "Page Not Found"
+msgstr "Strona nie została znaleziona"
+
+#: patterns/hidden-404.php:13
+msgctxt "Message to convey that a webpage could not be found"
+msgid "The page you are looking for does not exist, or it has been moved. Please try searching using the form below."
+msgstr "Strona, której szukasz, nie istnieje lub została przeniesiona. Spróbuj wyszukać za pomocą poniższego formularza."
+
+#: patterns/hidden-comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr "Komentarze"
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "No results"
+msgstr "Brak wyników"
+
+#: patterns/hidden-search.php:9
+msgctxt "search button text"
+msgid "Search"
+msgstr "Szukaj"
+
+#: patterns/hidden-search.php:9 patterns/hidden-sidebar.php:75
+msgctxt "search form label"
+msgid "Search"
+msgstr "Szukaj"
+
+#: patterns/hidden-search.php
+msgctxt "Pattern title"
+msgid "Search"
+msgstr "Wyszukiwanie"
+
+#: patterns/hidden-post-navigation.php:12
+msgctxt "Label before the title of the next post. There is a space after the colon."
+msgid "Next: "
+msgstr "Następny: "
+
+#: patterns/hidden-post-navigation.php:11
+msgctxt "Label before the title of the previous post. There is a space after the colon."
+msgid "Previous: "
+msgstr "Poprzedni: "
+
+#: patterns/hidden-post-navigation.php
+msgctxt "Pattern title"
+msgid "Post navigation"
+msgstr "Nawigacja wpisu"
+
+#: patterns/hidden-post-meta.php:25
+msgctxt "Prefix for the post category block: in category name"
+msgid "in "
+msgstr "w "
+
+#: patterns/hidden-no-results.php:9
+msgctxt "Message explaining that there are no results returned from a search"
+msgid "No posts were found."
+msgstr "Nie znaleziono żadnych wpisów."
+
+#: patterns/hidden-sidebar.php
+msgctxt "Pattern title"
+msgid "Sidebar"
+msgstr "Panel boczny"
+
+#: patterns/hidden-sidebar.php:17
+msgid "About the author"
+msgstr "O autorze"
+
+#: patterns/hidden-sidebar.php:75
+msgctxt "search form placeholder"
+msgid "Search..."
+msgstr "Szukaj…"
+
+#: patterns/page-newsletter-landing.php:40
+msgctxt "Sample content for newsletter subscribe button"
+msgid "Sign up"
+msgstr "Zapisz się"
+
+#: patterns/team-4-col.php:97
+msgctxt "Sample role of a team member"
+msgid "Architect"
+msgstr "Architekt"
+
+#: patterns/team-4-col.php:44
+msgctxt "Sample name of a team member"
+msgid "Francesca Piovani"
+msgstr "Francesca Piovani"
+
+#: patterns/team-4-col.php:92
+msgctxt "Sample name of a team member"
+msgid "Helga Steiner"
+msgstr "Helga Steiner"
+
+#: patterns/team-4-col.php:116
+msgctxt "Sample name of a team member"
+msgid "Ivan Lawrence"
+msgstr "Ivan Lawrence"
+
+#: patterns/team-4-col.php:68
+msgctxt "Sample name of a team member"
+msgid "Rhye Moore"
+msgstr "Rhye Moore"
+
+#: patterns/text-title-left-image-right.php
+msgctxt "Pattern title"
+msgid "Title text and button on left with image on right"
+msgstr "Tekst tytułu i przycisk po lewej stronie, a obrazek po prawej"
+
+#: patterns/banner-project-description.php:26
+msgctxt "Sample descriptive text for a project or post."
+msgid "This transformative project seeks to enhance the gallery's infrastructure, accessibility, and exhibition spaces while preserving its rich cultural heritage."
+msgstr "Rewolucyjny projekt ma na celu ulepszenie infrastruktury galerii, poprawę jej dostępności i przestrzeni wystawowych, jednocześnie zachowując jej bogate dziedzictwo kulturowe."
+
+#: patterns/footer-colophon-3-col.php:42
+msgctxt "Example email in site footer"
+msgid "info@example.com"
+msgstr "info@example.com"
+
+#: patterns/footer.php:41 patterns/footer.php:47
+msgid "About"
+msgstr "O"
+
+#: patterns/gallery-full-screen-image.php
+msgctxt "Pattern title"
+msgid "Full screen image"
+msgstr "Obrazek na cały ekran"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "the WordPress team"
+msgstr "zespół WordPressa"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wordpress.org/themes/twentytwentyfour/"
+msgstr "https://pl.wordpress.org/themes/twentytwentyfour/"

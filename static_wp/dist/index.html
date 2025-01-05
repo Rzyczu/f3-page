@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <script type="text/javascript">
+    var isIndex = true;
+  </script>
+</head>
+
+<body class="bg-white">
+
+  <nav class="sticky z-40 bg-white text-gray" data-page="index" id="navbar">
+    <div class="z-50 items-center hidden gap-4 lg:block lg:absolute right-4 top-8">
+      <span
+        id="navbar-lock-icon"
+        class="text-xl text-gray-400 cursor-pointer emoji-gray">
+        🔓
+      </span>
+    </div>
+    <div class="container flex items-center justify-between py-8 mx-auto">
+      <div class="flex md:basis-2/3 lg:basis-3/12 xl:basis-2/5">
+        <a href="./index.html" class="flex items-center space-x-2 group">
+          <img src="./assets/svg/logo.svg" class="h-8 svg-color-gray group-hover:svg-color-primary"
+            alt="Flowbite Logo" />
+          <span id="navbar-brand"
+            class="font-medium text-2xs md:text-xs xl:text-xs text-gray lg:text-2xs group-hover:text-primary">
+            3 Podgórski Szczep Fioletowej Trójki<br />
+            im. Tadeusza Kościószki
+          </span>
+        </a>
+      </div>
+      <a href="./index.html" aria-current="page"
+        class="hidden py-2 font-semibold sm:text-sm text-gray hover:text-primary max-md:px-3 2xl:px-4 lg:block">Strona
+        Główna</a>
+      <a href="./about-us.html"
+        class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">O
+        nas</a>
+      <a href="./join-us.html"
+        class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Dołącz
+        do nas</a>
+      <a href="./our-creativity.html"
+        class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Nasza
+        twórczość</a>
+      <a href="./support-us.html"
+        class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Wesprzyj
+        nas</a>
+      <a href="./contact.html"
+        class="hidden py-2 text-xs font-semibold text-gray display-mobile sm:block hover:text-primary 2xl:px-4 max-md:px-3 sm:text-sm">Kontakt</a>
+      <a href="./support-us.html"
+        class="hidden py-2 text-sm font-semibold text-gray display-mobile sm:block hover: hover:text-primary 2xl:px-4 max-md:px-3 sm:text-md lg:hidden ">1,5%</a>
+
+      <div
+        class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <div class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-label">menu</span>
+        </div>
+      </div>
+
+    </div>
+    <div id="mobile-navbar">
+      <div class="relative flex justify-center pt-20">
+        <div class="relative flex flex-col space-y-6 w-min-min left-line left-1">
+          <a aria-current="page" href="./index.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">Strona
+            główna</a>
+          <a href="./about-us.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">O
+            nas</a>
+          <a href="./join-us.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Dołącz
+            do
+            nas</a>
+          <a href="./our-creativity.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Nasza
+            twórczość</a>
+          <a href="./support-us.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Wesprzyj
+            nas</a>
+          <a href="./contact.html"
+            class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Kontakt</a>
+        </div>
+      </div>
+      <img src="./assets/svg/camp.svg" class="hidden w-56 svg-color-white bottom-28 right-20 md:block md:absolute"
+        alt="Flowbite Logo" />
+    </div>
+  </nav>
+
+  <main>
+    <section
+      class="mx-auto mb-12 overflow-visible max-sm:pt-12 bg-primary sm:bg-gradient-to-r sm:from-white sm:from-2/3 sm:to-primary sm:to-2/3 max-sm:mt-0 sm:mb-24 text-primary">
+      <div class="relative ">
+        <div class="max-sm:relative">
+          <img src="./assets/svg/logo-white.svg"
+            class="max-sm:pb-20 h-1/2 sm:h-full sm:absolute sm:left-2/3 -translate-x-half-logo" alt="Flowbite Logo" />
+          <img src="./assets/svg/boat.svg" class="absolute w-12 sm:w-16 bottom-7 sm:bottom-4 right-12"
+            alt="Flowbite Logo" />
+          <svg class="absolute w-4 sm:w-5 right-4 -bottom-24 sm:-bottom-28" xmlns="http://www.w3.org/2000/svg"
+            width="44" height="206" viewBox="0 0 44 206">
+            <text id="Płyń_dalej" data-name="Płyń dalej" transform="translate(44) rotate(90)" fill="#b3a2ce"
+              font-size="36" font-family="Montserrat-Light, Montserrat" font-weight="300">
+              <tspan x="0" y="35">Płyń dalej</tspan>
+            </text>
+          </svg>
+        </div>
+        <div class="container max-sm:bg-white md:mx-auto">
+          <div class="pt-12 pb-12 sm:w-1/2">
+            <h1 class="mb-4 ">3 Podgórski Szczep <br /> Fioletowej Trójki </br> im. Tadeusza Kościuszki</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+            <div class="horizontal-line">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto my-24 text-primary">
+      <div class="flex flex-col md:px-24 sm:flex-row gap-x-12">
+        <div class="relative md:basis-1/2">
+          <img src="./assets//svg/scouts.svg"
+            class="relative svg-color-primary sm:w-full sm:-translate-y-1/2 xl:w-2/3 sm:top-1/2 xl:left-1/2 xl:-translate-x-1/2"
+            alt="Flowbite Logo" />
+        </div>
+        <div class="self-center sm:basis-1/2 max-sm:mt-10">
+          <h2 class="mb-4">Dołącz do nas</h2>
+          <p class="mb-6">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt
+            ut labore et dolore magna</p>
+          <button type="button" class="hover:font-semibold stroke-primary hover:stroke-primary-dark">
+            <span class="text-xs">Działaj z nami</span>
+            <svg class="w-16 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.621 27.941">
+              <g id="Group_131" data-name="Group 131" transform="translate(132.162 27.204) rotate(180)">
+                <path id="Path_461" data-name="Path 461" d="M1299.5,1378.625l-13.766,12.656,14.381,13.828"
+                  transform="translate(-1285.732 -1378.625)" fill="none" stroke-miterlimit="10" stroke-width="3" />
+                <line id="Line_27" data-name="Line 27" x2="132.162" transform="translate(0 12.656)" fill="none"
+                  stroke-miterlimit="10" stroke-width="3" />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-24 text-white bg-primary">
+      <div class="container flex flex-col py-24 mx-auto sm:relative sm:block sm:flex-none">
+        <div class="order-3 float-right max-sm:mt-12 ">
+          <button class="pr-8" id="opinions-prev-btn">
+            <svg class="h-4 stroke-white hover:stroke-primary-light hover:scale-x-125"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.623 27.941">
+              <g id="Group_50" data-name="Group 50" transform="translate(1.459 0.736)">
+                <path id="Path_461" data-name="Path 461" d="M1299.5,1378.625l-13.766,12.656,14.381,13.828"
+                  transform="translate(-1285.732 -1378.625)" fill="none" stroke-miterlimit="10" stroke-width="2" />
+                <line id="Line_27" data-name="Line 27" x2="56.164" transform="translate(0 12.656)" fill="none"
+                  stroke-miterlimit="10" stroke-width="2" />
+              </g>
+            </svg>
+          </button>
+          <button class="" id="opinions-next-btn">
+            <svg class="h-4 stroke-white hover:stroke-primary-light hover:scale-x-125"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161.462 27.941">
+              <g id="Group_49" data-name="Group 49" transform="translate(160.003 27.205) rotate(180)">
+                <path class="xd" id="Path_461" data-name="Path 461" d="M13.766,0,0,12.656,14.381,26.484" fill="none"
+                  stroke-miterlimit="10" stroke-width="2" />
+                <path class="xd" id="Path_462" data-name="Path 462" d="M13.766,0,0,12.656,14.382,26.484"
+                  transform="translate(27.201)" fill="none" stroke-miterlimit="10" stroke-width="2" />
+                <path class="xd" id="Path_463" data-name="Path 463" d="M13.766,0,0,12.656,14.382,26.484"
+                  transform="translate(54.401)" fill="none" stroke-miterlimit="10" stroke-width="2" />
+                <line class="xd" id="Line_27" data-name="Line 27" x2="160.003" transform="translate(0 12.656)"
+                  fill="none" stroke-miterlimit="10" stroke-width="2" />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <!-- sm:right-8 md:right-12 lg:right-16 xl:right-20 2xl:right-24 -->
+        <div
+          class="relative self-center order-1 inline-block sm:right-8 md:right-12 lg:right-16 xl:right-20 2xl:right-24 max-sm:w-full sm:mt-0 sm:absolute sm:bottom-12">
+          <img src="./assets/svg/bushes.svg" class="w-full svg-color-white" alt="Flowbite Logo" />
+        </div>
+        <div class="order-2 sm:ml-24 sm:w-1/3 max-sm:pt-24">
+          <h2 class="mb-4">Opinie</h2>
+          <div class="opinions">
+            <article class="">
+              <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
+                zadowolony Jako rodzic, mogę powiedzieć, że o Jako rodzic, mogę powiedzieć, że o Jako rodzic, mogę
+                powiedzieć, że o Jako rodzic, mogę powiedzieć, że o
+                z wyjazdów letnich!</p>
+              <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
+            </article>
+            <article class="">
+              <p class="mb-6">Jako rodzic, mogę powiedzieć, że organizacyjnie są pierwsza klasa! Mój syn jest bardzo
+                zadowolony
+                z wyjazdów letnich!</p>
+              <span class="text-xs"><i>Pani Agnieszka, mama harcerza</i></span>
+            </article>
+            <article class="">
+              <p class="mb-6">Moje dziecko wraca z każdej zbiórki pełne entuzjazmu i nowych pomysłów. Program jest
+                świetnie
+                zorganizowany i dostosowany do różnych zainteresowań.</p>
+              <span class="text-xs"><i>Pan Tomasz, tata zucha</i></span>
+            </article>
+            <article class="">
+              <p class="mb-6">Jestem pod wrażeniem, jak harcerstwo kształtuje charakter mojego syna. Nauczył się
+                samodzielności i odpowiedzialności, a jednocześnie ma mnóstwo zabawy.</p>
+              <span class="text-xs"><i>Pani Ewa, mama harcerza</i></span>
+            </article>
+            <article class="">
+              <p class="mb-6">Fantastyczna drużyna! Córka nie może doczekać się każdego kolejnego spotkania. Lubi
+                wszystkie
+                gry i wyzwania, jakie stawia przed nią drużyna.</p>
+              <span class="text-xs"><i>Pani Katarzyna, mama harcerki</i></span>
+            </article>
+            <article class="">
+              <p class="mb-6">Harcerstwo to najlepsza decyzja, jaką mogliśmy podjąć dla naszego syna. Obóz letni był
+                doskonale zorganizowany, a syn wrócił pełen wrażeń i nowych znajomości.</p>
+              <span class="text-xs"><i>Pan Marek, tata harcerza</i></span>
+            </article>
+          </div>
+        </div>
+    </section>
+
+
+    <section class="container relative mx-auto my-24 overflow-visible bg-white text-primary">
+      <h2 class="mb-4 sm:ml-24">Wydarzenia</h2>
+      <div class="absolute flex w-11/12 gap-10 md:gap-6 max-md:justify-end md:right-10">
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+      </div>
+      <div class="swiper-news">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide news-article">
+            <div class="news-article-imgages">
+              <img class="news-article-img" src="./assets/news-1.jpg" />
+              <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+            </div>
+            <h3 class="news-article-header">Wydarzenie 0</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+          <div class="swiper-slide news-article">
+            <div class="news-article-imgages">
+              <img class="news-article-img" src="./assets/news-2.jpg" />
+              <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+            </div>
+            <h3 class="news-article-header">Wydarzenie I</h3>
+            <p>Lorem ipsum dolor sit aLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+              tempormet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+          <div class="swiper-slide news-article">
+            <div class="news-article-imgages">
+              <img class="news-article-img" src="./assets/news-3.jpg" />
+              <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+            </div>
+            <h3 class="news-article-header">Wydarzenie II</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+          <div class="swiper-slide news-article">
+            <div class="news-article-imgages">
+              <img class="news-article-img" src="./assets/news-1.jpg" />
+              <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+            </div>
+            <h3 class="news-article-header">Wydarzenie III</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+          <div class="swiper-slide news-article">
+            <div class="news-article-imgages">
+              <img class="news-article-img" src="./assets/news-2.jpg" />
+              <img class="news-article-img-logo" src="./assets/svg/logo.svg" />
+            </div>
+            <h3 class="news-article-header">Wydarzenie IV</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="relative my-24 bg-white text-primary">
+      <div class="container mx-auto -scroll-my-28 text-primary">
+        <h2 class="mb-4">Struktury, <br /> w których działamy</h2>
+        <div
+          class="grid justify-around grid-cols-2 gap-16 mx-auto mt-16 sm:grid-cols-4 flex-grow-2 sm:mx-10 md:m-20 md:gap-12 lg:gap-24">
+          <article class="justify-self-stretch hover:scale-110">
+            <a href="https://zhr.pl/" target="_blank">
+              <img class="object-contain w-full" alt="ZHR" src="./assets/zhr.png" />
+            </a>
+          </article>
+          <article class="justify-self-stretch hover:scale-110">
+            <a href="https://malopolska.zhr.pl/" target="_blank">
+              <img class="object-contain w-full" alt="Okręg Małopolski ZHR" src="./assets/okrag-malopolsski.png" />
+            </a>
+          </article>
+          <article class="justify-self-stretch hover:scale-110">
+            <a href="https://malopolanki.zhr.pl/" target="_blank">
+              <img class="object-contain w-full" alt="Małopolska Chorągiew Harcerek ZHR" src="./assets/chhrek.png" />
+            </a>
+          </article>
+          <article class="justify-self-stretch hover:scale-110">
+            <a href="https://malopolanie.zhr.pl/" target="_blank">
+              <img class="object-contain w-full" alt="Małopolska Chorągiew Harcerzy ZHR" src="./assets/chhrzy.png" />
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="relative text-white bg-primary">
+      <div class="container items-start py-24 mx-auto">
+        <h2 class="mb-4 text-3xl font-semibold">Jak nas wesprzeć?</h2>
+        <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+          <div class="p-6 rounded-lg shadow-lg hover:scale-105 bg-primary-light bg-opacity-20">
+            <div class="grid gap-4">
+              <div class="grid grid-cols-[auto_1fr] items-center">
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="white" />
+                  <text x="55" y="70" font-size="50" font-weight="bold" text-anchor="middle" fill="#714C98">1,5%</text>
+                </svg>
+                <p class="ml-3 text-lg">Przekaż nam swój 1,5%</p>
+              </div>
+              <div class="grid grid-cols-[auto_1fr] items-center">
+                <a href="https://www.facebook.com/szczepf3" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 w-10 h-10 text-white" fill="currentColor"
+                    viewBox="2 2 46 46">
+                    <path
+                      d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z" />
+                  </svg>
+                </a>
+                <p class="ml-3 text-lg">Polub naszą stronę</p>
+              </div>
+              <div class="grid grid-cols-[auto_1fr] items-center">
+                <svg class="flex-shrink-0 w-10 h-10 primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="1 1 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 11c.889-.086 1.416-.543 2.156-1.057a22.323 22.323 0 0 0 3.958-5.084 1.6 1.6 0 0 1 .582-.628 1.549 1.549 0 0 1 1.466-.087c.205.095.388.233.537.406a1.64 1.64 0 0 1 .384 1.279l-1.388 4.114M7 11H4v6.5A1.5 1.5 0 0 0 5.5 19v0A1.5 1.5 0 0 0 7 17.5V11Zm6.5-1h4.915c.286 0 .372.014.626.15.254.135.472.332.637.572a1.874 1.874 0 0 1 .215 1.673l-2.098 6.4C17.538 19.52 17.368 20 16.12 20c-2.303 0-4.79-.943-6.67-1.475" />
+                </svg>
+                <p class="ml-3 text-lg">Poleć nas innym</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-lg shadow-lg hover:scale-105 bg-primary-dark bg-opacity-20">
+            <p class="mb-2 text-lg font-semibold">Nasze dane 1,5%</p>
+            <ul class="space-y-2 text-gray">
+              <li>Nazwa OPP: Związek Harcerstwa Rzeczypospolitej</li>
+              <li>Numer KRS: 0000057720</li>
+              <li>Kod Szczepu: MAL 078</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container flex justify-end mx-auto">
+        <img src="./assets/svg/mountains.svg" class="my-4 xl:w-2/5 sm:my-12 sm:w-2/3 primary" alt="Flowbite Logo" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-white bg-primary">
+    <div class="container flex flex-col items-center justify-between py-4 mx-auto font-medium text-center sm:flex-row">
+      <div class="flex items-center gap-8">
+        <img src="./assets/svg/logo.svg" class="h-8 svg-color-white" alt="Flowbite Logo" />
+        <p>&copy; Szczep Fiolej Trójki</p>
+      </div>
+      <div class="flex items-center gap-16">
+        <a href="./">Logowanie</a>
+        <a href="./contact.html">Kontakt</a>
+        <a href="https://www.facebook.com/szczepf3" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.04c-5.5 0-9.96 4.47-9.96 9.96 0 5.24 4.04 9.57 9.27 9.96v-7.06h-2.79v-2.91h2.79v-2.18c0-2.72 1.63-4.23 4.12-4.23 1.2 0 2.45.21 2.45.21v2.67h-1.38c-1.36 0-1.78.85-1.78 1.72v2.08h3.12l-.5 2.91h-2.62v7.06c5.23-.39 9.27-4.72 9.27-9.96 0-5.49-4.47-9.96-9.96-9.96z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script defer src="./js/navbar.js"></script>
+<script defer src="./js/opinions.js"></script>
+<script defer src="./js/news.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</html>
