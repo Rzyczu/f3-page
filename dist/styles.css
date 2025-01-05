@@ -2790,6 +2790,10 @@ textarea {
 }
 
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+
   .lg\:right-16 {
     right: 4rem;
   }
