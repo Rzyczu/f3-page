@@ -1418,18 +1418,17 @@ nav {
 }
 
 .scout-path-elements {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   width: 100%;
   padding-top: 4rem;
-  gap: 1rem;
+  justify-items: center;
 }
 
-@media not all and (min-width: 640px) {
+@media (min-width: 768px) {
   .scout-path-elements {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
@@ -1800,16 +1799,16 @@ textarea {
   left: 0.25rem;
 }
 
-.left-2 {
-  left: 0.5rem;
-}
-
 .right-0 {
   right: 0px;
 }
 
 .right-12 {
   right: 3rem;
+}
+
+.right-2 {
+  right: 0.5rem;
 }
 
 .right-20 {
@@ -1826,10 +1825,6 @@ textarea {
 
 .top-\[7\.375rem\] {
   top: 7.375rem;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .z-40 {
