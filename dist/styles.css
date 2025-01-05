@@ -2429,6 +2429,11 @@ textarea {
     align-self: center;
   }
 
+  .max-md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .max-md\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -2663,6 +2668,16 @@ textarea {
     padding-bottom: 3rem;
   }
 
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .sm\:pb-12 {
     padding-bottom: 3rem;
   }
@@ -2764,12 +2779,21 @@ textarea {
     padding-right: 6rem;
   }
 
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
   .md\:pl-8 {
     padding-left: 2rem;
   }
 
   .md\:text-xs {
     font-size: 0.75rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
   }
 
   .md\:font-bold {
@@ -2836,6 +2860,16 @@ textarea {
 
   .lg\:gap-24 {
     gap: 6rem;
+  }
+
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:text-2xs {
@@ -2917,5 +2951,15 @@ textarea {
 
   .\32xl\:w-2\/5 {
     width: 40%;
+  }
+
+  .\32xl\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .\32xl\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
