@@ -15,7 +15,7 @@
 
             if ($news_query->have_posts()) :
                 while ($news_query->have_posts()) : $news_query->the_post();
-                    $news_image = get_the_post_thumbnail_url(get_the_ID(), 'medium') ?: get_template_directory_uri() . '/assets/news-placeholder.jpg';
+                    $news_image = get_the_post_thumbnail_url(get_the_ID(), 'medium') ?: get_template_directory_uri() . '/assets/images/news-placeholder.jpg';
                     $news_logo = get_template_directory_uri() . '/assets/svg/logo.svg';
                     ?>
                     <div class="swiper-slide news-article">

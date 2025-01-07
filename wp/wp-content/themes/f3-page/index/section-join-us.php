@@ -2,7 +2,7 @@
     <div class="flex flex-col md:px-24 sm:flex-row gap-x-12">
         <div class="relative md:basis-1/2">
             <img 
-                src="<?php echo esc_url(get_theme_mod('section_join_us_image', get_template_directory_uri() . '/assets/svg/scouts.svg')); ?>" 
+                src="<?php echo esc_url(get_theme_mod('section_join_us_image', get_template_directory_uri() . '/assets/images/svg/scouts.svg')); ?>" 
                 class="relative svg-color-primary sm:w-full sm:-translate-y-1/2 xl:w-2/3 sm:top-1/2 xl:left-1/2 xl:-translate-x-1/2" 
                 alt="<?php esc_attr_e('Scouts Illustration', 'your-theme-textdomain'); ?>" 
             />

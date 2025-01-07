@@ -49,6 +49,6 @@
         </div>
     </div>
     <div class="container flex justify-end mx-auto">
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/mountains.svg'); ?>" class="my-4 xl:w-2/5 sm:my-12 sm:w-2/3 primary" alt="<?php esc_attr_e('Mountains Illustration', 'your-theme-textdomain'); ?>" />
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/mountains.svg'); ?>" class="my-4 xl:w-2/5 sm:my-12 sm:w-2/3 primary" alt="<?php esc_attr_e('Mountains Illustration', 'your-theme-textdomain'); ?>" />
     </div>
 </section>

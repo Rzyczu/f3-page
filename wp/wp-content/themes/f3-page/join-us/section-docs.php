@@ -35,7 +35,7 @@
                 <p><?php esc_html_e('Brak dokumentów do wyświetlenia.', 'your-theme-textdomain'); ?></p>
             <?php endif; ?>
         </div>
-        <img src="<?php echo esc_url(get_theme_mod('docs_section_image', get_template_directory_uri() . '/assets/svg/tea-cup.svg')); ?>"
+        <img src="<?php echo esc_url(get_theme_mod('docs_section_image', get_template_directory_uri() . '/assets/images/svg/tea-cup.svg')); ?>"
              class="w-3/5 sm:w-1/5 max-sm:self-center svg-color-primary"
              alt="<?php esc_attr_e('Documents Section Image', 'your-theme-textdomain'); ?>" />
     </div>

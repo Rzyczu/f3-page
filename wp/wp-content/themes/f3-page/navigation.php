@@ -14,7 +14,7 @@
                <?php if (has_custom_logo()) : ?>
                      <?php the_custom_logo(); ?>
                <?php else : ?>
-                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/logo.svg'); ?>" 
+                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo.svg'); ?>" 
                         class="h-8 svg-color-gray group-hover:svg-color-primary" 
                         alt="<?php bloginfo('name'); ?>" />
                <?php endif; ?>
@@ -109,7 +109,7 @@
                 </a>
             </div>
         </div>
-        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/camp.svg'); ?>" 
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/camp.svg'); ?>" 
              class="hidden w-56 svg-color-white bottom-28 right-20 md:block md:absolute" 
              alt="Camp Logo" />
     </div>

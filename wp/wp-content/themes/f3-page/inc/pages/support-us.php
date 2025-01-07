@@ -31,7 +31,7 @@ function customize_support_intro_section($wp_customize) {
 
     // Obraz sekcji
     $wp_customize->add_setting('support_intro_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/pier.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/pier.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'support_intro_image', array(

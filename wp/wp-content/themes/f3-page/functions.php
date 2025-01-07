@@ -5,6 +5,7 @@ require_once get_template_directory() . '/inc/global/theme-setup.php';
 require_once get_template_directory() . '/inc/global/forms.php';
 require_once get_template_directory() . '/inc/global/customizer.php';
 require_once get_template_directory() . '/inc/global/post-types.php';
+require_once get_template_directory() . '/inc/global/pages.php';
 
 // Wczytywanie plików dla stron
 require_once get_template_directory() . '/inc/pages/index.php';
@@ -32,3 +33,10 @@ function redirect_archives_to_home() {
     }
 }
 add_action('template_redirect', 'redirect_archives_to_home');
+
+function add_bg_white_to_body_class($classes) {
+    // Dodaj klasę 'bg-white' do istniejących klas
+    $classes[] = 'bg-white';
+    return $classes;
+}
+add_filter('body_class', 'add_bg_white_to_body_class');

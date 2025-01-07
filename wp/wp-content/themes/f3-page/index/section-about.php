@@ -2,12 +2,12 @@
     <div class="relative">
         <div class="max-sm:relative">
             <img 
-                src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/logo-white.svg'); ?>" 
+                src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo-white.svg'); ?>" 
                 class="max-sm:pb-20 h-1/2 sm:h-full sm:absolute sm:left-2/3 -translate-x-half-logo" 
                 alt="<?php esc_attr_e('Logo', 'your-theme-textdomain'); ?>" 
             />
             <img 
-                src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/boat.svg'); ?>" 
+                src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/boat.svg'); ?>" 
                 class="absolute w-12 sm:w-16 bottom-7 sm:bottom-4 right-12" 
                 alt="<?php esc_attr_e('Boat', 'your-theme-textdomain'); ?>" 
             />

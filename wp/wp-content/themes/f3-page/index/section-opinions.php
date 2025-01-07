@@ -23,7 +23,7 @@
             </button>
         </div>
         <div class="relative self-center order-1 inline-block sm:right-8 md:right-12 lg:right-16 xl:right-20 2xl:right-24 max-sm:w-full sm:mt-0 sm:absolute sm:bottom-12">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/bushes.svg'); ?>" class="w-full svg-color-white" alt="<?php esc_attr_e('Bushes Illustration', 'your-theme-textdomain'); ?>" />
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/bushes.svg'); ?>" class="w-full svg-color-white" alt="<?php esc_attr_e('Bushes Illustration', 'your-theme-textdomain'); ?>" />
         </div>
         <div class="order-2 sm:ml-24 sm:w-1/3 max-sm:pt-24">
             <h2 class="mb-4"><?php esc_html_e('Opinie', 'your-theme-textdomain'); ?></h2>

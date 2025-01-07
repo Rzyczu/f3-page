@@ -31,7 +31,7 @@ function customize_section_intro($wp_customize) {
 
     // Ustawienie dla obrazu
     $wp_customize->add_setting('section_intro_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/waterfall.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/waterfall.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_intro_image', array(
@@ -116,7 +116,7 @@ function customize_section_teams($wp_customize) {
 
     // Obraz
     $wp_customize->add_setting('section_teams_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/flag.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/flag.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_teams_image', array(
@@ -288,7 +288,7 @@ function customize_section_brotherhood($wp_customize) {
     // Dane dla każdego sztandaru
     for ($i = 1; $i <= 3; $i++) {
         $wp_customize->add_setting("brotherhood_photo_$i", array(
-            'default' => get_template_directory_uri() . "/assets/news-$i.jpg",
+            'default' => get_template_directory_uri() . "/assets/images/news-$i.jpg",
             'sanitize_callback' => 'esc_url_raw',
         ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "brotherhood_photo_$i", array(
@@ -350,7 +350,7 @@ function customize_section_history($wp_customize) {
 
     // Obraz sekcji
     $wp_customize->add_setting('section_history_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/castle.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/castle.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_history_image', array(

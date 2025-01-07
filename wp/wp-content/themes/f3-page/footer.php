@@ -1,7 +1,7 @@
 <footer class="text-white bg-primary">
     <div class="container flex flex-col items-center justify-between py-4 mx-auto font-medium text-center sm:flex-row">
         <div class="flex items-center gap-8">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/logo.svg'); ?>" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo.svg'); ?>" 
                  class="h-8 svg-color-white" 
                  alt="<?php esc_attr_e('Logo', 'your-theme-textdomain'); ?>" />
             <p>

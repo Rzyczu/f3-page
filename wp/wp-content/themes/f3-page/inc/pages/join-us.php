@@ -31,7 +31,7 @@ function customize_join_us_intro_section($wp_customize) {
 
     // Obraz
     $wp_customize->add_setting('join_us_intro_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/lake.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/lake.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'join_us_intro_image', array(
@@ -73,7 +73,7 @@ function customize_join_info_section($wp_customize) {
     // Kroki
     for ($i = 1; $i <= 6; $i++) {
         $wp_customize->add_setting("join_info_image_$i", array(
-            'default' => get_template_directory_uri() . "/assets/svg/icon-$i.svg",
+            'default' => get_template_directory_uri() . "/assets/images/svg/icon-$i.svg",
             'sanitize_callback' => 'esc_url_raw',
         ));
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "join_info_image_$i", array(
@@ -180,7 +180,7 @@ function customize_docs_section($wp_customize) {
 
     // Obraz sekcji
     $wp_customize->add_setting('docs_section_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/tea-cup.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/tea-cup.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'docs_section_image', array(

@@ -46,7 +46,7 @@ function customize_section_join_us($wp_customize) {
     ));
 
     $wp_customize->add_setting('section_join_us_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/scouts.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/scouts.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_join_us_image', array(

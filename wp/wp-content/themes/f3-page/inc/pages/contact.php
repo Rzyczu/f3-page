@@ -31,7 +31,7 @@ function customize_contact_intro_section($wp_customize) {
 
     // Obraz
     $wp_customize->add_setting('contact_intro_image', array(
-        'default' => get_template_directory_uri() . '/assets/svg/hammock.svg',
+        'default' => get_template_directory_uri() . '/assets/images/svg/hammock.svg',
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_intro_image', array(
