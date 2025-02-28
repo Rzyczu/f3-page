@@ -19,7 +19,7 @@
             </a>
         </div>
 
-        <img src="<?php echo esc_url(get_theme_mod('section_history_image', get_template_directory_uri() . '/assets/svg/castle.svg')); ?>"
+        <img src="<?php echo esc_url(get_theme_mod('section_history_image', get_template_directory_uri() . '/assets/images/svg/castle.svg')); ?>"
              class="w-full svg-color-white xl:w-1/2 md:w-4/6 max-md:self-center md:pl-8"
              alt="<?php esc_attr_e('History Image', 'your-theme-textdomain'); ?>" />
     </div>

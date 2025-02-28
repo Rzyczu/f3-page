@@ -10,7 +10,7 @@
                     <?php echo esc_html(get_theme_mod('section_board_text', __('Ścisłą Kadrę Szczepu stanowi Szczepowy, Kwatermistrz oraz Viceszczepowi. W składzie rady są wszyscy drużynowi oraz instruktorzy którzy nie mają funkcji w szczepie.', 'your-theme-textdomain'))); ?>
                 </p>
             </div>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/svg/logo-cartoon.svg'); ?>" 
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo-cartoon.svg'); ?>" 
                  class="w-16 ml-16 svg-color-primary max-sm:hidden" 
                  alt="<?php esc_attr_e('Logo', 'your-theme-textdomain'); ?>" />
         </div>

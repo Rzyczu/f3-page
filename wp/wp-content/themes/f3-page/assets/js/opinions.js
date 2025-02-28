@@ -4,6 +4,8 @@ let OpinionOpinion = document.getElementById('opinions-prev-btn');
 
 let active = 0;
 
+
+
 function updateClasses() {
   opinions.forEach((opinion, index) => {
     opinion.classList.remove('active', 'prev', 'next');
@@ -15,6 +17,11 @@ function updateClasses() {
       opinion.classList.add('next');
     }
   });
+
+  if (opinions.length == 0) {
+    return;
+  }
+
 
   // Adjust the height of the container
   const activeOpinion = opinions[active];

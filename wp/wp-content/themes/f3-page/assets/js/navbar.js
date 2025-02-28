@@ -4,7 +4,7 @@ const hamburgerLabel = document.querySelector(".hamburger-label");
 const navbarBrand = document.getElementById("navbar-brand");
 const navbarLinksDisplayMobile = document.querySelectorAll(".display-mobile");
 const navElement = document.querySelector('nav');
-const logo = document.querySelector('img[src="./assets/svg/logo.svg"]');
+const logo = document.getElementById('logo') || document.querySelector('.custom-logo');
 const activePageLinks = document.querySelectorAll('[aria-current="page"]'); // Selects active page link
 activePageLinks.forEach(link => {
   link.classList.add('text-primary');
@@ -15,6 +15,11 @@ const isIndexPage = navElement.getAttribute('data-page') === 'index';
 if (isIndexPage) {
   navElement.classList.add('max-sm:bg-primary');
 }
+if (!logo) {
+  console.warn('Element logo nie został znaleziony');
+}
+
+console.log(logo)
 
 let isAnimating = false;
 
@@ -100,7 +105,9 @@ toggleNavbar = () => {
 }
 
 handleResize = () => {
-  contextMenu.classList.add('hidden');
+  if (contextMenu) {
+    contextMenu.classList.add('hidden');
+  }
 
   if (window.innerWidth > 1024) {
     hamburgerBtn.classList.remove("is-active");

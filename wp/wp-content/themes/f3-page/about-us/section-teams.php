@@ -20,7 +20,7 @@
                 <?php echo esc_html(get_theme_mod('section_teams_text_age', __('Kolejnym ważnym odróżnieniem drużyn jest ze względu na wiek. Są trzy główne grupy wiekowe: <br /> - Gromady zuchowe: 7–10 lat <br /> - Drużyny harcerskie: 11-15 lat <br /> - Drużyny wędrownicze: 16-18 lat', 'your-theme-textdomain'))); ?>
             </p>
         </div>
-        <img src="<?php echo esc_url(get_theme_mod('section_teams_image', get_template_directory_uri() . '/assets/svg/flag.svg')); ?>" 
+        <img src="<?php echo esc_url(get_theme_mod('section_teams_image', get_template_directory_uri() . '/assets/images/svg/flag.svg')); ?>" 
              class="w-3/5 svg-color-white xl:w-1/4 md:w-2/5 max-md:self-center md:pl-8" 
              alt="<?php esc_attr_e('Teams Image', 'your-theme-textdomain'); ?>" />
     </div>

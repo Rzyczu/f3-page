@@ -11,13 +11,13 @@
         </div>
         <div class="flex md:basis-2/3 lg:basis-3/12 xl:basis-2/5">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center space-x-2 group">
-               <?php if (has_custom_logo()) : ?>
-                     <?php the_custom_logo(); ?>
+            <?php if (has_custom_logo()) : ?>
+               <?php the_custom_logo(); ?>
                <?php else : ?>
-                     <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo.svg'); ?>" 
-                        class="h-8 svg-color-gray group-hover:svg-color-primary" 
-                        alt="<?php bloginfo('name'); ?>" />
-               <?php endif; ?>
+               <img id="logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo.svg'); ?>" 
+                     class="h-8 svg-color-gray group-hover:svg-color-primary" 
+                     alt="<?php bloginfo('name'); ?>" />
+            <?php endif; ?>
                <span id="navbar-brand" class="text-xs font-medium xl:text-xs text-gray lg:text-2xs group-hover:text-primary">
                      3 Podgórski Szczep Fioletowej Trójki<br />
                      im. Tadeusza Kościuszki

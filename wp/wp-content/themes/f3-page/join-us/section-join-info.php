@@ -11,7 +11,7 @@
         <div class="scout-path-elements">
             <?php
             for ($i = 1; $i <= 6; $i++) {
-                $image = get_theme_mod("join_info_image_$i", get_template_directory_uri() . "/assets/images/svg/icon-$i.svg");
+                $image = get_theme_mod("join_info_image_$i", get_template_directory_uri() . "/assets/images/svg/step-icon-$i.svg");
                 ?>
                 <img src="<?php echo esc_url($image); ?>"
                      class="h-16 hover:hover:scale-110 active scout-path-element lg:h-20 xl:h-28"

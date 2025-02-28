@@ -20,10 +20,10 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_szczep_f3_7592' );
+define( 'DB_NAME', 'database_name_here' );
 
 /** Database username */
-define( 'DB_USER', 'fioletowy_adm_1931' );
+define( 'DB_USER', 'username_here' );
 
 /** Database password */
 define( 'DB_PASSWORD', 'password_here' );
