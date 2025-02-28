@@ -1,6 +1,6 @@
 <section class="container relative mx-auto my-24 text-primary">
     <h1 class="mb-8"><?php echo esc_html(get_theme_mod('contact_buildings_heading', __('Harcówki', 'your-theme-textdomain'))); ?></h1>
-    <div class="flex flex-row gap-8">
+    <div class="grid grid-cols-2 gap-8">
         <?php
         // Pobierz wszystkie budynki
         $buildings = get_posts(array(
@@ -14,7 +14,7 @@
             foreach ($buildings as $building) :
                 $iframe_code = get_post_meta($building->ID, 'building_iframe', true);
                 ?>
-                <div class="flex flex-col basis-1/2">
+                <div class="flex flex-col">
                     <p class="font-semibold"><?php echo esc_html($building->post_title); ?></p>
                     <iframe 
                         src="<?php echo esc_url($iframe_code); ?>" 
