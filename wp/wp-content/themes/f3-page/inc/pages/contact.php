@@ -52,6 +52,7 @@ function register_building_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title'),
+        'menu_icon'    => 'dashicons-admin-home',
     ));
 
     // Dodanie metaboxów dla iframe

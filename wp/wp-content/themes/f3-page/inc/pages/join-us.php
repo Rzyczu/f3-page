@@ -115,6 +115,7 @@ function register_document_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title'),
+        'menu_icon'    => 'dashicons-media-document',
     ));
 
     // Dodanie metaboxów dla linku i opisu dokumentu

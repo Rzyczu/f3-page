@@ -137,6 +137,7 @@ function register_team_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'thumbnail'),
+        'menu_icon'    => 'dashicons-networking',
     ));
 
     // Dodanie metaboxów dla opisu, płci i linków
@@ -217,6 +218,7 @@ function register_board_member_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'thumbnail'),
+        'menu_icon'    => 'dashicons-businessman',
     ));
 
     // Dodanie metaboxów dla grupy i tytułu

@@ -87,6 +87,7 @@ function register_opinion_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('editor'),
+        'menu_icon'    => 'dashicons-thumbs-up',
     ));
 
     // Dodaj pole metabox dla "Person's Name"
@@ -176,6 +177,7 @@ function register_structure_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title', 'thumbnail'),
+        'menu_icon'    => 'dashicons-admin-site-alt',
     ));
 
     // Dodanie metaboxów dla dodatkowych pól
