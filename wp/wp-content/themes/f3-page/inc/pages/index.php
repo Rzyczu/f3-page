@@ -86,29 +86,24 @@ function register_opinion_post_type() {
         ),
         'public' => true,
         'has_archive' => false,
-        'supports' => array('title', 'editor'),
+        'supports' => array('editor'),
     ));
 
-    // Add custom meta box for person's name
-    add_action('add_meta_boxes', function () {
-        add_meta_box(
-            'opinion_person_meta',
-            __('Person', 'your-theme-textdomain'),
-            'opinion_person_meta_box',
-            'opinion',
-            'normal',
-            'default'
-        );
-    });
-
-    // Save meta box data
-    add_action('save_post', function ($post_id) {
-        if (array_key_exists('opinion_person', $_POST)) {
-            update_post_meta($post_id, 'opinion_person', sanitize_text_field($_POST['opinion_person']));
-        }
-    });
+    // Dodaj pole metabox dla "Person's Name"
+    add_action('add_meta_boxes', 'opinion_add_meta_boxes');
 }
 add_action('init', 'register_opinion_post_type');
+
+function opinion_add_meta_boxes() {
+    add_meta_box(
+        'opinion_person_meta',
+        __('Person', 'your-theme-textdomain'),
+        'opinion_person_meta_box',
+        'opinion',
+        'normal',
+        'default'
+    );
+}
 
 function opinion_person_meta_box($post) {
     $value = get_post_meta($post->ID, 'opinion_person', true);
@@ -117,6 +112,28 @@ function opinion_person_meta_box($post) {
     <input type="text" id="opinion_person" name="opinion_person" value="<?php echo esc_attr($value); ?>" style="width: 100%;">
     <?php
 }
+
+function opinion_save_post($post_id) {
+    // Zapobiegamy zapisowi przy autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    
+    if (isset($_POST['opinion_person'])) {
+         $person = sanitize_text_field($_POST['opinion_person']);
+         update_post_meta($post_id, 'opinion_person', $person);
+
+         // Aktualizacja tytułu posta na podstawie Person's Name
+         $post_data = array(
+             'ID'         => $post_id,
+             'post_title' => $person,
+         );
+         // Unikamy nieskończonej pętli
+         remove_action('save_post', 'opinion_save_post');
+         wp_update_post($post_data);
+         add_action('save_post', 'opinion_save_post');
+    }
+}
+add_action('save_post', 'opinion_save_post');
+
 
 function setup_theme_features() {
     add_theme_support('post-thumbnails'); // Wsparcie dla obrazków wyróżniających
