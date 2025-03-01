@@ -3,7 +3,7 @@
 function customize_support_intro_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('support_intro_section', array(
-        'title' => __('Support Us Intro Section', 'your-theme-textdomain'),
+        'title' => __('Wesprzyj nas', 'your-theme-textdomain'),
         'priority' => 30,
     ));
 

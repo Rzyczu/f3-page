@@ -44,7 +44,7 @@ add_action('customize_register', 'customize_contact_intro_section');
 function register_building_post_type() {
     register_post_type('building', array(
         'labels' => array(
-            'name' => __('Buildings', 'your-theme-textdomain'),
+            'name' => __('Budynki - Kontakt', 'your-theme-textdomain'),
             'singular_name' => __('Building', 'your-theme-textdomain'),
             'add_new_item' => __('Add New Building', 'your-theme-textdomain'),
             'edit_item' => __('Edit Building', 'your-theme-textdomain'),
@@ -194,3 +194,24 @@ function handle_contact_form() {
 }
 add_action('wp_ajax_nopriv_contact_form', 'handle_contact_form');
 add_action('wp_ajax_contact_form', 'handle_contact_form');
+
+function customize_contact_panel($wp_customize) {
+    // Tworzenie głównego panelu "Kontakt"
+    $wp_customize->add_panel('panel_contact', array(
+        'title'       => __('Kontakt', 'your-theme-textdomain'),
+        'priority'    => 30,
+        'description' => __('Zarządzaj sekcjami strony Kontakt.', 'your-theme-textdomain'),
+    ));
+
+    // Przypisanie sekcji do panelu "Kontakt"
+    if ($wp_customize->get_section('contact_intro_section')) {
+        $wp_customize->get_section('contact_intro_section')->panel = 'panel_contact';
+    }
+    if ($wp_customize->get_section('contact_buildings_section')) {
+        $wp_customize->get_section('contact_buildings_section')->panel = 'panel_contact';
+    }
+    if ($wp_customize->get_section('contact_form_section')) {
+        $wp_customize->get_section('contact_form_section')->panel = 'panel_contact';
+    }
+}
+add_action('customize_register', 'customize_contact_panel');

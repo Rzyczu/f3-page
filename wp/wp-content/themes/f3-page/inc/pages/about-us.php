@@ -1,4 +1,43 @@
 <?php
+if (class_exists('WP_Customize_TinyMCE_Control')) {
+    class WP_Customize_TinyMCE_Control extends WP_Customize_Control {
+        public $type = 'tinymce';
+
+        public function render_content() {
+            $textarea_id = 'tinymce_' . $this->id;
+            ?>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html($this->label); ?></span>
+                <textarea id="<?php echo esc_attr($textarea_id); ?>" class="customize-textarea"><?php echo esc_textarea($this->value()); ?></textarea>
+            </label>
+            <script>
+                jQuery(document).ready(function($) {
+                    tinymce.remove('#<?php echo esc_attr($textarea_id); ?>');
+                    tinymce.init({
+                        selector: '#<?php echo esc_attr($textarea_id); ?>',
+                        menubar: false,
+                        toolbar: 'bold italic underline | bullist numlist | link',
+                        plugins: 'lists link',
+                        setup: function(editor) {
+                            editor.on('change', function() {
+                                editor.save();
+                                $('#<?php echo esc_attr($textarea_id); ?>').trigger('change');
+                            });
+                        }
+                    });
+
+                    $('#<?php echo esc_attr($textarea_id); ?>').on('change', function() {
+                        var content = tinymce.get('<?php echo esc_attr($textarea_id); ?>').getContent();
+                        wp.customize('<?php echo esc_attr($this->id); ?>', function(value) {
+                            value.set(content);
+                        });
+                    });
+                });
+            </script>
+            <?php
+        }
+    }
+}
 
 function customize_section_intro($wp_customize) {
     // Sekcja Customizera
@@ -64,11 +103,11 @@ function customize_section_teams($wp_customize) {
         'default' => __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/ symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control('section_teams_text_main', array(
+    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_main', array(
         'label' => __('Main Text', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
-    ));
+    )));
 
     // Nagłówek "Jak działamy?"
     $wp_customize->add_setting('section_teams_subheading_how', array(
@@ -86,11 +125,11 @@ function customize_section_teams($wp_customize) {
         'default' => __('W strukturach ZHR działa Organizacja Harcerek oraz Organizacja Harcerzy, stąd podział drużyn ze względu na płeć.', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control('section_teams_text_how', array(
+    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_how', array(
         'label' => __('Text (How we work)', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
-    ));
+    )));
 
     // Nagłówek "Podział wiekowy"
     $wp_customize->add_setting('section_teams_subheading_age', array(
@@ -108,11 +147,11 @@ function customize_section_teams($wp_customize) {
         'default' => __('Kolejnym ważnym odróżnieniem drużyn jest ze względu na wiek. Są trzy główne grupy wiekowe: <br /> - Gromady zuchowe: 7–10 lat <br /> - Drużyny harcerskie: 11-15 lat <br /> - Drużyny wędrownicze: 16-18 lat', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
-    $wp_customize->add_control('section_teams_text_age', array(
+    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_age', array(
         'label' => __('Text (Age Division)', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
-    ));
+    )));
 
     // Obraz
     $wp_customize->add_setting('section_teams_image', array(
@@ -548,19 +587,6 @@ function brotherhood_settings_page() {
     <?php
 }
 
-function add_brotherhood_menu() {
-    add_menu_page(
-        __('Brotherhood Settings', 'your-theme-textdomain'),
-        __('Brotherhood Settings', 'your-theme-textdomain'),
-        'manage_options',
-        'brotherhood_settings',
-        'brotherhood_settings_page',
-        'dashicons-admin-generic',
-        90
-    );
-}
-add_action('admin_menu', 'add_brotherhood_menu');
-
 function customize_brotherhood_section($wp_customize) {
     $wp_customize->add_section('section_brotherhood', array(
         'title'    => __('Brotherhood Section', 'your-theme-textdomain'),
@@ -588,3 +614,46 @@ function customize_brotherhood_section($wp_customize) {
     ));
 }
 add_action('customize_register', 'customize_brotherhood_section');
+
+function add_custom_menu_group() {
+    // Dodanie głównego menu (bez linkowania do podstrony)
+    add_menu_page(
+        __('O nas', 'your-theme-textdomain'),
+        __('O nas', 'your-theme-textdomain'),
+        'manage_options',
+        'structure_menu',
+        '__return_null', // Nie przekierowuje na żadną stronę
+        'dashicons-groups',
+        5
+    );
+
+    // Przeniesienie CPT do tej grupy
+    add_submenu_page('structure_menu', __('Drużyny', 'your-theme-textdomain'), __('Drużyny', 'your-theme-textdomain'), 'manage_options', 'edit.php?post_type=team');
+    add_submenu_page('structure_menu', __('Bractwo sztandarowe', 'your-theme-textdomain'), __('Bractwo sztandarowe', 'your-theme-textdomain'), 'manage_options', 'edit.php?post_type=brotherhood_banner');
+    add_submenu_page('structure_menu', __('Rada szczepu', 'your-theme-textdomain'), __('Rada szczepu', 'your-theme-textdomain'), 'manage_options', 'edit.php?post_type=board_member');
+}
+add_action('admin_menu', 'add_custom_menu_group');
+
+// Ukrycie CPT z menu głównego
+function remove_cpt_from_admin_menu() {
+    remove_menu_page('edit.php?post_type=team');
+    remove_menu_page('edit.php?post_type=brotherhood_banner');
+    remove_menu_page('edit.php?post_type=board_member');
+}
+add_action('admin_menu', 'remove_cpt_from_admin_menu', 999);
+
+
+function customize_structure_panel($wp_customize) {
+    // Tworzenie panelu nadrzędnego dla strony "O nas"
+    $wp_customize->add_panel('panel_structure', array(
+        'title'       => __('O nas', 'your-theme-textdomain'),
+        'priority'    => 20,
+        'description' => __('Zarządzaj sekcjami podstrony "O nas".', 'your-theme-textdomain'),
+    ));
+
+    // Przypisanie istniejących sekcji do panelu
+    $wp_customize->get_section('section_intro')->panel = 'panel_structure';
+    $wp_customize->get_section('section_teams')->panel = 'panel_structure';
+    $wp_customize->get_section('section_brotherhood')->panel = 'panel_structure';
+}
+add_action('customize_register', 'customize_structure_panel');

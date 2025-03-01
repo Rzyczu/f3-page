@@ -11,6 +11,7 @@ require_once get_template_directory() . '/inc/global/pages.php';
 require_once get_template_directory() . '/inc/pages/index.php';
 require_once get_template_directory() . '/inc/pages/about-us.php';
 require_once get_template_directory() . '/inc/pages/contact.php';
+require_once get_template_directory() . '/inc/pages/our-creativity.php';
 require_once get_template_directory() . '/inc/pages/join-us.php';
 require_once get_template_directory() . '/inc/pages/support-us.php';
 

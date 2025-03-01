@@ -20,8 +20,7 @@
                     $description = get_post_meta($doc->ID, 'document_description', true) ?: '';
                     ?>
                     <div class="flex flex-row gap-4 mt-12">
-                        <i class="fa-sharp fa-light fa-file fa-2x"></i>
-                        <div class="flex flex-col">
+                    <i class="fa-sharp fa-light fa-file fa-2x"></i>                        <div class="flex flex-col">
                             <a href="<?php echo esc_url($link); ?>" target="_blank">
                                 <h3 class="mb-2 font-medium"><?php echo esc_html(get_the_title($doc->ID)); ?></h3>
                             </a>

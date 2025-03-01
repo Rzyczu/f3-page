@@ -303,3 +303,43 @@ function customize_section_support($wp_customize) {
     ));
 }
 add_action('customize_register', 'customize_section_support');
+
+function customize_homepage_panel($wp_customize) {
+    // Tworzymy nowy panel nadrzędny
+    $wp_customize->add_panel('panel_homepage', array(
+        'title'       => __('Strona Główna', 'your-theme-textdomain'),
+        'priority'    => 10,
+        'description' => __('Zarządzaj sekcjami na stronie głównej.', 'your-theme-textdomain'),
+    ));
+
+    // Przypisujemy sekcje do panelu "Strona Główna"
+    $wp_customize->get_section('section_about')->panel = 'panel_homepage';
+    $wp_customize->get_section('section_join_us')->panel = 'panel_homepage';
+    $wp_customize->get_section('section_support')->panel = 'panel_homepage';
+}
+add_action('customize_register', 'customize_homepage_panel');
+
+function add_homepage_menu_group() {
+    // Tworzymy główne menu bez przekierowania
+    add_menu_page(
+        __('Strona Główna', 'your-theme-textdomain'),
+        __('Strona Główna', 'your-theme-textdomain'),
+        'manage_options',
+        'homepage_menu',
+        '__return_null', // Brak przekierowania
+        'dashicons-admin-home',
+        4
+    );
+
+    // Dodajemy podmenu dla CPT
+    add_submenu_page('homepage_menu', __('Opinie', 'your-theme-textdomain'), __('Opinie', 'your-theme-textdomain'), 'manage_options', 'edit.php?post_type=opinion');
+    add_submenu_page('homepage_menu', __('Struktury', 'your-theme-textdomain'), __('Struktury', 'your-theme-textdomain'), 'manage_options', 'edit.php?post_type=structure');
+}
+add_action('admin_menu', 'add_homepage_menu_group');
+
+// Usuwamy CPT z menu głównego, zostawiając je tylko w "Strona Główna"
+function remove_homepage_cpt_from_menu() {
+    remove_menu_page('edit.php?post_type=opinion');
+    remove_menu_page('edit.php?post_type=structure');
+}
+add_action('admin_menu', 'remove_homepage_cpt_from_menu', 999);
