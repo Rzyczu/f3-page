@@ -7,16 +7,17 @@
     <div class="swiper-news">
         <div class="swiper-wrapper">
             <?php
-            // Query to fetch news posts
             $news_query = new WP_Query(array(
-                'post_type' => 'post',
-                'posts_per_page' => 5, // Limit number of news items
+                'post_type' => 'news',
+                'posts_per_page' => 5,
+                'orderby' => 'date',
+                'order' => 'DESC',
             ));
 
             if ($news_query->have_posts()) :
                 while ($news_query->have_posts()) : $news_query->the_post();
                     $news_image = get_the_post_thumbnail_url(get_the_ID(), 'medium') ?: get_template_directory_uri() . '/assets/images/news-placeholder.jpg';
-                    $news_logo = get_template_directory_uri() . '/assets/svg/logo.svg';
+                    $news_logo = get_template_directory_uri() . '/assets/images/svg/logo.svg';
                     ?>
                     <div class="swiper-slide news-article">
                         <div class="news-article-imgages">
@@ -24,16 +25,35 @@
                             <img class="news-article-img-logo" src="<?php echo esc_url($news_logo); ?>" alt="<?php esc_attr_e('News Logo', 'your-theme-textdomain'); ?>" />
                         </div>
                         <h3 class="news-article-header"><?php the_title(); ?></h3>
-                        <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="news-link" aria-label="<?php the_title_attribute(); ?>"></a>
+                        <p>
+                            <?php 
+                                $content = strip_tags(get_the_content()); 
+                                echo esc_html(mb_strimwidth($content, 0, 100, "...")); 
+                            ?>
+                            <a href="<?php echo get_permalink(); ?>" class="news-link">
+                                <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
+                            </a>
+                        </p>
                     </div>
                     <?php
                 endwhile;
                 wp_reset_postdata();
-            else :
-                ?>
-                <p><?php esc_html_e('Brak wydarzeń do wyświetlenia.', 'your-theme-textdomain'); ?></p>
-            <?php endif; ?>
+            endif;
+            ?>
+            
+            <!-- Ostatni slide: Przejdź do wszystkich aktualności -->
+            <div class="flex items-center justify-center swiper-slide news-article">
+            <div class="news-article-imgages bg-primary">
+                <img class="news-article-img-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/logo.svg" alt="News Logo" />
+                </div>
+                <h3 class="news-article-header">Wszystkie aktualności</h3>
+                <p class="mt-4 text-center">
+                    <a href="<?php echo get_post_type_archive_link('news'); ?>" class="font-semibold news-link text-primary">
+                        <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
+                    </a>
+                </p>
+            </div>
+
         </div>
     </div>
 </section>

@@ -33,11 +33,16 @@ function create_default_pages() {
             'content' => 'This is the Our Creativity page.',
             'template' => 'our-creativity.php',
         ],
-        'news' => [
-            'title' => 'News',
-            'content' => '',
-            'template' => 'single-post.php', 
-        ],
+        // 'news' => [
+        //     'title' => 'News',
+        //     'content' => '',
+        //     'template' => 'single-news.php', 
+        // ],
+        // 'archive_news' => [
+        //     'title' => 'Archive News',
+        //     'content' => '',
+        //     'template' => 'archive-news.php', 
+        // ],
         'history' => [
             'title' => 'History',
             'content' => 'This is the history page.',

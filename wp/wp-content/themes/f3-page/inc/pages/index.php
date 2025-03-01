@@ -87,6 +87,7 @@ function register_opinion_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('editor'),
+        'rewrite' => true,
         'menu_icon'    => 'dashicons-thumbs-up',
     ));
 
@@ -143,28 +144,28 @@ function setup_theme_features() {
 }
 add_action('after_setup_theme', 'setup_theme_features');
 
-// Wsparcie dla wyciągania newsów (standardowy post type)
-function register_news_support() {
-    // Rejestracja obrazków i excerpt dla wpisów
-    add_post_type_support('post', array('excerpt', 'thumbnail'));
-}
-add_action('init', 'register_news_support');
+// // Wsparcie dla wyciągania newsów (standardowy post type)
+// function register_news_support() {
+//     // Rejestracja obrazków i excerpt dla wpisów
+//     add_post_type_support('post', array('excerpt', 'thumbnail'));
+// }
+// add_action('init', 'register_news_support');
 
-// Skrócenie długości excerpt (opcjonalnie)
-function custom_excerpt_length($length) {
-    return 20; // Długość w słowach
-}
-add_filter('excerpt_length', 'custom_excerpt_length');
+// // Skrócenie długości excerpt (opcjonalnie)
+// function custom_excerpt_length($length) {
+//     return 20; // Długość w słowach
+// }
+// add_filter('excerpt_length', 'custom_excerpt_length');
 
-// Dodanie domyślnego obrazu dla newsów (opcjonalne)
-function get_default_news_image() {
-    return get_template_directory_uri() . '/assets/news-placeholder.jpg';
-}
+// // Dodanie domyślnego obrazu dla newsów (opcjonalne)
+// function get_default_news_image() {
+//     return get_template_directory_uri() . '/assets/news-placeholder.jpg';
+// }
 
-// Wsparcie dla logo newsów
-function get_news_logo_image() {
-    return get_template_directory_uri() . '/assets/svg/logo.svg';
-}
+// // Wsparcie dla logo newsów
+// function get_news_logo_image() {
+//     return get_template_directory_uri() . '/assets/svg/logo.svg';
+// }
 
 function register_structure_post_type() {
     register_post_type('structure', array(
@@ -343,3 +344,87 @@ function remove_homepage_cpt_from_menu() {
     remove_menu_page('edit.php?post_type=structure');
 }
 add_action('admin_menu', 'remove_homepage_cpt_from_menu', 999);
+
+function register_news_post_type() {
+    register_post_type('news', array(
+        'labels' => array(
+            'name' => __('News', 'your-theme-textdomain'),
+            'singular_name' => __('News Item', 'your-theme-textdomain'),
+            'add_new_item' => __('Add New News Item', 'your-theme-textdomain'),
+            'edit_item' => __('Edit News Item', 'your-theme-textdomain'),
+            'new_item' => __('New News Item', 'your-theme-textdomain'),
+            'view_item' => __('View News Item', 'your-theme-textdomain'),
+            'not_found' => __('No news found', 'your-theme-textdomain'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'news', 'with_front' => false),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'menu_icon' => 'dashicons-megaphone',
+    ));
+}
+add_action('init', 'register_news_post_type');
+
+function add_news_date_metabox() {
+    add_meta_box(
+        'news_date_meta', // Unikalny ID metaboxa
+        __('Data wydarzenia', 'your-theme-textdomain'), // Tytuł
+        'news_date_meta_box_callback', // Funkcja renderująca
+        'news', // Post Type
+        'side',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'add_news_date_metabox');
+
+function news_date_meta_box_callback($post) {
+    // Pobierz aktualną wartość
+    $news_date = get_post_meta($post->ID, '_news_date', true);
+
+    // Jeśli brak wartości, ustaw bieżącą datę
+    if (!$news_date) {
+        $news_date = date('d.m.Y');
+    }
+
+    ?>
+    <label for="news_date"><?php _e('Wybierz datę wydarzenia:', 'your-theme-textdomain'); ?></label>
+    <input type="text" id="news_date" name="news_date" value="<?php echo esc_attr($news_date); ?>" class="widefat news-date-picker">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            jQuery("#news_date").datepicker({
+                dateFormat: "dd.mm.yy"
+            });
+        });
+    </script>
+    <?php
+}
+
+// Zapisujemy wartość pola
+function save_news_date_meta($post_id) {
+    if (isset($_POST['news_date'])) {
+        update_post_meta($post_id, '_news_date', sanitize_text_field($_POST['news_date']));
+    }
+}
+add_action('save_post', 'save_news_date_meta');
+
+// Załaduj jQuery UI Datepicker
+function load_datepicker_assets($hook) {
+    global $post;
+    if ($post && $post->post_type === 'news') {
+        wp_enqueue_script('jquery-ui-datepicker');
+        wp_enqueue_style('jquery-ui-css', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css');
+    }
+}
+add_action('admin_enqueue_scripts', 'load_datepicker_assets');
+
+function remove_unwanted_news_fields() {
+    remove_post_type_support('news', 'comments'); // Usuwa komentarze
+    remove_post_type_support('news', 'custom-fields'); // Usuwa "Własne pola"
+    remove_post_type_support('news', 'excerpt'); // Usuwa "Zajawkę"
+}
+add_action('init', 'remove_unwanted_news_fields');
+
+function flush_rewrite_rules_on_init() {
+    flush_rewrite_rules();
+}
+add_action('init', 'flush_rewrite_rules_on_init');
