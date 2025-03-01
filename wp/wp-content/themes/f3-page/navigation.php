@@ -4,7 +4,7 @@
  */
 ?>
 
-<nav class="sticky z-40 bg-white text-gray" id="navbar">
+<nav class="sticky z-40 bg-white text-gray" id="navbar" <?php if ( is_front_page() ) { echo 'data-page="index"'; } ?>>
     <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-8">
         <div class="z-50 items-center hidden gap-4 lg:block lg:absolute right-4 top-8">
             <span id="navbar-lock-icon" class="text-xl text-gray-400 cursor-pointer emoji-gray">🔓</span>

@@ -39,9 +39,10 @@
             <div class="slider-names">
                 <?php
                 foreach ($teams as $team) :
+                    $short_name = get_post_meta($team->ID, 'team_short_name', true);
                     ?>
-                    <span class="slide-name"><?php echo esc_html(get_the_title($team->ID)); ?></span>
-                    <?php
+                    <span class="slide-name"><?php echo esc_html($short_name ? $short_name : get_the_title($team->ID)); ?></span>
+        <?php
                 endforeach;
                 ?>
             </div>
@@ -56,8 +57,8 @@
                         <p><?php echo esc_html($description); ?></p>
                         <div class="slide-media">
                             <?php foreach ($links as $link) : ?>
-                                <a href="<?php echo esc_url($link['url']); ?>">
-                                    <i class="<?php echo esc_attr($link['icon']); ?>"></i>
+                                <a target="_blank" href="<?php echo esc_url($link['url']); ?>">
+                                    <i class="<?php echo esc_attr($link['icon']); ?> fa-2x"></i>
                                 </a>
                             <?php endforeach; ?>
                         </div>
