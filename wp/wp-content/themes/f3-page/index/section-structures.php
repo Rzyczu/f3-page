@@ -10,17 +10,19 @@
                 'post_type' => 'structure',
                 'posts_per_page' => -1,
             ));
-
+            
             if (!empty($structures)) :
                 foreach ($structures as $structure) :
                     $url = get_post_meta($structure->ID, 'structure_url', true) ?: '#';
                     $image = get_the_post_thumbnail_url($structure->ID, 'medium') ?: get_template_directory_uri() . '/assets/placeholder.png';
                     $name = get_the_title($structure->ID);
                     ?>
-                    <article class="justify-self-stretch hover:scale-110">
-                        <a href="<?php echo esc_url($url); ?>" target="_blank">
-                            <img class="object-contain w-full" alt="<?php echo esc_attr($name); ?>" src="<?php echo esc_url($image); ?>">
-                        </a>
+                    <article class="pb-4 justify-self-stretch">
+                        <div class="relative overflow-visible">
+                            <a href="<?php echo esc_url($url); ?>" target="_blank">
+                                <img class="object-contain w-full transition-transform duration-300 hover:scale-110" alt="<?php echo esc_attr($name); ?>" src="<?php echo esc_url($image); ?>">
+                            </a>
+                        </div>
                     </article>
                     <?php
                 endforeach;
