@@ -207,3 +207,39 @@ function save_resource_item_meta($post_id) {
     }
 }
 add_action('save_post', 'save_resource_item_meta');
+
+function customize_our_creativity_admin_menu() {
+    // Usunięcie Resource Groups i Resource Items z głównego menu
+    remove_menu_page('edit.php?post_type=resource_group');
+    remove_menu_page('edit.php?post_type=resource_item');
+
+    // Dodanie głównej pozycji menu "Nasza Twórczość"
+    add_menu_page(
+        __('Nasza Twórczość', 'your-theme-textdomain'), // Tytuł
+        __('Nasza Twórczość', 'your-theme-textdomain'), // Nazwa w menu
+        'manage_options', // Uprawnienia
+        'our_creativity_main', // Slug
+        '__return_null', // Nie dodajemy funkcji, bo to tylko kontener
+        'dashicons-admin-customizer', // Ikona
+        25 // Pozycja w menu
+    );
+
+    // Dodanie podmenu dla Resource Groups
+    add_submenu_page(
+        'our_creativity_main', // Rodzic
+        __('Resource Groups', 'your-theme-textdomain'),
+        __('Resource Groups', 'your-theme-textdomain'),
+        'manage_options',
+        'edit.php?post_type=resource_group'
+    );
+
+    // Dodanie podmenu dla Resource Items
+    add_submenu_page(
+        'our_creativity_main',
+        __('Resource Items', 'your-theme-textdomain'),
+        __('Resource Items', 'your-theme-textdomain'),
+        'manage_options',
+        'edit.php?post_type=resource_item'
+    );
+}
+add_action('admin_menu', 'customize_our_creativity_admin_menu');

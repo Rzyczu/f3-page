@@ -14,6 +14,7 @@ require_once get_template_directory() . '/inc/pages/contact.php';
 require_once get_template_directory() . '/inc/pages/our-creativity.php';
 require_once get_template_directory() . '/inc/pages/join-us.php';
 require_once get_template_directory() . '/inc/pages/support-us.php';
+require_once get_template_directory() . '/inc/pages/history.php';
 
 function theme_setup() {
     add_theme_support('custom-logo', array(

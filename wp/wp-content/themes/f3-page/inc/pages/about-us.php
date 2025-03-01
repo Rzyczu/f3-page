@@ -525,6 +525,85 @@ function sort_board_member_by_group($query) {
 }
 add_action('pre_get_posts', 'sort_board_member_by_group');
 
+function board_member_order_meta_box($post) {
+    $order = get_post_meta($post->ID, 'person_order', true);
+    ?>
+    <p>
+        <label for="person_order"><?php _e('Order', 'your-theme-textdomain'); ?></label>
+        <input type="number" id="person_order" name="person_order" value="<?php echo esc_attr($order); ?>" style="width: 100%;">
+        <small><?php _e('Lower values appear first.', 'your-theme-textdomain'); ?></small>
+    </p>
+    <?php
+}
+
+add_action('add_meta_boxes', function () {
+    add_meta_box('board_member_order', __('Order', 'your-theme-textdomain'), 'board_member_order_meta_box', 'board_member', 'side', 'default');
+});
+
+// Zapisanie wartości
+add_action('save_post', function ($post_id) {
+    if (isset($_POST['person_order'])) {
+        update_post_meta($post_id, 'person_order', intval($_POST['person_order']));
+    }
+});
+
+function add_board_member_order_column($columns) {
+    $columns['person_order'] = __('Order', 'your-theme-textdomain');
+    return $columns;
+}
+add_filter('manage_edit-board_member_columns', 'add_board_member_order_column');
+
+function fill_board_member_order_column($column, $post_id) {
+    if ($column === 'person_order') {
+        $order = get_post_meta($post_id, 'person_order', true);
+        echo esc_html($order);
+    }
+}
+add_action('manage_board_member_posts_custom_column', 'fill_board_member_order_column', 10, 2);
+
+function make_board_member_order_column_sortable($columns) {
+    $columns['person_order'] = 'person_order';
+    return $columns;
+}
+add_filter('manage_edit-board_member_sortable_columns', 'make_board_member_order_column_sortable');
+
+function sort_board_member_by_order($query) {
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if (isset($query->query_vars['orderby']) && $query->query_vars['orderby'] === 'person_order') {
+        $query->set('meta_key', 'person_order');
+        $query->set('orderby', 'meta_value_num'); // Sortowanie numeryczne
+    }
+}
+add_action('pre_get_posts', 'sort_board_member_by_order');
+
+function board_member_quick_edit_fields($column_name, $post_type) {
+    if ($post_type !== 'board_member' || $column_name !== 'person_order') {
+        return;
+    }
+    ?>
+    <fieldset class="inline-edit-col-right">
+        <div class="inline-edit-col">
+            <label class="inline-edit-group">
+                <span class="title"><?php _e('Order', 'your-theme-textdomain'); ?></span>
+                <input type="number" name="person_order" value="" style="width: 50px;">
+            </label>
+        </div>
+    </fieldset>
+    <?php
+}
+add_action('quick_edit_custom_box', 'board_member_quick_edit_fields', 10, 2);
+
+function save_board_member_quick_edit($post_id) {
+    if (isset($_POST['person_order'])) {
+        update_post_meta($post_id, 'person_order', intval($_POST['person_order']));
+    }
+}
+add_action('save_post', 'save_board_member_quick_edit');
+
+
 function register_brotherhood_post_type() {
     $labels = array(
         'name'               => __('Banners', 'your-theme-textdomain'),

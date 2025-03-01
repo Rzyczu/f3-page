@@ -35,9 +35,17 @@
                 $persons = get_posts(array(
                     'post_type' => 'board_member',
                     'posts_per_page' => -1,
-                    'meta_key' => 'board_group',
-                    'meta_value' => $group_key,
-                ));
+                    'meta_key' => 'person_order',
+                    'orderby' => 'meta_value_num',
+                    'order' => 'ASC',
+                    'meta_query' => array(
+                        array(
+                            'key' => 'board_group',
+                            'value' => $group_key,
+                            'compare' => '='
+                        )
+                    )
+                ));                
                 ?>
                 <div class="board-group <?php echo $group_key === 'personnel' ? 'active' : ''; ?>" data-id="board-<?php echo esc_attr($group_key); ?>">
                     <?php foreach ($persons as $person) : ?>
