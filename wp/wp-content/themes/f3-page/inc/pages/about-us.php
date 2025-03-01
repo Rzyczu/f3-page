@@ -486,107 +486,105 @@ function sort_board_member_by_group($query) {
 }
 add_action('pre_get_posts', 'sort_board_member_by_group');
 
+function register_brotherhood_post_type() {
+    $labels = array(
+        'name'               => __('Banners', 'your-theme-textdomain'),
+        'singular_name'      => __('Banner', 'your-theme-textdomain'),
+        'menu_name'          => __('Brotherhood', 'your-theme-textdomain'),
+        'add_new'            => __('Add New Banner', 'your-theme-textdomain'),
+        'add_new_item'       => __('Add New Banner', 'your-theme-textdomain'),
+        'edit_item'          => __('Edit Banner', 'your-theme-textdomain'),
+        'new_item'           => __('New Banner', 'your-theme-textdomain'),
+        'view_item'          => __('View Banner', 'your-theme-textdomain'),
+        'search_items'       => __('Search Banners', 'your-theme-textdomain'),
+        'not_found'          => __('No banners found', 'your-theme-textdomain'),
+        'not_found_in_trash' => __('No banners found in trash', 'your-theme-textdomain')
+    );
 
-function customize_section_brotherhood($wp_customize) {
-    // Sekcja Customizera
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'show_in_menu'       => true,
+        'menu_position'      => 20,
+        'menu_icon'          => 'dashicons-flag',
+        'supports'           => array('title', 'editor', 'thumbnail'),
+        'has_archive'        => false,
+        'publicly_queryable' => false,
+    );
+
+    register_post_type('brotherhood_banner', $args);
+}
+add_action('init', 'register_brotherhood_post_type');
+
+function register_brotherhood_settings() {
+    add_option('brotherhood_section_heading', 'Bractwo Szandarowe');
+    add_option('brotherhood_section_text', 'Ścisłą Kadrę Szczepu stanowi Szczepowy, Kwatermistrz oraz Viceszczepowi. W składzie rady są wszyscy drużynowi oraz instruktorzy którzy nie mają funkcji w szczepie.');
+    
+    register_setting('brotherhood_options_group', 'brotherhood_section_heading');
+    register_setting('brotherhood_options_group', 'brotherhood_section_text');
+}
+add_action('admin_init', 'register_brotherhood_settings');
+
+function brotherhood_settings_page() {
+    ?>
+    <div class="wrap">
+        <h1><?php _e('Brotherhood Section Settings', 'your-theme-textdomain'); ?></h1>
+        <form method="post" action="options.php">
+            <?php settings_fields('brotherhood_options_group'); ?>
+            <?php do_settings_sections('brotherhood_options_group'); ?>
+            <table class="form-table">
+                <tr>
+                    <th scope="row"><label for="brotherhood_section_heading"><?php _e('Section Title', 'your-theme-textdomain'); ?></label></th>
+                    <td><input type="text" id="brotherhood_section_heading" name="brotherhood_section_heading" value="<?php echo esc_attr(get_option('brotherhood_section_heading')); ?>" class="regular-text"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="brotherhood_section_text"><?php _e('Section Text', 'your-theme-textdomain'); ?></label></th>
+                    <td><textarea id="brotherhood_section_text" name="brotherhood_section_text" class="large-text"><?php echo esc_textarea(get_option('brotherhood_section_text')); ?></textarea></td>
+                </tr>
+            </table>
+            <?php submit_button(); ?>
+        </form>
+    </div>
+    <?php
+}
+
+function add_brotherhood_menu() {
+    add_menu_page(
+        __('Brotherhood Settings', 'your-theme-textdomain'),
+        __('Brotherhood Settings', 'your-theme-textdomain'),
+        'manage_options',
+        'brotherhood_settings',
+        'brotherhood_settings_page',
+        'dashicons-admin-generic',
+        90
+    );
+}
+add_action('admin_menu', 'add_brotherhood_menu');
+
+function customize_brotherhood_section($wp_customize) {
     $wp_customize->add_section('section_brotherhood', array(
-        'title' => __('Brotherhood Section', 'your-theme-textdomain'),
+        'title'    => __('Brotherhood Section', 'your-theme-textdomain'),
         'priority' => 30,
     ));
 
-    // Nagłówek sekcji
-    $wp_customize->add_setting('section_brotherhood_heading', array(
-        'default' => __('Bractwo sztandarowe', 'your-theme-textdomain'),
+    $wp_customize->add_setting('brotherhood_section_heading', array(
+        'default'           => __('Bractwo Szandarowe', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_text_field',
     ));
-    $wp_customize->add_control('section_brotherhood_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+    $wp_customize->add_control('brotherhood_section_heading', array(
+        'label'   => __('Section Title', 'your-theme-textdomain'),
         'section' => 'section_brotherhood',
-        'type' => 'text',
+        'type'    => 'text',
     ));
 
-    // Główna treść sekcji
-    $wp_customize->add_setting('section_brotherhood_text', array(
-        'default' => __('Ścisłą Kadrę Szczepu stanowi Szczepowy, Kwatermistrz oraz Viceszczepowi...', 'your-theme-textdomain'),
+    $wp_customize->add_setting('brotherhood_section_text', array(
+        'default'           => __('Ścisłą Kadrę Szczepu stanowi Szczepowy, Kwatermistrz oraz Viceszczepowi. W składzie rady są wszyscy drużynowi oraz instruktorzy którzy nie mają funkcji w szczepie.', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
-    $wp_customize->add_control('section_brotherhood_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
+    $wp_customize->add_control('brotherhood_section_text', array(
+        'label'   => __('Section Text', 'your-theme-textdomain'),
         'section' => 'section_brotherhood',
-        'type' => 'textarea',
+        'type'    => 'textarea',
     ));
-
-    // Dane dla każdego sztandaru
-    for ($i = 1; $i <= 3; $i++) {
-        $wp_customize->add_setting("brotherhood_photo_$i", array(
-            'default' => get_template_directory_uri() . "/assets/images/news-$i.jpg",
-            'sanitize_callback' => 'esc_url_raw',
-        ));
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "brotherhood_photo_$i", array(
-            'label' => __("Banner $i Photo", 'your-theme-textdomain'),
-            'section' => 'section_brotherhood',
-        )));
-
-        $wp_customize->add_setting("brotherhood_name_$i", array(
-            'default' => __("Sztandar $i", 'your-theme-textdomain'),
-            'sanitize_callback' => 'sanitize_text_field',
-        ));
-        $wp_customize->add_control("brotherhood_name_$i", array(
-            'label' => __("Banner $i Name", 'your-theme-textdomain'),
-            'section' => 'section_brotherhood',
-            'type' => 'text',
-        ));
-
-        $wp_customize->add_setting("brotherhood_content_$i", array(
-            'default' => __("Treść dla sztandaru $i", 'your-theme-textdomain'),
-            'sanitize_callback' => 'sanitize_textarea_field',
-        ));
-        $wp_customize->add_control("brotherhood_content_$i", array(
-            'label' => __("Banner $i Content", 'your-theme-textdomain'),
-            'section' => 'section_brotherhood',
-            'type' => 'textarea',
-        ));
-    }
 }
-add_action('customize_register', 'customize_section_brotherhood');
-
-function customize_section_history($wp_customize) {
-    // Sekcja Customizera
-    $wp_customize->add_section('section_history', array(
-        'title' => __('History Section', 'your-theme-textdomain'),
-        'priority' => 30,
-    ));
-
-    // Nagłówek sekcji
-    $wp_customize->add_setting('section_history_heading', array(
-        'default' => __('Nasza historia', 'your-theme-textdomain'),
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('section_history_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
-        'section' => 'section_history',
-        'type' => 'text',
-    ));
-
-    // Główna treść sekcji
-    $wp_customize->add_setting('section_history_text', array(
-        'default' => __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób...', 'your-theme-textdomain'),
-        'sanitize_callback' => 'sanitize_textarea_field',
-    ));
-    $wp_customize->add_control('section_history_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
-        'section' => 'section_history',
-        'type' => 'textarea',
-    ));
-
-    // Obraz sekcji
-    $wp_customize->add_setting('section_history_image', array(
-        'default' => get_template_directory_uri() . '/assets/images/svg/castle.svg',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_history_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
-        'section' => 'section_history',
-    )));
-}
-add_action('customize_register', 'customize_section_history');
+add_action('customize_register', 'customize_brotherhood_section');
