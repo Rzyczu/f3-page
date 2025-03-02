@@ -11,6 +11,7 @@ function register_footer_link_post_type() {
         'public' => true,
         'has_archive' => false,
         'supports' => array('title'),
+        'menu_position'=> 23,
     ));
 
     // Dodanie metaboxów dla linków
@@ -61,3 +62,20 @@ function sanitize_footer_links($input) {
     }
     return array();
 }
+
+function change_pages_menu_position() {
+    // Usunięcie domyślnego menu "Strony"
+    remove_menu_page('edit.php?post_type=page');
+
+    // Ponowne dodanie "Strony" z nową pozycją w menu
+    add_menu_page(
+        __('Strony', 'your-theme-textdomain'),
+        __('Strony', 'your-theme-textdomain'),
+        'edit_pages',
+        'edit.php?post_type=page',
+        '',
+        'dashicons-admin-page',
+        24 
+    );
+}
+add_action('admin_menu', 'change_pages_menu_position', 999);

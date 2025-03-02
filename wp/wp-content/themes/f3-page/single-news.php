@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 
 <main class="container mx-auto my-24 text-primary">
+
+    <div class="mb-6">
+        <button onclick="window.history.back();" class="flex items-center text-primary hover:text-primary-light">
+            <i class="mr-2 fa-solid fa-arrow-turn-left"></i> 
+            <span class="px-4"> Powrót </span>
+        </button>
+    </div>
+
     <?php
     if (have_posts()) :
         while (have_posts()) : the_post();

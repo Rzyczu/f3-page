@@ -3,8 +3,8 @@
 function customize_contact_intro_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('contact_intro_section', array(
-        'title' => __('Contact Intro Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Intro', 'your-theme-textdomain'),
+        'priority' => 10,
     ));
 
     // Nagłówek
@@ -13,7 +13,7 @@ function customize_contact_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('contact_intro_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'contact_intro_section',
         'type' => 'text',
     ));
@@ -24,7 +24,7 @@ function customize_contact_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('contact_intro_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'contact_intro_section',
         'type' => 'textarea',
     ));
@@ -35,7 +35,7 @@ function customize_contact_intro_section($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_intro_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
+        'label' => __('Image', 'your-theme-textdomain'),
         'section' => 'contact_intro_section',
     )));
 }
@@ -53,6 +53,7 @@ function register_building_post_type() {
         'has_archive' => false,
         'supports' => array('title'),
         'menu_icon'    => 'dashicons-admin-home',
+        'menu_position'=> 22,
     ));
 
     // Dodanie metaboxów dla iframe
@@ -81,8 +82,8 @@ function building_iframe_meta_box($post) {
 
 function customize_contact_buildings_section($wp_customize) {
     $wp_customize->add_section('contact_buildings_section', array(
-        'title' => __('Contact Buildings Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Harcówki', 'your-theme-textdomain'),
+        'priority' => 20,
     ));
 
     $wp_customize->add_setting('contact_buildings_heading', array(
@@ -91,7 +92,7 @@ function customize_contact_buildings_section($wp_customize) {
     ));
 
     $wp_customize->add_control('contact_buildings_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'contact_buildings_section',
         'type' => 'text',
     ));
@@ -101,8 +102,8 @@ add_action('customize_register', 'customize_contact_buildings_section');
 function customize_contact_form_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('contact_form_section', array(
-        'title' => __('Contact Form Section', 'your-theme-textdomain'),
-        'priority' => 40,
+        'title' => __('Formularz Kontaktowy', 'your-theme-textdomain'),
+        'priority' => 30,
     ));
 
     // Nagłówek formularza
@@ -111,7 +112,7 @@ function customize_contact_form_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('contact_form_heading', array(
-        'label' => __('Form Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'contact_form_section',
         'type' => 'text',
     ));
@@ -199,7 +200,7 @@ function customize_contact_panel($wp_customize) {
     // Tworzenie głównego panelu "Kontakt"
     $wp_customize->add_panel('panel_contact', array(
         'title'       => __('Kontakt', 'your-theme-textdomain'),
-        'priority'    => 30,
+        'priority'    => 70,
         'description' => __('Zarządzaj sekcjami strony Kontakt.', 'your-theme-textdomain'),
     ));
 

@@ -45,15 +45,14 @@
             <div class="flex items-center justify-center swiper-slide news-article">
             <div class="news-article-imgages bg-primary">
                 <img class="news-article-img-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/logo.svg" alt="News Logo" />
-                </div>
+            </div>
                 <h3 class="news-article-header">Wszystkie aktualności</h3>
                 <p class="mt-4 text-center">
-                    <a href="<?php echo get_post_type_archive_link('news'); ?>" class="font-semibold news-link text-primary">
+                <a href="<?php echo get_permalink(get_page_by_path('archive_news')); ?>" class="font-semibold news-link text-primary">
                         <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
                     </a>
                 </p>
             </div>
-
         </div>
     </div>
 </section>

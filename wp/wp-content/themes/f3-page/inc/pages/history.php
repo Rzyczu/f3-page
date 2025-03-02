@@ -19,7 +19,7 @@ function register_history_cpt() {
         'labels'             => $labels,
         'public'             => true,
         'show_in_menu'       => true,
-        'menu_position'      => 25,
+        'menu_position'      => 18,
         'menu_icon'          => 'dashicons-book',
         'supports'           => array('title', 'editor', 'thumbnail'),
         'has_archive'        => false,
@@ -34,19 +34,6 @@ function enable_theme_supports() {
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'enable_theme_supports');
-
-function add_history_menu() {
-    add_menu_page(
-        __('Historia', 'your-theme-textdomain'),
-        __('Historia', 'your-theme-textdomain'),
-        'manage_options',
-        'edit.php?post_type=history_entry',
-        '',
-        'dashicons-book-alt',
-        25
-    );
-}
-add_action('admin_menu', 'add_history_menu');
 
 function add_history_entry_meta_box() {
     add_meta_box(

@@ -42,8 +42,8 @@ if (class_exists('WP_Customize_Control')) {
 function customize_join_us_intro_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('join_us_intro_section', array(
-        'title' => __('Join Us Intro Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Intro', 'your-theme-textdomain'),
+        'priority' => 10,
     ));
 
     // Nagłówek
@@ -52,7 +52,7 @@ function customize_join_us_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('join_us_intro_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'join_us_intro_section',
         'type' => 'text',
     ));
@@ -63,7 +63,7 @@ function customize_join_us_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('join_us_intro_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'join_us_intro_section',
         'type' => 'textarea',
     ));
@@ -74,7 +74,7 @@ function customize_join_us_intro_section($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'join_us_intro_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
+        'label' => __('Image', 'your-theme-textdomain'),
         'section' => 'join_us_intro_section',
     )));
 }
@@ -83,14 +83,14 @@ add_action('customize_register', 'customize_join_us_intro_section');
 function customize_join_steps_section($wp_customize) {
     // Dodajemy główny panel "Join Steps"
     $wp_customize->add_panel('join_steps_panel', array(
-        'title' => __('Join Steps', 'your-theme-textdomain'),
-        'priority' => 25,
+        'title' => __('Kroki', 'your-theme-textdomain'),
+        'priority' => 45,
     ));
 
     for ($i = 1; $i <= 6; $i++) {
         // Tworzymy sekcję dla każdego kroku
         $wp_customize->add_section("join_step_section_$i", array(
-            'title'    => __("Step $i", 'your-theme-textdomain'),
+            'title'    => __("Krok $i", 'your-theme-textdomain'),
             'panel'    => 'join_steps_panel',
             'priority' => $i,
         ));
@@ -101,18 +101,18 @@ function customize_join_steps_section($wp_customize) {
             'sanitize_callback' => 'sanitize_text_field',
         ));
         $wp_customize->add_control("join_step_title_$i", array(
-            'label' => __("Step $i Title", 'your-theme-textdomain'),
+            'label' => __("Step $i Heading", 'your-theme-textdomain'),
             'section' => "join_step_section_$i",
             'type' => 'text',
         ));
 
         // Treść kroku (TinyMCE)
         $wp_customize->add_setting("join_step_content_$i", array(
-            'default' => __("Opis dla kroku $i", 'your-theme-textdomain'),
+            'default' => __("Step $i Text", 'your-theme-textdomain'),
             'sanitize_callback' => 'wp_kses_post',
         ));
         $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, "join_step_content_$i", array(
-            'label' => __("Step $i Content", 'your-theme-textdomain'),
+            'label' => __("Step $i Text", 'your-theme-textdomain'),
             'section' => "join_step_section_$i",
         )));
 
@@ -131,8 +131,8 @@ add_action('customize_register', 'customize_join_steps_section');
 
 function customize_join_info_section($wp_customize) {
     $wp_customize->add_section('join_info_section', array(
-        'title' => __('Join Steps Info Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Krok po kroku', 'your-theme-textdomain'),
+        'priority' => 20,
     ));
 
     // Nagłówek sekcji
@@ -141,7 +141,7 @@ function customize_join_info_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('join_info_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'join_info_section',
         'type' => 'text',
     ));
@@ -152,7 +152,7 @@ function customize_join_info_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('join_steps_text', array(
-        'label' => __('Section Description', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'join_info_section',
         'type' => 'textarea',
     ));
@@ -171,6 +171,7 @@ function register_document_post_type() {
         'has_archive' => false,
         'supports' => array('title'),
         'menu_icon'    => 'dashicons-media-document',
+        'menu_position'=> 19,
     ));
 
     // Dodanie metaboxów dla linku i opisu dokumentu
@@ -208,8 +209,8 @@ function document_meta_box($post) {
 function customize_docs_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('docs_section', array(
-        'title' => __('Documents Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Dokumenty', 'your-theme-textdomain'),
+        'priority' => 40,
     ));
 
     // Nagłówek sekcji
@@ -218,7 +219,7 @@ function customize_docs_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('docs_section_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'docs_section',
         'type' => 'text',
     ));
@@ -229,7 +230,7 @@ function customize_docs_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('docs_section_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'docs_section',
         'type' => 'textarea',
     ));
@@ -240,7 +241,7 @@ function customize_docs_section($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'docs_section_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
+        'label' => __('Image', 'your-theme-textdomain'),
         'section' => 'docs_section',
     )));
 }
@@ -250,16 +251,16 @@ function customize_join_us_panel($wp_customize) {
     // Tworzenie głównego panelu "Dołącz do nas"
     $wp_customize->add_panel('panel_join_us', array(
         'title'       => __('Dołącz do nas', 'your-theme-textdomain'),
-        'priority'    => 20,
+        'priority'    => 35,
         'description' => __('Zarządzaj sekcjami strony Dołącz do nas.', 'your-theme-textdomain'),
     ));
 
     // Tworzenie podpanelu "Join Steps" wewnątrz "Dołącz do nas"
     $wp_customize->add_panel('panel_join_steps', array(
-        'title'       => __('Join Steps', 'your-theme-textdomain'),
-        'priority'    => 21,
+        'title'       => __('Kroki', 'your-theme-textdomain'),
+        'priority'    => 38,
         'description' => __('Zarządzaj krokami dołączenia.', 'your-theme-textdomain'),
-        'panel'       => 'panel_join_us', // PRZYPISANIE DO GŁÓWNEGO PANELU
+        'panel'       => 'panel_join_us',
     ));
 
     // Przypisanie istniejących sekcji do panelu "Dołącz do nas"
@@ -269,6 +270,10 @@ function customize_join_us_panel($wp_customize) {
     if ($wp_customize->get_section('join_info_section')) {
         $wp_customize->get_section('join_info_section')->panel = 'panel_join_us';
     }
+    if ($wp_customize->get_section('docs_section')) {
+        $wp_customize->get_section('docs_section')->panel = 'panel_join_us';
+    }
+
     if ($wp_customize->get_section('docs_section')) {
         $wp_customize->get_section('docs_section')->panel = 'panel_join_us';
     }

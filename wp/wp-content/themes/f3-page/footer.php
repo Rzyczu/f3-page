@@ -9,6 +9,7 @@
             </p>
         </div>
         <div class="flex items-center gap-16">
+        <div class="flex items-center gap-8">
             <?php
             // Pobieranie linków z CPT
             $footer_links = get_posts(array(
@@ -28,12 +29,32 @@
                 endforeach;
             endif;
             ?>
-            <a href="https://www.facebook.com/szczepf3" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 2.04c-5.5 0-9.96 4.47-9.96 9.96 0 5.24 4.04 9.57 9.27 9.96v-7.06h-2.79v-2.91h2.79v-2.18c0-2.72 1.63-4.23 4.12-4.23 1.2 0 2.45.21 2.45.21v2.67h-1.38c-1.36 0-1.78.85-1.78 1.72v2.08h3.12l-.5 2.91h-2.62v7.06c5.23-.39 9.27-4.72 9.27-9.96 0-5.49-4.47-9.96-9.96-9.96z" />
-          </svg>
-        </a>
+                    </div>
+
+            <div class="flex items-center gap-8">
+            <?php if (get_theme_mod('footer_icons_display', true)) : ?>
+    <div class="flex items-center gap-8">
+        <?php if ($email = get_theme_mod('footer_email')) : ?>
+            <a href="mailto:<?php echo esc_url($email); ?>" target="_blank" rel="noopener noreferrer">
+                <i class="text-white fa-regular fa-envelope fa-xl"></i>
+            </a>
+        <?php endif; ?>
+
+        <?php if ($instagram = get_theme_mod('footer_instagram')) : ?>
+            <a href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">
+                <i class="text-white fa-brands fa-instagram fa-xl"></i>
+            </a>
+        <?php endif; ?>
+
+        <?php if ($facebook = get_theme_mod('footer_facebook')) : ?>
+            <a href="<?php echo esc_url($facebook); ?>" target="_blank" rel="noopener noreferrer">
+                <i class="text-white fa-brands fa-facebook fa-xl"></i>
+            </a>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>
+
+            </div>
         </div>
     </div>
 </footer>

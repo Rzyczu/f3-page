@@ -7,6 +7,13 @@ get_header();
 
 <main class="history-page">
     <div class="container py-24 mx-auto text-primary">
+    <div class="mb-6">
+        <button onclick="window.history.back();" class="flex items-center text-primary hover:text-primary-light">
+            <i class="mr-2 fa-solid fa-arrow-turn-left"></i> 
+            <span class="px-4"> Powrót </span>
+        </button>
+    </div>
+    
         <h1 class="mb-8 text-3xl font-bold"><?php echo esc_html(get_theme_mod('history_page_heading', __('Nasza Historia', 'your-theme-textdomain'))); ?></h1>
          <!-- <p class="mb-12 text-lg text-gray-700"><?php echo esc_html(get_theme_mod('history_page_description', __('Tutaj znajdziesz naszą historię oraz kluczowe wydarzenia.', 'your-theme-textdomain'))); ?></p> -->
 

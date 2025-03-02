@@ -2,8 +2,8 @@
 
 function customize_section_about($wp_customize) {
     $wp_customize->add_section('section_about', array(
-        'title' => __('About Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Intro', 'your-theme-textdomain'),
+        'priority' => 10,
     ));
 
     $wp_customize->add_setting('section_about_text', array(
@@ -12,7 +12,7 @@ function customize_section_about($wp_customize) {
     ));
 
     $wp_customize->add_control('section_about_text', array(
-        'label' => __('About Section Text', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'section_about',
         'type' => 'textarea',
     ));
@@ -21,8 +21,8 @@ add_action('customize_register', 'customize_section_about');
 
 function customize_section_join_us($wp_customize) {
     $wp_customize->add_section('section_join_us', array(
-        'title' => __('Join Us Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Dołącz do nas', 'your-theme-textdomain'),
+        'priority' => 20,
     ));
 
     $wp_customize->add_setting('section_join_us_heading', array(
@@ -207,8 +207,8 @@ function structure_meta_box($post) {
 
 function customize_section_support($wp_customize) {
     $wp_customize->add_section('section_support', array(
-        'title' => __('Support Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Jak nas wesprzeć?', 'your-theme-textdomain'),
+        'priority' => 90,
     ));
 
     // Ustawienia dla nagłówka i tekstów
@@ -309,14 +309,13 @@ function customize_homepage_panel($wp_customize) {
     // Tworzymy nowy panel nadrzędny
     $wp_customize->add_panel('panel_homepage', array(
         'title'       => __('Strona Główna', 'your-theme-textdomain'),
-        'priority'    => 10,
+        'priority'    => 25,
         'description' => __('Zarządzaj sekcjami na stronie głównej.', 'your-theme-textdomain'),
     ));
 
     // Przypisujemy sekcje do panelu "Strona Główna"
     $wp_customize->get_section('section_about')->panel = 'panel_homepage';
     $wp_customize->get_section('section_join_us')->panel = 'panel_homepage';
-    $wp_customize->get_section('section_support')->panel = 'panel_homepage';
 }
 add_action('customize_register', 'customize_homepage_panel');
 
@@ -329,7 +328,7 @@ function add_homepage_menu_group() {
         'homepage_menu',
         '__return_null', // Brak przekierowania
         'dashicons-admin-home',
-        4
+        15
     );
 
     // Dodajemy podmenu dla CPT
@@ -357,10 +356,11 @@ function register_news_post_type() {
             'not_found' => __('No news found', 'your-theme-textdomain'),
         ),
         'public' => true,
-        'has_archive' => true,
+        'has_archive' => 'news',
         'rewrite' => array('slug' => 'news', 'with_front' => false),
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
         'menu_icon' => 'dashicons-megaphone',
+        'menu_position'=> 16,
     ));
 }
 add_action('init', 'register_news_post_type');

@@ -38,11 +38,11 @@ function create_default_pages() {
         //     'content' => '',
         //     'template' => 'single-news.php', 
         // ],
-        // 'archive_news' => [
-        //     'title' => 'Archive News',
-        //     'content' => '',
-        //     'template' => 'archive-news.php', 
-        // ],
+        'archive_news' => [
+            'title' => 'Archive News',
+            'content' => 'This is the Archive News page',
+            'template' => 'archive-news.php', 
+        ],
         'history' => [
             'title' => 'History',
             'content' => 'This is the history page.',

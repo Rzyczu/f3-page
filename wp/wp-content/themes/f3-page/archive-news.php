@@ -1,45 +1,66 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Archive News
+*/
+
+get_header(); ?>
 
 <main class="container mx-auto my-24 text-primary">
-    <h1 class="mb-6 text-3xl font-bold"><?php esc_html_e('Wszystkie Aktualności', 'your-theme-textdomain'); ?></h1>
+    <div class="mb-6">
+        <button onclick="window.history.back();" class="flex items-center text-primary hover:text-primary-light">
+            <i class="mr-2 fa-solid fa-arrow-turn-left"></i> 
+            <span class="px-4"> Powrót </span>
+        </button>
+    </div>
+    
+    <h1 class="mb-8 text-3xl font-bold">Wszystkie aktualności</h1>
+    
+    <?php
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+    $news_query = new WP_Query(array(
+        'post_type' => 'news',
+        'posts_per_page' => 3,
+        'paged' => $paged,
+        'orderby' => 'meta_value',
+        'meta_key' => '_news_date',
+        'order' => 'DESC',
+    ));
 
-    <?php if (have_posts()) : ?>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <?php while (have_posts()) : the_post(); ?>
-                <article class="p-4 bg-white rounded-lg shadow news-item">
-                    <a href="<?php the_permalink(); ?>" class="block">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img class="object-cover w-full h-48 mb-4" src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
-                        <?php else : ?>
-                            <img class="object-cover w-full h-48 mb-4" src="<?php echo get_template_directory_uri(); ?>/assets/images/news-placeholder.jpg" alt="Placeholder">
-                        <?php endif; ?>
-                    </a>
-                    <h2 class="mb-2 text-xl font-semibold">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h2>
-                    <p class="mb-2 text-sm text-gray-500">
-                        <?php echo get_post_meta(get_the_ID(), '_news_date', true); ?>
-                    </p>
-                    <p class="text-gray-700">
-                        <?php 
-                            $content = strip_tags(get_the_content());
-                            echo esc_html(mb_strimwidth($content, 0, 150, "...")); 
-                        ?>
-                    </p>
-                    <a href="<?php the_permalink(); ?>" class="inline-block mt-2 font-semibold text-primary">
-                        <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
-                    </a>
-                </article>
-            <?php endwhile; ?>
-        </div>
+    if ($news_query->have_posts()) :
+        $i = 0;
+        while ($news_query->have_posts()) : $news_query->the_post();
+            $news_date = get_post_meta(get_the_ID(), '_news_date', true);
+            $thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'medium') : get_template_directory_uri() . '/assets/images/news-placeholder.jpg';
+            ?>
+            <article class="flex flex-col items-center gap-6 mb-12 md:flex-row <?php echo $i % 2 == 0 ? 'md:flex-row-reverse' : ''; ?>">
+                <div class="md:w-1/3">
+                    <img src="<?php echo esc_url($thumbnail); ?>" alt="<?php the_title_attribute(); ?>" class="rounded-lg shadow-md">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="mb-2 text-2xl font-semibold"><?php the_title(); ?></h2>
+                    <?php if ($news_date) : ?>
+                        <p class="mb-2 text-sm text-gray-600"><?php echo esc_html($news_date); ?></p>
+                    <?php endif; ?>
+                    <p class="mb-4"> <?php echo wp_trim_words(get_the_excerpt(), 25, '...'); ?> </p>
+                    <a href="<?php the_permalink(); ?>" class="font-bold text-primary">Czytaj dalej</a>
+                </div>
+            </article>
+            <?php
+            $i++;
+        endwhile;
+        
+        // Paginacja
+        echo '<div class="flex items-center justify-center gap-4 mt-12">';
+        echo get_previous_posts_link('<button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">&laquo;</button>', $news_query->max_num_pages);
+        echo '<span class="font-semibold text-gray-600">' . $paged . ' / ' . $news_query->max_num_pages . '</span>';
+        echo get_next_posts_link('<button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">&raquo;</button>', $news_query->max_num_pages);
+        echo '</div>';
 
-        <div class="mt-6">
-            <?php the_posts_pagination(); ?>
-        </div>
-
-    <?php else : ?>
-        <p><?php esc_html_e('Brak aktualności do wyświetlenia.', 'your-theme-textdomain'); ?></p>
-    <?php endif; ?>
+        wp_reset_postdata();
+    else :
+        echo '<p>Brak aktualności do wyświetlenia.</p>';
+    endif;
+    ?>
 </main>
 
 <?php get_footer(); ?>

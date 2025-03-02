@@ -3,8 +3,8 @@
 function customize_our_creativity_intro_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('our_creativity_intro_section', array(
-        'title' => __('Our Creativity Intro Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Intro', 'your-theme-textdomain'),
+        'priority' => 10,
     ));
 
     // Nagłówek
@@ -13,7 +13,7 @@ function customize_our_creativity_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('our_creativity_intro_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'our_creativity_intro_section',
         'type' => 'text',
     ));
@@ -24,7 +24,7 @@ function customize_our_creativity_intro_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('our_creativity_intro_text', array(
-        'label' => __('Section Text', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'our_creativity_intro_section',
         'type' => 'textarea',
     ));
@@ -35,7 +35,7 @@ function customize_our_creativity_intro_section($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'our_creativity_intro_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
+        'label' => __('Image', 'your-theme-textdomain'),
         'section' => 'our_creativity_intro_section',
     )));
 }
@@ -44,8 +44,8 @@ add_action('customize_register', 'customize_our_creativity_intro_section');
 function customize_our_creativity_blank_section($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('our_creativity_blank_section', array(
-        'title' => __('Our Creativity Blank Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Takie Fioletowe Puste Pole', 'your-theme-textdomain'),
+        'priority' => 20,
     ));
 
     // Obraz sekcji
@@ -54,7 +54,7 @@ function customize_our_creativity_blank_section($wp_customize) {
         'sanitize_callback' => 'esc_url_raw',
     ));
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'our_creativity_blank_image', array(
-        'label' => __('Section Image', 'your-theme-textdomain'),
+        'label' => __('Image', 'your-theme-textdomain'),
         'section' => 'our_creativity_blank_section',
     )));
 }
@@ -65,7 +65,7 @@ function customize_our_creativity_panel($wp_customize) {
     // Tworzenie głównego panelu "Nasza Twórczość"
     $wp_customize->add_panel('panel_our_creativity', array(
         'title'       => __('Nasza Twórczość', 'your-theme-textdomain'),
-        'priority'    => 35,
+        'priority'    => 50,
         'description' => __('Zarządzaj sekcjami strony Nasza Twórczość.', 'your-theme-textdomain'),
     ));
 
@@ -209,31 +209,27 @@ function save_resource_item_meta($post_id) {
 add_action('save_post', 'save_resource_item_meta');
 
 function customize_our_creativity_admin_menu() {
-    // Usunięcie Resource Groups i Resource Items z głównego menu
     remove_menu_page('edit.php?post_type=resource_group');
     remove_menu_page('edit.php?post_type=resource_item');
 
-    // Dodanie głównej pozycji menu "Nasza Twórczość"
     add_menu_page(
-        __('Nasza Twórczość', 'your-theme-textdomain'), // Tytuł
-        __('Nasza Twórczość', 'your-theme-textdomain'), // Nazwa w menu
-        'manage_options', // Uprawnienia
-        'our_creativity_main', // Slug
-        '__return_null', // Nie dodajemy funkcji, bo to tylko kontener
-        'dashicons-admin-customizer', // Ikona
-        25 // Pozycja w menu
+        __('Nasza Twórczość', 'your-theme-textdomain'),
+        __('Nasza Twórczość', 'your-theme-textdomain'),
+        'manage_options',
+        'our_creativity_main',
+        '__return_null',
+        'dashicons-admin-customizer',
+        20
     );
 
-    // Dodanie podmenu dla Resource Groups
     add_submenu_page(
-        'our_creativity_main', // Rodzic
+        'our_creativity_main',
         __('Resource Groups', 'your-theme-textdomain'),
         __('Resource Groups', 'your-theme-textdomain'),
         'manage_options',
         'edit.php?post_type=resource_group'
     );
 
-    // Dodanie podmenu dla Resource Items
     add_submenu_page(
         'our_creativity_main',
         __('Resource Items', 'your-theme-textdomain'),

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+</head>
+
+<body class="bg-white">
+    <nav class="sticky z-40 bg-white text-gray" id="navbar">
+
+        <div class="mb-6">
+            <button onclick="window.history.back();" class="flex items-center text-primary hover:text-primary-light">
+                <i class="mr-2 fa-solid fa-arrow-turn-left"></i>
+                <span class="px-4"> Powrót </span>
+            </button>
+        </div>
+
+        <div class="container flex flex-wrap items-center justify-between py-8 mx-auto max-md:pb-8">
+            <div class="z-50 items-center hidden gap-4 lg:block lg:absolute right-4 top-8">
+                <span
+                    id="navbar-lock-icon"
+                    class="text-xl text-gray-400 cursor-pointer emoji-gray">
+                    🔓
+                </span>
+            </div>
+            <div class="flex md:basis-2/3 lg:basis-3/12 xl:basis-2/5">
+                <a href="./index.html" class="flex items-center space-x-2 group">
+                    <img src="./assets/svg/logo.svg" class="h-8 svg-color-gray group-hover:svg-color-primary"
+                        alt="Flowbite Logo" />
+                    <span id="navbar-brand"
+                        class="text-xs font-medium xl:text-xs text-gray lg:text-2xs group-hover:text-primary">
+                        3 Podgórski Szczep Fioletowej Trójki<br />
+                        im. Tadeusza Kościószki
+                    </span>
+                </a>
+            </div>
+
+            <a href="./index.html"
+                class="hidden py-2 font-semibold sm:text-sm text-gray hover:text-primary max-md:px-3 2xl:px-4 lg:block">Strona
+                Główna</a>
+            <a href="./about-us.html" aria-current="page"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">O
+                nas</a>
+            <a href="./join-us.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Dołącz
+                do nas</a>
+            <a href="./our-creativity.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Nasza
+                twórczość</a>
+            <a href="./support-us.html"
+                class="hidden py-2 text-xs font-semibold text-gray hover:text-primary max-md:px-3 2xl:px-4 sm:text-sm lg:block">Wesprzyj
+                nas</a>
+            <a href="./contact.html"
+                class="hidden py-2 text-xs font-semibold text-gray display-mobile sm:block hover:text-primary 2xl:px-4 max-md:px-3 sm:text-sm">Kontakt</a>
+            <a href="./support-us.html"
+                class="hidden py-2 text-sm font-semibold text-gray display-mobile sm:block hover: hover:text-primary 2xl:px-4 max-md:px-3 sm:text-md lg:hidden ">1,5%</a>
+
+            <div
+                class="flex items-center justify-center h-10 py-2 text-lg sm:pl-3 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <div class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-label">menu</span>
+                </div>
+            </div>
+
+        </div>
+        <div id="mobile-navbar" class="h-screen bg-primary">
+            <div class="relative flex justify-center pt-20">
+                <div class="relative flex flex-col space-y-6 w-min-min left-line left-1 ">
+                    <a href="./index.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">Strona
+                        główna</a>
+                    <a href="./about-us.html" aria-current="page"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle ">O
+                        nas</a>
+                    <a href="./join-us.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Dołącz
+                        do
+                        nas</a>
+                    <a href="./our-creativity.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Nasza
+                        twórczość</a>
+                    <a href="./support-us.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Wesprzyj
+                        nas</a>
+                    <a href="./contact.html"
+                        class="relative px-3 py-2 text-2xl font-semibold text-gray hover:text-white hover-left-circle">Kontakt</a>
+                </div>
+            </div>
+            <img src="./assets/svg/camp.svg" class="hidden w-56 svg-color-white bottom-28 right-20 md:block md:absolute"
+                alt="Flowbite Logo" />
+        </div>
+    </nav>
+
+
+    <main class="container mx-auto my-24 text-primary">
+        <h1 class="mb-8 text-3xl font-bold">Wszystkie aktualności</h1>
+
+        <article class="flex flex-col items-center gap-6 mb-12 md:flex-row md:flex-row-reverse">
+            <div class="md:w-1/3">
+                <img src="https://via.placeholder.com/400" alt="News 1" class="rounded-lg shadow-md">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="mb-2 text-2xl font-semibold">Nowe wydarzenie w Szczepie</h2>
+                <p class="mb-2 text-sm text-gray-600">12 marca 2025</p>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nulla id
+                    sapien.</p>
+                <a href="#" class="font-bold text-primary">Czytaj dalej</a>
+            </div>
+        </article>
+
+        <article class="flex flex-col items-center gap-6 mb-12 md:flex-row">
+            <div class="md:w-1/3">
+                <img src="https://via.placeholder.com/400" alt="News 2" class="rounded-lg shadow-md">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="mb-2 text-2xl font-semibold">Obóz letni - zapisy otwarte!</h2>
+                <p class="mb-2 text-sm text-gray-600">5 marca 2025</p>
+                <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+                </p>
+                <a href="#" class="font-bold text-primary">Czytaj dalej</a>
+            </div>
+        </article>
+
+        <article class="flex flex-col items-center gap-6 mb-12 md:flex-row md:flex-row-reverse">
+            <div class="md:w-1/3">
+                <img src="https://via.placeholder.com/400" alt="News 3" class="rounded-lg shadow-md">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="mb-2 text-2xl font-semibold">Spotkanie z drużynowym</h2>
+                <p class="mb-2 text-sm text-gray-600">28 lutego 2025</p>
+                <p class="mb-4">Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+                <a href="#" class="font-bold text-primary">Czytaj dalej</a>
+            </div>
+        </article>
+
+        <!-- Paginacja -->
+        <div class="flex items-center justify-center gap-4 mt-12">
+            <button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">
+                <svg class="w-5 h-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.623 27.941">
+                    <g transform="translate(1.459 0.736)">
+                        <path d="M1299.5,1378.625l-13.766,12.656,14.381,13.828"
+                            transform="translate(-1285.732 -1378.625)" fill="none" stroke="currentColor"
+                            stroke-miterlimit="10" stroke-width="2" />
+                        <line x2="56.164" transform="translate(0 12.656)" fill="none" stroke="currentColor"
+                            stroke-miterlimit="10" stroke-width="2" />
+                    </g>
+                </svg>
+            </button>
+            <span class="font-semibold text-gray-600">1 / 5</span>
+            <button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">
+                <svg class="w-5 h-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.623 27.941">
+                    <g transform="scale(-1,1) translate(-57.623, 0)">
+                        <path d="M1299.5,1378.625l-13.766,12.656,14.381,13.828"
+                            transform="translate(-1285.732 -1378.625)" fill="none" stroke="currentColor"
+                            stroke-miterlimit="10" stroke-width="2" />
+                        <line x2="56.164" transform="translate(0 12.656)" fill="none" stroke="currentColor"
+                            stroke-miterlimit="10" stroke-width="2" />
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+
+
+    <footer class="container py-6 mx-auto mt-24 text-center text-gray-600">
+        &copy; 2025 Archiwum Aktualności
+    </footer>
+
+</body>
+
+</html>

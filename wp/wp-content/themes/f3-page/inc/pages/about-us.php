@@ -42,8 +42,8 @@ if (class_exists('WP_Customize_TinyMCE_Control')) {
 function customize_section_intro($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('section_intro', array(
-        'title' => __('Intro Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Intro', 'your-theme-textdomain'),
+        'priority' => 10,
     ));
 
     // Ustawienie dla nagłówka
@@ -83,8 +83,8 @@ add_action('customize_register', 'customize_section_intro');
 function customize_section_teams($wp_customize) {
     // Sekcja Customizera
     $wp_customize->add_section('section_teams', array(
-        'title' => __('Teams Section', 'your-theme-textdomain'),
-        'priority' => 30,
+        'title' => __('Drużyny', 'your-theme-textdomain'),
+        'priority' => 20,
     ));
 
     // Nagłówek sekcji
@@ -93,7 +93,7 @@ function customize_section_teams($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('section_teams_heading', array(
-        'label' => __('Section Heading', 'your-theme-textdomain'),
+        'label' => __('Heading', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'text',
     ));
@@ -115,7 +115,7 @@ function customize_section_teams($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('section_teams_subheading_how', array(
-        'label' => __('Subheading (How we work)', 'your-theme-textdomain'),
+        'label' => __('Subheading', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'text',
     ));
@@ -126,7 +126,7 @@ function customize_section_teams($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_how', array(
-        'label' => __('Text (How we work)', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
     )));
@@ -137,7 +137,7 @@ function customize_section_teams($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('section_teams_subheading_age', array(
-        'label' => __('Subheading (Age Division)', 'your-theme-textdomain'),
+        'label' => __('Subheading', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'text',
     ));
@@ -148,7 +148,7 @@ function customize_section_teams($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_age', array(
-        'label' => __('Text (Age Division)', 'your-theme-textdomain'),
+        'label' => __('Text', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
     )));
@@ -643,32 +643,9 @@ function register_brotherhood_settings() {
 }
 add_action('admin_init', 'register_brotherhood_settings');
 
-function brotherhood_settings_page() {
-    ?>
-    <div class="wrap">
-        <h1><?php _e('Brotherhood Section Settings', 'your-theme-textdomain'); ?></h1>
-        <form method="post" action="options.php">
-            <?php settings_fields('brotherhood_options_group'); ?>
-            <?php do_settings_sections('brotherhood_options_group'); ?>
-            <table class="form-table">
-                <tr>
-                    <th scope="row"><label for="brotherhood_section_heading"><?php _e('Section Title', 'your-theme-textdomain'); ?></label></th>
-                    <td><input type="text" id="brotherhood_section_heading" name="brotherhood_section_heading" value="<?php echo esc_attr(get_option('brotherhood_section_heading')); ?>" class="regular-text"></td>
-                </tr>
-                <tr>
-                    <th scope="row"><label for="brotherhood_section_text"><?php _e('Section Text', 'your-theme-textdomain'); ?></label></th>
-                    <td><textarea id="brotherhood_section_text" name="brotherhood_section_text" class="large-text"><?php echo esc_textarea(get_option('brotherhood_section_text')); ?></textarea></td>
-                </tr>
-            </table>
-            <?php submit_button(); ?>
-        </form>
-    </div>
-    <?php
-}
-
 function customize_brotherhood_section($wp_customize) {
     $wp_customize->add_section('section_brotherhood', array(
-        'title'    => __('Brotherhood Section', 'your-theme-textdomain'),
+        'title'    => __('Bractwo Sztandarowe', 'your-theme-textdomain'),
         'priority' => 30,
     ));
 
@@ -677,7 +654,7 @@ function customize_brotherhood_section($wp_customize) {
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('brotherhood_section_heading', array(
-        'label'   => __('Section Title', 'your-theme-textdomain'),
+        'label'   => __('Heading', 'your-theme-textdomain'),
         'section' => 'section_brotherhood',
         'type'    => 'text',
     ));
@@ -687,12 +664,54 @@ function customize_brotherhood_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
     $wp_customize->add_control('brotherhood_section_text', array(
-        'label'   => __('Section Text', 'your-theme-textdomain'),
+        'label'   => __('Text', 'your-theme-textdomain'),
         'section' => 'section_brotherhood',
         'type'    => 'textarea',
     ));
 }
 add_action('customize_register', 'customize_brotherhood_section');
+
+function customize_section_history($wp_customize) {
+    // Dodajemy nową sekcję "Nasza historia" w ramach grupy "O nas"
+    $wp_customize->add_section('section_history', array(
+        'title'    => __('Nasza historia', 'your-theme-textdomain'),
+        'priority' => 40,
+        'panel'    => 'panel_structure', // Przypisujemy do panelu "O nas"
+    ));
+
+    // Nagłówek sekcji
+    $wp_customize->add_setting('section_history_heading', array(
+        'default'           => __('Nasza historia', 'your-theme-textdomain'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('section_history_heading', array(
+        'label'   => __('Nagłówek', 'your-theme-textdomain'),
+        'section' => 'section_history',
+        'type'    => 'text',
+    ));
+
+    // Treść sekcji
+    $wp_customize->add_setting('section_history_text', array(
+        'default'           => __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'),
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_history_text', array(
+        'label'   => __('Treść', 'your-theme-textdomain'),
+        'section' => 'section_history',
+    )));
+
+    // Obraz sekcji
+    $wp_customize->add_setting('section_history_image', array(
+        'default'           => get_template_directory_uri() . '/assets/images/svg/castle.svg',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_history_image', array(
+        'label'   => __('Obraz', 'your-theme-textdomain'),
+        'section' => 'section_history',
+    )));
+}
+add_action('customize_register', 'customize_section_history');
+
 
 function add_custom_menu_group() {
     // Dodanie głównego menu (bez linkowania do podstrony)
@@ -703,7 +722,7 @@ function add_custom_menu_group() {
         'structure_menu',
         '__return_null', // Nie przekierowuje na żadną stronę
         'dashicons-groups',
-        5
+        17
     );
 
     // Przeniesienie CPT do tej grupy
@@ -726,7 +745,7 @@ function customize_structure_panel($wp_customize) {
     // Tworzenie panelu nadrzędnego dla strony "O nas"
     $wp_customize->add_panel('panel_structure', array(
         'title'       => __('O nas', 'your-theme-textdomain'),
-        'priority'    => 20,
+        'priority'    => 30,
         'description' => __('Zarządzaj sekcjami podstrony "O nas".', 'your-theme-textdomain'),
     ));
 
