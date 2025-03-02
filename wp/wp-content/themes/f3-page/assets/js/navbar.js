@@ -19,8 +19,6 @@ if (!logo) {
   console.warn('Element logo nie został znaleziony');
 }
 
-console.log(logo)
-
 let isAnimating = false;
 
 toggleNavbar = () => {
