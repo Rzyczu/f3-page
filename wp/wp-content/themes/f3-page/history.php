@@ -19,9 +19,11 @@ get_header();
 
         <?php
         // Pobranie wpisów historycznych, sortowanie po dacie
-        $history_query = new WP_Query(array(
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array(
             'post_type'      => 'history_entry',
-            'posts_per_page' => -1,
+            'posts_per_page' => 6,
+            'paged'          => $paged,
             'meta_key'       => '_history_entry_date_sortable',
             'orderby'        => 'meta_value',
             'order'          => 'DESC',
@@ -31,7 +33,9 @@ get_header();
                     'compare' => 'EXISTS',
                 ),
             ),
-        ));
+        );
+        
+        $history_query = new WP_Query($args);
 
         if ($history_query->have_posts()) :
             while ($history_query->have_posts()) :
@@ -60,6 +64,14 @@ get_header();
                 </article>
                 <?php
             endwhile;
+
+            // Paginacja
+            echo '<div class="flex items-center justify-center gap-4 mt-12">';
+            echo get_previous_posts_link('<button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">&laquo;</button>', $history_query->max_num_pages);
+            echo '<span class="font-semibold text-gray-600">' . $paged . ' / ' . $history_query->max_num_pages . '</span>';
+            echo get_next_posts_link('<button class="p-2 bg-gray-200 rounded-full hover:bg-primary hover:text-white">&raquo;</button>', $history_query->max_num_pages);
+            echo '</div>';
+            
             wp_reset_postdata();
         else :
             ?>

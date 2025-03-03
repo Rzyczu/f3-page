@@ -19,7 +19,7 @@ get_header(); ?>
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $news_query = new WP_Query(array(
         'post_type' => 'news',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'paged' => $paged,
         'orderby' => 'meta_value',
         'meta_key' => '_news_date',

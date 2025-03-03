@@ -1,5 +1,6 @@
 <?php
 
+// Footer
 function register_footer_link_post_type() {
     register_post_type('footer_link', array(
         'labels' => array(
@@ -14,12 +15,10 @@ function register_footer_link_post_type() {
         'menu_position'=> 23,
     ));
 
-    // Dodanie metaboxów dla linków
     add_action('add_meta_boxes', function () {
         add_meta_box('footer_link_meta', __('Footer Link Details', 'your-theme-textdomain'), 'footer_link_meta_box', 'footer_link', 'normal', 'default');
     });
 
-    // Zapisanie danych metaboxów
     add_action('save_post', function ($post_id) {
         if (array_key_exists('footer_link_url', $_POST)) {
             update_post_meta($post_id, 'footer_link_url', esc_url_raw($_POST['footer_link_url']));
@@ -63,11 +62,11 @@ function sanitize_footer_links($input) {
     return array();
 }
 
+
+// Menu Pages position
 function change_pages_menu_position() {
-    // Usunięcie domyślnego menu "Strony"
     remove_menu_page('edit.php?post_type=page');
 
-    // Ponowne dodanie "Strony" z nową pozycją w menu
     add_menu_page(
         __('Strony', 'your-theme-textdomain'),
         __('Strony', 'your-theme-textdomain'),

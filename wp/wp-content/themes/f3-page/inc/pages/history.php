@@ -1,6 +1,6 @@
 <?php
 
-function register_history_cpt() {
+function register_history_entry_cpt() {
     $labels = array(
         'name'               => __('History Entries', 'your-theme-textdomain'),
         'singular_name'      => __('History Entry', 'your-theme-textdomain'),
@@ -22,13 +22,14 @@ function register_history_cpt() {
         'menu_position'      => 18,
         'menu_icon'          => 'dashicons-book',
         'supports'           => array('title', 'editor', 'thumbnail'),
-        'has_archive'        => false,
-        'rewrite'            => array('slug' => 'history'),
+        'has_archive'        => true,
+        'rewrite'            => array('slug' => 'history-entry', 'with_front' => false),
     );
 
     register_post_type('history_entry', $args);
 }
-add_action('init', 'register_history_cpt');
+add_action('init', 'register_history_entry_cpt');
+
 
 function enable_theme_supports() {
     add_theme_support('post-thumbnails');
