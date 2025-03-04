@@ -35,7 +35,7 @@ function enqueue_theme_scripts() {
 
     // Skrypty dla strony "Contact"
     if (is_page('contact')) {
-        //wp_enqueue_script('contact-script', get_template_directory_uri() . '/assets/js/contact.js', array(), '1.0.0', true);
+        wp_enqueue_script('contact-script', get_template_directory_uri() . '/assets/js/contact.js', array(), '1.0.0', true);
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');

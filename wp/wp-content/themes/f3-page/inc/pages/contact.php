@@ -138,63 +138,10 @@ function sanitize_contact_form_additional_fields($input) {
 }
 add_action('customize_register', 'customize_contact_form_section');
 
-function handle_contact_form_submission() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $name = sanitize_text_field($_POST['name']);
-        $mail = sanitize_email($_POST['mail']);
-        $message = sanitize_textarea_field($_POST['message']);
-
-        // Wyślij e-mail (lub obsłuż wiadomość w inny sposób)
-        wp_mail(
-            get_option('admin_email'),
-            __('Nowa wiadomość kontaktowa', 'your-theme-textdomain'),
-            sprintf(
-                __("Imię i nazwisko: %s\nE-mail: %s\nWiadomość:\n%s", 'your-theme-textdomain'),
-                $name,
-                $mail,
-                $message
-            )
-        );
-
-        // Przekierowanie po wysłaniu
-        wp_safe_redirect(home_url('/thank-you'));
-        exit;
-    }
-}
 
 
 add_action('admin_post_nopriv_contact_form', 'handle_contact_form_submission');
 add_action('admin_post_contact_form', 'handle_contact_form_submission');
-
-function handle_contact_form() {
-    // Pobieranie danych z formularza
-    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
-    $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
-    $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
-
-    // Walidacja danych
-    if (empty($name)) {
-        wp_send_json_error('Proszę podać imię i nazwisko.');
-    }
-    if (!is_email($email)) {
-        wp_send_json_error('Podano niepoprawny adres e-mail.');
-    }
-    if (empty($message)) {
-        wp_send_json_error('Wiadomość nie może być pusta.');
-    }
-
-    // Próba wysyłki e-maila
-    $sent = wp_mail(get_option('admin_email'), 'Nowa wiadomość z formularza kontaktowego', $message);
-
-    if (!$sent) {
-        wp_send_json_error('Nie udało się wysłać wiadomości. Spróbuj ponownie później.');
-    }
-
-    // Zwrócenie sukcesu
-    wp_send_json_success('Wiadomość wysłana pomyślnie!');
-}
-add_action('wp_ajax_nopriv_contact_form', 'handle_contact_form');
-add_action('wp_ajax_contact_form', 'handle_contact_form');
 
 function customize_contact_panel($wp_customize) {
     // Tworzenie głównego panelu "Kontakt"

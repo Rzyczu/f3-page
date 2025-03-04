@@ -1,22 +1,49 @@
 <?php
 // Plik: /inc/global/forms.php
 
-function sanitize_form_data($post_data) {
-    $sanitized_data = array(
-        'name' => isset($post_data['name']) ? sanitize_text_field($post_data['name']) : '',
-        'email' => isset($post_data['email']) ? sanitize_email($post_data['email']) : '',
-        'message' => isset($post_data['message']) ? sanitize_textarea_field($post_data['message']) : '',
-    );
-
-    if (!is_email($sanitized_data['email'])) {
-        wp_die('Niepoprawny adres e-mail.');
-    }
-
-    return $sanitized_data;
+function register_contact_message_cpt() {
+    register_post_type('contact_message', array(
+        'labels'      => array(
+            'name'          => __('Wiadomości Kontaktowe', 'textdomain'),
+            'singular_name' => __('Wiadomość Kontaktowa', 'textdomain'),
+        ),
+        'public'      => false,
+        'show_ui'     => true,
+        'supports'    => array('title', 'editor', 'custom-fields'),
+    ));
 }
+add_action('init', 'register_contact_message_cpt');
 
-function validate_post_data($data) {
-    if (empty($data)) {
-        wp_send_json_error('Brak wymaganych danych.');
+function handle_contact_form_submission() {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $name = sanitize_text_field($_POST["name"]);
+        $email = sanitize_email($_POST["mail"]);
+        $message = sanitize_textarea_field($_POST["message"]);
+        $gdpr = isset($_POST["gdpr"]) ? 'Zaakceptowano' : 'Nie zaakceptowano';
+
+        if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($message)) {
+            wp_send_json_error(["message" => "Wypełnij poprawnie formularz."]);
+        }
+
+        // Tworzenie wpisu w CPT
+        $post_id = wp_insert_post(array(
+            "post_type"   => "contact_message",
+            "post_title"  => "Wiadomość od " . $name,
+            "post_status" => "publish",
+            "meta_input"  => array(
+                "email"   => $email,
+                "message" => $message,
+                "gdpr"    => $gdpr
+            )
+        ));
+
+        if ($post_id) {
+            wp_send_json_success(["message" => "Wiadomość została wysłana."]);
+        } else {
+            wp_send_json_error(["message" => "Błąd podczas zapisu wiadomości."]);
+        }
     }
 }
+add_action("wp_ajax_contact_form", "handle_contact_form_submission");
+add_action("wp_ajax_nopriv_contact_form", "handle_contact_form_submission");
+

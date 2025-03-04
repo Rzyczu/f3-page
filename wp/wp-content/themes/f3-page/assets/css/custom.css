@@ -75,8 +75,8 @@ Footer on the bootom of the page.
 html,
 body {
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    overflow-x: hidden;
+
 }
 
 main {
@@ -1840,6 +1840,10 @@ textarea {
     right: 1rem;
 }
 
+.top-0 {
+    top: 0;
+}
+
 .top-8 {
     top: 2rem;
 }
@@ -3049,4 +3053,43 @@ textarea {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: rgb(254 251 247 / var(--tw-bg-opacity));
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: rgb(83 41 132 / var(--tw-bg-opacity));
+
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
 }

@@ -103,9 +103,7 @@ toggleNavbar = () => {
 }
 
 handleResize = () => {
-  if (contextMenu) {
-    contextMenu.classList.add('hidden');
-  }
+  contextMenu.classList.add('hidden');
 
   if (window.innerWidth > 1024) {
     hamburgerBtn.classList.remove("is-active");
@@ -186,6 +184,9 @@ updateLockIconState();
 
 // Funkcja przełączająca stan sticky navbaru
 function toggleStickyNavbar() {
+  console.log(localStorage.getItem('isNavSticky'));
+  console.log(navElement);
+
   if (isNavSticky) {
     navElement.classList.remove('sticky', 'top-0');
     isNavSticky = false;

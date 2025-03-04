@@ -30,7 +30,8 @@
                                 $content = strip_tags(get_the_content()); 
                                 echo esc_html(mb_strimwidth($content, 0, 100, "...")); 
                             ?>
-                            <a href="<?php echo get_permalink(); ?>" class="news-link">
+                            <br />
+                            <a href="<?php echo get_permalink(); ?>" class="font-semibold news-link text-primary">
                                 <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
                             </a>
                         </p>
@@ -47,7 +48,7 @@
                 <img class="news-article-img-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/svg/logo.svg" alt="News Logo" />
             </div>
                 <h3 class="news-article-header">Wszystkie aktualności</h3>
-                <p class="mt-4 text-center">
+                <p class="mt-4">
                 <a href="<?php echo get_permalink(get_page_by_path('archive_news')); ?>" class="font-semibold news-link text-primary">
                         <em><?php esc_html_e('Czytaj dalej', 'your-theme-textdomain'); ?></em>
                     </a>
