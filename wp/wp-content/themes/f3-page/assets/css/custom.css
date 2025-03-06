@@ -46,7 +46,7 @@ html,
     -o-tab-size: 4;
     tab-size: 4;
     /* 3 */
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Montserrat', 'Roboto', ui-sans-serif, system-ui, sans-serif;
     /* 4 */
     font-feature-settings: normal;
     /* 5 */
@@ -151,7 +151,7 @@ code,
 kbd,
 samp,
 pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: 'Montserrat', 'Roboto', ui-sans-serif, system-ui, sans-serif;
     /* 1 */
     font-feature-settings: normal;
     /* 2 */
@@ -464,7 +464,7 @@ video {
 }
 
 body {
-    font-family: Montserrat;
+    font-family: 'Montserrat', 'Roboto', ui-sans-serif, system-ui, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1840,9 +1840,9 @@ textarea {
     right: 1rem;
 }
 
-.top-0 {
+/* .top-0 {
     top: 0;
-}
+} */
 
 .top-8 {
     top: 2rem;
@@ -3092,4 +3092,28 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:focus {
     outline: max(2px, 0.15em) solid currentColor;
     outline-offset: max(2px, 0.15em);
+}
+
+.forminator-required {
+    display: none;
+}
+
+.forminator-error-message {
+    font-weight: 700;
+    --tw-text-opacity: 1 !important;
+    color: rgb(113 76 152 / var(--tw-text-opacity)) !important;
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(179 162 206 / var(--tw-bg-opacity)) !important;
+    font-size: 0.85rem !important;
+}
+
+.forminator-response-message,
+.forminator-show,
+.forminator-success {
+    background-color: rgb(179 162 206) !important;
+    -webkit-box-shadow: inset 2px 0 0 0 rgb(254 251 247) !important;
+    box-shadow: inset 2px 0 0 0 rgb(254 251 247) !important;
+    --moz-box-shadow: inset 2px 0 0 0 rgb(254 251 247) !important;
+    font-size: 1rem !important;
+    color: rgb(254 251 247) !important;
 }

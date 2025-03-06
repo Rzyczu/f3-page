@@ -1,51 +1,54 @@
-let opinions = document.querySelectorAll('.opinions article');
-let nextBtnOpinion = document.getElementById('opinions-next-btn');
-let OpinionOpinion = document.getElementById('opinions-prev-btn');
+document.addEventListener("DOMContentLoaded", function () {
 
-let active = 0;
+  let opinions = document.querySelectorAll('.opinions article');
+  let nextBtnOpinion = document.getElementById('opinions-next-btn');
+  let OpinionOpinion = document.getElementById('opinions-prev-btn');
+
+  let active = 0;
 
 
 
-function updateClasses() {
-  opinions.forEach((opinion, index) => {
-    opinion.classList.remove('active', 'prev', 'next');
-    if (index === active) {
-      opinion.classList.add('active');
-    } else if (index === (active - 1 + opinions.length) % opinions.length) {
-      opinion.classList.add('prev');
-    } else if (index === (active + 1) % opinions.length) {
-      opinion.classList.add('next');
+  function updateClasses() {
+    opinions.forEach((opinion, index) => {
+      opinion.classList.remove('active', 'prev', 'next');
+      if (index === active) {
+        opinion.classList.add('active');
+      } else if (index === (active - 1 + opinions.length) % opinions.length) {
+        opinion.classList.add('prev');
+      } else if (index === (active + 1) % opinions.length) {
+        opinion.classList.add('next');
+      }
+    });
+
+    if (opinions.length == 0) {
+      return;
     }
-  });
 
-  if (opinions.length == 0) {
-    return;
+
+    // Adjust the height of the container
+    const activeOpinion = opinions[active];
+    const opinionsContainer = document.querySelector('.opinions');
+    opinionsContainer.style.height = activeOpinion.offsetHeight + 'px';
   }
 
-
-  // Adjust the height of the container
-  const activeOpinion = opinions[active];
-  const opinionsContainer = document.querySelector('.opinions');
-  opinionsContainer.style.height = activeOpinion.offsetHeight + 'px';
-}
-
-// Initial setup
-updateClasses();
-
-function nextSlide() {
-  active = (active + 1) % opinions.length;
+  // Initial setup
   updateClasses();
-}
 
-function prevSlide() {
-  active = (active - 1 + opinions.length) % opinions.length;
-  updateClasses();
-}
+  function nextSlide() {
+    active = (active + 1) % opinions.length;
+    updateClasses();
+  }
 
-// Event listeners for buttons
-nextBtnOpinion.addEventListener('click', nextSlide);
+  function prevSlide() {
+    active = (active - 1 + opinions.length) % opinions.length;
+    updateClasses();
+  }
 
-OpinionOpinion.addEventListener('click', prevSlide);
+  // Event listeners for buttons
+  nextBtnOpinion.addEventListener('click', nextSlide);
+
+  OpinionOpinion.addEventListener('click', prevSlide);
 
 
-setInterval(nextSlide, 15000);
+  setInterval(nextSlide, 15000);
+});

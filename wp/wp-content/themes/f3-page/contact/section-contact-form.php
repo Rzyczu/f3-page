@@ -1,5 +1,14 @@
 <section class="relative mt-24 text-white bg-primary">
-    <div class="container items-start py-24 mx-auto max-md:flex-col-reverse">
+<div>
+
+<div class="container items-start py-24 mx-auto max-md:flex-col-reverse">
+        <div class="">
+            <h2 class="mb-8">Napisz do nas</h2>
+<?php echo do_shortcode('[forminator_form id="135"]'); ?>
+</div>
+    </div>
+
+<!-- <div class="container items-start py-24 mx-auto max-md:flex-col-reverse">
         <div class="">
             <h2 class="mb-8">Napisz do nas</h2>
             <form id="contact-form" action="<?php echo admin_url('admin-ajax.php'); ?>" method="POST">
@@ -20,7 +29,7 @@
                         <input type="checkbox" id="gdpr" name="gdpr" required>
                         <div>
                             Akceptuję
-                            <a href="/polityka-prywatnosci">politykę prywatności</a>
+                            <a href="/privacy-policy" target="_blank">politykę prywatności</a>
                         </div>  
                     </div>
                 </label>
@@ -32,5 +41,5 @@
 
             </form>
         </div>
-    </div>
+    </div> -->
 </section>

@@ -86,9 +86,9 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header id="site-header" class="site-header">
+    <!-- <header id="site-header" class="site-header"> -->
         <?php 
         // Include the navigation template
         get_template_part('navigation'); 
         ?>
-    </header>
+    <!-- </header> -->
