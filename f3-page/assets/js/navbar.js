@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   hamburgerBtn.addEventListener("click", toggleNavbar);
-  window.addEventListener("resize", handleResize, () => {
+  window.addEventListener("resize", () => {
     contextMenu.classList.add('hidden');
 
     if (window.innerWidth > 1024) {
