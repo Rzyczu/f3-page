@@ -138,8 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }, false);
 
   window.addEventListener('scroll', () => {
-    console.log("chuuuuj")
-
     if (hamburgerBtn.classList.contains("is-active"))
       return;
     contextMenu.classList.add('hidden');

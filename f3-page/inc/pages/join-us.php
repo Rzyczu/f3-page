@@ -162,7 +162,7 @@ add_action('customize_register', 'customize_join_info_section');
 function register_document_post_type() {
     register_post_type('document', array(
         'labels' => array(
-            'name' => __('Documenty - Dołącz do nas', 'your-theme-textdomain'),
+            'name' => __('Dokumenty - Dołącz do nas', 'your-theme-textdomain'),
             'singular_name' => __('Document', 'your-theme-textdomain'),
             'add_new_item' => __('Add New Document', 'your-theme-textdomain'),
             'edit_item' => __('Edit Document', 'your-theme-textdomain'),
