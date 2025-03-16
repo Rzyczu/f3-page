@@ -7,30 +7,30 @@ get_header();
 
 <main class="about-us">
     <?php
-    // Załaduj sekcję intro
-    include locate_template('./about-us/section-intro.php', false, false);
+    // Section intro
+    include locate_template('/inc/pages/about-us/sections/intro.php', false, false);
 
-    // Załaduj sekcję teams
-    include locate_template('./about-us/section-teams.php', false, false);
+    // Section teams
+    include locate_template('/inc/pages/about-us/sections/teams.php', false, false);
 
-    // Załaduj sekcję teams-carousel (żeńskie)
+    // Section teams-carousel (żeńskie)
     $title = __('Żeńskie Drużyny', 'your-theme-textdomain');
     $gender = 'female';
-    include locate_template('./about-us/section-teams-carousel.php', false, false);
+    include locate_template('/inc/pages/about-us/sections/teams-carousel.php', false, false);
 
-    // Załaduj sekcję teams-carousel (męskie)
+    // Section teams-carousel (męskie)
     $title = __('Męskie Drużyny', 'your-theme-textdomain');
     $gender = 'male';
-    include locate_template('./about-us/section-teams-carousel.php', false, false);
+    include locate_template('/inc/pages/about-us/sections/teams-carousel.php', false, false);
 
-    // Załaduj sekcję board
-    include locate_template('./about-us/section-board.php', false, false);
+    // Section board
+    include locate_template('/inc/pages/about-us/sections/board.php', false, false);
 
-    // Załaduj sekcję brotherhood
-    include locate_template('./about-us/section-brotherhood.php', false, false);
+    // Section brotherhood
+    include locate_template('/inc/pages/about-us/sections/brotherhood.php', false, false);
 
-    // Załaduj sekcję history-short
-    include locate_template('./about-us/section-history-short.php', false, false);
+    // Section history-short
+    include locate_template('/inc/pages/about-us/sections/history.php', false, false);
     ?>
 </main>
 

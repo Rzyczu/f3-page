@@ -72,7 +72,6 @@ body {
 Footer on the bootom of the page.
 */
 
-html,
 body {
     height: 100%;
     overflow-x: hidden;
@@ -468,6 +467,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 251 247 / var(--tw-bg-opacity));
 }
 
 p,
@@ -1668,7 +1669,7 @@ textarea {
 }
 
 .news-article-img-logo {
-    filter: invert(96%) sepia(9%) saturate(611%) hue-rotate(35deg) brightness(113%) contrast(99%);
+    filter: invert(99%) sepia(69%) saturate(492%) hue-rotate(293deg) brightness(107%) contrast(99%);
     position: absolute;
     top: 0px;
     z-index: 10;

@@ -7,11 +7,11 @@ get_header();
 
 <main class="support-us-page">
     <?php
-    // Załaduj sekcję intro
-    include locate_template('./support-us/section-intro.php', false, false);
+    // Section intro
+    include locate_template('/inc/pages/support-us/sections/intro.php', false, false);
 
-    // Załaduj sekcję support z index
-    include locate_template('./index/section-support.php', false, false);
+    // Section support z index
+    include locate_template('/inc/pages/index/sections/support.php', false, false);
     ?>
 </main>
 

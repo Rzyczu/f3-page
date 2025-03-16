@@ -7,14 +7,14 @@ get_header();
 
 <main class="our-creativity">
     <?php
-    // Załaduj sekcję intro
-    include locate_template('./our-creativity/section-intro.php', false, false);
+    // Section intro
+    include locate_template('/inc/pages/our-creativity/sections/intro.php', false, false);
 
-    // Załaduj sekcję blank
-    include locate_template('./our-creativity/section-blank.php', false, false);
+    // Section blank
+    include locate_template('/inc/pages/our-creativity/sections/blank.php', false, false);
 
-    // Załaduj sekcję resources (nazwa może być zmieniona w zależności od pliku)
-    include locate_template('./our-creativity/section-resources.php', false, false);
+    // Section resources (nazwa może być zmieniona w zależności od pliku)
+    include locate_template('/inc/pages/our-creativity/sections/resources.php', false, false);
     ?>
 </main>
 

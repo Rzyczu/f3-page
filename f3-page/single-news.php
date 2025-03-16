@@ -22,7 +22,7 @@
                 <?php endif; ?>
 
                 <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title_attribute(); ?>" class="mb-6">
+                    <img loading="lazy" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title_attribute(); ?>" class="mb-6">
                 <?php endif; ?>
 
                 <div class="content">

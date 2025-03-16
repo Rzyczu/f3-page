@@ -1,5 +1,5 @@
 <?php
-// Plik: /inc/global/forms.php
+// File: /inc/global/forms.php
 
 function register_contact_message_cpt() {
     register_post_type('contact_message', array(

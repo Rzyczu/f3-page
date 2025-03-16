@@ -1,12 +1,11 @@
 <?php
-// Plik: /inc/global/customizer.php
+// File: /inc/global/customizer.php
 
 function sanitize_customizer_text($input) {
     return sanitize_text_field($input);
 }
 
 function customize_global_settings($wp_customize) {
-    // Przykładowe ustawienie w Customizerze
     $wp_customize->add_setting('footer_text', array(
         'default' => '',
         'sanitize_callback' => 'sanitize_customizer_text',
@@ -17,13 +16,11 @@ add_action('customize_register', 'customize_global_settings');
 
 
 function customize_footer_icons($wp_customize) {
-    // Sekcja w Customizerze
     $wp_customize->add_section('footer_icons_section', array(
         'title'    => __('Ikony Social Media w Stopce', 'your-theme-textdomain'),
         'priority' => 100,
     ));
 
-    // Opcja: Włącz/Wyłącz ikony
     $wp_customize->add_setting('footer_icons_display', array(
         'default'   => true,
         'transport' => 'refresh',
@@ -37,7 +34,6 @@ function customize_footer_icons($wp_customize) {
         'type'     => 'checkbox',
     ));
 
-    // Linki do ikon
     $social_links = array(
         'footer_email'    => __('E-mail', 'your-theme-textdomain'),
         'footer_instagram' => __('Instagram', 'your-theme-textdomain'),

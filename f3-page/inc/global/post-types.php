@@ -4,10 +4,10 @@
 function register_footer_link_post_type() {
     register_post_type('footer_link', array(
         'labels' => array(
-            'name' => __('Footer Links', 'your-theme-textdomain'),
-            'singular_name' => __('Footer Link', 'your-theme-textdomain'),
-            'add_new_item' => __('Add New Footer Link', 'your-theme-textdomain'),
-            'edit_item' => __('Edit Footer Link', 'your-theme-textdomain'),
+            'name' => __('Linki Stopki', 'your-theme-textdomain'),
+            'singular_name' => __('Link', 'your-theme-textdomain'),
+            'add_new_item' => __('Dodaj nowy link', 'your-theme-textdomain'),
+            'edit_item' => __('Edytuj link', 'your-theme-textdomain'),
         ),
         'public' => true,
         'has_archive' => false,
@@ -16,7 +16,7 @@ function register_footer_link_post_type() {
     ));
 
     add_action('add_meta_boxes', function () {
-        add_meta_box('footer_link_meta', __('Footer Link Details', 'your-theme-textdomain'), 'footer_link_meta_box', 'footer_link', 'normal', 'default');
+        add_meta_box('footer_link_meta', __('Szczegóły', 'your-theme-textdomain'), 'footer_link_meta_box', 'footer_link', 'normal', 'default');
     });
 
     add_action('save_post', function ($post_id) {
@@ -39,10 +39,10 @@ function footer_link_meta_box($post) {
         <input type="url" id="footer_link_url" name="footer_link_url" value="<?php echo esc_url($url); ?>" style="width: 100%;" placeholder="https://example.com">
     </p>
     <p>
-        <label for="footer_link_target"><?php _e('Link Target', 'your-theme-textdomain'); ?></label>
+        <label for="footer_link_target"><?php _e('Karta przeglądarki', 'your-theme-textdomain'); ?></label>
         <select id="footer_link_target" name="footer_link_target" style="width: 100%;">
-            <option value="_self" <?php selected($target, '_self'); ?>><?php _e('Same Tab (_self)', 'your-theme-textdomain'); ?></option>
-            <option value="_blank" <?php selected($target, '_blank'); ?>><?php _e('New Tab (_blank)', 'your-theme-textdomain'); ?></option>
+            <option value="_self" <?php selected($target, '_self'); ?>><?php _e('Ta sama karta (_self)', 'your-theme-textdomain'); ?></option>
+            <option value="_blank" <?php selected($target, '_blank'); ?>><?php _e('Nowa karta (_blank)', 'your-theme-textdomain'); ?></option>
         </select>
     </p>
     <?php
@@ -78,3 +78,8 @@ function change_pages_menu_position() {
     );
 }
 add_action('admin_menu', 'change_pages_menu_position', 999);
+
+function add_lazy_loading_to_images( $content ) {
+    return str_replace( '<img', '<img loading="lazy"', $content );
+}
+add_filter( 'the_content', 'add_lazy_loading_to_images' );

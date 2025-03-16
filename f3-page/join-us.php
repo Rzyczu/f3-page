@@ -7,14 +7,14 @@ get_header();
 
 <main class="join-us">
     <?php
-    // Załaduj sekcję intro
-    include locate_template('./join-us/section-intro.php', false, false);
+    // Section intro
+    include locate_template('/inc/pages/join-us/sections/intro.php', false, false);
 
-    // Załaduj sekcję join-info
-    include locate_template('./join-us/section-join-info.php', false, false);
+    // Section join-info
+    include locate_template('/inc/pages/join-us/sections/join-info.php', false, false);
 
-    // Załaduj sekcję docs
-    include locate_template('./join-us/section-docs.php', false, false);
+    // Section docs
+    include locate_template('/inc/pages/join-us/sections/docs.php', false, false);
     ?>
 </main>
 

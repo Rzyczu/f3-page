@@ -103,7 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburgerBtn.addEventListener("click", toggleNavbar);
   window.addEventListener("resize", () => {
-    contextMenu.classList.add('hidden');
+    if (contextMenu)
+      contextMenu.classList.add('hidden');
 
     if (window.innerWidth > 1024) {
       hamburgerBtn.classList.remove("is-active");
@@ -138,12 +139,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }, false);
 
   window.addEventListener('scroll', () => {
-    if (hamburgerBtn.classList.contains("is-active"))
-      return;
-    contextMenu.classList.add('hidden');
 
-    const scrollY = window.scrollY;
-    if (scrollY > 50) {
+    if (hamburgerBtn.classList.contains("is-active")) return;
+
+    if (contextMenu)
+      contextMenu.classList.add('hidden');
+
+    if (window.scrollY > 50) {
       navElement.classList.add('shadow-lg');
     } else {
       navElement.classList.remove('shadow-lg');
@@ -213,12 +215,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener('click', () => {
-    contextMenu.classList.add('hidden');
+    if (contextMenu)
+      contextMenu.classList.add('hidden');
   });
 
   menuItem.addEventListener('click', () => {
     toggleStickyNavbar();
-    contextMenu.classList.add('hidden');
+    if (contextMenu)
+      contextMenu.classList.add('hidden');
   });
 
   // Obsługa zdarzeń dla ikony emoji

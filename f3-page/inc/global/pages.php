@@ -70,3 +70,11 @@ function create_default_pages() {
     }
 }
 add_action('after_switch_theme', 'create_default_pages');
+
+function redirect_archives_to_home() {
+    if (is_archive()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_archives_to_home');
