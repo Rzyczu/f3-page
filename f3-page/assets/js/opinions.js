@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let active = 0;
 
-
+  if (!opinions || opinions.length === 0) {
+    return;
+  }
 
   function updateClasses() {
     opinions.forEach((opinion, index) => {
@@ -25,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Adjust the height of the container
     const activeOpinion = opinions[active];
     const opinionsContainer = document.querySelector('.opinions');
     opinionsContainer.style.height = activeOpinion.offsetHeight + 'px';
   }
 
-  // Initial setup
   updateClasses();
 
   function nextSlide() {
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateClasses();
   }
 
-  // Event listeners for buttons
   nextBtnOpinion.addEventListener('click', nextSlide);
 
   OpinionOpinion.addEventListener('click', prevSlide);

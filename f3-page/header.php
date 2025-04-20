@@ -17,16 +17,9 @@
     <meta property="og:type" content="<?php echo (is_single()) ? 'article' : 'website'; ?>">
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo esc_attr(get_the_title()); ?>">
-    <meta name="twitter:description" content="<?php echo wp_strip_all_tags(get_the_excerpt()); ?>">
-    <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>">
-    <meta name="twitter:site" content="@TwojTwitter">
-
     <!-- Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" as="style">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/css/custom.css" as="style">
+    <link rel="prefetch" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" as="style" crossorigin>
+    <link rel="prefetch" href="<?php echo get_template_directory_uri(); ?>/assets/css/custom.css" as="style">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -39,6 +32,11 @@
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
       >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.7.2/css/solid.css"
+      >                  
 
       <link
         rel="stylesheet"
@@ -71,8 +69,7 @@
         "url": "<?php echo esc_url(get_home_url()); ?>",
         "logo": "<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/logo.png",
         "sameAs": [
-          "<?php echo esc_url(get_option('facebook_url', 'https://www.facebook.com/TWOJA_STRONA')); ?>",
-          "<?php echo esc_url(get_option('twitter_url', 'https://twitter.com/TWOJA_STRONA')); ?>"
+          "<?php echo esc_url(get_option('facebook_url', 'https://www.facebook.com/szczepf3')); ?>",
         ]
       }
 </script>

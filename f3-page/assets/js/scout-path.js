@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let scoutPathContent = document.querySelectorAll('.scout-path-content');
   let scoutPathElements = document.querySelectorAll('.scout-path-element');
 
+  scoutPathElements[0].classList.add('active');
+
   function clickEvent() {
     scoutPathElements.forEach(item => {
       item.classList.remove('active');

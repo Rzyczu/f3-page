@@ -1,6 +1,23 @@
 <?php
 // File: /inc/global/customizer.php
 
+function allow_extended_tags($input) {
+    return wp_kses($input, array_merge(
+        wp_kses_allowed_html('post'),
+        array(
+            'ul' => array(),
+            'ol' => array(),
+            'li' => array(),
+            'a'  => array(
+                'href' => true,
+                'title' => true,
+                'target' => true,
+                'rel' => true,
+            ),
+        )
+    ));
+}
+
 function sanitize_customizer_text($input) {
     return sanitize_text_field($input);
 }

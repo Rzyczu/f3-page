@@ -15,7 +15,7 @@
                 ?>
                 <img src="<?php echo esc_url($image); ?>"
                      class="h-16 hover:scale-110 scout-path-element lg:h-20 xl:h-28"
-                     alt="<?php esc_attr_e("Scout Path $i", 'your-theme-textdomain'); ?>"
+                     alt="<?php echo esc_attr(sprintf(__('Scout Path %d', 'your-theme-textdomain'), $i)); ?>"
                      id="scout-path-<?php echo $i; ?>" 
                      loading="lazy"/>
                 <?php
@@ -25,11 +25,26 @@
         <?php
         for ($i = 1; $i <= 6; $i++) {
             $title = get_theme_mod("join_step_title_$i", __("Krok $i", 'your-theme-textdomain'));
-            $content = get_theme_mod("join_step_content_$i", __("Opis dla kroku $i", 'your-theme-textdomain'));
+            $content_left = get_theme_mod("join_step_content_left_$i", __("Opis dla kroku $i - Lewa strona", 'your-theme-textdomain'));
+            $content_right = get_theme_mod("join_step_content_right_$i", __("Opis dla kroku $i - Prawa strona", 'your-theme-textdomain'));
+            $layout = get_theme_mod("join_step_layout_$i", 'left_right');
             ?>
-            <div class="scout-path-content <?php echo $i === 1 ? 'active' : ''; ?>" data-id="scout-path-<?php echo $i; ?>">
+            <div class="scout-path-content w-full <?php echo $i === 1 ? 'active' : ''; ?>" data-id="scout-path-<?php echo $i; ?>">
                 <h3 class="mb-8"><?php echo esc_html($title); ?></h3>
-                <div class="text-content"><?php echo wp_kses_post($content); ?></div>
+                <?php
+                    if ($layout === 'full') :
+                 ?>
+                <div class="text-content"><?php echo wp_kses_post($content_left); ?></div>
+                <?php
+                else :
+                ?>
+                <div class="grid w-full md:grid-cols-2 md:gap-x-20 gap-y-8">
+                        <div class="text-content"><?php echo wp_kses_post($content_left); ?></div>
+                        <div class="text-content"><?php echo wp_kses_post($content_right); ?></div>
+                </div>
+                <?php
+                endif;
+                ?>
             </div>
             <?php
         }

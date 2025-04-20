@@ -448,6 +448,18 @@ section {
     --tw-contain-style:
 }
 
+.hover\:text-gray:hover,
+.text-gray {
+    --tw-text-opacity: 1;
+    color: rgb(196 194 193 / var(--tw-text-opacity))
+}
+
+.hover\:text-white:hover,
+.text-white {
+    --tw-text-opacity: 1;
+    color: rgb(254 251 247 / var(--tw-text-opacity))
+}
+
 #custom-context-menu,
 .shadow-md {
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -1577,7 +1589,15 @@ input[type=checkbox]::before {
 
 .gap-x-12 {
     -moz-column-gap: 3rem;
-    column-gap: 3rem
+    column-gap: 3rem;
+}
+
+.gap-y-4 {
+    row-gap: 1rem;
+}
+
+.gap-y-8 {
+    row-gap: 2rem;
 }
 
 .space-x-2>:not([hidden])~:not([hidden]) {
@@ -1791,18 +1811,6 @@ input[type=checkbox] {
     font-weight: 600
 }
 
-.hover\:text-gray:hover,
-.text-gray {
-    --tw-text-opacity: 1;
-    color: rgb(196 194 193 / var(--tw-text-opacity))
-}
-
-.hover\:text-white:hover,
-.text-white {
-    --tw-text-opacity: 1;
-    color: rgb(254 251 247 / var(--tw-text-opacity))
-}
-
 .shadow-lg {
     --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1919,6 +1927,14 @@ input[type=checkbox] {
 
     .max-md\:pt-12 {
         padding-top: 3rem
+    }
+
+    .max-md\:mb-4 {
+        margin-bottom: 1rem;
+    }
+
+    .max-md\:mb-8 {
+        margin-bottom: 2rem;
     }
 }
 

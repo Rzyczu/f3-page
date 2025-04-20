@@ -21,7 +21,7 @@ function customize_section_history($wp_customize) {
         'default'           => __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'),
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
-    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_history_text', array(
+    $wp_customize->add_control(new Custom_HTML_Editor_Control($wp_customize, 'section_history_text', array(
         'label'   => __('Kontekst', 'your-theme-textdomain'),
         'section' => 'section_history',
     )));

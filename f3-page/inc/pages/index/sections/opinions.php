@@ -1,3 +1,12 @@
+<?php
+// Query to get all opinions
+$opinions = new WP_Query(array(
+    'post_type' => 'opinion',
+    'posts_per_page' => -1,
+));
+
+if ($opinions->have_posts()) : ?>
+
 <section class="my-24 text-white bg-primary">
     <div class="container flex flex-col py-24 mx-auto sm:relative sm:block sm:flex-none">
         <div class="order-3 float-right max-sm:mt-12">
@@ -59,3 +68,5 @@
         </div>
     </div>
 </section>
+
+<?php endif; ?>

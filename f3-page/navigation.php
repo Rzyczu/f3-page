@@ -19,7 +19,7 @@
                      class="h-8 svg-color-gray group-hover:svg-color-primary" 
                      alt="<?php bloginfo('name'); ?>" />
             <?php endif; ?>
-               <span id="navbar-brand" class="text-xs font-medium xl:text-xs text-gray lg:text-2xs group-hover:text-primary">
+               <span id="navbar-brand" class="text-xs font-medium xl:text-xs text-gray lg:text-2xs group-hover:text-pimary">
                      3 Podgórski Szczep Fioletowej Trójki<br />
                      im. Tadeusza Kościuszki
                </span>

@@ -41,3 +41,8 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
 
 // remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
+function mytheme_enqueue_extension_error_suppressor() {
+    wp_enqueue_script('suppress-extension-errors', get_template_directory_uri() . '/assets/js/suppress-extension-errors.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_extension_error_suppressor');

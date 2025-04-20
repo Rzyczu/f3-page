@@ -20,7 +20,7 @@ function customize_section_teams($wp_customize) {
         'default' => __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/ symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'),
         'sanitize_callback' => 'wp_kses_post',
     ));
-    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_main', array(
+    $wp_customize->add_control(new Custom_HTML_Editor_Control($wp_customize, 'section_teams_text_main', array(
         'label' => __('Kontekst', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
@@ -40,7 +40,7 @@ function customize_section_teams($wp_customize) {
         'default' => __('W strukturach ZHR działa Organizacja Harcerek oraz Organizacja Harcerzy, stąd podział drużyn ze względu na płeć.', 'your-theme-textdomain'),
         'sanitize_callback' => 'wp_kses_post',
     ));
-    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_how', array(
+    $wp_customize->add_control(new Custom_HTML_Editor_Control($wp_customize, 'section_teams_text_how', array(
         'label' => __('Kontekst', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
@@ -60,7 +60,7 @@ function customize_section_teams($wp_customize) {
         'default' => __('Kolejnym ważnym odróżnieniem drużyn jest ze względu na wiek. Są trzy główne grupy wiekowe: <br /> - Gromady zuchowe: 7–10 lat <br /> - Drużyny harcerskie: 11-15 lat <br /> - Drużyny wędrownicze: 16-18 lat', 'your-theme-textdomain'),
         'sanitize_callback' => 'wp_kses_post',
     ));
-    $wp_customize->add_control(new WP_Customize_TinyMCE_Control($wp_customize, 'section_teams_text_age', array(
+    $wp_customize->add_control(new Custom_HTML_Editor_Control($wp_customize, 'section_teams_text_age', array(
         'label' => __('Kontekst', 'your-theme-textdomain'),
         'section' => 'section_teams',
         'type' => 'textarea',
