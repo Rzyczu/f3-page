@@ -12,7 +12,7 @@ function register_team_post_type() {
         'has_archive' => false,
         'supports' => array('title', 'thumbnail', 'page-attributes'),
         'menu_icon'    => 'dashicons-networking',
-    ));
+    ));         
 
     add_action('add_meta_boxes', function () {
         add_meta_box('team_meta', __('Szczegóły', 'your-theme-textdomain'), 'team_meta_box', 'team', 'normal', 'default');

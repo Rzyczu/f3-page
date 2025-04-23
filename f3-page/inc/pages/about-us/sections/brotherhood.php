@@ -16,8 +16,7 @@
                 $args = array(
                     'post_type'      => 'brotherhood_banner',
                     'posts_per_page' => -1,
-                    'meta_key'       => 'brotherhood_order',
-                    'orderby'        => 'meta_value_num',
+                    'orderby'        => 'menu_order',
                     'order'          => 'ASC',
                 );
                 $query = new WP_Query($args);

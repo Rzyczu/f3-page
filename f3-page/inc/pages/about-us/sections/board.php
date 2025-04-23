@@ -35,8 +35,7 @@
                 $persons = get_posts(array(
                     'post_type' => 'board_member',
                     'posts_per_page' => -1,
-                    'meta_key' => 'person_order',
-                    'orderby' => 'meta_value_num',
+                    'orderby' => 'menu_order',
                     'order' => 'ASC',
                     'meta_query' => array(
                         array(

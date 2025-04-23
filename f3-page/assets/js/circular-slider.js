@@ -64,3 +64,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  document.querySelectorAll('.circular-carousel').forEach(carousel => {
+    const links = carousel.querySelectorAll('.slide-link');
+
+    links.forEach(link => {
+      const type = link.dataset.type;
+      const value = link.dataset.value;
+
+      if ((type === 'mail' || type === 'phone') && !isMobile) {
+        link.removeAttribute('href');
+
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const displayValue = value.replace(/^mailto:|^tel:/, '');
+          const existingSpan = this.querySelector('.tooltip-info');
+
+          if (existingSpan) {
+            existingSpan.remove();
+            return;
+          }
+
+          const info = document.createElement('span');
+          info.textContent = displayValue;
+          info.className = 'tooltip-info';
+          info.style.marginLeft = '1rem';
+          info.style.fontSize = '1.125rem';
+          info.style.color = 'inherit';
+          info.style.userSelect = 'text';
+          info.style.cursor = 'pointer';
+          info.style.position = 'relative';
+
+          // Tooltip
+          const tooltip = document.createElement('div');
+          tooltip.textContent = 'Skopiowano!';
+          tooltip.style.position = 'absolute';
+          tooltip.style.top = '-2.5em';
+          tooltip.style.left = '0';
+          tooltip.style.background = '#777';
+          tooltip.style.color = '#fff';
+          tooltip.style.fontSize = '1.125rem';
+          tooltip.style.padding = '2px 6px';
+          tooltip.style.borderRadius = '4px';
+          tooltip.style.opacity = '0';
+          tooltip.style.transition = 'opacity 0.3s ease';
+          tooltip.style.pointerEvents = 'none';
+
+          info.appendChild(tooltip);
+
+          info.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            const tempInput = document.createElement('input');
+            tempInput.value = displayValue;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            tooltip.style.opacity = '1';
+            setTimeout(() => {
+              tooltip.style.opacity = '0';
+            }, 1500);
+          });
+
+          this.appendChild(info);
+        });
+      } else if ((type === 'mail' || type === 'phone') && isMobile) {
+        if (type === 'mail') link.href = `mailto:${value.replace(/^mailto:/, '')}`;
+        if (type === 'phone') link.href = `tel:${value.replace(/^tel:/, '')}`;
+      }
+    });
+  });
+});

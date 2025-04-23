@@ -58,11 +58,25 @@
                         <h4 class="slide-title"><?php echo esc_html(get_the_title($team->ID)); ?></h4>
                         <p><?php echo esc_html($description); ?></p>
                         <div class="slide-media">
-                            <?php foreach ($links as $link) : ?>
-                                <a target="_blank" href="<?php echo esc_url($link['url']); ?>">
-                                    <i class="<?php echo esc_attr($link['icon']); ?> fa-2x"></i>
-                                </a>
-                            <?php endforeach; ?>
+                        <?php foreach ($links as $link) :
+                            $url = esc_url($link['url']);
+                            $icon = esc_attr($link['icon']);
+                            $is_mail = strpos($icon, 'envelope') !== false;
+                            $is_phone = strpos($icon, 'phone') !== false;
+
+                            $type = $is_mail ? 'mail' : ($is_phone ? 'phone' : 'url');
+
+                            $data_type_attr = "data-type=\"$type\"";
+                            $data_value_attr = "data-value=\"$url\"";
+                        ?>
+                            <a 
+                                href="<?php echo ($type === 'url') ? $url : '#'; ?>" 
+                                class="slide-link" 
+                                <?php echo $data_type_attr . ' ' . $data_value_attr; ?> 
+                                target="<?php echo ($type === 'url') ? '_blank' : '_self'; ?>">
+                                <i class="<?php echo $icon; ?> fa-2x"></i>
+                            </a>
+                        <?php endforeach; ?>
                         </div>
                     </div>
                     <?php
@@ -72,3 +86,10 @@
         </div>
     </div>
 </section>
+
+<script>
+   
+
+</script>
+
+

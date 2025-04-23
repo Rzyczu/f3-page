@@ -12,8 +12,7 @@
             $docs = get_posts(array(
                 'post_type' => 'document',
                 'posts_per_page' => -1,
-                'meta_key' => 'document_order',
-                'orderby' => 'meta_value_num',
+                'orderby' => 'menu_order',
                 'order' => 'ASC',
             ));
              

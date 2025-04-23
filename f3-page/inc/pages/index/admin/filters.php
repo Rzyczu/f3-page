@@ -21,7 +21,25 @@ add_action('pre_get_posts', function ($query) {
         return;
     }
 
-    if ($query->get('orderby') === 'menu_order' && $query->get('post_type') === 'structure') {
+    if ($query->get('post_type') === 'structure' && !$query->get('orderby')) {
         $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+    }
+});
+
+
+add_filter('manage_edit-opinion_sortable_columns', function ($columns) {
+    $columns['menu_order'] = 'menu_order';
+    return $columns;
+});
+
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->get('post_type') === 'opinion' && !$query->get('orderby')) {
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
     }
 });

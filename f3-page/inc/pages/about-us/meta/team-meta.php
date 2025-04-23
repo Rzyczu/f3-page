@@ -10,6 +10,7 @@ function team_meta_box($post) {
         'www'       => 'fa-regular fa-globe',
         'facebook'  => 'fa-brands fa-facebook',
         'instagram' => 'fa-brands fa-instagram',
+        'phone'     => 'fa-solid fa-phone'
     );
     ?>
     <p>
@@ -45,9 +46,13 @@ function team_meta_box($post) {
                     }
                     ?>
                     <div class="team-link" style="margin-bottom:10px; display:flex; gap:5px;">
-                        <input type="url" name="team_links[url][]" value="<?php echo esc_url($link['url']); ?>" placeholder="URL" style="width:30%;" />
+                    <input type="url" name="team_links[url][]" value="<?php echo esc_url($link['url']); ?>" class="url-input" placeholder="<?php
+                        echo ($icon_select === 'mail') ? 'mailto:mail@adres.pl' :
+                            (($icon_select === 'phone') ? 'tel:+48123456789' : 'https://example.com');
+                    ?>" style="width:30%;" />
                         <select name="team_links[icon_select][]" class="icon-select" style="width:20%;">
                             <option value="mail" <?php selected($icon_select, 'mail'); ?>><?php _e('Mail', 'your-theme-textdomain'); ?></option>
+                            <option value="phone" <?php selected($icon_select, 'phone'); ?>><?php _e('Telefon', 'your-theme-textdomain'); ?></option>
                             <option value="www" <?php selected($icon_select, 'www'); ?>><?php _e('WWW', 'your-theme-textdomain'); ?></option>
                             <option value="facebook" <?php selected($icon_select, 'facebook'); ?>><?php _e('Facebook', 'your-theme-textdomain'); ?></option>
                             <option value="instagram" <?php selected($icon_select, 'instagram'); ?>><?php _e('Instagram', 'your-theme-textdomain'); ?></option>
@@ -65,6 +70,7 @@ function team_meta_box($post) {
         (function(){
             const defaultIcons = {
                 'mail': 'fa-regular fa-envelope',
+                'phone': 'fa-solid fa-phone',
                 'www': 'fa-regular fa-globe',
                 'facebook': 'fa-brands fa-facebook',
                 'instagram': 'fa-brands fa-instagram',
@@ -73,13 +79,32 @@ function team_meta_box($post) {
 
             function updateIconClass(selectElem) {
                 const selectedValue = selectElem.value;
-                const iconInput = selectElem.parentElement.querySelector('.icon-class-input');
+                const parent = selectElem.parentElement;
+                const iconInput = parent.querySelector('.icon-class-input');
+                const urlInput = parent.querySelector('.url-input');
+
                 if (selectedValue !== 'other') {
                     iconInput.value = defaultIcons[selectedValue];
                     iconInput.placeholder = '';
                 } else {
                     iconInput.value = '';
                     iconInput.placeholder = 'Icon Class';
+                }
+
+                 switch (selectedValue) {
+                    case 'mail':
+                        urlInput.placeholder = 'mailto:mail@adres.pl';
+                        break;
+                    case 'phone':
+                        urlInput.placeholder = 'tel:+48123456789';
+                        break;
+                    case 'www':
+                    case 'facebook':
+                    case 'instagram':
+                    case 'other':
+                    default:
+                        urlInput.placeholder = 'https://example.com';
+                        break;
                 }
             }
 
@@ -97,9 +122,10 @@ function team_meta_box($post) {
                 newLink.style.display = 'flex';
                 newLink.style.gap = '5px';
                 newLink.innerHTML = `
-                    <input type="url" name="team_links[url][]" placeholder="URL" style="width:30%;" />
+                    <input type="url" name="team_links[url][]" placeholder="https://example.com" class="url-input" style="width:30%;" />
                     <select name="team_links[icon_select][]" class="icon-select" style="width:20%;">
                         <option value="mail">Mail</option>
+                        <option value="phone">Telefon</option>
                         <option value="www">WWW</option>
                         <option value="facebook">Facebook</option>
                         <option value="instagram">Instagram</option>

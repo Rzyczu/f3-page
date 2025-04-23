@@ -10,14 +10,13 @@ function register_document_post_type() {
         ),
         'public' => true,
         'has_archive' => false,
-        'supports' => array('title'),
+        'supports' => array('title' , 'page-attributes'),
         'menu_icon'    => 'dashicons-media-document',
         'menu_position'=> 19,
     ));
 
     add_action('add_meta_boxes', function () {
         add_meta_box('document_meta', __('Szczegóły', 'your-theme-textdomain'), 'document_meta_box', 'document', 'normal', 'default');
-        add_meta_box('document_order_meta', __('Kolejność', 'your-theme-textdomain'), 'document_order_meta_box', 'document', 'side', 'core');
     });    
 
     add_action('save_post', function ($post_id) {

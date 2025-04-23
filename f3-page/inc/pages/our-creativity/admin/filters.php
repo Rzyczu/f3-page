@@ -32,10 +32,12 @@ add_action('pre_get_posts', function ($query) {
         return;
     }
 
-    if ($query->get('orderby') === 'menu_order' && $query->get('post_type') === 'resource_item') {
+    if ($query->get('post_type') === 'resource_item' && !$query->get('orderby')) {
         $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
     }
 });
+
 
 add_filter('manage_edit-resource_group_sortable_columns', function ($columns) {
     $columns['menu_order'] = 'menu_order';
@@ -47,7 +49,8 @@ add_action('pre_get_posts', function ($query) {
         return;
     }
 
-    if ($query->get('orderby') === 'menu_order' && $query->get('post_type') === 'resource_group') {
+    if ($query->get('post_type') === 'resource_group' && !$query->get('orderby')) {
         $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
     }
 });

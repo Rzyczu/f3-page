@@ -21,7 +21,7 @@ function register_brotherhood_post_type() {
         'show_in_menu'       => true,
         'menu_position'      => 20,
         'menu_icon'          => 'dashicons-flag',
-        'supports'           => array('title', 'editor', 'thumbnail'),
+        'supports'           => array('title', 'editor', 'thumbnail', 'page-attributes'),
         'has_archive'        => false,
         'publicly_queryable' => false,
     );

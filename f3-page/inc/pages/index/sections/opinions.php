@@ -3,6 +3,8 @@
 $opinions = new WP_Query(array(
     'post_type' => 'opinion',
     'posts_per_page' => -1,
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
 ));
 
 if ($opinions->have_posts()) : ?>
