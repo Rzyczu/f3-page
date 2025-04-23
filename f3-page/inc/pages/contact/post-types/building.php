@@ -10,7 +10,7 @@ function register_building_post_type() {
         ),
         'public' => true,
         'has_archive' => false,
-        'supports' => array('title'),
+        'supports' => array('title', 'page-attributes'),
         'menu_icon'    => 'dashicons-admin-home',
         'menu_position'=> 22,
     ));

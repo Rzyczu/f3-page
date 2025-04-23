@@ -699,7 +699,7 @@ nav {
 }
 
 .slide-dot {
-    transform: rotate(calc(360deg / var(--total-slides) * var(--i)));
+    transform: rotate(calc(360deg / var(--total-slides) * var(--i) + 90deg));
     z-index: 10
 }
 
@@ -831,6 +831,7 @@ nav {
 .board-group,
 .board-group.active {
     display: grid;
+    align-items: baseline;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
@@ -883,7 +884,11 @@ nav {
 .slide-title {
     margin-bottom: .5rem;
     font-size: 1.25rem;
-    font-weight: 500
+    font-weight: 500;
+}
+
+.person-title {
+    text-align: center;
 }
 
 .board-group.active[data-id=board-personnel] .person-card:first-child,
@@ -1790,6 +1795,10 @@ input[type=checkbox] {
     font-size: .875rem
 }
 
+.text-base {
+    font-size: 1rem
+}
+
 .text-xl {
     font-size: 1.25rem
 }
@@ -1935,6 +1944,10 @@ input[type=checkbox] {
 
     .max-md\:mb-8 {
         margin-bottom: 2rem;
+    }
+
+    .max-md\:text-lg {
+        font-size: 1.125rem
     }
 }
 
@@ -2234,7 +2247,6 @@ input[type=checkbox] {
         -moz-column-gap: 4rem;
         column-gap: 4rem;
         grid-template-columns: repeat(2, auto);
-        gap: 4rem
     }
 
     .brotherhood-photos {

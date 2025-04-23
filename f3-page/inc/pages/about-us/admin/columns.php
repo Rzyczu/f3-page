@@ -106,7 +106,38 @@ function sort_board_member_by_order($query) {
 
     if (isset($query->query_vars['orderby']) && $query->query_vars['orderby'] === 'person_order') {
         $query->set('meta_key', 'person_order');
-        $query->set('orderby', 'meta_value_num'); // Sortowanie numeryczne
+        $query->set('orderby', 'meta_value_num');
     }
 }
 add_action('pre_get_posts', 'sort_board_member_by_order');
+
+add_filter('manage_edit-brotherhood_banner_sortable_columns', function ($columns) {
+    $columns['brotherhood_order'] = 'brotherhood_order';
+    return $columns;
+});
+
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->get('orderby') === 'brotherhood_order') {
+        $query->set('meta_key', 'brotherhood_order');
+        $query->set('orderby', 'meta_value_num');
+    }
+});
+
+add_filter('manage_edit-team_sortable_columns', function ($columns) {
+    $columns['menu_order'] = 'menu_order';
+    return $columns;
+});
+
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->get('orderby') === 'menu_order' && $query->get('post_type') === 'team') {
+        $query->set('orderby', 'menu_order');
+    }
+});

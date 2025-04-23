@@ -3,6 +3,7 @@
 // Admin
 require_once __DIR__ . '/admin/menu.php';
 require_once __DIR__ . '/admin/assets.php';
+require_once __DIR__ . '/admin/filters.php';
 
 // Customizer
 require_once __DIR__ . '/customizer/sections/about.php';

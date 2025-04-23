@@ -15,6 +15,8 @@
                 $group_items = get_posts(array(
                     'post_type' => 'resource_item',
                     'posts_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'resource_group_category',
@@ -23,6 +25,7 @@
                         ),
                     ),
                 ));
+                
                 ?>
                 <div class="lg:basis-1/4 md:basis-1/2 max-lg:mb-12">
                     <h2 class="mb-4"><?php echo esc_html(get_the_title($group->ID)); ?></h2>

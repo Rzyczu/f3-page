@@ -916,7 +916,7 @@ nav {
 
 .slide-dot {
     border-radius: 50%;
-    transform: rotate(calc(360deg / var(--total-slides) * var(--i)));
+    transform: rotate(calc(360deg / var(--total-slides) * var(--i) + 90deg));
     z-index: 10;
 }
 
@@ -1135,6 +1135,7 @@ nav {
 .board-group.active {
     position: relative;
     display: grid;
+    align-items: baseline;
     opacity: 1;
     --tw-scale-x: 1;
     --tw-scale-y: 1;
@@ -1189,6 +1190,10 @@ nav {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
     font-weight: 500;
+}
+
+.person-title {
+    text-align: center;
 }
 
 .board-group.active[data-id="board-personnel"] .person-card:first-child {
@@ -1288,9 +1293,6 @@ nav {
 @media (min-width: 768px) {
     .brotherhood {
         grid-template-columns: repeat(2, auto);
-        /* Custom column definition */
-        gap: 4rem;
-        /* Matches md:gap-x-16 */
     }
 
     .brotherhood-photos {
@@ -2381,6 +2383,10 @@ textarea {
     font-size: 1.25rem;
 }
 
+.text-base {
+    font-size: 1rem;
+}
+
 .text-xs {
     font-size: 0.75rem;
 }
@@ -2583,6 +2589,10 @@ textarea {
 
     .max-md\:mb-8 {
         margin-bottom: 2rem;
+    }
+
+    .max-md\:text-lg {
+        font-size: 1.125rem
     }
 }
 

@@ -12,18 +12,20 @@
                 $teams = get_posts(array(
                     'post_type' => 'team',
                     'posts_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
                     'meta_query' => array(
                         array(
                             'key' => 'team_gender',
                             'value' => $gender ?? 'all',
-                            'compare' => '='
+                            'compare' => '=',
                         )
                     )
                 ));
 
                 if (!empty($teams)) :
                     foreach ($teams as $team) :
-                        $image = get_the_post_thumbnail_url($team->ID, 'medium') ?: get_template_directory_uri() . '/assets/team-placeholder.jpg';
+                        $image = get_the_post_thumbnail_url($team->ID, 'full') ?: get_template_directory_uri() . '/assets/team-placeholder.jpg';
                         ?>
                         <div class="slide-image">
                             <img alt="<?php echo esc_attr(get_the_title($team->ID)); ?>" class="" src="<?php echo esc_url($image); ?>" loading="lazy">

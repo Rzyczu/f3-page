@@ -10,7 +10,7 @@ function register_team_post_type() {
         ),
         'public' => true,
         'has_archive' => false,
-        'supports' => array('title', 'thumbnail'),
+        'supports' => array('title', 'thumbnail', 'page-attributes'),
         'menu_icon'    => 'dashicons-networking',
     ));
 

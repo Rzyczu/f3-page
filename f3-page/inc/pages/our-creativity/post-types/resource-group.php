@@ -10,8 +10,8 @@ function register_resource_group_cpt() {
         'edit_item'          => __('Edytuj grupę', 'your-theme-textdomain'),
         'new_item'           => __('Nowa grupa', 'your-theme-textdomain'),
         'view_item'          => __('Zobacz grupę', 'your-theme-textdomain'),
-        'search_items'       => __('Wyszukaj grupę', 'your-theme-textdomain'),
-        'not_found'          => __('Nie znalezniono żadnej grupy', 'your-theme-textdomain'),
+        'search_items'       => __('Wyszukaj grupę', 'your-theniono żadnej grupyme-textdomain'),
+        'not_found'          => __('Nie znalez', 'your-theme-textdomain'),
         'not_found_in_trash' => __('Nie znalezniono żadnej grupy w koszu', 'your-theme-textdomain')
     );
 

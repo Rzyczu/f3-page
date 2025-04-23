@@ -1,5 +1,10 @@
 <?php
 
+// Admin
+require_once __DIR__ . '/admin/menu.php';
+require_once __DIR__ . '/admin/filters.php';
+require_once __DIR__ . '/admin/quick-edit.php';
+
 // Customizer
 require_once __DIR__ . '/customizer/sections/intro.php';
 require_once __DIR__ . '/customizer/sections/steps.php';
