@@ -1,6 +1,6 @@
 # F3 Page — WordPress Theme
 
-Custom **WordPress** theme for the scouting unit “Szczep Fioletowej Trójki” (Fioletowa Trójka). Built with **Tailwind CSS** and a rich set of WordPress features: custom post types, meta boxes, Customizer sections, admin columns/filters, and server‑rendered templates for all public pages.
+Custom **WordPress** theme for the scouting unit “Szczep Fioletowej Trójki”. Built with **Tailwind CSS** and a rich set of WordPress features: custom post types, meta boxes, Customizer sections, admin columns/filters, and server‑rendered templates for all public pages.
 
 **Live Demo:** https://f3.zhr.pl/
 
