@@ -16,6 +16,9 @@ function customize_structure_panel($wp_customize) {
     if ($wp_customize->get_section('section_teams')) {
         $wp_customize->get_section('section_teams')->panel = 'panel_structure';
     }
+    if ($wp_customize->get_section('section_association')) {
+        $wp_customize->get_section('section_association')->panel = 'panel_structure';
+    }
     if ($wp_customize->get_section('section_brotherhood')) {
         $wp_customize->get_section('section_brotherhood')->panel = 'panel_structure';
     }

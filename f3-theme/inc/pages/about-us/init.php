@@ -7,6 +7,7 @@ require_once __DIR__ . '/admin/filters.php';
 require_once __DIR__ . '/admin/quick-edit.php';
 
 // Customizer
+require_once __DIR__ . '/customizer/sections/association.php';
 require_once __DIR__ . '/customizer/sections/brotherhood.php';
 require_once __DIR__ . '/customizer/sections/history.php';
 require_once __DIR__ . '/customizer/sections/intro.php';

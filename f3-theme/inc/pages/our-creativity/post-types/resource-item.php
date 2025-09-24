@@ -21,7 +21,7 @@ function register_resource_item_cpt() {
         'show_in_menu'       => true,
         'menu_position'      => 21,
         'menu_icon'          => 'dashicons-media-document',
-        'supports'           => array('title' , 'excerpt'),
+        'supports'           => array('title', 'excerpt', 'page-attributes'),
         'hierarchical'       => false,
         'has_archive'        => false,
         'rewrite'            => array('slug' => 'resource-item'),

@@ -82,7 +82,12 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
           e.preventDefault();
 
-          const displayValue = value.replace(/^mailto:|^tel:/, '');
+         let displayValue = value.replace(/^mailto:|^tel:/, '');
+
+          if (type === 'phone') {
+            displayValue = displayValue.replace(/^(\+\d{2})(\d{3})(\d{3})(\d{3})$/, '$1 $2 $3 $4');
+          }          
+          
           const existingSpan = this.querySelector('.tooltip-info');
 
           if (existingSpan) {

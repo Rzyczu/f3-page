@@ -1,6 +1,6 @@
 <footer class="text-white bg-primary">
     <div class="container flex flex-col items-center justify-between py-4 mx-auto font-medium text-center sm:flex-row">
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8 max-md:mb-4">
             <img loading="lazy" src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/svg/logo.svg'); ?>" 
                  class="h-8 svg-color-white" 
                  alt="<?php esc_attr_e('Logo', 'your-theme-textdomain'); ?>" />
@@ -11,7 +11,6 @@
         <div class="flex items-center gap-16">
         <div class="flex items-center gap-8">
             <?php
-            // Pobieranie linków z CPT
             $footer_links = get_posts(array(
                 'post_type' => 'footer_link',
                 'posts_per_page' => -1,
@@ -34,11 +33,15 @@
             <div class="flex items-center gap-8">
             <?php if (get_theme_mod('footer_icons_display', true)) : ?>
     <div class="flex items-center gap-8">
-        <?php if ($email = get_theme_mod('footer_email')) : ?>
-            <a href="mailto:<?php echo esc_url($email); ?>" target="_blank" rel="noopener noreferrer">
-                <i class="text-white fa-regular fa-envelope fa-xl"></i>
-            </a>
-        <?php endif; ?>
+    <?php if ($email = get_theme_mod('footer_email')) : ?>
+        <a class="slide-link" 
+            data-type="mail" 
+            data-value="<?php echo esc_attr($email); ?>"
+            href="mailto:<?php echo esc_attr($email); ?>">
+            <i class="text-white fa-regular fa-envelope fa-xl"></i>
+        </a>
+    <?php endif; ?>
+
 
         <?php if ($instagram = get_theme_mod('footer_instagram')) : ?>
             <a href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">

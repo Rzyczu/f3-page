@@ -5,10 +5,18 @@
                 <?php echo esc_html(get_theme_mod('section_history_heading', __('Nasza historia', 'your-theme-textdomain'))); ?>
             </h2>
             <p class="mb-6">
-                <?php echo esc_html(get_theme_mod('section_history_text', __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'))); ?>
+                <?php echo wp_kses_post(get_theme_mod('section_history_text', __('Działają w grupach rówieśniczych, w jednej drużynie jest około 15-30 osób. Nazwa "Podgórska" jest nazwą historyczną/symboliczną. Nasze drużyny działają w różnych rejonach Krakowa.', 'your-theme-textdomain'))); ?>
             </p>
-            <a href="<?php echo esc_url(get_permalink(get_page_by_path('history'))); ?>" class="hover:font-semibold stroke-white hover:stroke-gray">
-                <svg class="w-16 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.621 27.941">
+            <?php if (get_theme_mod('section_history_button_visible', true)) : ?>
+            <a 
+            href="<?php echo esc_url(get_theme_mod('section_history_link', get_permalink(get_page_by_path('history')))); ?>"
+                class="hover:font-semibold stroke-primary stroke-white hover:stroke-gray">
+                <span class="text-xs">
+                    <?php 
+                    echo esc_html(get_theme_mod('section_history_button_text', __('Dowiedz się więcej', 'your-theme-textdomain'))); 
+                    ?>
+                </span>
+                <svg class="w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.621 27.941">
                     <g id="Group_131" data-name="Group 131" transform="translate(132.162 27.204) rotate(180)">
                         <path id="Path_461" data-name="Path 461" d="M1299.5,1378.625l-13.766,12.656,14.381,13.828"
                               transform="translate(-1285.732 -1378.625)" fill="none" stroke-miterlimit="10" stroke-width="3" />
@@ -17,6 +25,7 @@
                     </g>
                 </svg>
             </a>
+            <?php endif; ?>
         </div>
 
         <img src="<?php echo esc_url(get_theme_mod('section_history_image', get_template_directory_uri() . '/assets/images/svg/castle.svg')); ?>"

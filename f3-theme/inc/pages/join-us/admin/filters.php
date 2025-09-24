@@ -1,16 +1,17 @@
 <?php
-add_filter('manage_edit-building_columns', function ($columns) {
+add_filter('manage_edit-document_columns', function ($columns) {
     $columns['menu_order'] = __('Kolejność', 'your-theme-textdomain');
     return $columns;
 });
 
-add_action('manage_building_posts_custom_column', function ($column, $post_id) {
+add_action('manage_document_posts_custom_column', function ($column, $post_id) {
     if ($column === 'menu_order') {
         echo esc_html(get_post_field('menu_order', $post_id));
     }
 }, 10, 2);
 
-add_filter('manage_edit-building_sortable_columns', function ($columns) {
+
+add_filter('manage_edit-document_sortable_columns', function ($columns) {
     $columns['menu_order'] = 'menu_order';
     return $columns;
 });
@@ -20,7 +21,7 @@ add_action('pre_get_posts', function ($query) {
         return;
     }
 
-    if ($query->get('post_type') === 'building' && !$query->get('orderby')) {
+    if ($query->get('post_type') === 'document' && !$query->get('orderby')) {
         $query->set('orderby', 'menu_order');
         $query->set('order', 'ASC');
     }

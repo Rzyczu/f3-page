@@ -1,4 +1,4 @@
-<section class="relative my-24">
+<section class="relative my-24 overflow-y-hidden">
     <div class="md:w-1/3 max-sm:w-3/4 2xl:w-2/5 horizontal-line"></div>
     <div class="container mx-auto bg-white text-primary">
         <div class="flex flex-row mb-6">
@@ -35,8 +35,7 @@
                 $persons = get_posts(array(
                     'post_type' => 'board_member',
                     'posts_per_page' => -1,
-                    'meta_key' => 'person_order',
-                    'orderby' => 'meta_value_num',
+                    'orderby' => 'menu_order',
                     'order' => 'ASC',
                     'meta_query' => array(
                         array(
@@ -50,7 +49,7 @@
                 <div class="board-group <?php echo $group_key === 'personnel' ? 'active' : ''; ?>" data-id="board-<?php echo esc_attr($group_key); ?>">
                     <?php foreach ($persons as $person) : ?>
                         <?php
-                        $image = get_the_post_thumbnail_url($person->ID, 'medium') ?: get_template_directory_uri() . '/assets/person-placeholder.jpg';
+                        $image = get_the_post_thumbnail_url($person->ID, 'large') ?: get_template_directory_uri() . '/assets/person-placeholder.jpg';
                         $title = get_post_meta($person->ID, 'person_title', true);
                         $name = get_the_title($person->ID);
                         $display_order = get_theme_mod('board_display_order', 'title_first');
@@ -59,10 +58,10 @@
                             <img loading="lazy" alt="<?php echo esc_attr($name); ?>" class="person-image" src="<?php echo esc_url($image); ?>">
                             <?php
                                 if ($display_order === 'title_first') :?>
-                                    <h4 class="person-title"><?php echo esc_html($title); ?></h4>
+                                    <h4 class="person-title max-md:text-lg"><?php echo esc_html($title); ?></h4>
                                     <p class="person-name"><?php echo esc_html($name); ?></p>
                                 <?php else : ?>
-                                    <h4 class="person-title"><?php echo esc_html($name); ?></h4>
+                                    <h4 class="person-title max-md:text-lg"><?php echo esc_html($name); ?></h4>
                                     <p class="person-name"><?php echo esc_html($title); ?></p>
                                 <?php endif; ?>
                         </div>

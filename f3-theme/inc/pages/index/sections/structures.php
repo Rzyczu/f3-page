@@ -9,7 +9,7 @@
             $structures = get_posts(array(
                 'post_type' => 'structure',
                 'posts_per_page' => -1,
-                'orderby'        => 'date',
+                'orderby' => 'menu_order',
                 'order'          => 'ASC',
             ));
             

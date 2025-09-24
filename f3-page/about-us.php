@@ -26,6 +26,9 @@ get_header();
     // Section board
     include locate_template('/inc/pages/about-us/sections/board.php', false, false);
 
+    // Section association
+    include locate_template('/inc/pages/about-us/sections/association.php', false, false);
+
     // Section brotherhood
     include locate_template('/inc/pages/about-us/sections/brotherhood.php', false, false);
 

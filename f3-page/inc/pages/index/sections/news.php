@@ -11,7 +11,7 @@
                 'post_type' => 'news',
                 'posts_per_page' => 5,
                 'orderby' => 'date',
-                'order' => 'DESC',
+                'order' => 'ASC',
             ));
 
             if ($news_query->have_posts()) :

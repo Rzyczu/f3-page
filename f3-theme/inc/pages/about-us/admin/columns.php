@@ -78,35 +78,3 @@ function sort_board_member_by_group($query) {
 }
 add_action('pre_get_posts', 'sort_board_member_by_group');
 
-
-function add_board_member_order_column($columns) {
-    $columns['person_order'] = __('Kolejność', 'your-theme-textdomain');
-    return $columns;
-}
-add_filter('manage_edit-board_member_columns', 'add_board_member_order_column');
-
-function fill_board_member_order_column($column, $post_id) {
-    if ($column === 'person_order') {
-        $order = get_post_meta($post_id, 'person_order', true);
-        echo esc_html($order);
-    }
-}
-add_action('manage_board_member_posts_custom_column', 'fill_board_member_order_column', 10, 2);
-
-function make_board_member_order_column_sortable($columns) {
-    $columns['person_order'] = 'person_order';
-    return $columns;
-}
-add_filter('manage_edit-board_member_sortable_columns', 'make_board_member_order_column_sortable');
-
-function sort_board_member_by_order($query) {
-    if (!is_admin() || !$query->is_main_query()) {
-        return;
-    }
-
-    if (isset($query->query_vars['orderby']) && $query->query_vars['orderby'] === 'person_order') {
-        $query->set('meta_key', 'person_order');
-        $query->set('orderby', 'meta_value_num'); // Sortowanie numeryczne
-    }
-}
-add_action('pre_get_posts', 'sort_board_member_by_order');

@@ -8,11 +8,14 @@
                 <?php echo esc_html(get_theme_mod('docs_section_text', __('Czasem gotujemy się z nadmiaru dokumentów, ale to one umożliwiają nam organizacje i dbanie o bezpieczeństwo', 'your-theme-textdomain'))); ?>
             </p>
             <?php
-            // Pobierz dokumenty z CPT
+
             $docs = get_posts(array(
                 'post_type' => 'document',
                 'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
             ));
+             
 
             if (!empty($docs)) :
                 foreach ($docs as $doc) :

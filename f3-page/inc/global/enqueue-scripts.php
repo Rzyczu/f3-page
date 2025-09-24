@@ -6,6 +6,7 @@ function enqueue_theme_assets() {
     wp_enqueue_style('theme-custom-styles', get_template_directory_uri() . '/assets/css/custom.min.css', array(), '1.0.0');
 
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/js/navbar.js', array(), '1.0.0', true);
+    wp_enqueue_script('footer', get_template_directory_uri() . '/assets/js/footer-behavior.js', array(), '1.0.0', true);
 
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);

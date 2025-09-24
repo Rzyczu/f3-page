@@ -13,7 +13,8 @@ get_header(); ?>
         </button>
     </div>
     
-    <h1 class="mb-4">Wszystkie aktualności</h1>
+    <h1 class="mb-4"><?php echo esc_html(get_theme_mod('f3_news_heading', 'Aktualności')); ?></h1>
+    <p class="mb-8"><?php echo wp_kses_post(get_theme_mod('f3_news_description')); ?></p>
     
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -21,8 +22,8 @@ get_header(); ?>
         'post_type' => 'news',
         'posts_per_page' => 6,
         'paged' => $paged,
+        'meta_key' => '_news_date_sort',
         'orderby' => 'meta_value',
-        'meta_key' => '_news_date',
         'order' => 'DESC',
     ));
 

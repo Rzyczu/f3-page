@@ -18,24 +18,3 @@ function board_member_meta_box($post) {
     </p>
     <?php
 }
-
-function board_member_order_meta_box($post) {
-    $order = get_post_meta($post->ID, 'person_order', true);
-    ?>
-    <p>
-        <label for="person_order"><?php _e('Kolejność', 'your-theme-textdomain'); ?></label>
-        <input type="number" id="person_order" name="person_order" value="<?php echo esc_attr($order); ?>" style="width: 100%;">
-        <small><?php _e('Mnijesze wartości wyświetlają się wcześniej.', 'your-theme-textdomain'); ?></small>
-    </p>
-    <?php
-}
-
-add_action('add_meta_boxes', function () {
-    add_meta_box('board_member_order', __('Kolejność', 'your-theme-textdomain'), 'board_member_order_meta_box', 'board_member', 'side', 'default');
-});
-
-add_action('save_post', function ($post_id) {
-    if (isset($_POST['person_order'])) {
-        update_post_meta($post_id, 'person_order', intval($_POST['person_order']));
-    }
-});

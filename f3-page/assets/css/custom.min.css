@@ -498,7 +498,13 @@ nav {
     height: 100vh
 }
 
-.scout-path-element.active,
+.scout-path-element.active {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    filter: drop-shadow(0 0 0 black) drop-shadow(0 0 3px black) invert(96%) sepia(9%) saturate(611%) hue-rotate(35deg) brightness(113%) contrast(99%)
+}
+
 .svg-color-white {
     filter: invert(96%) sepia(9%) saturate(611%) hue-rotate(35deg) brightness(113%) contrast(99%)
 }
@@ -2271,6 +2277,14 @@ input[type=checkbox] {
         height: 12rem
     }
 
+    .md\:bg-primary-dark {
+        background-color: rgb(83 41 132 / var(--tw-bg-opacity));
+    }
+
+    .md\:bg-primary-light {
+        background-color: rgb(179 162 206 / var(--tw-bg-opacity));
+    }
+
     .md\:after\:-translate-y-\[0\%\]::after,
     .md\:after\:translate-x-0::after {
         content: var(--tw-content);
@@ -2453,6 +2467,10 @@ input[type=checkbox] {
     .lg\:text-2xs {
         font-size: .625rem
     }
+
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (min-width:1280px) {
@@ -2548,6 +2566,14 @@ input[type=checkbox] {
         padding-left: 1rem;
         padding-right: 1rem
     }
+}
+
+.content > div {
+    margin-bottom: 1rem;
+}
+
+.content > div > div[dir="auto"] {
+    margin-bottom: 1rem;
 }
 
 input[type=checkbox] {

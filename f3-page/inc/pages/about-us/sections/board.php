@@ -53,18 +53,37 @@
                         $title = get_post_meta($person->ID, 'person_title', true);
                         $name = get_the_title($person->ID);
                         $display_order = get_theme_mod('board_display_order', 'title_first');
+                        $email = get_post_meta($person->ID, 'person_email', true) ?: __('Brak emaila', 'your-theme-textdomain');
+                        $phone = get_post_meta($person->ID, 'person_phone', true) ?: __('Brak telefonu', 'your-theme-textdomain');
                         ?>
                         <div class="person-card">
-                            <img loading="lazy" alt="<?php echo esc_attr($name); ?>" class="person-image" src="<?php echo esc_url($image); ?>">
-                            <?php
-                                if ($display_order === 'title_first') :?>
-                                    <h4 class="person-title max-md:text-lg"><?php echo esc_html($title); ?></h4>
-                                    <p class="person-name"><?php echo esc_html($name); ?></p>
-                                <?php else : ?>
-                                    <h4 class="person-title max-md:text-lg"><?php echo esc_html($name); ?></h4>
-                                    <p class="person-name"><?php echo esc_html($title); ?></p>
-                                <?php endif; ?>
+                            <div class="person-image ">
+                                <img loading="lazy" alt="<?php echo esc_attr($name); ?>"
+                                    class="block person-front" 
+                                    src="<?php echo esc_url($image); ?>">
+
+                                <div class="text-white person-back bg-primary">
+                                    <div class="flex items-center gap-4">
+                                        <i class="fa-solid fa-envelope"></i> 
+                                        <p class="text-lg"><?php echo esc_html($email); ?></p>
+                                    </div>    
+                                    <div class="flex items-center gap-4">
+                                        <i class="fa-solid fa-phone"></i> 
+                                        <p class="text-lg"><?php echo esc_html($phone); ?></p>
+                                    </div>  
+                                    
+                                </div>
+                            </div>
+
+                            <?php if ($display_order === 'title_first') : ?>
+                                <h4 class="person-title max-md:text-lg"><?php echo esc_html($title); ?></h4>
+                                <p class="person-name"><?php echo esc_html($name); ?></p>
+                            <?php else : ?>
+                                <h4 class="person-title max-md:text-lg"><?php echo esc_html($name); ?></h4>
+                                <p class="person-name"><?php echo esc_html($title); ?></p>
+                            <?php endif; ?>
                         </div>
+
                     <?php endforeach; ?>
                 </div>
             <?php endforeach; ?>

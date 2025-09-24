@@ -27,6 +27,12 @@ function register_board_member_post_type() {
         if (array_key_exists('board_group', $_POST)) {
             update_post_meta($post_id, 'board_group', sanitize_text_field($_POST['board_group']));
         }
+        if (array_key_exists('person_email', $_POST)) {
+            update_post_meta($post_id, 'person_email', sanitize_email($_POST['person_email']));
+        }
+        if (array_key_exists('person_phone', $_POST)) {
+            update_post_meta($post_id, 'person_phone', sanitize_text_field($_POST['person_phone']));
+        }
     });
 }
 add_action('init', 'register_board_member_post_type');

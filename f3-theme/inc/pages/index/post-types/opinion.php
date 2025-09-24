@@ -10,7 +10,7 @@ function register_opinion_post_type() {
         ),
         'public' => true,
         'has_archive' => false,
-        'supports' => array('editor'),
+        'supports' => array('editor', 'page-attributes'),
         'rewrite' => true,
         'menu_icon'    => 'dashicons-thumbs-up',
     ));

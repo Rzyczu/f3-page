@@ -3,9 +3,10 @@
 
 function enqueue_theme_assets() {
     wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), '1.0.0');
-    wp_enqueue_style('theme-custom-styles', get_template_directory_uri() . '/assets/css/custom.min.css', array(), '1.0.0');
+    wp_enqueue_style('theme-custom-styles', get_template_directory_uri() . '/assets/css/custom.min.css', array(), '1.0.1');
 
     wp_enqueue_script('navbar', get_template_directory_uri() . '/assets/js/navbar.js', array(), '1.0.0', true);
+    wp_enqueue_script('footer', get_template_directory_uri() . '/assets/js/footer-behavior.js', array(), '1.0.0', true);
 
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
@@ -22,7 +23,7 @@ function enqueue_theme_scripts() {
 
     // Skrypty dla strony "About Us"
     if (is_page('about-us')) {
-        wp_enqueue_script('circular-slider-script', get_template_directory_uri() . '/assets/js/circular-slider.js', array(), '1.0.0', true);
+        wp_enqueue_script('circular-slider-script', get_template_directory_uri() . '/assets/js/circular-slider.js', array(), '2.0.0', true);
         wp_enqueue_script('board-script', get_template_directory_uri() . '/assets/js/board.js', array(), '1.0.0', true);
         wp_enqueue_script('banner-brotherhood-script', get_template_directory_uri() . '/assets/js/banner-brotherhood.js', array(), '1.0.0', true);
     }

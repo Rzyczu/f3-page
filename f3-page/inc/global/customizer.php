@@ -22,6 +22,9 @@ function sanitize_customizer_text($input) {
     return sanitize_text_field($input);
 }
 
+//Footer
+
+
 function customize_global_settings($wp_customize) {
     $wp_customize->add_setting('footer_text', array(
         'default' => '',
@@ -30,7 +33,6 @@ function customize_global_settings($wp_customize) {
 }
 
 add_action('customize_register', 'customize_global_settings');
-
 
 function customize_footer_icons($wp_customize) {
     $wp_customize->add_section('footer_icons_section', array(
@@ -73,3 +75,35 @@ function customize_footer_icons($wp_customize) {
     }
 }
 add_action('customize_register', 'customize_footer_icons');
+
+// News
+
+function f3_customize_register_news_section($wp_customize) {
+    $wp_customize->add_section('f3_news_section', array(
+        'title' => __('Aktualności', 'f3'),
+        'priority' => 25,
+    ));
+
+    $wp_customize->add_setting('f3_news_heading', array(
+        'default' => __('Aktualności', 'f3'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('f3_news_heading', array(
+        'label' => __('Nagłówek', 'f3'),
+        'section' => 'f3_news_section',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('f3_news_description', array(
+        'default' => __('Znajdziesz tu relacje z wydarzeń i działań naszego szczepu. <a href="https://facebook.com/szczepf3" target="_blank" rel="noopener">Śledź nas też na Facebooku</a>.', 'f3'),
+        'sanitize_callback' => 'wp_kses_post',
+    ));    
+
+    $wp_customize->add_control('f3_news_description', array(
+        'label' => __('Opis', 'f3'),
+        'section' => 'f3_news_section',
+        'type' => 'textarea',
+    ));
+}
+add_action('customize_register', 'f3_customize_register_news_section');

@@ -6,11 +6,19 @@
     </div>
     <div class="swiper-news">
         <div class="swiper-wrapper">
+            
             <?php
+            echo '<pre>';
+foreach ($news_query->posts as $post) {
+    echo 'ID: ' . $post->ID . ' — _news_date_sort: ' . get_post_meta($post->ID, '_news_date_sort', true) . "\n";
+}
+echo '</pre>';
+
             $news_query = new WP_Query(array(
                 'post_type' => 'news',
                 'posts_per_page' => 5,
-                'orderby' => 'date',
+                'meta_key' => '_news_date_sort',
+                'orderby' => 'meta_value',
                 'order' => 'DESC',
             ));
 

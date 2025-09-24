@@ -1,20 +1,10 @@
 <?php
-
-function enqueue_admin_script($hook) {
-    if ('post.php' === $hook || 'post-new.php' === $hook) {
-        wp_enqueue_media();
-        wp_enqueue_script('document-meta-box', get_template_directory_uri() . '/js/document-meta-box.js', array('jquery'), null, true);
-    }
-}
-add_action('admin_enqueue_scripts', 'enqueue_admin_script');
-
-
 function document_meta_box($post) {
     $link = get_post_meta($post->ID, 'document_link', true);
     $description = get_post_meta($post->ID, 'document_description', true);
     ?>
     <p>
-        <label for="document_link"><?php _e('Document Link', 'your-theme-textdomain'); ?></label>
+        <label for="document_link"><?php _e('Link/Plik', 'your-theme-textdomain'); ?></label>
         <input type="url" id="document_link" name="document_link" value="<?php echo esc_url($link); ?>" style="width: 100%;" placeholder="https://example.com">
     </p>
     <p>
@@ -22,7 +12,7 @@ function document_meta_box($post) {
         <button type="button" class="button document-remove" style="<?php echo empty($link) ? 'display: none;' : ''; ?>"><?php _e('Usuń', 'your-theme-textdomain'); ?></button>
     </p>
     <p>
-        <label for="document_description"><?php _e('Document Description', 'your-theme-textdomain'); ?></label>
+        <label for="document_description"><?php _e('Opis dokumentu', 'your-theme-textdomain'); ?></label>
         <textarea id="document_description" name="document_description" style="width: 100%;"><?php echo esc_textarea($description); ?></textarea>
     </p>
 
@@ -65,7 +55,6 @@ function document_meta_box($post) {
     </script>
     <?php
 }
-
 
 add_action('save_post', function ($post_id) {
     if (isset($_POST['document_link'])) {
